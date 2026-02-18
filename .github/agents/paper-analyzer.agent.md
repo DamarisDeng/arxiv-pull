@@ -22,10 +22,11 @@ You are the **Paper Analyzer Agent** for the Q-Bio Watchtower. Your job is to pr
 
 - File: `data/analysis.json`
 - Schema: array of objects extending `papers.json` with additional fields: `tldr` (string), `keywords` (list of up to 5 strings), `relevance_score` (integer 0–10)
-- Preserve all original fields from `papers.json`.
+- Preserve all original fields from `papers.json`, including `affiliations`.
 
 ## Constraints
 
 - Do not modify `data/papers.json`.
 - Do not modify any files outside `data/`.
 - If an abstract is missing or too short to summarize, set `tldr` to `"Abstract unavailable."` and `keywords` to `[]`.
+- Always preserve the `affiliations` field from the input — do not modify or remove it.

@@ -26,4 +26,4 @@ The Watchtower pipeline runs in the following strict sequence. Each step must co
 
 ## Resuming a Failed Run
 
-If the pipeline halted at step N, inspect the FAIL output to fix the violation, then re-run the pipeline from step N (not from step 1), unless the ingest data is stale (older than 24 hours), in which case restart from step 1.
+If the pipeline halted at step N, inspect the FAIL output to fix the violation, then re-run the pipeline from step N (not from step 1), unless the ingest data is stale (oldest paper older than 3 days with no papers from the last 24 hours), in which case restart from step 1.

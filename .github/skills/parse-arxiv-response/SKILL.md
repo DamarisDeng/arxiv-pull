@@ -20,6 +20,7 @@ For each `<entry>` element in the Atom feed, extract the following fields:
 | `abstract` | `<summary>` | Collapse whitespace; remove leading/trailing whitespace |
 | `pdf_link` | `<link rel="related" title="pdf">` href | Use the direct PDF link |
 | `categories` | `<category>` term attributes | Collect all category terms into an array |
+| `affiliations` | `<author><arxiv:affiliation>` | Collect unique affiliations across all authors into an array. If no `<arxiv:affiliation>` elements exist, set to `["Unknown"]` |
 
 ## Output
 
@@ -33,7 +34,8 @@ A JSON array of objects matching the schema above. Example single entry:
   "published_date": "2024-01-15T00:00:00Z",
   "abstract": "We present a novel quantitative model...",
   "pdf_link": "https://arxiv.org/pdf/2401.12345",
-  "categories": ["q-bio.QM", "q-bio.CB"]
+  "categories": ["q-bio.QM", "q-bio.CB"],
+  "affiliations": ["MIT", "Stanford University"]
 }
 ```
 
