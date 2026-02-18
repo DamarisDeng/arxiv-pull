@@ -1,120 +1,97 @@
 [
   {
-    "id": "2602.11001",
-    "title": "A Bayesian Framework for Inferring Gene Regulatory Networks from Single-Cell Multi-Omics Data",
+    "id": "2602.15451v1",
+    "title": "Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer",
     "authors": [
-      "Alice Chen",
-      "Bob Martinez",
-      "Carol Wang",
-      "David Liu"
+      "Hayato Kunugi",
+      "Mohsen Rahmani",
+      "Yosuke Iyama",
+      "Yutaro Hirono",
+      "Akira Suma",
+      "Matthew Woolway",
+      "Vladimir Vargas-Calderón",
+      "William Kim",
+      "Kevin Chern",
+      "Mohammad Amin",
+      "Masaru Tateno"
     ],
-    "published_date": "2026-02-18T04:12:58Z",
-    "abstract": "We develop a hierarchical Bayesian model that integrates single-cell RNA-seq and ATAC-seq data to infer gene regulatory networks. Our approach uses a spike-and-slab prior on network edges and employs variational inference for scalable posterior approximation. Benchmarking on simulated and real datasets from mouse embryonic stem cells demonstrates superior accuracy over existing methods, particularly for identifying weak regulatory interactions.",
-    "pdf_link": "https://arxiv.org/pdf/2602.11001",
+    "published_date": "2026-02-17T09:38:11Z",
+    "abstract": "Deep generative modeling to stochastically design small molecules is an emerging technology for accelerating drug discovery and development. However, one major issue in molecular generative models is their lower frequency of drug-like compounds. To resolve this problem, we developed a novel framework for optimization of deep generative models integrated with a D-Wave quantum annealing computer, where our Neural Hash Function (NHF) presented herein is used both as the regularization and binarization schemes simultaneously, of which the latter is for transformation between continuous and discrete signals of the classical and quantum neural networks, respectively, in the error evaluation (i.e., objective) function. The compounds generated via the quantum-annealing generative models exhibited higher quality in both validity and drug-likeness than those generated via the fully-classical models, and was further indicated to exceed even the training data in terms of drug-likeness features, without any restraints and conditions to deliberately induce such an optimization. These results indicated an advantage of quantum annealing to aim at a stochastic generator integrated with our novel neural network architectures, for the extended performance of feature space sampling and extraction of characteristic features in drug design.",
+    "pdf_link": "https://arxiv.org/pdf/2602.15451v1",
     "categories": [
       "q-bio.QM",
-      "stat.ML"
+      "cs.AI",
+      "cs.LG",
+      "quant-ph"
     ],
-    "tldr": "Introduces a hierarchical Bayesian model with spike-and-slab priors and variational inference to reconstruct gene regulatory networks from multi-omics single-cell data.",
+    "tldr": "A quantum-annealing generative framework using a Neural Hash Function produces drug-like molecules exceeding training data in drug-likeness, outperforming fully-classical models.",
     "keywords": [
-      "Variational Inference",
-      "Spike-and-Slab Prior",
-      "Gene Regulatory Network",
-      "Single-Cell RNA-seq"
+      "Quantum Annealing",
+      "Neural Hash Function",
+      "D-Wave Optimization",
+      "Molecular Generative Model",
+      "Drug-Likeness Scoring"
     ],
     "relevance_score": 10
   },
   {
-    "id": "2602.11002",
-    "title": "Stochastic Modeling of Transcriptional Bursting with Time-Varying Rates",
+    "id": "2602.15677v1",
+    "title": "CAMEL: An ECG Language Model for Forecasting Cardiac Events",
     "authors": [
-      "Emily Park",
-      "Frank Zhao"
+      "Neelay Velingker",
+      "Alaia Solko-Breslin",
+      "Mayank Keoliya",
+      "Seewon Choi",
+      "Jiayi Xin",
+      "Anika Marathe",
+      "Alireza Oraii",
+      "Rajat Deo",
+      "Sameed Khatana",
+      "Rajeev Alur",
+      "Mayur Naik",
+      "Eric Wong"
     ],
-    "published_date": "2026-02-18T04:12:58Z",
-    "abstract": "We extend the classical two-state model of transcriptional bursting to incorporate time-varying burst rates driven by circadian oscillations. Using a piecewise-deterministic Markov process framework, we derive analytical expressions for the time-dependent mRNA distribution and validate predictions against live-cell imaging data from Drosophila.",
-    "pdf_link": "https://arxiv.org/pdf/2602.11002",
+    "published_date": "2026-02-17T16:02:52Z",
+    "abstract": "Electrocardiograms (ECG) are electrical recordings of the heart that are critical for diagnosing cardiovascular conditions. ECG language models (ELMs) have recently emerged as a promising framework for ECG classification accompanied by report generation. However, current models cannot forecast future cardiac events despite the immense clinical value for planning earlier intervention. To address this gap, we propose CAMEL, the first ELM that is capable of inference over longer signal durations which enables its forecasting capability. Our key insight is a specialized ECG encoder which enables cross-understanding of ECG signals with text. We train CAMEL using established LLM training procedures, combining LoRA adaptation with a curriculum learning pipeline. Our curriculum includes ECG classification, metrics calculations, and multi-turn conversations to elicit reasoning. CAMEL demonstrates strong zero-shot performance across 6 tasks and 9 datasets, including ECGForecastBench, a new benchmark that we introduce for forecasting arrhythmias. CAMEL is on par with or surpasses ELMs and fully supervised baselines both in- and out-of-distribution, achieving SOTA results on ECGBench (+7.0% absolute average gain) as well as ECGForecastBench (+12.4% over fully supervised models and +21.1% over zero-shot ELMs).",
+    "pdf_link": "https://arxiv.org/pdf/2602.15677v1",
     "categories": [
-      "q-bio.QM",
-      "q-bio.MN"
+      "cs.LG",
+      "q-bio.QM"
     ],
-    "tldr": "Extends the two-state transcriptional bursting model with circadian-driven time-varying rates using piecewise-deterministic Markov processes, deriving analytical mRNA distributions.",
+    "tldr": "CAMEL combines a specialized ECG encoder with LoRA fine-tuning to become the first ECG language model capable of forecasting future arrhythmias, surpassing supervised baselines.",
     "keywords": [
-      "Piecewise-Deterministic Markov Process",
-      "Transcriptional Bursting",
-      "Two-State Model",
-      "Circadian Oscillation"
+      "ECG Language Model",
+      "LoRA Fine-Tuning",
+      "Cardiac Event Forecasting",
+      "ECG Signal Encoder",
+      "Arrhythmia Benchmark"
     ],
     "relevance_score": 9
   },
   {
-    "id": "2602.11003",
-    "title": "Graph Neural Networks for Predicting Protein-Protein Interaction Dynamics",
+    "id": "2602.15740v1",
+    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
     "authors": [
-      "Grace Kim",
-      "Henry Patel",
-      "Isabel Rodriguez"
+      "Fatemeh Khalvandi",
+      "Saadat Izadi",
+      "Abdolah Chalechale"
     ],
-    "published_date": "2026-02-17T16:12:58Z",
-    "abstract": "We propose a temporal graph neural network architecture for predicting time-resolved protein-protein interaction networks. The model combines message-passing layers with gated recurrent units to capture both structural and dynamic features of interaction networks. Applied to yeast two-hybrid datasets, our method achieves 15% improvement in AUROC over static GNN baselines for predicting transient interactions.",
-    "pdf_link": "https://arxiv.org/pdf/2602.11003",
+    "published_date": "2026-02-17T17:15:32Z",
+    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
+    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
     "categories": [
-      "q-bio.QM",
-      "cs.LG"
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
     ],
-    "tldr": "Proposes a temporal graph neural network combining message-passing with GRUs that predicts dynamic protein-protein interactions with 15% AUROC improvement.",
+    "tldr": "MRC-GAT fuses multimodal patient data via copula-based alignment and relational attention, achieving 96.87% Alzheimer's classification accuracy on TADPOLE.",
     "keywords": [
-      "Graph Neural Network",
-      "Gated Recurrent Unit",
-      "Protein-Protein Interaction",
-      "Message Passing"
+      "Graph Attention Network",
+      "Copula-Based Alignment",
+      "Episodic Meta-Learning",
+      "Relational Attention",
+      "Multimodal Fusion"
     ],
     "relevance_score": 9
-  },
-  {
-    "id": "2602.11004",
-    "title": "Optimal Experimental Design for Dose-Response Studies Using Gaussian Process Regression",
-    "authors": [
-      "Jack Thompson"
-    ],
-    "published_date": "2026-02-17T16:12:58Z",
-    "abstract": "We present an adaptive Bayesian optimal experimental design framework for dose-response modeling. Using Gaussian process regression with a sigmoidal mean function, we sequentially select dose levels that maximize expected information gain about the EC50 parameter. Simulation studies demonstrate a 40% reduction in required sample size compared to traditional D-optimal designs.",
-    "pdf_link": "https://arxiv.org/pdf/2602.11004",
-    "categories": [
-      "q-bio.QM",
-      "stat.ME"
-    ],
-    "tldr": "Develops an adaptive Bayesian experimental design using Gaussian process regression that reduces dose-response study sample sizes by 40% over D-optimal designs.",
-    "keywords": [
-      "Gaussian Process Regression",
-      "Bayesian Optimal Experimental Design",
-      "Dose-Response Modeling",
-      "D-Optimal Design"
-    ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2602.11005",
-    "title": "Phylogenetic Placement of Environmental Sequences via Hidden Markov Models",
-    "authors": [
-      "Karen Lee",
-      "Leo Nakamura",
-      "Maria Santos"
-    ],
-    "published_date": "2026-02-18T04:12:58Z",
-    "abstract": "We introduce a profile hidden Markov model approach for rapid phylogenetic placement of short environmental DNA sequences. Our method combines position-specific scoring matrices with a maximum-likelihood branch-length optimization step, enabling placement of metagenomic reads onto reference trees 100x faster than existing EPA-based methods while maintaining comparable accuracy.",
-    "pdf_link": "https://arxiv.org/pdf/2602.11005",
-    "categories": [
-      "q-bio.QM",
-      "q-bio.PE"
-    ],
-    "tldr": "Achieves 100x faster phylogenetic placement of environmental DNA via profile hidden Markov models with maximum-likelihood branch optimization.",
-    "keywords": [
-      "Hidden Markov Model",
-      "Phylogenetic Placement",
-      "Maximum Likelihood",
-      "Metagenomic Analysis"
-    ],
-    "relevance_score": 8
   }
 ]
