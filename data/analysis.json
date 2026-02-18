@@ -1,31 +1,5 @@
 [
   {
-    "id": "2602.15740v1",
-    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
-    "authors": [
-      "Fatemeh Khalvandi",
-      "Saadat Izadi",
-      "Abdolah Chalechale"
-    ],
-    "published_date": "2026-02-17T17:15:32Z",
-    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
-    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "q-bio.QM"
-    ],
-    "tldr": "Copula-based graph attention network with meta-learning integrates multimodal clinical data for interpretable Alzheimer's diagnosis, achieving 96.87% accuracy on TADPOLE.",
-    "keywords": [
-      "Graph Attention Network",
-      "Copula-based transformation",
-      "Meta-learning",
-      "Multimodal fusion",
-      "Statistical alignment"
-    ],
-    "relevance_score": 9
-  },
-  {
     "id": "2602.15451v1",
     "title": "Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer",
     "authors": [
@@ -50,13 +24,41 @@
       "cs.LG",
       "quant-ph"
     ],
-    "tldr": "Quantum annealing-enhanced generative model with Neural Hash Function produces drug-like molecules exceeding training data quality, outperforming classical generative models.",
+    "affiliations": ["Unknown"],
+    "tldr": "Quantum annealing integrated with a Neural Hash Function binarization scheme drives a generative AI model to produce drug-like molecules exceeding training data quality.",
     "keywords": [
-      "Quantum annealing",
-      "Generative modeling",
+      "quantum annealing",
       "Neural Hash Function",
-      "Molecular design",
-      "Stochastic optimization"
+      "D-Wave binarization",
+      "stochastic molecular design",
+      "drug-likeness optimization"
+    ],
+    "relevance_score": 10
+  },
+  {
+    "id": "2602.15740v1",
+    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
+    "authors": [
+      "Fatemeh Khalvandi",
+      "Saadat Izadi",
+      "Abdolah Chalechale"
+    ],
+    "published_date": "2026-02-17T17:15:32Z",
+    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
+    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "affiliations": ["Unknown"],
+    "tldr": "A novel graph attention network combining copula-based statistical alignment and episodic meta-learning achieves state-of-the-art Alzheimer's disease classification (96.87% accuracy) by integrating multimodal patient data through relational attention mechanisms.",
+    "keywords": [
+      "graph attention network",
+      "copula-based transformation",
+      "episodic meta-learning",
+      "relational attention mechanism",
+      "multimodal fusion"
     ],
     "relevance_score": 9
   },
@@ -84,14 +86,98 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "ECG language model using curriculum learning and LoRA adaptation to forecast cardiac events, achieving SOTA +7.0% on ECGBench and +12.4% over supervised models.",
+    "affiliations": ["Unknown"],
+    "tldr": "CAMEL, the first ECG language model for cardiac event forecasting, combines LoRA adaptation and curriculum learning to achieve +21.1% improvement over zero-shot baselines on arrhythmia prediction.",
     "keywords": [
-      "Language models",
-      "Curriculum learning",
+      "ECG language model",
       "LoRA adaptation",
-      "Time series forecasting",
-      "Signal processing"
+      "curriculum learning",
+      "time series forecasting",
+      "specialized encoder"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2602.14828v1",
+    "title": "Exploring the limits of pre-trained embeddings in machine-guided protein design: a case study on predicting AAV vector viability",
+    "authors": [
+      "Ana F. Rodrigues",
+      "Lucas Ferraz",
+      "Laura Balbi",
+      "Pedro Giesteira Cotovio",
+      "Catia Pesquita"
+    ],
+    "published_date": "2026-02-16T15:21:11Z",
+    "abstract": "Effective representations of protein sequences are widely recognized as a cornerstone of machine learning-based protein design. Yet, protein bioengineering poses unique challenges for sequence representation, as experimental datasets typically feature few mutations, which are either sparsely distributed across the entire sequence or densely concentrated within localized regions. This limits the ability of sequence-level representations to extract functionally meaningful signals. In addition, comprehensive comparative studies remain scarce, despite their crucial role in clarifying which representations best encode relevant information and ultimately support superior predictive performance. In this study, we systematically evaluate multiple ProtBERT and ESM2 embedding variants as sequence representations, using the adeno-associated virus capsid as a case study and prototypical example of bioengineering, where functional optimization is targeted through highly localized sequence variation within an otherwise large protein. Our results reveal that, prior to fine-tuning, amino acid-level embeddings outperform sequence-level representations in supervised predictive tasks, whereas the latter tend to be more effective in unsupervised settings. However, optimal performance is only achieved when embeddings are fine-tuned with task-specific labels, with sequence-level representations providing the best performance. Moreover, our findings indicate that the extent of sequence variation required to produce notable shifts in sequence representations exceeds what is typically explored in bioengineering studies, showing the need for fine-tuning in datasets characterized by sparse or highly localized mutations.",
+    "pdf_link": "https://arxiv.org/pdf/2602.14828v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "affiliations": ["Unknown"],
+    "tldr": "A systematic evaluation of ProtBERT and ESM2 embedding variants for protein sequence representation reveals that fine-tuned sequence-level embeddings achieve optimal performance for AAV vector viability prediction, especially with sparse or localized mutations.",
+    "keywords": [
+      "protein embeddings",
+      "ProtBERT",
+      "ESM2",
+      "fine-tuning",
+      "sequence representation"
     ],
     "relevance_score": 8
+  },
+  {
+    "id": "2602.14616v1",
+    "title": "Higher-Order Hit-&-Run Samplers for Linearly Constrained Densities",
+    "authors": [
+      "Richard D. Paul",
+      "Anton Stratmann",
+      "Johann F. Jadebeck",
+      "Martin Beyß",
+      "Hanno Scharr",
+      "David Rügamer",
+      "Katharina Nöh"
+    ],
+    "published_date": "2026-02-16T10:20:52Z",
+    "abstract": "Markov chain Monte Carlo (MCMC) sampling of densities restricted to linearly constrained domains is an important task arising in Bayesian treatment of inverse problems in the natural sciences. While efficient algorithms for uniform polytope sampling exist, much less work has dealt with more complex constrained densities. In particular, gradient information as used in unconstrained MCMC is not necessarily helpful in the constrained case, where the gradient may push the proposal's density out of the polytope. In this work, we propose a novel constrained sampling algorithm, which combines strengths of higher-order information, like the target's log-density's gradients and curvature, with the Hit-&-Run proposal, a simple mechanism which guarantees the generation of feasible proposals, fulfilling the linear constraints. Our extensive experiments demonstrate improved sampling efficiency on complex constrained densities over various constrained and unconstrained samplers.",
+    "pdf_link": "https://arxiv.org/pdf/2602.14616v1",
+    "categories": [
+      "stat.CO",
+      "q-bio.QM",
+      "stat.AP"
+    ],
+    "affiliations": ["Unknown"],
+    "tldr": "A novel constrained MCMC sampling algorithm combines higher-order gradient and curvature information with Hit-&-Run proposals to efficiently sample from complex densities on linearly constrained domains arising in Bayesian inverse problems.",
+    "keywords": [
+      "Markov chain Monte Carlo",
+      "Hit-&-Run sampler",
+      "constrained sampling",
+      "Bayesian inverse problems",
+      "polytope sampling"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2602.14328v1",
+    "title": "Conformational landscapes in cryo-ET data based on MD simulations",
+    "authors": [
+      "Slavica Jonic"
+    ],
+    "published_date": "2026-02-15T22:51:11Z",
+    "abstract": "Cryo-electron tomography (cryo-ET) provides a unique window into molecular organization in cellular environments (in situ). However, the interpretation of molecular structural information is complicated by several intrinsic properties of cryo-ET data, such as noise, missing wedge, and continuous conformational variability of the molecules. Additionally, in crowded in situ environments, the number of particles extracted is sometimes small and precludes extensive classification into discrete states. These challenges shift the emphasis from high-resolution structure determination toward validation and interpretation of low-resolution density maps, and analysis of conformational flexibility. Molecular Dynamics (MD) simulations are particularly well suited to this task, as they provide a physically grounded way to explore continuous conformation transitions consistent with both experimental data and molecular energetics. This review focuses on the roles of MD simulations in cryo-ET, emphasizing their use in emerging methods for conformational landscape determination and their contribution to gain new biological insight.",
+    "pdf_link": "https://arxiv.org/pdf/2602.14328v1",
+    "categories": [
+      "q-bio.BM",
+      "q-bio.QM"
+    ],
+    "affiliations": ["Unknown"],
+    "tldr": "Molecular Dynamics simulations provide a physically grounded approach to analyze continuous conformational flexibility and validate low-resolution density maps from cryo-electron tomography data, enabling conformational landscape determination despite data limitations.",
+    "keywords": [
+      "Molecular Dynamics",
+      "cryo-electron tomography",
+      "conformational analysis",
+      "density map validation",
+      "continuous variability"
+    ],
+    "relevance_score": 7
   }
 ]
