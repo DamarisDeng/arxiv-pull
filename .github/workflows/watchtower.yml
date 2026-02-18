@@ -1,0 +1,68 @@
+name: Q-Bio Watchtower
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Daily at 06:00 UTC (after arXiv nightly batch)
+  workflow_dispatch:      # Allow manual runs
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write  # Required for GitHub Pages OIDC deployment
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  watchtower:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install GitHub Copilot CLI
+        run: npm install -g @github/copilot
+
+      - name: Run Watchtower pipeline
+        env:
+          GH_TOKEN: ${{ secrets.COPILOT_TOKEN }}
+        run: |
+          copilot --agent watchtower-orchestrator \
+                  --prompt "Run the full Q-Bio Watchtower pipeline for today's arXiv papers." \
+                  --allow-all
+
+      - name: Commit updated data and report
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html data/papers.json data/analysis.json
+          git diff --cached --quiet || git commit -m "chore: watchtower update $(date -u +%Y-%m-%d) UTC"
+          git push origin main
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/
+
+      - name: Upload debug artifacts on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: watchtower-debug
+          path: |
+            data/
+            docs/index.html
+
+  deploy:
+    needs: watchtower
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
