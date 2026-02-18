@@ -1,0 +1,80 @@
+[
+  {
+    "id": "2602.11001",
+    "title": "A Bayesian Framework for Inferring Gene Regulatory Networks from Single-Cell Multi-Omics Data",
+    "authors": [
+      "Alice Chen",
+      "Bob Martinez",
+      "Carol Wang",
+      "David Liu"
+    ],
+    "published_date": "2026-02-18T04:12:58Z",
+    "abstract": "We develop a hierarchical Bayesian model that integrates single-cell RNA-seq and ATAC-seq data to infer gene regulatory networks. Our approach uses a spike-and-slab prior on network edges and employs variational inference for scalable posterior approximation. Benchmarking on simulated and real datasets from mouse embryonic stem cells demonstrates superior accuracy over existing methods, particularly for identifying weak regulatory interactions.",
+    "pdf_link": "https://arxiv.org/pdf/2602.11001",
+    "categories": [
+      "q-bio.QM",
+      "stat.ML"
+    ]
+  },
+  {
+    "id": "2602.11002",
+    "title": "Stochastic Modeling of Transcriptional Bursting with Time-Varying Rates",
+    "authors": [
+      "Emily Park",
+      "Frank Zhao"
+    ],
+    "published_date": "2026-02-18T04:12:58Z",
+    "abstract": "We extend the classical two-state model of transcriptional bursting to incorporate time-varying burst rates driven by circadian oscillations. Using a piecewise-deterministic Markov process framework, we derive analytical expressions for the time-dependent mRNA distribution and validate predictions against live-cell imaging data from Drosophila.",
+    "pdf_link": "https://arxiv.org/pdf/2602.11002",
+    "categories": [
+      "q-bio.QM",
+      "q-bio.MN"
+    ]
+  },
+  {
+    "id": "2602.11003",
+    "title": "Graph Neural Networks for Predicting Protein-Protein Interaction Dynamics",
+    "authors": [
+      "Grace Kim",
+      "Henry Patel",
+      "Isabel Rodriguez"
+    ],
+    "published_date": "2026-02-17T16:12:58Z",
+    "abstract": "We propose a temporal graph neural network architecture for predicting time-resolved protein-protein interaction networks. The model combines message-passing layers with gated recurrent units to capture both structural and dynamic features of interaction networks. Applied to yeast two-hybrid datasets, our method achieves 15% improvement in AUROC over static GNN baselines for predicting transient interactions.",
+    "pdf_link": "https://arxiv.org/pdf/2602.11003",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ]
+  },
+  {
+    "id": "2602.11004",
+    "title": "Optimal Experimental Design for Dose-Response Studies Using Gaussian Process Regression",
+    "authors": [
+      "Jack Thompson"
+    ],
+    "published_date": "2026-02-17T16:12:58Z",
+    "abstract": "We present an adaptive Bayesian optimal experimental design framework for dose-response modeling. Using Gaussian process regression with a sigmoidal mean function, we sequentially select dose levels that maximize expected information gain about the EC50 parameter. Simulation studies demonstrate a 40% reduction in required sample size compared to traditional D-optimal designs.",
+    "pdf_link": "https://arxiv.org/pdf/2602.11004",
+    "categories": [
+      "q-bio.QM",
+      "stat.ME"
+    ]
+  },
+  {
+    "id": "2602.11005",
+    "title": "Phylogenetic Placement of Environmental Sequences via Hidden Markov Models",
+    "authors": [
+      "Karen Lee",
+      "Leo Nakamura",
+      "Maria Santos"
+    ],
+    "published_date": "2026-02-18T04:12:58Z",
+    "abstract": "We introduce a profile hidden Markov model approach for rapid phylogenetic placement of short environmental DNA sequences. Our method combines position-specific scoring matrices with a maximum-likelihood branch-length optimization step, enabling placement of metagenomic reads onto reference trees 100x faster than existing EPA-based methods while maintaining comparable accuracy.",
+    "pdf_link": "https://arxiv.org/pdf/2602.11005",
+    "categories": [
+      "q-bio.QM",
+      "q-bio.PE"
+    ]
+  }
+]
