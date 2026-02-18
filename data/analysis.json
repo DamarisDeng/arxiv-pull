@@ -1,5 +1,31 @@
 [
   {
+    "id": "2602.15740v1",
+    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
+    "authors": [
+      "Fatemeh Khalvandi",
+      "Saadat Izadi",
+      "Abdolah Chalechale"
+    ],
+    "published_date": "2026-02-17T17:15:32Z",
+    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
+    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "tldr": "Copula-based graph attention network with meta-learning integrates multimodal clinical data for interpretable Alzheimer's diagnosis, achieving 96.87% accuracy on TADPOLE.",
+    "keywords": [
+      "Graph Attention Network",
+      "Copula-based transformation",
+      "Meta-learning",
+      "Multimodal fusion",
+      "Statistical alignment"
+    ],
+    "relevance_score": 9
+  },
+  {
     "id": "2602.15451v1",
     "title": "Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer",
     "authors": [
@@ -24,15 +50,15 @@
       "cs.LG",
       "quant-ph"
     ],
-    "tldr": "A quantum-annealing generative framework using a Neural Hash Function produces drug-like molecules exceeding training data in drug-likeness, outperforming fully-classical models.",
+    "tldr": "Quantum annealing-enhanced generative model with Neural Hash Function produces drug-like molecules exceeding training data quality, outperforming classical generative models.",
     "keywords": [
-      "Quantum Annealing",
+      "Quantum annealing",
+      "Generative modeling",
       "Neural Hash Function",
-      "D-Wave Optimization",
-      "Molecular Generative Model",
-      "Drug-Likeness Scoring"
+      "Molecular design",
+      "Stochastic optimization"
     ],
-    "relevance_score": 10
+    "relevance_score": 9
   },
   {
     "id": "2602.15677v1",
@@ -58,40 +84,14 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "CAMEL combines a specialized ECG encoder with LoRA fine-tuning to become the first ECG language model capable of forecasting future arrhythmias, surpassing supervised baselines.",
+    "tldr": "ECG language model using curriculum learning and LoRA adaptation to forecast cardiac events, achieving SOTA +7.0% on ECGBench and +12.4% over supervised models.",
     "keywords": [
-      "ECG Language Model",
-      "LoRA Fine-Tuning",
-      "Cardiac Event Forecasting",
-      "ECG Signal Encoder",
-      "Arrhythmia Benchmark"
+      "Language models",
+      "Curriculum learning",
+      "LoRA adaptation",
+      "Time series forecasting",
+      "Signal processing"
     ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2602.15740v1",
-    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
-    "authors": [
-      "Fatemeh Khalvandi",
-      "Saadat Izadi",
-      "Abdolah Chalechale"
-    ],
-    "published_date": "2026-02-17T17:15:32Z",
-    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
-    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "q-bio.QM"
-    ],
-    "tldr": "MRC-GAT fuses multimodal patient data via copula-based alignment and relational attention, achieving 96.87% Alzheimer's classification accuracy on TADPOLE.",
-    "keywords": [
-      "Graph Attention Network",
-      "Copula-Based Alignment",
-      "Episodic Meta-Learning",
-      "Relational Attention",
-      "Multimodal Fusion"
-    ],
-    "relevance_score": 9
+    "relevance_score": 8
   }
 ]

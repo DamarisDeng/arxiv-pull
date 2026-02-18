@@ -3,115 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-Bio Watchtower — Daily arXiv Digest</title>
+    <title>Q-Bio Watchtower - Daily arXiv Digest</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #ffffff;
             color: #1a1a1a;
             line-height: 1.6;
         }
-        
+
         header {
             background-color: #2c3e50;
             color: #ffffff;
-            padding: 2rem 1rem;
+            padding: 2rem;
             text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
+
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             font-weight: 600;
         }
-        
+
         header .subtitle {
             font-size: 1.1rem;
-            opacity: 0.9;
-            margin-top: 0.5rem;
+            color: #ecf0f1;
+            margin-bottom: 0.5rem;
         }
-        
-        header .meta {
+
+        header .metadata {
             font-size: 0.95rem;
-            opacity: 0.8;
+            color: #bdc3c7;
             margin-top: 0.5rem;
         }
-        
+
         main {
             max-width: 1400px;
             margin: 2rem auto;
-            padding: 0 1rem;
+            padding: 0 2rem;
         }
-        
+
+        .narrative-summary {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        .narrative-summary h2 {
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+            color: #2c3e50;
+        }
+
+        .narrative-summary p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #34495e;
+        }
+
         .table-container {
             overflow-x: auto;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
-            border: 1px solid #ddd;
             background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        
+
         thead {
             background-color: #2c3e50;
             color: #ffffff;
         }
-        
+
         th {
             padding: 1rem;
             text-align: left;
             font-weight: 600;
+            font-size: 0.95rem;
             border: 1px solid #ddd;
         }
-        
-        th.rank-col {
-            width: 60px;
-            text-align: center;
-        }
-        
-        th.score-col {
-            width: 80px;
-            text-align: center;
-        }
-        
+
         td {
             padding: 1rem;
             border: 1px solid #ddd;
             vertical-align: top;
         }
-        
+
         tbody tr:nth-child(odd) {
             background-color: #f9f9f9;
         }
-        
+
         tbody tr:nth-child(even) {
             background-color: #ffffff;
         }
-        
+
         tbody tr:hover {
-            background-color: #f0f0f0;
+            background-color: #ecf0f1;
         }
-        
-        td.rank-cell {
+
+        .rank-cell {
             text-align: center;
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            width: 60px;
+        }
+
+        .title-cell a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .title-cell a:hover {
+            text-decoration: underline;
+            color: #2980b9;
+        }
+
+        .authors-cell {
+            color: #555;
+            font-size: 0.9rem;
+            max-width: 250px;
+        }
+
+        .date-cell {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            width: 110px;
+        }
+
+        .tldr-cell {
+            font-size: 0.95rem;
             color: #2c3e50;
+            max-width: 350px;
+            line-height: 1.5;
         }
-        
-        td.score-cell {
+
+        .keywords-cell {
+            font-size: 0.85rem;
+            color: #555;
+            font-style: italic;
+            max-width: 200px;
+        }
+
+        .score-cell {
             text-align: center;
+            width: 80px;
         }
-        
+
         .score-badge {
             display: inline-block;
             padding: 0.4rem 0.8rem;
@@ -120,91 +173,51 @@
             font-size: 0.95rem;
             color: #ffffff;
         }
-        
+
         .score-high {
             background-color: #27ae60;
         }
-        
+
         .score-medium {
             background-color: #f39c12;
         }
-        
+
         .score-low {
             background-color: #95a5a6;
         }
-        
-        .paper-title {
-            font-weight: 600;
-            font-size: 1.05rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .paper-title a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        
-        .paper-title a:hover {
-            text-decoration: underline;
-        }
-        
-        .authors {
-            color: #555;
-            font-size: 0.9rem;
-            margin-bottom: 0.3rem;
-        }
-        
-        .date {
-            color: #666;
-            font-size: 0.85rem;
-        }
-        
-        .tldr {
-            line-height: 1.5;
-        }
-        
-        .keywords {
-            color: #555;
-            font-size: 0.9rem;
-            font-style: italic;
-        }
-        
-        .narrative {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 1.5rem;
-            margin: 2rem 0;
-            border-radius: 4px;
-        }
-        
-        .narrative h2 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
-        }
-        
-        .narrative p {
-            font-size: 1.05rem;
-            line-height: 1.7;
-            color: #333;
-        }
-        
+
         footer {
-            background-color: #2c3e50;
-            color: #ffffff;
+            background-color: #ecf0f1;
+            color: #7f8c8d;
             text-align: center;
             padding: 1.5rem;
             margin-top: 3rem;
             font-size: 0.9rem;
+            border-top: 1px solid #ddd;
         }
-        
+
         footer a {
             color: #3498db;
             text-decoration: none;
         }
-        
+
         footer a:hover {
             text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+
+            th, td {
+                padding: 0.75rem;
+                font-size: 0.85rem;
+            }
         }
     </style>
 </head>
@@ -212,83 +225,75 @@
     <header>
         <h1>Q-Bio Watchtower</h1>
         <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-02-18 UTC</div>
-        <div class="meta">3 papers analyzed | Date range: 2026-02-17</div>
+        <div class="metadata">3 papers reviewed | Published: 2026-02-17</div>
     </header>
-    
+
     <main>
+        <section class="narrative-summary">
+            <h2>Daily Overview</h2>
+            <p>Today's q-bio.QM submissions showcase cutting-edge applications of advanced machine learning architectures to critical biomedical challenges. Key themes include multimodal integration for disease diagnosis, quantum computing integration with generative models for molecular design, and specialized language models for time-series forecasting. Methodologically, the papers emphasize attention mechanisms, meta-learning frameworks, and hybrid quantum-classical optimization approaches, demonstrating the field's ongoing convergence of deep learning innovations with domain-specific medical and pharmaceutical applications.</p>
+        </section>
+
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th class="rank-col">Rank</th>
+                        <th>Rank</th>
                         <th>Title</th>
                         <th>Authors</th>
                         <th>Published Date</th>
                         <th>TL;DR</th>
                         <th>Keywords</th>
-                        <th class="score-col">Score</th>
+                        <th>Relevance Score</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td class="rank-cell">1</td>
-                        <td>
-                            <div class="paper-title">
-                                <a href="https://arxiv.org/pdf/2602.15451v1" target="_blank">Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer</a>
-                            </div>
+                        <td class="title-cell">
+                            <a href="https://arxiv.org/pdf/2602.15740v1" target="_blank">MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis</a>
                         </td>
-                        <td class="authors">Hayato Kunugi, Mohsen Rahmani, Yosuke Iyama, et al.</td>
-                        <td class="date">2026-02-17</td>
-                        <td class="tldr">A quantum-annealing generative framework using a Neural Hash Function produces drug-like molecules exceeding training data in drug-likeness, outperforming fully-classical models.</td>
-                        <td class="keywords">Quantum Annealing, Neural Hash Function, D-Wave Optimization, Molecular Generative Model, Drug-Likeness Scoring</td>
+                        <td class="authors-cell">Fatemeh Khalvandi, Saadat Izadi, Abdolah Chalechale</td>
+                        <td class="date-cell">2026-02-17</td>
+                        <td class="tldr-cell">Copula-based graph attention network with meta-learning integrates multimodal clinical data for interpretable Alzheimer's diagnosis, achieving 96.87% accuracy on TADPOLE.</td>
+                        <td class="keywords-cell">Graph Attention Network, Copula-based transformation, Meta-learning, Multimodal fusion, Statistical alignment</td>
                         <td class="score-cell">
-                            <span class="score-badge score-high">10</span>
+                            <span class="score-badge score-high">9</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="rank-cell">2</td>
-                        <td>
-                            <div class="paper-title">
-                                <a href="https://arxiv.org/pdf/2602.15677v1" target="_blank">CAMEL: An ECG Language Model for Forecasting Cardiac Events</a>
-                            </div>
+                        <td class="title-cell">
+                            <a href="https://arxiv.org/pdf/2602.15451v1" target="_blank">Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer</a>
                         </td>
-                        <td class="authors">Neelay Velingker, Alaia Solko-Breslin, Mayank Keoliya, et al.</td>
-                        <td class="date">2026-02-17</td>
-                        <td class="tldr">CAMEL combines a specialized ECG encoder with LoRA fine-tuning to become the first ECG language model capable of forecasting future arrhythmias, surpassing supervised baselines.</td>
-                        <td class="keywords">ECG Language Model, LoRA Fine-Tuning, Cardiac Event Forecasting, ECG Signal Encoder, Arrhythmia Benchmark</td>
+                        <td class="authors-cell">Hayato Kunugi, Mohsen Rahmani, Yosuke Iyama et al.</td>
+                        <td class="date-cell">2026-02-17</td>
+                        <td class="tldr-cell">Quantum annealing-enhanced generative model with Neural Hash Function produces drug-like molecules exceeding training data quality, outperforming classical generative models.</td>
+                        <td class="keywords-cell">Quantum annealing, Generative modeling, Neural Hash Function, Molecular design, Stochastic optimization</td>
                         <td class="score-cell">
                             <span class="score-badge score-high">9</span>
                         </td>
                     </tr>
                     <tr>
                         <td class="rank-cell">3</td>
-                        <td>
-                            <div class="paper-title">
-                                <a href="https://arxiv.org/pdf/2602.15740v1" target="_blank">MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis</a>
-                            </div>
+                        <td class="title-cell">
+                            <a href="https://arxiv.org/pdf/2602.15677v1" target="_blank">CAMEL: An ECG Language Model for Forecasting Cardiac Events</a>
                         </td>
-                        <td class="authors">Fatemeh Khalvandi, Saadat Izadi, Abdolah Chalechale</td>
-                        <td class="date">2026-02-17</td>
-                        <td class="tldr">MRC-GAT fuses multimodal patient data via copula-based alignment and relational attention, achieving 96.87% Alzheimer's classification accuracy on TADPOLE.</td>
-                        <td class="keywords">Graph Attention Network, Copula-Based Alignment, Episodic Meta-Learning, Relational Attention, Multimodal Fusion</td>
+                        <td class="authors-cell">Neelay Velingker, Alaia Solko-Breslin, Mayank Keoliya et al.</td>
+                        <td class="date-cell">2026-02-17</td>
+                        <td class="tldr-cell">ECG language model using curriculum learning and LoRA adaptation to forecast cardiac events, achieving SOTA +7.0% on ECGBench and +12.4% over supervised models.</td>
+                        <td class="keywords-cell">Language models, Curriculum learning, LoRA adaptation, Time series forecasting, Signal processing</td>
                         <td class="score-cell">
-                            <span class="score-badge score-high">9</span>
+                            <span class="score-badge score-high">8</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        
-        <section class="narrative">
-            <h2>Narrative Summary</h2>
-            <p>
-                Today's q-bio.QM highlights showcase the integration of advanced machine learning architectures with domain-specific applications. Quantum annealing emerges as a novel approach for molecular generative modeling, producing drug-like compounds beyond training data distributions. Meanwhile, specialized neural encoders and attention mechanisms dominate clinical diagnostics, with breakthroughs in ECG forecasting for cardiac events and multimodal fusion for Alzheimer's disease classification achieving state-of-the-art accuracy.
-            </p>
-        </section>
     </main>
-    
+
     <footer>
-        Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/list/q-bio.QM/recent">arXiv q-bio.QM</a> · 2026-02-18
+        <p>Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/list/q-bio.QM/recent" target="_blank">arXiv q-bio.QM</a> · 2026-02-18T07:03:12Z</p>
     </footer>
 </body>
 </html>
