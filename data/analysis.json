@@ -1,5 +1,61 @@
 [
   {
+    "id": "2602.14828v1",
+    "title": "Exploring the limits of pre-trained embeddings in machine-guided protein design: a case study on predicting AAV vector viability",
+    "authors": [
+      "Ana F. Rodrigues",
+      "Lucas Ferraz",
+      "Laura Balbi",
+      "Pedro Giesteira Cotovio",
+      "Catia Pesquita"
+    ],
+    "published_date": "2026-02-16T15:21:11Z",
+    "abstract": "Effective representations of protein sequences are widely recognized as a cornerstone of machine learning-based protein design. Yet, protein bioengineering poses unique challenges for sequence representation, as experimental datasets typically feature few mutations, which are either sparsely distributed across the entire sequence or densely concentrated within localized regions. This limits the ability of sequence-level representations to extract functionally meaningful signals. In addition, comprehensive comparative studies remain scarce, despite their crucial role in clarifying which representations best encode relevant information and ultimately support superior predictive performance. In this study, we systematically evaluate multiple ProtBERT and ESM2 embedding variants as sequence representations, using the adeno-associated virus capsid as a case study and prototypical example of bioengineering, where functional optimization is targeted through highly localized sequence variation within an otherwise large protein. Our results reveal that, prior to fine-tuning, amino acid-level embeddings outperform sequence-level representations in supervised predictive tasks, whereas the latter tend to be more effective in unsupervised settings. However, optimal performance is only achieved when embeddings are fine-tuned with task-specific labels, with sequence-level representations providing the best performance. Moreover, our findings indicate that the extent of sequence variation required to produce notable shifts in sequence representations exceeds what is typically explored in bioengineering studies, showing the need for fine-tuning in datasets characterized by sparse or highly localized mutations.",
+    "pdf_link": "https://arxiv.org/pdf/2602.14828v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "affiliations": [
+      "Unknown"
+    ],
+    "tldr": "Systematic evaluation of ProtBERT and ESM2 embeddings for protein design reveals that amino acid-level representations outperform sequence-level ones before fine-tuning, but fine-tuned sequence embeddings achieve optimal performance for localized mutation prediction tasks.",
+    "keywords": [
+      "Protein Embeddings",
+      "ProtBERT",
+      "ESM2",
+      "Protein Design",
+      "Fine-Tuning"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2602.16504v1",
+    "title": "GRIMM: Genetic stRatification for Inference in Molecular Modeling",
+    "authors": [
+      "Ashley Babjac",
+      "Adrienne Hoarfrost"
+    ],
+    "published_date": "2026-02-18T14:46:18Z",
+    "abstract": "The vast majority of biological sequences encode unknown functions and bear little resemblance to experimentally characterized proteins, limiting both our understanding of biology and our ability to harness functional potential for the bioeconomy. Predicting enzyme function from sequence remains a central challenge in computational biology, complicated by low sequence diversity and imbalanced label support in publicly available datasets. Models trained on these data can overestimate performance and fail to generalize. To address this, we introduce GRIMM (Genetic stRatification for Inference in Molecular Modeling), a benchmark for enzyme function prediction that employs genetic stratification: sequences are clustered by similarity and clusters are assigned exclusively to training, validation, or test sets. This ensures that sequences from the same cluster do not appear in multiple partitions. GRIMM produces multiple test sets: a closed-set test with the same label distribution as training (Test-1) and an open-set test containing novel labels (Test-2), serving as a realistic out-of-distribution proxy for discovering novel enzyme functions. While demonstrated on enzymes, this approach is generalizable to any sequence-based classification task where inputs can be clustered by similarity. By formalizing a splitting strategy often used implicitly, GRIMM provides a unified and reproducible framework for closed- and open-set evaluation. The method is lightweight, requiring only sequence clustering and label annotations, and can be adapted to different similarity thresholds, data scales, and biological tasks. GRIMM enables more realistic evaluation of functional prediction models on both familiar and unseen classes and establishes a benchmark that more faithfully assesses model performance and generalizability.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16504v1",
+    "categories": [
+      "q-bio.QM"
+    ],
+    "affiliations": [
+      "Unknown"
+    ],
+    "tldr": "GRIMM introduces a genetic stratification framework for enzyme function prediction that clusters sequences by similarity and partitions them across training/validation/test sets to enable rigorous closed-set and open-set evaluation of generalization performance.",
+    "keywords": [
+      "Sequence Clustering",
+      "Enzyme Function Prediction",
+      "Genetic Stratification",
+      "Out-Of-Distribution Evaluation",
+      "Sequence-Based Classification"
+    ],
+    "relevance_score": 9
+  },
+  {
     "id": "2602.15451v1",
     "title": "Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer",
     "authors": [
@@ -9,7 +65,7 @@
       "Yutaro Hirono",
       "Akira Suma",
       "Matthew Woolway",
-      "Vladimir Vargas-Calderón",
+      "Vladimir Vargas-Calder\u00f3n",
       "William Kim",
       "Kevin Chern",
       "Mohammad Amin",
@@ -24,41 +80,77 @@
       "cs.LG",
       "quant-ph"
     ],
-    "affiliations": ["Unknown"],
-    "tldr": "Quantum annealing integrated with a Neural Hash Function binarization scheme drives a generative AI model to produce drug-like molecules exceeding training data quality.",
-    "keywords": [
-      "quantum annealing",
-      "Neural Hash Function",
-      "D-Wave binarization",
-      "stochastic molecular design",
-      "drug-likeness optimization"
+    "affiliations": [
+      "Unknown"
     ],
-    "relevance_score": 10
+    "tldr": "A quantum annealing-enhanced deep generative model with novel Neural Hash Functions generates drug-like molecules exceeding training data quality by bridging continuous and discrete representations for improved molecular design.",
+    "keywords": [
+      "Quantum Annealing",
+      "Generative Models",
+      "Molecular Design",
+      "Neural Hash Function",
+      "Drug Discovery"
+    ],
+    "relevance_score": 9
   },
   {
-    "id": "2602.15740v1",
-    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
+    "id": "2602.16696v1",
+    "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
     "authors": [
-      "Fatemeh Khalvandi",
-      "Saadat Izadi",
-      "Abdolah Chalechale"
+      "Huan Souza",
+      "Pankaj Mehta"
     ],
-    "published_date": "2026-02-17T17:15:32Z",
-    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
-    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
+    "published_date": "2026-02-18T18:42:29Z",
+    "abstract": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16696v1",
     "categories": [
+      "q-bio.GN",
       "cs.LG",
-      "cs.AI",
       "q-bio.QM"
     ],
-    "affiliations": ["Unknown"],
-    "tldr": "A novel graph attention network combining copula-based statistical alignment and episodic meta-learning achieves state-of-the-art Alzheimer's disease classification (96.87% accuracy) by integrating multimodal patient data through relational attention mechanisms.",
+    "affiliations": [
+      "Unknown"
+    ],
+    "tldr": "Simple linear methods and normalization achieve state-of-the-art performance on single-cell RNA-seq classification tasks, outperforming computationally expensive transformer-based foundation models on out-of-distribution benchmarks.",
     "keywords": [
-      "graph attention network",
-      "copula-based transformation",
-      "episodic meta-learning",
-      "relational attention mechanism",
-      "multimodal fusion"
+      "Linear Methods",
+      "Normalization",
+      "Cell-Type Classification",
+      "Generative Models",
+      "Single-Cell RNA-Seq"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2602.16004v1",
+    "title": "Time-Varying Directed Interactions in Functional Brain Networks: Modeling and Validation",
+    "authors": [
+      "Nan Xu",
+      "Xiaodi Zhang",
+      "Wen-Ju Pan",
+      "Jeremy L. Smith",
+      "Eric H. Schumacher",
+      "Jason W. Allen",
+      "Vince D. Calhoun",
+      "Shella D. Keilholz"
+    ],
+    "published_date": "2026-02-17T20:51:07Z",
+    "abstract": "Understanding the dynamic nature of brain connectivity is critical for elucidating neural processing, behavior, and brain disorders. Traditional approaches such as sliding-window correlation (SWC) characterize time-varying undirected associations but do not resolve directional interactions, limiting inference about time-resolved information flow in brain networks. We introduce sliding-window prediction correlation (SWpC), which embeds a directional linear time-invariant (LTI) model within each sliding window to estimate time-varying directed functional connectivity (FC). SWpC yields two complementary descriptors of directed interactions: a strength measure (prediction correlation) and a duration measure (window-wise duration of information transfer). Using concurrent local field potential (LFP) and fMRI BOLD recordings from rat somatosensory cortices, we demonstrate stable directionality estimates in both LFP band-limited power and BOLD. Using Human Connectome Project (HCP) motor task fMRI, SWpC detects significant task-evoked changes in directed FC strength and duration and shows higher sensitivity than SWC for identifying task-evoked connectivity differences. Finally, in post-concussion vestibular dysfunction (PCVD), SWpC reveals reproducible vestibular-multisensory brain-state shifts and improves healthy-control vs subacute patient (HC-ST) discrimination using state-derived features. Together, these results show that SWpC provides biologically interpretable, time-resolved directed connectivity patterns across multimodal validation and clinical application settings, supporting both basic and translational neuroscience.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16004v1",
+    "categories": [
+      "q-bio.NC",
+      "q-bio.QM"
+    ],
+    "affiliations": [
+      "Unknown"
+    ],
+    "tldr": "Sliding-window prediction correlation (SWpC) embeds linear time-invariant models to estimate time-varying directed functional connectivity in brain networks, outperforming traditional correlation methods for detecting task-evoked changes and clinical brain-state shifts.",
+    "keywords": [
+      "Directed Functional Connectivity",
+      "Sliding-Window Correlation",
+      "Linear Time-Invariant Model",
+      "Network Analysis",
+      "Brain Dynamics"
     ],
     "relevance_score": 9
   },
@@ -86,42 +178,45 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "affiliations": ["Unknown"],
-    "tldr": "CAMEL, the first ECG language model for cardiac event forecasting, combines LoRA adaptation and curriculum learning to achieve +21.1% improvement over zero-shot baselines on arrhythmia prediction.",
-    "keywords": [
-      "ECG language model",
-      "LoRA adaptation",
-      "curriculum learning",
-      "time series forecasting",
-      "specialized encoder"
+    "affiliations": [
+      "Unknown"
     ],
-    "relevance_score": 9
+    "tldr": "CAMEL is the first ECG language model capable of forecasting cardiac events using a specialized encoder and curriculum learning with LoRA adaptation, achieving state-of-the-art performance on classification and forecasting benchmarks.",
+    "keywords": [
+      "Language Models",
+      "ECG Classification",
+      "LoRA Adaptation",
+      "Curriculum Learning",
+      "Time Series Forecasting"
+    ],
+    "relevance_score": 8
   },
   {
-    "id": "2602.14828v1",
-    "title": "Exploring the limits of pre-trained embeddings in machine-guided protein design: a case study on predicting AAV vector viability",
+    "id": "2602.15740v1",
+    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
     "authors": [
-      "Ana F. Rodrigues",
-      "Lucas Ferraz",
-      "Laura Balbi",
-      "Pedro Giesteira Cotovio",
-      "Catia Pesquita"
+      "Fatemeh Khalvandi",
+      "Saadat Izadi",
+      "Abdolah Chalechale"
     ],
-    "published_date": "2026-02-16T15:21:11Z",
-    "abstract": "Effective representations of protein sequences are widely recognized as a cornerstone of machine learning-based protein design. Yet, protein bioengineering poses unique challenges for sequence representation, as experimental datasets typically feature few mutations, which are either sparsely distributed across the entire sequence or densely concentrated within localized regions. This limits the ability of sequence-level representations to extract functionally meaningful signals. In addition, comprehensive comparative studies remain scarce, despite their crucial role in clarifying which representations best encode relevant information and ultimately support superior predictive performance. In this study, we systematically evaluate multiple ProtBERT and ESM2 embedding variants as sequence representations, using the adeno-associated virus capsid as a case study and prototypical example of bioengineering, where functional optimization is targeted through highly localized sequence variation within an otherwise large protein. Our results reveal that, prior to fine-tuning, amino acid-level embeddings outperform sequence-level representations in supervised predictive tasks, whereas the latter tend to be more effective in unsupervised settings. However, optimal performance is only achieved when embeddings are fine-tuned with task-specific labels, with sequence-level representations providing the best performance. Moreover, our findings indicate that the extent of sequence variation required to produce notable shifts in sequence representations exceeds what is typically explored in bioengineering studies, showing the need for fine-tuning in datasets characterized by sparse or highly localized mutations.",
-    "pdf_link": "https://arxiv.org/pdf/2602.14828v1",
+    "published_date": "2026-02-17T17:15:32Z",
+    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
+    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
     "categories": [
-      "q-bio.QM",
-      "cs.LG"
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
     ],
-    "affiliations": ["Unknown"],
-    "tldr": "A systematic evaluation of ProtBERT and ESM2 embedding variants for protein sequence representation reveals that fine-tuned sequence-level embeddings achieve optimal performance for AAV vector viability prediction, especially with sparse or localized mutations.",
+    "affiliations": [
+      "Unknown"
+    ],
+    "tldr": "A meta-relational graph attention network using copula-based similarity alignment integrates multimodal features (risk factors, cognitive scores, MRI) to achieve state-of-the-art Alzheimer's disease classification with interpretable diagnosis.",
     "keywords": [
-      "protein embeddings",
-      "ProtBERT",
-      "ESM2",
-      "fine-tuning",
-      "sequence representation"
+      "Graph Attention Network",
+      "Copula-Based Alignment",
+      "Meta-Learning",
+      "Multimodal Integration",
+      "Alzheimer's Diagnosis"
     ],
     "relevance_score": 8
   },
@@ -132,10 +227,10 @@
       "Richard D. Paul",
       "Anton Stratmann",
       "Johann F. Jadebeck",
-      "Martin Beyß",
+      "Martin Bey\u00df",
       "Hanno Scharr",
-      "David Rügamer",
-      "Katharina Nöh"
+      "David R\u00fcgamer",
+      "Katharina N\u00f6h"
     ],
     "published_date": "2026-02-16T10:20:52Z",
     "abstract": "Markov chain Monte Carlo (MCMC) sampling of densities restricted to linearly constrained domains is an important task arising in Bayesian treatment of inverse problems in the natural sciences. While efficient algorithms for uniform polytope sampling exist, much less work has dealt with more complex constrained densities. In particular, gradient information as used in unconstrained MCMC is not necessarily helpful in the constrained case, where the gradient may push the proposal's density out of the polytope. In this work, we propose a novel constrained sampling algorithm, which combines strengths of higher-order information, like the target's log-density's gradients and curvature, with the Hit-&-Run proposal, a simple mechanism which guarantees the generation of feasible proposals, fulfilling the linear constraints. Our extensive experiments demonstrate improved sampling efficiency on complex constrained densities over various constrained and unconstrained samplers.",
@@ -145,38 +240,46 @@
       "q-bio.QM",
       "stat.AP"
     ],
-    "affiliations": ["Unknown"],
-    "tldr": "A novel constrained MCMC sampling algorithm combines higher-order gradient and curvature information with Hit-&-Run proposals to efficiently sample from complex densities on linearly constrained domains arising in Bayesian inverse problems.",
-    "keywords": [
-      "Markov chain Monte Carlo",
-      "Hit-&-Run sampler",
-      "constrained sampling",
-      "Bayesian inverse problems",
-      "polytope sampling"
+    "affiliations": [
+      "Unknown"
     ],
-    "relevance_score": 8
+    "tldr": "A novel MCMC sampler combines higher-order gradient and curvature information with Hit-&-Run proposals to efficiently sample complex densities restricted to linearly constrained polytopes for Bayesian inverse problems.",
+    "keywords": [
+      "Markov Chain Monte Carlo",
+      "Constrained Sampling",
+      "Hit-And-Run",
+      "Bayesian Inference",
+      "Gradient-Based Methods"
+    ],
+    "relevance_score": 7
   },
   {
-    "id": "2602.14328v1",
-    "title": "Conformational landscapes in cryo-ET data based on MD simulations",
+    "id": "2602.16357v1",
+    "title": "Optical Inversion and Spectral Unmixing of Spectroscopic Photoacoustic Images with Physics-Informed Neural Networks",
     "authors": [
-      "Slavica Jonic"
+      "Sarkis Ter Martirosyan",
+      "Xinyue Huang",
+      "David Qin",
+      "Anthony Yu",
+      "Stanislav Emelianov"
     ],
-    "published_date": "2026-02-15T22:51:11Z",
-    "abstract": "Cryo-electron tomography (cryo-ET) provides a unique window into molecular organization in cellular environments (in situ). However, the interpretation of molecular structural information is complicated by several intrinsic properties of cryo-ET data, such as noise, missing wedge, and continuous conformational variability of the molecules. Additionally, in crowded in situ environments, the number of particles extracted is sometimes small and precludes extensive classification into discrete states. These challenges shift the emphasis from high-resolution structure determination toward validation and interpretation of low-resolution density maps, and analysis of conformational flexibility. Molecular Dynamics (MD) simulations are particularly well suited to this task, as they provide a physically grounded way to explore continuous conformation transitions consistent with both experimental data and molecular energetics. This review focuses on the roles of MD simulations in cryo-ET, emphasizing their use in emerging methods for conformational landscape determination and their contribution to gain new biological insight.",
-    "pdf_link": "https://arxiv.org/pdf/2602.14328v1",
+    "published_date": "2026-02-18T10:44:45Z",
+    "abstract": "Accurate estimation of the relative concentrations of chromophores in a spectroscopic photoacoustic (sPA) image can reveal immense structural, functional, and molecular information about physiological processes. However, due to nonlinearities and ill-posedness inherent to sPA imaging, concentration estimation is intractable. The Spectroscopic Photoacoustic Optical Inversion Autoencoder (SPOI-AE) aims to address the sPA optical inversion and spectral unmixing problems without assuming linearity. Herein, SPOI-AE was trained and tested on \\textit{in vivo} mouse lymph node sPA images with unknown ground truth chromophore concentrations. SPOI-AE better reconstructs input sPA pixels than conventional algorithms while providing biologically coherent estimates for optical parameters, chromophore concentrations, and the percent oxygen saturation of tissue. SPOI-AE's unmixing accuracy was validated using a simulated mouse lymph node phantom ground truth.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16357v1",
     "categories": [
-      "q-bio.BM",
+      "cs.LG",
       "q-bio.QM"
     ],
-    "affiliations": ["Unknown"],
-    "tldr": "Molecular Dynamics simulations provide a physically grounded approach to analyze continuous conformational flexibility and validate low-resolution density maps from cryo-electron tomography data, enabling conformational landscape determination despite data limitations.",
+    "affiliations": [
+      "Unknown"
+    ],
+    "tldr": "A physics-informed autoencoder addresses nonlinear optical inversion and spectral unmixing in photoacoustic imaging, estimating chromophore concentrations and oxygen saturation without assuming linearity.",
     "keywords": [
-      "Molecular Dynamics",
-      "cryo-electron tomography",
-      "conformational analysis",
-      "density map validation",
-      "continuous variability"
+      "Physics-Informed Neural Networks",
+      "Autoencoder",
+      "Spectral Unmixing",
+      "Optical Inversion",
+      "Photoacoustic Imaging"
     ],
     "relevance_score": 7
   }
