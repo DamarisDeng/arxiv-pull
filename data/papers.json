@@ -1,5 +1,133 @@
 [
   {
+    "id": "2602.16696v1",
+    "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
+    "authors": [
+      "Huan Souza",
+      "Pankaj Mehta"
+    ],
+    "published_date": "2026-02-18T18:42:29Z",
+    "abstract": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16696v1",
+    "categories": [
+      "q-bio.GN",
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "affiliations": [
+      "Unknown"
+    ]
+  },
+  {
+    "id": "2602.16504v1",
+    "title": "GRIMM: Genetic stRatification for Inference in Molecular Modeling",
+    "authors": [
+      "Ashley Babjac",
+      "Adrienne Hoarfrost"
+    ],
+    "published_date": "2026-02-18T14:46:18Z",
+    "abstract": "The vast majority of biological sequences encode unknown functions and bear little resemblance to experimentally characterized proteins, limiting both our understanding of biology and our ability to harness functional potential for the bioeconomy. Predicting enzyme function from sequence remains a central challenge in computational biology, complicated by low sequence diversity and imbalanced label support in publicly available datasets. Models trained on these data can overestimate performance and fail to generalize. To address this, we introduce GRIMM (Genetic stRatification for Inference in Molecular Modeling), a benchmark for enzyme function prediction that employs genetic stratification: sequences are clustered by similarity and clusters are assigned exclusively to training, validation, or test sets. This ensures that sequences from the same cluster do not appear in multiple partitions. GRIMM produces multiple test sets: a closed-set test with the same label distribution as training (Test-1) and an open-set test containing novel labels (Test-2), serving as a realistic out-of-distribution proxy for discovering novel enzyme functions. While demonstrated on enzymes, this approach is generalizable to any sequence-based classification task where inputs can be clustered by similarity. By formalizing a splitting strategy often used implicitly, GRIMM provides a unified and reproducible framework for closed- and open-set evaluation. The method is lightweight, requiring only sequence clustering and label annotations, and can be adapted to different similarity thresholds, data scales, and biological tasks. GRIMM enables more realistic evaluation of functional prediction models on both familiar and unseen classes and establishes a benchmark that more faithfully assesses model performance and generalizability.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16504v1",
+    "categories": [
+      "q-bio.QM"
+    ],
+    "affiliations": [
+      "Unknown"
+    ]
+  },
+  {
+    "id": "2602.16357v1",
+    "title": "Optical Inversion and Spectral Unmixing of Spectroscopic Photoacoustic Images with Physics-Informed Neural Networks",
+    "authors": [
+      "Sarkis Ter Martirosyan",
+      "Xinyue Huang",
+      "David Qin",
+      "Anthony Yu",
+      "Stanislav Emelianov"
+    ],
+    "published_date": "2026-02-18T10:44:45Z",
+    "abstract": "Accurate estimation of the relative concentrations of chromophores in a spectroscopic photoacoustic (sPA) image can reveal immense structural, functional, and molecular information about physiological processes. However, due to nonlinearities and ill-posedness inherent to sPA imaging, concentration estimation is intractable. The Spectroscopic Photoacoustic Optical Inversion Autoencoder (SPOI-AE) aims to address the sPA optical inversion and spectral unmixing problems without assuming linearity. Herein, SPOI-AE was trained and tested on \\textit{in vivo} mouse lymph node sPA images with unknown ground truth chromophore concentrations. SPOI-AE better reconstructs input sPA pixels than conventional algorithms while providing biologically coherent estimates for optical parameters, chromophore concentrations, and the percent oxygen saturation of tissue. SPOI-AE's unmixing accuracy was validated using a simulated mouse lymph node phantom ground truth.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16357v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "affiliations": [
+      "Unknown"
+    ]
+  },
+  {
+    "id": "2602.16749v1",
+    "title": "U-FedTomAtt: Ultra-lightweight Federated Learning with Attention for Tomato Disease Recognition",
+    "authors": [
+      "Romiyal George",
+      "Sathiyamohan Nishankar",
+      "Selvarajah Thuseethan",
+      "Chathrie Wimalasooriya",
+      "Yakub Sebastian",
+      "Roshan G. Ragel",
+      "Zhongwei Liang"
+    ],
+    "published_date": "2026-02-18T05:00:38Z",
+    "abstract": "Federated learning has emerged as a privacy-preserving and efficient approach for deploying intelligent agricultural solutions. Accurate edge-based diagnosis across geographically dispersed farms is crucial for recognising tomato diseases in sustainable farming. Traditional centralised training aggregates raw data on a central server, leading to communication overhead, privacy risks and latency. Meanwhile, edge devices require lightweight networks to operate effectively within limited resources. In this paper, we propose U-FedTomAtt, an ultra-lightweight federated learning framework with attention for tomato disease recognition in resource-constrained and distributed environments. The model comprises only 245.34K parameters and 71.41 MFLOPS. First, we propose an ultra-lightweight neural network with dilated bottleneck (DBNeck) modules and a linear transformer to minimise computational and memory overhead. To mitigate potential accuracy loss, a novel local-global residual attention (LoGRA) module is incorporated. Second, we propose the federated dual adaptive weight aggregation (FedDAWA) algorithm that enhances global model accuracy. Third, our framework is validated using three benchmark datasets for tomato diseases under simulated federated settings. Experimental results show that the proposed method achieves 0.9910% and 0.9915% Top-1 accuracy and 0.9923% and 0.9897% F1-scores on SLIF-Tomato and PlantVillage tomato datasets, respectively.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16749v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "affiliations": [
+      "Unknown"
+    ]
+  },
+  {
+    "id": "2602.16737v1",
+    "title": "Exploring the Utility of MALDI-TOF Mass Spectrometry and Antimicrobial Resistance in Hospital Outbreak Detection",
+    "authors": [
+      "Chang Liu",
+      "Jieshi Chen",
+      "Alexander J. Sundermann",
+      "Kathleen Shutt",
+      "Marissa P. Griffith",
+      "Lora Lee Pless",
+      "Lee H. Harrison",
+      "Artur W. Dubrawski"
+    ],
+    "published_date": "2026-02-17T20:59:31Z",
+    "abstract": "Accurate and timely identification of hospital outbreak clusters is crucial for preventing the spread of infections that have epidemic potential. While assessing pathogen similarity through whole genome sequencing (WGS) is considered the gold standard for outbreak detection, its high cost and lengthy turnaround time preclude routine implementation in clinical laboratories. We explore the utility of two rapid and cost-effective alternatives to WGS, matrix-assisted laser desorption ionization-time of flight (MALDI-TOF) mass spectrometry and antimicrobial resistance (AR) patterns. We develop a machine learning framework that extracts informative representations from MALDI-TOF spectra and AR patterns for outbreak detection and explore their fusion. Through multi-species analyses, we demonstrate that in some cases MALDI-TOF and AR have the potential to reduce reliance on WGS, enabling more accessible and rapid outbreak surveillance.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16737v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "affiliations": [
+      "Unknown"
+    ]
+  },
+  {
+    "id": "2602.16004v1",
+    "title": "Time-Varying Directed Interactions in Functional Brain Networks: Modeling and Validation",
+    "authors": [
+      "Nan Xu",
+      "Xiaodi Zhang",
+      "Wen-Ju Pan",
+      "Jeremy L. Smith",
+      "Eric H. Schumacher",
+      "Jason W. Allen",
+      "Vince D. Calhoun",
+      "Shella D. Keilholz"
+    ],
+    "published_date": "2026-02-17T20:51:07Z",
+    "abstract": "Understanding the dynamic nature of brain connectivity is critical for elucidating neural processing, behavior, and brain disorders. Traditional approaches such as sliding-window correlation (SWC) characterize time-varying undirected associations but do not resolve directional interactions, limiting inference about time-resolved information flow in brain networks. We introduce sliding-window prediction correlation (SWpC), which embeds a directional linear time-invariant (LTI) model within each sliding window to estimate time-varying directed functional connectivity (FC). SWpC yields two complementary descriptors of directed interactions: a strength measure (prediction correlation) and a duration measure (window-wise duration of information transfer). Using concurrent local field potential (LFP) and fMRI BOLD recordings from rat somatosensory cortices, we demonstrate stable directionality estimates in both LFP band-limited power and BOLD. Using Human Connectome Project (HCP) motor task fMRI, SWpC detects significant task-evoked changes in directed FC strength and duration and shows higher sensitivity than SWC for identifying task-evoked connectivity differences. Finally, in post-concussion vestibular dysfunction (PCVD), SWpC reveals reproducible vestibular-multisensory brain-state shifts and improves healthy-control vs subacute patient (HC-ST) discrimination using state-derived features. Together, these results show that SWpC provides biologically interpretable, time-resolved directed connectivity patterns across multimodal validation and clinical application settings, supporting both basic and translational neuroscience.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16004v1",
+    "categories": [
+      "q-bio.NC",
+      "q-bio.QM"
+    ],
+    "affiliations": [
+      "Unknown"
+    ]
+  },
+  {
     "id": "2602.15740v1",
     "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
     "authors": [
@@ -14,6 +142,9 @@
       "cs.LG",
       "cs.AI",
       "q-bio.QM"
+    ],
+    "affiliations": [
+      "Unknown"
     ]
   },
   {
@@ -39,6 +170,9 @@
     "categories": [
       "cs.LG",
       "q-bio.QM"
+    ],
+    "affiliations": [
+      "Unknown"
     ]
   },
   {
@@ -65,6 +199,9 @@
       "cs.AI",
       "cs.LG",
       "quant-ph"
+    ],
+    "affiliations": [
+      "Unknown"
     ]
   }
 ]
