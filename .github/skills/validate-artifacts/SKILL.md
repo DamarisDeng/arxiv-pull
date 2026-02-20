@@ -11,16 +11,15 @@ Run the following checks before proceeding to deployment.
 - [ ] File exists and is non-empty
 - [ ] Valid JSON — parses without errors
 - [ ] Top-level value is an array (may be empty `[]` if no papers today)
-- [ ] Each object has all required fields: `id`, `title`, `authors`, `published_date`, `abstract`, `pdf_link`, `categories`, `affiliations`
+- [ ] Each object has all required fields: `id`, `title`, `authors`, `published_date`, `abstract`, `pdf_link`, `categories`
 - [ ] `published_date` values are within the last 4 days (3-day retention window + buffer)
-- [ ] `affiliations` is an array of strings (may contain `"Unknown"`)
 
 ### `data/analysis.json`
 - [ ] File exists and is non-empty
 - [ ] Valid JSON — parses without errors
 - [ ] Top-level value is an array with the same length as `papers.json`
 - [ ] Each object contains all fields from `papers.json` plus: `tldr`, `keywords`, `relevance_score`
-- [ ] All original fields including `affiliations` are preserved
+- [ ] All original fields are preserved
 - [ ] `relevance_score` is an integer between 0 and 10 inclusive
 - [ ] `keywords` is an array of at most 5 strings
 - [ ] Array is sorted by `relevance_score` descending

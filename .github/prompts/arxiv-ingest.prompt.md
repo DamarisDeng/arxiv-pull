@@ -21,12 +21,10 @@ These instructions guide the `arxiv-ingest` agent when fetching and normalizing 
 
 ## Output Quality
 
-- Every paper in `data/papers.json` must have all 8 required fields: `id`, `title`, `authors`, `published_date`, `abstract`, `pdf_link`, `categories`, `affiliations`.
+- Every paper in `data/papers.json` must have all 7 required fields: `id`, `title`, `authors`, `published_date`, `abstract`, `pdf_link`, `categories`.
 - Fields with missing data should be `null`, not omitted or set to empty string.
 - `authors` must always be an array, even for single-author papers.
 - `pdf_link` must always point to `https://arxiv.org/pdf/<id>` (use HTTPS).
-- `affiliations` must always be an array. If the arXiv API provides no affiliation data, set to `["Unknown"]`.
-
 ## Logging
 
 At the end of the ingest step, print a one-line summary:
