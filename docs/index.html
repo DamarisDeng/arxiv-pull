@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-Bio Watchtower - Daily arXiv q-bio.QM Digest</title>
+    <title>Q-Bio Watchtower — Daily arXiv q-bio.QM Digest</title>
     <style>
         * {
             margin: 0;
@@ -23,28 +23,30 @@
             color: #ffffff;
             padding: 2rem 1rem;
             text-align: center;
+            margin-bottom: 2rem;
         }
         
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 600;
         }
         
         header .subtitle {
             font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 0.25rem;
+            color: #ecf0f1;
+            margin-bottom: 0.3rem;
         }
         
-        header .paper-count {
+        header .meta {
             font-size: 0.95rem;
-            opacity: 0.8;
+            color: #bdc3c7;
         }
         
         main {
             max-width: 1400px;
-            margin: 2rem auto;
-            padding: 0 1rem;
+            margin: 0 auto;
+            padding: 0 1rem 2rem 1rem;
         }
         
         .narrative-summary {
@@ -57,23 +59,19 @@
         
         .narrative-summary h2 {
             font-size: 1.4rem;
-            margin-bottom: 0.75rem;
             color: #2c3e50;
+            margin-bottom: 1rem;
         }
         
         .narrative-summary p {
-            font-size: 1.05rem;
+            font-size: 1rem;
             line-height: 1.8;
+            color: #333;
         }
         
-        .papers-section {
+        .table-container {
+            overflow-x: auto;
             margin-bottom: 2rem;
-        }
-        
-        .papers-section h2 {
-            font-size: 1.6rem;
-            margin-bottom: 1rem;
-            color: #2c3e50;
         }
         
         table {
@@ -88,28 +86,17 @@
             color: #ffffff;
         }
         
-        th {
+        thead th {
             padding: 1rem 0.75rem;
             text-align: left;
             font-weight: 600;
-            font-size: 0.95rem;
-            border: 1px solid #ddd;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
-        th.rank-col { width: 5%; }
-        th.title-col { width: 20%; }
-        th.authors-col { width: 15%; }
-        th.affiliations-col { width: 10%; }
-        th.date-col { width: 10%; }
-        th.tldr-col { width: 25%; }
-        th.keywords-col { width: 10%; }
-        th.score-col { width: 5%; }
-        
-        td {
-            padding: 0.875rem 0.75rem;
-            border: 1px solid #ddd;
-            font-size: 0.9rem;
-            vertical-align: top;
+        tbody tr {
+            border-bottom: 1px solid #ddd;
         }
         
         tbody tr:nth-child(odd) {
@@ -121,54 +108,80 @@
         }
         
         tbody tr:hover {
-            background-color: #f0f8ff;
+            background-color: #ecf0f1;
         }
         
-        .paper-title {
+        tbody td {
+            padding: 1rem 0.75rem;
+            font-size: 0.9rem;
+            vertical-align: top;
+            border: 1px solid #ddd;
+        }
+        
+        .rank-cell {
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+            width: 50px;
+        }
+        
+        .title-cell {
+            min-width: 200px;
+        }
+        
+        .title-cell a {
             color: #3498db;
             text-decoration: none;
             font-weight: 500;
-            display: block;
-            line-height: 1.4;
         }
         
-        .paper-title:hover {
+        .title-cell a:hover {
             text-decoration: underline;
-            color: #2980b9;
         }
         
-        .authors {
+        .authors-cell {
+            min-width: 150px;
+            font-size: 0.85rem;
             color: #555;
         }
         
-        .affiliations {
+        .affiliations-cell {
+            min-width: 100px;
+            font-size: 0.85rem;
             color: #666;
-            font-style: italic;
-            font-size: 0.85rem;
         }
         
-        .date {
-            color: #555;
+        .date-cell {
+            min-width: 100px;
             font-size: 0.85rem;
+            white-space: nowrap;
         }
         
-        .tldr {
+        .tldr-cell {
+            min-width: 250px;
+            font-size: 0.85rem;
             line-height: 1.5;
         }
         
-        .keywords {
-            color: #666;
-            font-size: 0.85rem;
+        .keywords-cell {
+            min-width: 150px;
+            font-size: 0.8rem;
+            color: #555;
+            font-style: italic;
+        }
+        
+        .score-cell {
+            text-align: center;
+            width: 80px;
         }
         
         .score-badge {
             display: inline-block;
-            padding: 0.25rem 0.6rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 12px;
             font-weight: 600;
             font-size: 0.9rem;
             color: #ffffff;
-            text-align: center;
         }
         
         .score-high {
@@ -185,145 +198,147 @@
         
         footer {
             background-color: #2c3e50;
-            color: #ffffff;
+            color: #ecf0f1;
             text-align: center;
             padding: 1.5rem 1rem;
-            margin-top: 3rem;
             font-size: 0.9rem;
         }
         
-        footer .separator {
-            margin: 0 0.5rem;
-            opacity: 0.5;
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Q-Bio Watchtower</h1>
-        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-02-19 UTC</div>
-        <div class="paper-count">9 papers · Feb 16–18, 2026</div>
+        <p class="subtitle">Daily arXiv q-bio.QM Digest — 2026-02-19 UTC</p>
+        <p class="meta">9 papers analyzed | Date range: 2026-02-17 to 2026-02-18</p>
     </header>
     
     <main>
-        <section class="papers-section">
-            <h2>Ranked Papers</h2>
+        <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th class="rank-col">Rank</th>
-                        <th class="title-col">Title</th>
-                        <th class="authors-col">Authors</th>
-                        <th class="affiliations-col">Affiliations</th>
-                        <th class="date-col">Published Date</th>
-                        <th class="tldr-col">TL;DR</th>
-                        <th class="keywords-col">Keywords</th>
-                        <th class="score-col">Score</th>
+                        <th class="rank-cell">Rank</th>
+                        <th class="title-cell">Title</th>
+                        <th class="authors-cell">Authors</th>
+                        <th class="affiliations-cell">Affiliations</th>
+                        <th class="date-cell">Published Date</th>
+                        <th class="tldr-cell">TL;DR</th>
+                        <th class="keywords-cell">Keywords</th>
+                        <th class="score-cell">Score</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1</td>
-                        <td><a href="https://arxiv.org/pdf/2602.14828v1" target="_blank" class="paper-title">Exploring the limits of pre-trained embeddings in machine-guided protein design: a case study on predicting AAV vector viability</a></td>
-                        <td class="authors">Ana F. Rodrigues, Lucas Ferraz, Laura Balbi, et al.</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-16</td>
-                        <td class="tldr">Systematic evaluation of ProtBERT and ESM2 embeddings for protein design reveals that amino acid-level representations outperform sequence-level ones before fine-tuning, but fine-tuned sequence embeddings achieve optimal performance for localized mutation prediction tasks.</td>
-                        <td class="keywords">Protein Embeddings, ProtBERT, ESM2, Protein Design, Fine-Tuning</td>
-                        <td><span class="score-badge score-high">9</span></td>
+                        <td class="rank-cell">1</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.16504v1" target="_blank">GRIMM: Genetic stRatification for Inference in Molecular Modeling</a></td>
+                        <td class="authors-cell">Ashley Babjac, Adrienne Hoarfrost</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-18</td>
+                        <td class="tldr-cell">GRIMM uses genetic stratification to cluster sequences by similarity into exclusive train-test splits, enabling rigorous closed- and open-set evaluation for enzyme function prediction.</td>
+                        <td class="keywords-cell">GRIMM, Test-1, Test-2, Enzyme Commission, Genetic Stratification</td>
+                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
                     </tr>
                     <tr>
-                        <td>2</td>
-                        <td><a href="https://arxiv.org/pdf/2602.16504v1" target="_blank" class="paper-title">GRIMM: Genetic stRatification for Inference in Molecular Modeling</a></td>
-                        <td class="authors">Ashley Babjac, Adrienne Hoarfrost</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-18</td>
-                        <td class="tldr">GRIMM introduces a genetic stratification framework for enzyme function prediction that clusters sequences by similarity and partitions them across training/validation/test sets to enable rigorous closed-set and open-set evaluation of generalization performance.</td>
-                        <td class="keywords">Sequence Clustering, Enzyme Function Prediction, Genetic Stratification, Out-Of-Distribution Evaluation, Sequence-Based Classification</td>
-                        <td><span class="score-badge score-high">9</span></td>
+                        <td class="rank-cell">2</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.15451v1" target="_blank">Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer</a></td>
+                        <td class="authors-cell">Hayato Kunugi, Mohsen Rahmani, Yosuke Iyama, et al.</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-17</td>
+                        <td class="tldr-cell">A quantum annealing-integrated generative model with Neural Hash Function regularization generates drug-like molecules that exceed training data quality by optimizing continuous-discrete signal transformations.</td>
+                        <td class="keywords-cell">D-Wave, Neural Hash Function, SMILES, QED, Quantum Annealing</td>
+                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
                     </tr>
                     <tr>
-                        <td>3</td>
-                        <td><a href="https://arxiv.org/pdf/2602.15451v1" target="_blank" class="paper-title">Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer</a></td>
-                        <td class="authors">Hayato Kunugi, Mohsen Rahmani, Yosuke Iyama, et al.</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-17</td>
-                        <td class="tldr">A quantum annealing-enhanced deep generative model with novel Neural Hash Functions generates drug-like molecules exceeding training data quality by bridging continuous and discrete representations for improved molecular design.</td>
-                        <td class="keywords">Quantum Annealing, Generative Models, Molecular Design, Neural Hash Function, Drug Discovery</td>
-                        <td><span class="score-badge score-high">9</span></td>
+                        <td class="rank-cell">3</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.16696v1" target="_blank">Parameter-free representations outperform single-cell foundation models on downstream benchmarks</a></td>
+                        <td class="authors-cell">Huan Souza, Pankaj Mehta</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-18</td>
+                        <td class="tldr-cell">Simple linear methods with careful normalization match or exceed transformer-based foundation models for single-cell RNA-seq analysis on cell-type classification and cross-species tasks.</td>
+                        <td class="keywords-cell">TranscriptFormer, scRNA-seq, PCA, Log-Normalization, Linear Methods</td>
+                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
                     </tr>
                     <tr>
-                        <td>4</td>
-                        <td><a href="https://arxiv.org/pdf/2602.16696v1" target="_blank" class="paper-title">Parameter-free representations outperform single-cell foundation models on downstream benchmarks</a></td>
-                        <td class="authors">Huan Souza, Pankaj Mehta</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-18</td>
-                        <td class="tldr">Simple linear methods and normalization achieve state-of-the-art performance on single-cell RNA-seq classification tasks, outperforming computationally expensive transformer-based foundation models on out-of-distribution benchmarks.</td>
-                        <td class="keywords">Linear Methods, Normalization, Cell-Type Classification, Generative Models, Single-Cell RNA-Seq</td>
-                        <td><span class="score-badge score-high">9</span></td>
+                        <td class="rank-cell">4</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.16004v1" target="_blank">Time-Varying Directed Interactions in Functional Brain Networks: Modeling and Validation</a></td>
+                        <td class="authors-cell">Nan Xu, Xiaodi Zhang, Wen-Ju Pan, et al.</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-17</td>
+                        <td class="tldr-cell">SWpC embeds directional linear time-invariant models in sliding windows to estimate time-varying directed connectivity, revealing task-evoked information flow and improving clinical discrimination in post-concussion patients.</td>
+                        <td class="keywords-cell">SWpC, LTI Model, BOLD fMRI, Human Connectome Project, LFP</td>
+                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
                     </tr>
                     <tr>
-                        <td>5</td>
-                        <td><a href="https://arxiv.org/pdf/2602.16004v1" target="_blank" class="paper-title">Time-Varying Directed Interactions in Functional Brain Networks: Modeling and Validation</a></td>
-                        <td class="authors">Nan Xu, Xiaodi Zhang, Wen-Ju Pan, et al.</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-17</td>
-                        <td class="tldr">Sliding-window prediction correlation (SWpC) embeds linear time-invariant models to estimate time-varying directed functional connectivity in brain networks, outperforming traditional correlation methods for detecting task-evoked changes and clinical brain-state shifts.</td>
-                        <td class="keywords">Directed Functional Connectivity, Sliding-Window Correlation, Linear Time-Invariant Model, Network Analysis, Brain Dynamics</td>
-                        <td><span class="score-badge score-high">9</span></td>
+                        <td class="rank-cell">5</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.15677v1" target="_blank">CAMEL: An ECG Language Model for Forecasting Cardiac Events</a></td>
+                        <td class="authors-cell">Neelay Velingker, Alaia Solko-Breslin, Mayank Keoliya, et al.</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-17</td>
+                        <td class="tldr-cell">CAMEL is an ECG language model using LoRA adaptation and curriculum learning to forecast cardiac arrhythmias, achieving state-of-the-art zero-shot performance through a specialized signal-text encoder.</td>
+                        <td class="keywords-cell">CAMEL, LoRA, ECGBench, ECGForecastBench, Curriculum Learning</td>
+                        <td class="score-cell"><span class="score-badge score-high">8</span></td>
                     </tr>
                     <tr>
-                        <td>6</td>
-                        <td><a href="https://arxiv.org/pdf/2602.15677v1" target="_blank" class="paper-title">CAMEL: An ECG Language Model for Forecasting Cardiac Events</a></td>
-                        <td class="authors">Neelay Velingker, Alaia Solko-Breslin, Mayank Keoliya, et al.</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-17</td>
-                        <td class="tldr">CAMEL is the first ECG language model capable of forecasting cardiac events using a specialized encoder and curriculum learning with LoRA adaptation, achieving state-of-the-art performance on classification and forecasting benchmarks.</td>
-                        <td class="keywords">Language Models, ECG Classification, LoRA Adaptation, Curriculum Learning, Time Series Forecasting</td>
-                        <td><span class="score-badge score-high">8</span></td>
+                        <td class="rank-cell">6</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.15740v1" target="_blank">MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis</a></td>
+                        <td class="authors-cell">Fatemeh Khalvandi, Saadat Izadi, Abdolah Chalechale</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-17</td>
+                        <td class="tldr-cell">MRC-GAT uses copula-based statistical alignment and graph attention networks with episodic meta-learning to integrate multimodal patient data for interpretable Alzheimer's disease diagnosis, achieving over 96% accuracy.</td>
+                        <td class="keywords-cell">MRC-GAT, TADPOLE, NACC, Copula Transform, Graph Attention Network</td>
+                        <td class="score-cell"><span class="score-badge score-high">8</span></td>
                     </tr>
                     <tr>
-                        <td>7</td>
-                        <td><a href="https://arxiv.org/pdf/2602.15740v1" target="_blank" class="paper-title">MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis</a></td>
-                        <td class="authors">Fatemeh Khalvandi, Saadat Izadi, Abdolah Chalechale</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-17</td>
-                        <td class="tldr">A meta-relational graph attention network using copula-based similarity alignment integrates multimodal features (risk factors, cognitive scores, MRI) to achieve state-of-the-art Alzheimer's disease classification with interpretable diagnosis.</td>
-                        <td class="keywords">Graph Attention Network, Copula-Based Alignment, Meta-Learning, Multimodal Integration, Alzheimer's Diagnosis</td>
-                        <td><span class="score-badge score-high">8</span></td>
+                        <td class="rank-cell">7</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.16737v1" target="_blank">Exploring the Utility of MALDI-TOF Mass Spectrometry and Antimicrobial Resistance in Hospital Outbreak Detection</a></td>
+                        <td class="authors-cell">Chang Liu, Jieshi Chen, Alexander J. Sundermann, et al.</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-17</td>
+                        <td class="tldr-cell">A machine learning framework extracts representations from MALDI-TOF spectra and antimicrobial resistance patterns to enable rapid, cost-effective hospital outbreak detection without whole genome sequencing.</td>
+                        <td class="keywords-cell">MALDI-TOF, WGS, Antimicrobial Resistance, Mass Spectrometry, Outbreak Detection</td>
+                        <td class="score-cell"><span class="score-badge score-medium">7</span></td>
                     </tr>
                     <tr>
-                        <td>8</td>
-                        <td><a href="https://arxiv.org/pdf/2602.14616v1" target="_blank" class="paper-title">Higher-Order Hit-&-Run Samplers for Linearly Constrained Densities</a></td>
-                        <td class="authors">Richard D. Paul, Anton Stratmann, Johann F. Jadebeck, et al.</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-16</td>
-                        <td class="tldr">A novel MCMC sampler combines higher-order gradient and curvature information with Hit-&-Run proposals to efficiently sample complex densities restricted to linearly constrained polytopes for Bayesian inverse problems.</td>
-                        <td class="keywords">Markov Chain Monte Carlo, Constrained Sampling, Hit-And-Run, Bayesian Inference, Gradient-Based Methods</td>
-                        <td><span class="score-badge score-medium">7</span></td>
+                        <td class="rank-cell">8</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.16357v1" target="_blank">Optical Inversion and Spectral Unmixing of Spectroscopic Photoacoustic Images with Physics-Informed Neural Networks</a></td>
+                        <td class="authors-cell">Sarkis Ter Martirosyan, Xinyue Huang, David Qin, et al.</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-18</td>
+                        <td class="tldr-cell">SPOI-AE applies physics-informed autoencoders to solve nonlinear optical inversion and spectral unmixing in photoacoustic imaging, estimating chromophore concentrations and oxygen saturation without linearity assumptions.</td>
+                        <td class="keywords-cell">SPOI-AE, Spectroscopic Photoacoustic Imaging, Physics-Informed Neural Networks, Autoencoder, Chromophore Unmixing</td>
+                        <td class="score-cell"><span class="score-badge score-medium">7</span></td>
                     </tr>
                     <tr>
-                        <td>9</td>
-                        <td><a href="https://arxiv.org/pdf/2602.16357v1" target="_blank" class="paper-title">Optical Inversion and Spectral Unmixing of Spectroscopic Photoacoustic Images with Physics-Informed Neural Networks</a></td>
-                        <td class="authors">Sarkis Ter Martirosyan, Xinyue Huang, David Qin, et al.</td>
-                        <td class="affiliations">Unknown</td>
-                        <td class="date">2026-02-18</td>
-                        <td class="tldr">A physics-informed autoencoder addresses nonlinear optical inversion and spectral unmixing in photoacoustic imaging, estimating chromophore concentrations and oxygen saturation without assuming linearity.</td>
-                        <td class="keywords">Physics-Informed Neural Networks, Autoencoder, Spectral Unmixing, Optical Inversion, Photoacoustic Imaging</td>
-                        <td><span class="score-badge score-medium">7</span></td>
+                        <td class="rank-cell">9</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2602.16749v1" target="_blank">U-FedTomAtt: Ultra-lightweight Federated Learning with Attention for Tomato Disease Recognition</a></td>
+                        <td class="authors-cell">Romiyal George, Sathiyamohan Nishankar, Selvarajah Thuseethan, et al.</td>
+                        <td class="affiliations-cell">Unknown</td>
+                        <td class="date-cell">2026-02-18</td>
+                        <td class="tldr-cell">U-FedTomAtt is an ultra-lightweight federated learning framework using dilated bottleneck modules, linear transformers, and residual attention for distributed tomato disease recognition with only 245K parameters.</td>
+                        <td class="keywords-cell">U-FedTomAtt, FedDAWA, DBNeck, LoGRA, PlantVillage</td>
+                        <td class="score-cell"><span class="score-badge score-medium">6</span></td>
                     </tr>
                 </tbody>
             </table>
-        </section>
-        
+        </div>
+
         <section class="narrative-summary">
-            <h2>Daily Narrative Summary</h2>
-            <p>Today's collection highlights a pivotal shift toward rigorous benchmarking and interpretability in computational biology. Multiple studies challenge the assumption that complex deep learning architectures are necessary for strong performance: simple linear methods rival foundation models in single-cell classification, while genetic stratification frameworks expose overfitting risks in enzyme function prediction. Methodologically, the emphasis is on robust evaluation strategies—including out-of-distribution testing, curriculum learning, and physics-informed neural networks—applied across diverse domains from molecular design with quantum annealing to multimodal Alzheimer's diagnosis and time-varying brain connectivity analysis.</p>
+            <h2>Narrative Summary</h2>
+            <p>Today's q-bio.QM papers showcase a strong emphasis on machine learning methodologies applied to diverse biological domains, from enzyme function prediction with genetic stratification (GRIMM) to quantum annealing-integrated molecular design frameworks that generate drug candidates exceeding training data quality. A recurring theme is the rigorous evaluation of computational methods: researchers demonstrate that simple linear models can match or outperform transformer-based foundation models in single-cell RNA-seq analysis, while novel attention-based architectures improve time-resolved brain connectivity inference, arrhythmia forecasting, and Alzheimer's diagnosis. These advances highlight a shift toward interpretability, robust benchmarking, and lightweight, resource-efficient frameworks suitable for both edge deployment (federated learning for plant disease recognition) and clinical translation (outbreak detection using MALDI-TOF spectroscopy).</p>
         </section>
     </main>
     
     <footer>
-        <div>Generated by Q-Bio Watchtower <span class="separator">·</span> Data source: arXiv q-bio.QM <span class="separator">·</span> 2026-02-19 UTC</div>
+        <p>Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM · 2026-02-19 UTC</p>
     </footer>
 </body>
 </html>

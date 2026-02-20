@@ -1,35 +1,5 @@
 [
   {
-    "id": "2602.14828v1",
-    "title": "Exploring the limits of pre-trained embeddings in machine-guided protein design: a case study on predicting AAV vector viability",
-    "authors": [
-      "Ana F. Rodrigues",
-      "Lucas Ferraz",
-      "Laura Balbi",
-      "Pedro Giesteira Cotovio",
-      "Catia Pesquita"
-    ],
-    "published_date": "2026-02-16T15:21:11Z",
-    "abstract": "Effective representations of protein sequences are widely recognized as a cornerstone of machine learning-based protein design. Yet, protein bioengineering poses unique challenges for sequence representation, as experimental datasets typically feature few mutations, which are either sparsely distributed across the entire sequence or densely concentrated within localized regions. This limits the ability of sequence-level representations to extract functionally meaningful signals. In addition, comprehensive comparative studies remain scarce, despite their crucial role in clarifying which representations best encode relevant information and ultimately support superior predictive performance. In this study, we systematically evaluate multiple ProtBERT and ESM2 embedding variants as sequence representations, using the adeno-associated virus capsid as a case study and prototypical example of bioengineering, where functional optimization is targeted through highly localized sequence variation within an otherwise large protein. Our results reveal that, prior to fine-tuning, amino acid-level embeddings outperform sequence-level representations in supervised predictive tasks, whereas the latter tend to be more effective in unsupervised settings. However, optimal performance is only achieved when embeddings are fine-tuned with task-specific labels, with sequence-level representations providing the best performance. Moreover, our findings indicate that the extent of sequence variation required to produce notable shifts in sequence representations exceeds what is typically explored in bioengineering studies, showing the need for fine-tuning in datasets characterized by sparse or highly localized mutations.",
-    "pdf_link": "https://arxiv.org/pdf/2602.14828v1",
-    "categories": [
-      "q-bio.QM",
-      "cs.LG"
-    ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "Systematic evaluation of ProtBERT and ESM2 embeddings for protein design reveals that amino acid-level representations outperform sequence-level ones before fine-tuning, but fine-tuned sequence embeddings achieve optimal performance for localized mutation prediction tasks.",
-    "keywords": [
-      "Protein Embeddings",
-      "ProtBERT",
-      "ESM2",
-      "Protein Design",
-      "Fine-Tuning"
-    ],
-    "relevance_score": 9
-  },
-  {
     "id": "2602.16504v1",
     "title": "GRIMM: Genetic stRatification for Inference in Molecular Modeling",
     "authors": [
@@ -45,13 +15,13 @@
     "affiliations": [
       "Unknown"
     ],
-    "tldr": "GRIMM introduces a genetic stratification framework for enzyme function prediction that clusters sequences by similarity and partitions them across training/validation/test sets to enable rigorous closed-set and open-set evaluation of generalization performance.",
+    "tldr": "GRIMM uses genetic stratification to cluster sequences by similarity into exclusive train-test splits, enabling rigorous closed- and open-set evaluation for enzyme function prediction.",
     "keywords": [
-      "Sequence Clustering",
-      "Enzyme Function Prediction",
-      "Genetic Stratification",
-      "Out-Of-Distribution Evaluation",
-      "Sequence-Based Classification"
+      "GRIMM",
+      "Test-1",
+      "Test-2",
+      "Enzyme Commission",
+      "Genetic Stratification"
     ],
     "relevance_score": 9
   },
@@ -83,13 +53,13 @@
     "affiliations": [
       "Unknown"
     ],
-    "tldr": "A quantum annealing-enhanced deep generative model with novel Neural Hash Functions generates drug-like molecules exceeding training data quality by bridging continuous and discrete representations for improved molecular design.",
+    "tldr": "A quantum annealing-integrated generative model with Neural Hash Function regularization generates drug-like molecules that exceed training data quality by optimizing continuous-discrete signal transformations.",
     "keywords": [
-      "Quantum Annealing",
-      "Generative Models",
-      "Molecular Design",
+      "D-Wave",
       "Neural Hash Function",
-      "Drug Discovery"
+      "SMILES",
+      "QED",
+      "Quantum Annealing"
     ],
     "relevance_score": 9
   },
@@ -111,13 +81,13 @@
     "affiliations": [
       "Unknown"
     ],
-    "tldr": "Simple linear methods and normalization achieve state-of-the-art performance on single-cell RNA-seq classification tasks, outperforming computationally expensive transformer-based foundation models on out-of-distribution benchmarks.",
+    "tldr": "Simple linear methods with careful normalization match or exceed transformer-based foundation models for single-cell RNA-seq analysis on cell-type classification and cross-species tasks.",
     "keywords": [
-      "Linear Methods",
-      "Normalization",
-      "Cell-Type Classification",
-      "Generative Models",
-      "Single-Cell RNA-Seq"
+      "TranscriptFormer",
+      "scRNA-seq",
+      "PCA",
+      "Log-Normalization",
+      "Linear Methods"
     ],
     "relevance_score": 9
   },
@@ -144,13 +114,13 @@
     "affiliations": [
       "Unknown"
     ],
-    "tldr": "Sliding-window prediction correlation (SWpC) embeds linear time-invariant models to estimate time-varying directed functional connectivity in brain networks, outperforming traditional correlation methods for detecting task-evoked changes and clinical brain-state shifts.",
+    "tldr": "SWpC embeds directional linear time-invariant models in sliding windows to estimate time-varying directed connectivity, revealing task-evoked information flow and improving clinical discrimination in post-concussion patients.",
     "keywords": [
-      "Directed Functional Connectivity",
-      "Sliding-Window Correlation",
-      "Linear Time-Invariant Model",
-      "Network Analysis",
-      "Brain Dynamics"
+      "SWpC",
+      "LTI Model",
+      "BOLD fMRI",
+      "Human Connectome Project",
+      "LFP"
     ],
     "relevance_score": 9
   },
@@ -181,13 +151,13 @@
     "affiliations": [
       "Unknown"
     ],
-    "tldr": "CAMEL is the first ECG language model capable of forecasting cardiac events using a specialized encoder and curriculum learning with LoRA adaptation, achieving state-of-the-art performance on classification and forecasting benchmarks.",
+    "tldr": "CAMEL is an ECG language model using LoRA adaptation and curriculum learning to forecast cardiac arrhythmias, achieving state-of-the-art zero-shot performance through a specialized signal-text encoder.",
     "keywords": [
-      "Language Models",
-      "ECG Classification",
-      "LoRA Adaptation",
-      "Curriculum Learning",
-      "Time Series Forecasting"
+      "CAMEL",
+      "LoRA",
+      "ECGBench",
+      "ECGForecastBench",
+      "Curriculum Learning"
     ],
     "relevance_score": 8
   },
@@ -210,46 +180,46 @@
     "affiliations": [
       "Unknown"
     ],
-    "tldr": "A meta-relational graph attention network using copula-based similarity alignment integrates multimodal features (risk factors, cognitive scores, MRI) to achieve state-of-the-art Alzheimer's disease classification with interpretable diagnosis.",
+    "tldr": "MRC-GAT uses copula-based statistical alignment and graph attention networks with episodic meta-learning to integrate multimodal patient data for interpretable Alzheimer's disease diagnosis, achieving over 96% accuracy.",
     "keywords": [
-      "Graph Attention Network",
-      "Copula-Based Alignment",
-      "Meta-Learning",
-      "Multimodal Integration",
-      "Alzheimer's Diagnosis"
+      "MRC-GAT",
+      "TADPOLE",
+      "NACC",
+      "Copula Transform",
+      "Graph Attention Network"
     ],
     "relevance_score": 8
   },
   {
-    "id": "2602.14616v1",
-    "title": "Higher-Order Hit-&-Run Samplers for Linearly Constrained Densities",
+    "id": "2602.16737v1",
+    "title": "Exploring the Utility of MALDI-TOF Mass Spectrometry and Antimicrobial Resistance in Hospital Outbreak Detection",
     "authors": [
-      "Richard D. Paul",
-      "Anton Stratmann",
-      "Johann F. Jadebeck",
-      "Martin Bey\u00df",
-      "Hanno Scharr",
-      "David R\u00fcgamer",
-      "Katharina N\u00f6h"
+      "Chang Liu",
+      "Jieshi Chen",
+      "Alexander J. Sundermann",
+      "Kathleen Shutt",
+      "Marissa P. Griffith",
+      "Lora Lee Pless",
+      "Lee H. Harrison",
+      "Artur W. Dubrawski"
     ],
-    "published_date": "2026-02-16T10:20:52Z",
-    "abstract": "Markov chain Monte Carlo (MCMC) sampling of densities restricted to linearly constrained domains is an important task arising in Bayesian treatment of inverse problems in the natural sciences. While efficient algorithms for uniform polytope sampling exist, much less work has dealt with more complex constrained densities. In particular, gradient information as used in unconstrained MCMC is not necessarily helpful in the constrained case, where the gradient may push the proposal's density out of the polytope. In this work, we propose a novel constrained sampling algorithm, which combines strengths of higher-order information, like the target's log-density's gradients and curvature, with the Hit-&-Run proposal, a simple mechanism which guarantees the generation of feasible proposals, fulfilling the linear constraints. Our extensive experiments demonstrate improved sampling efficiency on complex constrained densities over various constrained and unconstrained samplers.",
-    "pdf_link": "https://arxiv.org/pdf/2602.14616v1",
+    "published_date": "2026-02-17T20:59:31Z",
+    "abstract": "Accurate and timely identification of hospital outbreak clusters is crucial for preventing the spread of infections that have epidemic potential. While assessing pathogen similarity through whole genome sequencing (WGS) is considered the gold standard for outbreak detection, its high cost and lengthy turnaround time preclude routine implementation in clinical laboratories. We explore the utility of two rapid and cost-effective alternatives to WGS, matrix-assisted laser desorption ionization-time of flight (MALDI-TOF) mass spectrometry and antimicrobial resistance (AR) patterns. We develop a machine learning framework that extracts informative representations from MALDI-TOF spectra and AR patterns for outbreak detection and explore their fusion. Through multi-species analyses, we demonstrate that in some cases MALDI-TOF and AR have the potential to reduce reliance on WGS, enabling more accessible and rapid outbreak surveillance.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16737v1",
     "categories": [
-      "stat.CO",
       "q-bio.QM",
-      "stat.AP"
+      "cs.LG"
     ],
     "affiliations": [
       "Unknown"
     ],
-    "tldr": "A novel MCMC sampler combines higher-order gradient and curvature information with Hit-&-Run proposals to efficiently sample complex densities restricted to linearly constrained polytopes for Bayesian inverse problems.",
+    "tldr": "A machine learning framework extracts representations from MALDI-TOF spectra and antimicrobial resistance patterns to enable rapid, cost-effective hospital outbreak detection without whole genome sequencing.",
     "keywords": [
-      "Markov Chain Monte Carlo",
-      "Constrained Sampling",
-      "Hit-And-Run",
-      "Bayesian Inference",
-      "Gradient-Based Methods"
+      "MALDI-TOF",
+      "WGS",
+      "Antimicrobial Resistance",
+      "Mass Spectrometry",
+      "Outbreak Detection"
     ],
     "relevance_score": 7
   },
@@ -264,7 +234,7 @@
       "Stanislav Emelianov"
     ],
     "published_date": "2026-02-18T10:44:45Z",
-    "abstract": "Accurate estimation of the relative concentrations of chromophores in a spectroscopic photoacoustic (sPA) image can reveal immense structural, functional, and molecular information about physiological processes. However, due to nonlinearities and ill-posedness inherent to sPA imaging, concentration estimation is intractable. The Spectroscopic Photoacoustic Optical Inversion Autoencoder (SPOI-AE) aims to address the sPA optical inversion and spectral unmixing problems without assuming linearity. Herein, SPOI-AE was trained and tested on \\textit{in vivo} mouse lymph node sPA images with unknown ground truth chromophore concentrations. SPOI-AE better reconstructs input sPA pixels than conventional algorithms while providing biologically coherent estimates for optical parameters, chromophore concentrations, and the percent oxygen saturation of tissue. SPOI-AE's unmixing accuracy was validated using a simulated mouse lymph node phantom ground truth.",
+    "abstract": "Accurate estimation of the relative concentrations of chromophores in a spectroscopic photoacoustic (sPA) image can reveal immense structural, functional, and molecular information about physiological processes. However, due to nonlinearities and ill-posedness inherent to sPA imaging, concentration estimation is intractable. The Spectroscopic Photoacoustic Optical Inversion Autoencoder (SPOI-AE) aims to address the sPA optical inversion and spectral unmixing problems without assuming linearity. Herein, SPOI-AE was trained and tested on in vivo mouse lymph node sPA images with unknown ground truth chromophore concentrations. SPOI-AE better reconstructs input sPA pixels than conventional algorithms while providing biologically coherent estimates for optical parameters, chromophore concentrations, and the percent oxygen saturation of tissue. SPOI-AE's unmixing accuracy was validated using a simulated mouse lymph node phantom ground truth.",
     "pdf_link": "https://arxiv.org/pdf/2602.16357v1",
     "categories": [
       "cs.LG",
@@ -273,14 +243,46 @@
     "affiliations": [
       "Unknown"
     ],
-    "tldr": "A physics-informed autoencoder addresses nonlinear optical inversion and spectral unmixing in photoacoustic imaging, estimating chromophore concentrations and oxygen saturation without assuming linearity.",
+    "tldr": "SPOI-AE applies physics-informed autoencoders to solve nonlinear optical inversion and spectral unmixing in photoacoustic imaging, estimating chromophore concentrations and oxygen saturation without linearity assumptions.",
     "keywords": [
+      "SPOI-AE",
+      "Spectroscopic Photoacoustic Imaging",
       "Physics-Informed Neural Networks",
       "Autoencoder",
-      "Spectral Unmixing",
-      "Optical Inversion",
-      "Photoacoustic Imaging"
+      "Chromophore Unmixing"
     ],
     "relevance_score": 7
+  },
+  {
+    "id": "2602.16749v1",
+    "title": "U-FedTomAtt: Ultra-lightweight Federated Learning with Attention for Tomato Disease Recognition",
+    "authors": [
+      "Romiyal George",
+      "Sathiyamohan Nishankar",
+      "Selvarajah Thuseethan",
+      "Chathrie Wimalasooriya",
+      "Yakub Sebastian",
+      "Roshan G. Ragel",
+      "Zhongwei Liang"
+    ],
+    "published_date": "2026-02-18T05:00:38Z",
+    "abstract": "Federated learning has emerged as a privacy-preserving and efficient approach for deploying intelligent agricultural solutions. Accurate edge-based diagnosis across geographically dispersed farms is crucial for recognising tomato diseases in sustainable farming. Traditional centralised training aggregates raw data on a central server, leading to communication overhead, privacy risks and latency. Meanwhile, edge devices require lightweight networks to operate effectively within limited resources. In this paper, we propose U-FedTomAtt, an ultra-lightweight federated learning framework with attention for tomato disease recognition in resource-constrained and distributed environments. The model comprises only 245.34K parameters and 71.41 MFLOPS. First, we propose an ultra-lightweight neural network with dilated bottleneck (DBNeck) modules and a linear transformer to minimise computational and memory overhead. To mitigate potential accuracy loss, a novel local-global residual attention (LoGRA) module is incorporated. Second, we propose the federated dual adaptive weight aggregation (FedDAWA) algorithm that enhances global model accuracy. Third, our framework is validated using three benchmark datasets for tomato diseases under simulated federated settings. Experimental results show that the proposed method achieves 0.9910% and 0.9915% Top-1 accuracy and 0.9923% and 0.9897% F1-scores on SLIF-Tomato and PlantVillage tomato datasets, respectively.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16749v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "affiliations": [
+      "Unknown"
+    ],
+    "tldr": "U-FedTomAtt is an ultra-lightweight federated learning framework using dilated bottleneck modules, linear transformers, and residual attention for distributed tomato disease recognition with only 245K parameters.",
+    "keywords": [
+      "U-FedTomAtt",
+      "FedDAWA",
+      "DBNeck",
+      "LoGRA",
+      "PlantVillage"
+    ],
+    "relevance_score": 6
   }
 ]
