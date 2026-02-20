@@ -12,12 +12,14 @@ Execute the following steps in order. Do **not** proceed to the next step unless
 
 1. **Ingest** — invoke the `arxiv-ingest` agent to fetch today's `q-bio.QM` papers and produce a normalized JSON dataset.
 2. **Review ingest output** — invoke the `code-reviewer` agent, passing the JSON artifact from step 1. If violations are reported, halt and surface the error.
-3. **Analyze** — invoke the `paper-analyzer` agent on the JSON dataset to produce summaries, keywords, and relevance rankings.
-4. **Review analysis output** — invoke the `code-reviewer` agent on the analysis artifact. Halt on violations.
-5. **Visualize** — invoke the `report-visualizer` agent to build the HTML dashboard from the analysis output.
-6. **Review visualizer output** — invoke the `code-reviewer` agent on the HTML artifact. Halt on violations.
-7. **Final gate review** — invoke the `code-reviewer` agent one last time for a holistic review of all artifacts. Halt on violations.
-8. **Deploy** — invoke the `pages-deployer` agent to publish the dashboard to GitHub Pages.
+3. **Validate ingest** — run `python3 scripts/validate_artifacts.py` as an additional deterministic check. Halt on non-zero exit.
+4. **Analyze** — invoke the `paper-analyzer` agent on the JSON dataset to produce summaries, keywords, and relevance rankings.
+5. **Review analysis output** — invoke the `code-reviewer` agent on the analysis artifact. Halt on violations.
+6. **Visualize** — invoke the `report-visualizer` agent to build the HTML dashboard from the analysis output.
+7. **Review visualizer output** — invoke the `code-reviewer` agent on the HTML artifact. Halt on violations.
+8. **Final gate validation** — run `python3 scripts/validate_artifacts.py` for a deterministic holistic check of all three artifacts. Halt on non-zero exit.
+9. **Final gate review** — invoke the `code-reviewer` agent one last time for a holistic review of all artifacts. Halt on violations.
+10. **Deploy** — invoke the `pages-deployer` agent to publish the dashboard to GitHub Pages.
 
 ## Failure Handling
 

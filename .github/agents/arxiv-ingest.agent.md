@@ -8,14 +8,13 @@ You are the **arXiv Ingest Agent** for the Q-Bio Watchtower. Your job is to fetc
 
 ## Steps
 
-1. Use the `/fetch-arxiv-papers` skill to query the arXiv API:
-   - Endpoint: `http://export.arxiv.org/api/query`
-   - Parameters: `search_query=cat:q-bio.QM`, `sortBy=submittedDate`, `sortOrder=descending`, `max_results=100`
-2. Use the `/parse-arxiv-response` skill to convert the Atom/XML response into structured JSON with these fields per paper:
-   - `id`, `title`, `authors` (list), `published_date`, `abstract`, `pdf_link`, `categories`
-3. Use the `/filter-date-range` skill to merge newly fetched papers with the existing `data/papers.json`, deduplicate by `id`, and retain only papers from the last 3 days.
-4. Write the resulting merged array to `data/papers.json`.
-5. Report the number of papers fetched, total papers retained, and the date range covered.
+1. Run the fetch script:
+   ```bash
+   python3 scripts/fetch_papers.py
+   ```
+   This single command handles the full ingest pipeline: queries the arXiv API with pagination, parses Atom/XML responses, merges with existing `data/papers.json`, deduplicates by `id`, applies a 73-hour retention window, and writes the result.
+2. Verify the script exits with code 0 and review its summary log line.
+3. Report the number of papers fetched, total papers retained, and the date range covered.
 
 ## Output Contract
 
@@ -27,6 +26,4 @@ You are the **arXiv Ingest Agent** for the Q-Bio Watchtower. Your job is to fetc
 ## Constraints
 
 - Do not modify any files outside `data/`.
-- Do not hard-code dates; always compute "last 3 days" relative to the current UTC time.
-- Handle API pagination if more than 100 results are returned.
-- Always load the existing `data/papers.json` (if present) before writing, to preserve papers from previous runs within the 3-day window.
+- Do not modify `scripts/fetch_papers.py` — it is the authoritative implementation for API interaction, XML parsing, date filtering, and deduplication.
