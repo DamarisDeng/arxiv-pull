@@ -13,9 +13,6 @@
       "q-bio.GN",
       "cs.LG",
       "q-bio.QM"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   },
   {
@@ -30,9 +27,6 @@
     "pdf_link": "https://arxiv.org/pdf/2602.16504v1",
     "categories": [
       "q-bio.QM"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   },
   {
@@ -51,9 +45,6 @@
     "categories": [
       "cs.LG",
       "q-bio.QM"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   },
   {
@@ -74,9 +65,6 @@
     "categories": [
       "q-bio.QM",
       "cs.LG"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   },
   {
@@ -98,9 +86,6 @@
     "categories": [
       "q-bio.QM",
       "cs.LG"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   },
   {
@@ -122,9 +107,6 @@
     "categories": [
       "q-bio.NC",
       "q-bio.QM"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   },
   {
@@ -142,9 +124,6 @@
       "cs.LG",
       "cs.AI",
       "q-bio.QM"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   },
   {
@@ -170,9 +149,6 @@
     "categories": [
       "cs.LG",
       "q-bio.QM"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   },
   {
@@ -199,9 +175,6 @@
       "cs.AI",
       "cs.LG",
       "quant-ph"
-    ],
-    "affiliations": [
-      "Unknown"
     ]
   }
 ]

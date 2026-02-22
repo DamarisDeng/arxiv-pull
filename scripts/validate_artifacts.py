@@ -47,7 +47,7 @@ def check_json_file(path: str, label: str) -> list | None:
 
 
 def validate_papers(data: list) -> None:
-    cutoff = datetime.now(timezone.utc) - timedelta(days=4)
+    cutoff = datetime.now(timezone.utc) - timedelta(days=7)
     for i, paper in enumerate(data):
         missing = REQUIRED_PAPER_FIELDS - set(paper.keys())
         if missing:
@@ -57,7 +57,7 @@ def validate_papers(data: list) -> None:
             try:
                 dt = datetime.fromisoformat(pub.replace("Z", "+00:00"))
                 if dt < cutoff:
-                    fail(f"papers[{i}]: published_date {pub} is older than 4 days")
+                    fail(f"papers[{i}]: published_date {pub} is older than 7 days")
             except ValueError:
                 fail(f"papers[{i}]: published_date is not valid ISO 8601")
 

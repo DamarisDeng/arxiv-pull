@@ -1,39 +1,81 @@
 [
   {
-    "id": "2602.15451v1",
-    "title": "Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer",
+    "id": "2602.16696v1",
+    "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
     "authors": [
-      "Hayato Kunugi",
-      "Mohsen Rahmani",
-      "Yosuke Iyama",
-      "Yutaro Hirono",
-      "Akira Suma",
-      "Matthew Woolway",
-      "Vladimir Vargas-Calderón",
-      "William Kim",
-      "Kevin Chern",
-      "Mohammad Amin",
-      "Masaru Tateno"
+      "Huan Souza",
+      "Pankaj Mehta"
     ],
-    "published_date": "2026-02-17T09:38:11Z",
-    "abstract": "Deep generative modeling to stochastically design small molecules is an emerging technology for accelerating drug discovery and development. However, one major issue in molecular generative models is their lower frequency of drug-like compounds. To resolve this problem, we developed a novel framework for optimization of deep generative models integrated with a D-Wave quantum annealing computer, where our Neural Hash Function (NHF) presented herein is used both as the regularization and binarization schemes simultaneously, of which the latter is for transformation between continuous and discrete signals of the classical and quantum neural networks, respectively, in the error evaluation (i.e., objective) function. The compounds generated via the quantum-annealing generative models exhibited higher quality in both validity and drug-likeness than those generated via the fully-classical models, and was further indicated to exceed even the training data in terms of drug-likeness features, without any restraints and conditions to deliberately induce such an optimization. These results indicated an advantage of quantum annealing to aim at a stochastic generator integrated with our novel neural network architectures, for the extended performance of feature space sampling and extraction of characteristic features in drug design.",
-    "pdf_link": "https://arxiv.org/pdf/2602.15451v1",
+    "published_date": "2026-02-18T18:42:29Z",
+    "abstract": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16696v1",
     "categories": [
-      "q-bio.QM",
-      "cs.AI",
+      "q-bio.GN",
       "cs.LG",
-      "quant-ph"
+      "q-bio.QM"
     ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "A quantum annealing-based framework using a Neural Hash Function optimizes generative models to design drug-like molecules with higher validity and drug-likeness than fully-classical approaches, even exceeding training data quality.",
+    "tldr": "Simple linear methods with careful normalization outperform transformer-based foundation models on single-cell RNA-seq benchmarks, demonstrating that complex deep learning may not be necessary for capturing cell identity from gene expression data.",
     "keywords": [
-      "Neural Hash Function",
-      "D-Wave Quantum Annealing",
-      "Quantum-Classical Hybrid Network"
+      "Linear Methods",
+      "Normalization",
+      "Cell-Type Classification",
+      "Generative Model",
+      "Transformer"
     ],
-    "relevance_score": 10
+    "relevance_score": 9
+  },
+  {
+    "id": "2602.16004v1",
+    "title": "Time-Varying Directed Interactions in Functional Brain Networks: Modeling and Validation",
+    "authors": [
+      "Nan Xu",
+      "Xiaodi Zhang",
+      "Wen-Ju Pan",
+      "Jeremy L. Smith",
+      "Eric H. Schumacher",
+      "Jason W. Allen",
+      "Vince D. Calhoun",
+      "Shella D. Keilholz"
+    ],
+    "published_date": "2026-02-17T20:51:07Z",
+    "abstract": "Understanding the dynamic nature of brain connectivity is critical for elucidating neural processing, behavior, and brain disorders. Traditional approaches such as sliding-window correlation (SWC) characterize time-varying undirected associations but do not resolve directional interactions, limiting inference about time-resolved information flow in brain networks. We introduce sliding-window prediction correlation (SWpC), which embeds a directional linear time-invariant (LTI) model within each sliding window to estimate time-varying directed functional connectivity (FC). SWpC yields two complementary descriptors of directed interactions: a strength measure (prediction correlation) and a duration measure (window-wise duration of information transfer). Using concurrent local field potential (LFP) and fMRI BOLD recordings from rat somatosensory cortices, we demonstrate stable directionality estimates in both LFP band-limited power and BOLD. Using Human Connectome Project (HCP) motor task fMRI, SWpC detects significant task-evoked changes in directed FC strength and duration and shows higher sensitivity than SWC for identifying task-evoked connectivity differences. Finally, in post-concussion vestibular dysfunction (PCVD), SWpC reveals reproducible vestibular-multisensory brain-state shifts and improves healthy-control vs subacute patient (HC-ST) discrimination using state-derived features. Together, these results show that SWpC provides biologically interpretable, time-resolved directed connectivity patterns across multimodal validation and clinical application settings, supporting both basic and translational neuroscience.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16004v1",
+    "categories": [
+      "q-bio.NC",
+      "q-bio.QM"
+    ],
+    "tldr": "A novel sliding-window prediction correlation (SWpC) method embeds directional linear time-invariant models to estimate time-varying directed functional connectivity in brain networks, demonstrating superior sensitivity in detecting task-evoked changes and clinical brain states.",
+    "keywords": [
+      "Sliding-Window Correlation",
+      "Linear Time-Invariant Model",
+      "Directed Functional Connectivity",
+      "Dynamical Systems",
+      "Network Analysis"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2602.16504v1",
+    "title": "GRIMM: Genetic stRatification for Inference in Molecular Modeling",
+    "authors": [
+      "Ashley Babjac",
+      "Adrienne Hoarfrost"
+    ],
+    "published_date": "2026-02-18T14:46:18Z",
+    "abstract": "The vast majority of biological sequences encode unknown functions and bear little resemblance to experimentally characterized proteins, limiting both our understanding of biology and our ability to harness functional potential for the bioeconomy. Predicting enzyme function from sequence remains a central challenge in computational biology, complicated by low sequence diversity and imbalanced label support in publicly available datasets. Models trained on these data can overestimate performance and fail to generalize. To address this, we introduce GRIMM (Genetic stRatification for Inference in Molecular Modeling), a benchmark for enzyme function prediction that employs genetic stratification: sequences are clustered by similarity and clusters are assigned exclusively to training, validation, or test sets. This ensures that sequences from the same cluster do not appear in multiple partitions. GRIMM produces multiple test sets: a closed-set test with the same label distribution as training (Test-1) and an open-set test containing novel labels (Test-2), serving as a realistic out-of-distribution proxy for discovering novel enzyme functions. While demonstrated on enzymes, this approach is generalizable to any sequence-based classification task where inputs can be clustered by similarity. By formalizing a splitting strategy often used implicitly, GRIMM provides a unified and reproducible framework for closed- and open-set evaluation. The method is lightweight, requiring only sequence clustering and label annotations, and can be adapted to different similarity thresholds, data scales, and biological tasks. GRIMM enables more realistic evaluation of functional prediction models on both familiar and unseen classes and establishes a benchmark that more faithfully assesses model performance and generalizability.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16504v1",
+    "categories": [
+      "q-bio.QM"
+    ],
+    "tldr": "GRIMM introduces a genetic stratification benchmark for enzyme function prediction using sequence clustering to ensure realistic train-test splits that better assess model generalization on both closed-set and out-of-distribution open-set evaluation scenarios.",
+    "keywords": [
+      "Sequence Clustering",
+      "Enzyme Function Prediction",
+      "Sequence Analysis",
+      "Out-Of-Distribution Evaluation",
+      "Benchmarking"
+    ],
+    "relevance_score": 8
   },
   {
     "id": "2602.15677v1",
@@ -59,16 +101,15 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "CAMEL is an ECG language model that combines LoRA adaptation with curriculum learning to forecast cardiac events, achieving state-of-the-art results on ECGBench and the new ECGForecastBench benchmark.",
+    "tldr": "CAMEL is the first ECG language model capable of forecasting cardiac events through a specialized encoder and curriculum learning approach, achieving state-of-the-art performance on both classification and arrhythmia prediction tasks.",
     "keywords": [
-      "CAMEL",
-      "LoRA Adaptation",
-      "Curriculum Learning Pipeline"
+      "Language Model",
+      "Lora Adaptation",
+      "Curriculum Learning",
+      "Time-Series Forecasting",
+      "Zero-Shot Learning"
     ],
-    "relevance_score": 9
+    "relevance_score": 8
   },
   {
     "id": "2602.15740v1",
@@ -86,76 +127,15 @@
       "cs.AI",
       "q-bio.QM"
     ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "MRC-GAT uses copula-based similarity alignment and episodic meta-learning to integrate multimodal features (risk factors, cognitive scores, MRI) for Alzheimer's disease classification, achieving state-of-the-art accuracy (96.87%) with interpretable results.",
+    "tldr": "MRC-GAT uses graph attention networks with copula-based statistical alignment and meta-learning to integrate multimodal patient data for accurate and interpretable Alzheimer's disease diagnosis.",
     "keywords": [
-      "MRC-GAT",
-      "Copula-Based Transformation",
-      "Episodic Meta-Learning",
-      "Multi-Relational Node Fusion"
+      "Graph Attention Network",
+      "Copula",
+      "Meta-Learning",
+      "Attention Mechanism",
+      "Multimodal Fusion"
     ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2602.16357v1",
-    "title": "Optical Inversion and Spectral Unmixing of Spectroscopic Photoacoustic Images with Physics-Informed Neural Networks",
-    "authors": [
-      "Sarkis Ter Martirosyan",
-      "Xinyue Huang",
-      "David Qin",
-      "Anthony Yu",
-      "Stanislav Emelianov"
-    ],
-    "published_date": "2026-02-18T10:44:45Z",
-    "abstract": "Accurate estimation of the relative concentrations of chromophores in a spectroscopic photoacoustic (sPA) image can reveal immense structural, functional, and molecular information about physiological processes. However, due to nonlinearities and ill-posedness inherent to sPA imaging, concentration estimation is intractable. The Spectroscopic Photoacoustic Optical Inversion Autoencoder (SPOI-AE) aims to address the sPA optical inversion and spectral unmixing problems without assuming linearity. Herein, SPOI-AE was trained and tested on \\textit{in vivo} mouse lymph node sPA images with unknown ground truth chromophore concentrations. SPOI-AE better reconstructs input sPA pixels than conventional algorithms while providing biologically coherent estimates for optical parameters, chromophore concentrations, and the percent oxygen saturation of tissue. SPOI-AE's unmixing accuracy was validated using a simulated mouse lymph node phantom ground truth.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16357v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "SPOI-AE is a physics-informed autoencoder that solves nonlinear optical inversion and spectral unmixing in photoacoustic imaging, accurately estimating chromophore concentrations and oxygen saturation in mouse lymph nodes.",
-    "keywords": [
-      "SPOI-AE",
-      "Spectroscopic Photoacoustic Imaging",
-      "Physics-Informed Autoencoder"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2602.16004v1",
-    "title": "Time-Varying Directed Interactions in Functional Brain Networks: Modeling and Validation",
-    "authors": [
-      "Nan Xu",
-      "Xiaodi Zhang",
-      "Wen-Ju Pan",
-      "Jeremy L. Smith",
-      "Eric H. Schumacher",
-      "Jason W. Allen",
-      "Vince D. Calhoun",
-      "Shella D. Keilholz"
-    ],
-    "published_date": "2026-02-17T20:51:07Z",
-    "abstract": "Understanding the dynamic nature of brain connectivity is critical for elucidating neural processing, behavior, and brain disorders. Traditional approaches such as sliding-window correlation (SWC) characterize time-varying undirected associations but do not resolve directional interactions, limiting inference about time-resolved information flow in brain networks. We introduce sliding-window prediction correlation (SWpC), which embeds a directional linear time-invariant (LTI) model within each sliding window to estimate time-varying directed functional connectivity (FC). SWpC yields two complementary descriptors of directed interactions: a strength measure (prediction correlation) and a duration measure (window-wise duration of information transfer). Using concurrent local field potential (LFP) and fMRI BOLD recordings from rat somatosensory cortices, we demonstrate stable directionality estimates in both LFP band-limited power and BOLD. Using Human Connectome Project (HCP) motor task fMRI, SWpC detects significant task-evoked changes in directed FC strength and duration and shows higher sensitivity than SWC for identifying task-evoked connectivity differences. Finally, in post-concussion vestibular dysfunction (PCVD), SWpC reveals reproducible vestibular-multisensory brain-state shifts and improves healthy-control vs subacute patient (HC-ST) discrimination using state-derived features. Together, these results show that SWpC provides biologically interpretable, time-resolved directed connectivity patterns across multimodal validation and clinical application settings, supporting both basic and translational neuroscience.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16004v1",
-    "categories": [
-      "q-bio.NC",
-      "q-bio.QM"
-    ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "SWpC (sliding-window prediction correlation) embeds directional linear time-invariant models to estimate time-varying directed functional connectivity, showing superior sensitivity to task-evoked changes and clinical discrimination compared to sliding-window correlation.",
-    "keywords": [
-      "SWpC",
-      "Linear Time-Invariant Model",
-      "Directed Functional Connectivity Estimation"
-    ],
-    "relevance_score": 9
+    "relevance_score": 8
   },
   {
     "id": "2602.16737v1",
@@ -177,61 +157,75 @@
       "q-bio.QM",
       "cs.LG"
     ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "A machine learning framework demonstrates that MALDI-TOF mass spectrometry and antimicrobial resistance patterns can serve as rapid, cost-effective alternatives to whole genome sequencing for hospital outbreak detection.",
+    "tldr": "Machine learning framework extracts informative representations from MALDI-TOF mass spectrometry and antimicrobial resistance patterns as cost-effective alternatives to whole genome sequencing for hospital outbreak detection.",
     "keywords": [
-      "MALDI-TOF Mass Spectrometry",
-      "Whole Genome Sequencing"
+      "Machine Learning",
+      "Maldi-Tof",
+      "Mass Spectrometry",
+      "Representation Learning",
+      "Clustering"
     ],
-    "relevance_score": 8
+    "relevance_score": 7
   },
   {
-    "id": "2602.16504v1",
-    "title": "GRIMM: Genetic stRatification for Inference in Molecular Modeling",
+    "id": "2602.15451v1",
+    "title": "Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer",
     "authors": [
-      "Ashley Babjac",
-      "Adrienne Hoarfrost"
+      "Hayato Kunugi",
+      "Mohsen Rahmani",
+      "Yosuke Iyama",
+      "Yutaro Hirono",
+      "Akira Suma",
+      "Matthew Woolway",
+      "Vladimir Vargas-Calder\u00f3n",
+      "William Kim",
+      "Kevin Chern",
+      "Mohammad Amin",
+      "Masaru Tateno"
     ],
-    "published_date": "2026-02-18T14:46:18Z",
-    "abstract": "The vast majority of biological sequences encode unknown functions and bear little resemblance to experimentally characterized proteins, limiting both our understanding of biology and our ability to harness functional potential for the bioeconomy. Predicting enzyme function from sequence remains a central challenge in computational biology, complicated by low sequence diversity and imbalanced label support in publicly available datasets. Models trained on these data can overestimate performance and fail to generalize. To address this, we introduce GRIMM (Genetic stRatification for Inference in Molecular Modeling), a benchmark for enzyme function prediction that employs genetic stratification: sequences are clustered by similarity and clusters are assigned exclusively to training, validation, or test sets. This ensures that sequences from the same cluster do not appear in multiple partitions. GRIMM produces multiple test sets: a closed-set test with the same label distribution as training (Test-1) and an open-set test containing novel labels (Test-2), serving as a realistic out-of-distribution proxy for discovering novel enzyme functions. While demonstrated on enzymes, this approach is generalizable to any sequence-based classification task where inputs can be clustered by similarity. By formalizing a splitting strategy often used implicitly, GRIMM provides a unified and reproducible framework for closed- and open-set evaluation. The method is lightweight, requiring only sequence clustering and label annotations, and can be adapted to different similarity thresholds, data scales, and biological tasks. GRIMM enables more realistic evaluation of functional prediction models on both familiar and unseen classes and establishes a benchmark that more faithfully assesses model performance and generalizability.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16504v1",
+    "published_date": "2026-02-17T09:38:11Z",
+    "abstract": "Deep generative modeling to stochastically design small molecules is an emerging technology for accelerating drug discovery and development. However, one major issue in molecular generative models is their lower frequency of drug-like compounds. To resolve this problem, we developed a novel framework for optimization of deep generative models integrated with a D-Wave quantum annealing computer, where our Neural Hash Function (NHF) presented herein is used both as the regularization and binarization schemes simultaneously, of which the latter is for transformation between continuous and discrete signals of the classical and quantum neural networks, respectively, in the error evaluation (i.e., objective) function. The compounds generated via the quantum-annealing generative models exhibited higher quality in both validity and drug-likeness than those generated via the fully-classical models, and was further indicated to exceed even the training data in terms of drug-likeness features, without any restraints and conditions to deliberately induce such an optimization. These results indicated an advantage of quantum annealing to aim at a stochastic generator integrated with our novel neural network architectures, for the extended performance of feature space sampling and extraction of characteristic features in drug design.",
+    "pdf_link": "https://arxiv.org/pdf/2602.15451v1",
     "categories": [
-      "q-bio.QM"
+      "q-bio.QM",
+      "cs.AI",
+      "cs.LG",
+      "quant-ph"
     ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "GRIMM prevents data leakage in enzyme function benchmarking by clustering sequences and assigning clusters exclusively to train, validation, or test partitions, enabling rigorous closed- and open-set evaluation.",
+    "tldr": "A quantum-annealing-driven generative model with Neural Hash Functions generates drug-like molecules that exceed training data quality through integrated optimization of classical and quantum neural networks for molecular design.",
     "keywords": [
-      "GRIMM",
-      "Cluster-Exclusive Data Splitting"
+      "Quantum Annealing",
+      "Generative Model",
+      "Neural Hash Function",
+      "Regularization",
+      "Stochastic Sampling"
     ],
-    "relevance_score": 8
+    "relevance_score": 7
   },
   {
-    "id": "2602.16696v1",
-    "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
+    "id": "2602.16357v1",
+    "title": "Optical Inversion and Spectral Unmixing of Spectroscopic Photoacoustic Images with Physics-Informed Neural Networks",
     "authors": [
-      "Huan Souza",
-      "Pankaj Mehta"
+      "Sarkis Ter Martirosyan",
+      "Xinyue Huang",
+      "David Qin",
+      "Anthony Yu",
+      "Stanislav Emelianov"
     ],
-    "published_date": "2026-02-18T18:42:29Z",
-    "abstract": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16696v1",
+    "published_date": "2026-02-18T10:44:45Z",
+    "abstract": "Accurate estimation of the relative concentrations of chromophores in a spectroscopic photoacoustic (sPA) image can reveal immense structural, functional, and molecular information about physiological processes. However, due to nonlinearities and ill-posedness inherent to sPA imaging, concentration estimation is intractable. The Spectroscopic Photoacoustic Optical Inversion Autoencoder (SPOI-AE) aims to address the sPA optical inversion and spectral unmixing problems without assuming linearity. Herein, SPOI-AE was trained and tested on \\textit{in vivo} mouse lymph node sPA images with unknown ground truth chromophore concentrations. SPOI-AE better reconstructs input sPA pixels than conventional algorithms while providing biologically coherent estimates for optical parameters, chromophore concentrations, and the percent oxygen saturation of tissue. SPOI-AE's unmixing accuracy was validated using a simulated mouse lymph node phantom ground truth.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16357v1",
     "categories": [
-      "q-bio.GN",
       "cs.LG",
       "q-bio.QM"
     ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "Simple linear methods with careful normalization achieve state-of-the-art performance on single-cell RNA-seq benchmarks, outperforming computationally intensive foundation models like TranscriptFormer on out-of-distribution tasks.",
+    "tldr": "SPOI-AE uses physics-informed neural networks to solve the nonlinear optical inversion and spectral unmixing problems in photoacoustic imaging, providing accurate chromophore concentration estimates validated on in vivo data.",
     "keywords": [
-      "TranscriptFormer",
-      "Log-CPM Normalization Pipeline"
+      "Physics-Informed Neural Network",
+      "Autoencoder",
+      "Spectral Unmixing",
+      "Inverse Problem",
+      "Optical Imaging"
     ],
     "relevance_score": 7
   },
@@ -254,16 +248,14 @@
       "q-bio.QM",
       "cs.LG"
     ],
-    "affiliations": [
-      "Unknown"
-    ],
-    "tldr": "U-FedTomAtt is an ultra-lightweight federated learning framework using DBNeck modules, LoGRA attention, and FedDAWA aggregation to achieve high accuracy (>99%) in tomato disease recognition with only 245K parameters.",
+    "tldr": "U-FedTomAtt is an ultra-lightweight federated learning framework with attention mechanisms and adaptive aggregation for distributed tomato disease recognition on resource-constrained edge devices.",
     "keywords": [
-      "U-FedTomAtt",
-      "DBNeck Modules",
-      "LoGRA Attention",
-      "FedDAWA Aggregation"
+      "Federated Learning",
+      "Attention Mechanism",
+      "Linear Transformer",
+      "Adaptive Aggregation",
+      "Distributed Learning"
     ],
-    "relevance_score": 7
+    "relevance_score": 5
   }
 ]
