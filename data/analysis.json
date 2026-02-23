@@ -14,13 +14,13 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "Simple linear methods with careful normalization outperform transformer-based foundation models on single-cell RNA-seq benchmarks, demonstrating that complex deep learning may not be necessary for capturing cell identity from gene expression data.",
+    "tldr": "Simple linear methods for single-cell RNA-seq data analysis achieve state-of-the-art performance comparable to or better than computationally intensive transformer-based foundation models on cell-type classification and cross-species tasks.",
     "keywords": [
-      "Linear Methods",
-      "Normalization",
-      "Cell-Type Classification",
-      "Generative Model",
-      "Transformer"
+      "linear dimensionality reduction",
+      "normalization methods",
+      "cell-type classification",
+      "transformer embeddings",
+      "generative models"
     ],
     "relevance_score": 9
   },
@@ -44,13 +44,13 @@
       "q-bio.NC",
       "q-bio.QM"
     ],
-    "tldr": "A novel sliding-window prediction correlation (SWpC) method embeds directional linear time-invariant models to estimate time-varying directed functional connectivity in brain networks, demonstrating superior sensitivity in detecting task-evoked changes and clinical brain states.",
+    "tldr": "A sliding-window prediction correlation method estimates time-varying directed functional connectivity in brain networks using linear time-invariant models, validated across multimodal neuroimaging data and clinical applications.",
     "keywords": [
-      "Sliding-Window Correlation",
-      "Linear Time-Invariant Model",
-      "Directed Functional Connectivity",
-      "Dynamical Systems",
-      "Network Analysis"
+      "sliding-window analysis",
+      "directed functional connectivity",
+      "linear time-invariant model",
+      "network dynamics",
+      "fMRI analysis"
     ],
     "relevance_score": 9
   },
@@ -67,105 +67,15 @@
     "categories": [
       "q-bio.QM"
     ],
-    "tldr": "GRIMM introduces a genetic stratification benchmark for enzyme function prediction using sequence clustering to ensure realistic train-test splits that better assess model generalization on both closed-set and out-of-distribution open-set evaluation scenarios.",
+    "tldr": "GRIMM introduces a genetic stratification benchmark for enzyme function prediction that clusters sequences by similarity and prevents cluster overlap between training and test sets, enabling rigorous evaluation on both closed-set and open-set (novel label) tasks.",
     "keywords": [
-      "Sequence Clustering",
-      "Enzyme Function Prediction",
-      "Sequence Analysis",
-      "Out-Of-Distribution Evaluation",
-      "Benchmarking"
+      "sequence clustering",
+      "genetic stratification",
+      "enzyme function prediction",
+      "out-of-distribution evaluation",
+      "benchmarking methodology"
     ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2602.15677v1",
-    "title": "CAMEL: An ECG Language Model for Forecasting Cardiac Events",
-    "authors": [
-      "Neelay Velingker",
-      "Alaia Solko-Breslin",
-      "Mayank Keoliya",
-      "Seewon Choi",
-      "Jiayi Xin",
-      "Anika Marathe",
-      "Alireza Oraii",
-      "Rajat Deo",
-      "Sameed Khatana",
-      "Rajeev Alur",
-      "Mayur Naik",
-      "Eric Wong"
-    ],
-    "published_date": "2026-02-17T16:02:52Z",
-    "abstract": "Electrocardiograms (ECG) are electrical recordings of the heart that are critical for diagnosing cardiovascular conditions. ECG language models (ELMs) have recently emerged as a promising framework for ECG classification accompanied by report generation. However, current models cannot forecast future cardiac events despite the immense clinical value for planning earlier intervention. To address this gap, we propose CAMEL, the first ELM that is capable of inference over longer signal durations which enables its forecasting capability. Our key insight is a specialized ECG encoder which enables cross-understanding of ECG signals with text. We train CAMEL using established LLM training procedures, combining LoRA adaptation with a curriculum learning pipeline. Our curriculum includes ECG classification, metrics calculations, and multi-turn conversations to elicit reasoning. CAMEL demonstrates strong zero-shot performance across 6 tasks and 9 datasets, including ECGForecastBench, a new benchmark that we introduce for forecasting arrhythmias. CAMEL is on par with or surpasses ELMs and fully supervised baselines both in- and out-of-distribution, achieving SOTA results on ECGBench (+7.0% absolute average gain) as well as ECGForecastBench (+12.4% over fully supervised models and +21.1% over zero-shot ELMs).",
-    "pdf_link": "https://arxiv.org/pdf/2602.15677v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ],
-    "tldr": "CAMEL is the first ECG language model capable of forecasting cardiac events through a specialized encoder and curriculum learning approach, achieving state-of-the-art performance on both classification and arrhythmia prediction tasks.",
-    "keywords": [
-      "Language Model",
-      "Lora Adaptation",
-      "Curriculum Learning",
-      "Time-Series Forecasting",
-      "Zero-Shot Learning"
-    ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2602.15740v1",
-    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
-    "authors": [
-      "Fatemeh Khalvandi",
-      "Saadat Izadi",
-      "Abdolah Chalechale"
-    ],
-    "published_date": "2026-02-17T17:15:32Z",
-    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
-    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "q-bio.QM"
-    ],
-    "tldr": "MRC-GAT uses graph attention networks with copula-based statistical alignment and meta-learning to integrate multimodal patient data for accurate and interpretable Alzheimer's disease diagnosis.",
-    "keywords": [
-      "Graph Attention Network",
-      "Copula",
-      "Meta-Learning",
-      "Attention Mechanism",
-      "Multimodal Fusion"
-    ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2602.16737v1",
-    "title": "Exploring the Utility of MALDI-TOF Mass Spectrometry and Antimicrobial Resistance in Hospital Outbreak Detection",
-    "authors": [
-      "Chang Liu",
-      "Jieshi Chen",
-      "Alexander J. Sundermann",
-      "Kathleen Shutt",
-      "Marissa P. Griffith",
-      "Lora Lee Pless",
-      "Lee H. Harrison",
-      "Artur W. Dubrawski"
-    ],
-    "published_date": "2026-02-17T20:59:31Z",
-    "abstract": "Accurate and timely identification of hospital outbreak clusters is crucial for preventing the spread of infections that have epidemic potential. While assessing pathogen similarity through whole genome sequencing (WGS) is considered the gold standard for outbreak detection, its high cost and lengthy turnaround time preclude routine implementation in clinical laboratories. We explore the utility of two rapid and cost-effective alternatives to WGS, matrix-assisted laser desorption ionization-time of flight (MALDI-TOF) mass spectrometry and antimicrobial resistance (AR) patterns. We develop a machine learning framework that extracts informative representations from MALDI-TOF spectra and AR patterns for outbreak detection and explore their fusion. Through multi-species analyses, we demonstrate that in some cases MALDI-TOF and AR have the potential to reduce reliance on WGS, enabling more accessible and rapid outbreak surveillance.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16737v1",
-    "categories": [
-      "q-bio.QM",
-      "cs.LG"
-    ],
-    "tldr": "Machine learning framework extracts informative representations from MALDI-TOF mass spectrometry and antimicrobial resistance patterns as cost-effective alternatives to whole genome sequencing for hospital outbreak detection.",
-    "keywords": [
-      "Machine Learning",
-      "Maldi-Tof",
-      "Mass Spectrometry",
-      "Representation Learning",
-      "Clustering"
-    ],
-    "relevance_score": 7
+    "relevance_score": 9
   },
   {
     "id": "2602.15451v1",
@@ -192,15 +102,105 @@
       "cs.LG",
       "quant-ph"
     ],
-    "tldr": "A quantum-annealing-driven generative model with Neural Hash Functions generates drug-like molecules that exceed training data quality through integrated optimization of classical and quantum neural networks for molecular design.",
+    "tldr": "A quantum annealing-integrated generative model with a Neural Hash Function improves molecular design by generating drug-like compounds that exceed training data quality through optimized feature space sampling.",
     "keywords": [
-      "Quantum Annealing",
-      "Generative Model",
-      "Neural Hash Function",
-      "Regularization",
-      "Stochastic Sampling"
+      "quantum annealing",
+      "generative models",
+      "neural hash function",
+      "molecular design",
+      "drug discovery"
     ],
-    "relevance_score": 7
+    "relevance_score": 9
+  },
+  {
+    "id": "2602.15677v1",
+    "title": "CAMEL: An ECG Language Model for Forecasting Cardiac Events",
+    "authors": [
+      "Neelay Velingker",
+      "Alaia Solko-Breslin",
+      "Mayank Keoliya",
+      "Seewon Choi",
+      "Jiayi Xin",
+      "Anika Marathe",
+      "Alireza Oraii",
+      "Rajat Deo",
+      "Sameed Khatana",
+      "Rajeev Alur",
+      "Mayur Naik",
+      "Eric Wong"
+    ],
+    "published_date": "2026-02-17T16:02:52Z",
+    "abstract": "Electrocardiograms (ECG) are electrical recordings of the heart that are critical for diagnosing cardiovascular conditions. ECG language models (ELMs) have recently emerged as a promising framework for ECG classification accompanied by report generation. However, current models cannot forecast future cardiac events despite the immense clinical value for planning earlier intervention. To address this gap, we propose CAMEL, the first ELM that is capable of inference over longer signal durations which enables its forecasting capability. Our key insight is a specialized ECG encoder which enables cross-understanding of ECG signals with text. We train CAMEL using established LLM training procedures, combining LoRA adaptation with a curriculum learning pipeline. Our curriculum includes ECG classification, metrics calculations, and multi-turn conversations to elicit reasoning. CAMEL demonstrates strong zero-shot performance across 6 tasks and 9 datasets, including ECGForecastBench, a new benchmark that we introduce for forecasting arrhythmias. CAMEL is on par with or surpasses ELMs and fully supervised baselines both in- and out-of-distribution, achieving SOTA results on ECGBench (+7.0% absolute average gain) as well as ECGForecastBench (+12.4% over fully supervised models and +21.1% over zero-shot ELMs).",
+    "pdf_link": "https://arxiv.org/pdf/2602.15677v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "tldr": "CAMEL is an ECG language model combining specialized encoders, LoRA adaptation, and curriculum learning to forecast cardiac arrhythmias, achieving state-of-the-art performance on multiple ECG classification and forecasting benchmarks.",
+    "keywords": [
+      "language models",
+      "LoRA adaptation",
+      "curriculum learning",
+      "time series forecasting",
+      "ECG signal processing"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2602.15740v1",
+    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
+    "authors": [
+      "Fatemeh Khalvandi",
+      "Saadat Izadi",
+      "Abdolah Chalechale"
+    ],
+    "published_date": "2026-02-17T17:15:32Z",
+    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
+    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "tldr": "A meta-learning graph attention network uses copula-based transformations to align multimodal features (risk factors, cognitive tests, MRI) for interpretable Alzheimer's disease classification, achieving over 96% accuracy.",
+    "keywords": [
+      "graph attention network",
+      "copula-based transformation",
+      "meta-learning",
+      "multimodal fusion",
+      "disease classification"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2602.16737v1",
+    "title": "Exploring the Utility of MALDI-TOF Mass Spectrometry and Antimicrobial Resistance in Hospital Outbreak Detection",
+    "authors": [
+      "Chang Liu",
+      "Jieshi Chen",
+      "Alexander J. Sundermann",
+      "Kathleen Shutt",
+      "Marissa P. Griffith",
+      "Lora Lee Pless",
+      "Lee H. Harrison",
+      "Artur W. Dubrawski"
+    ],
+    "published_date": "2026-02-17T20:59:31Z",
+    "abstract": "Accurate and timely identification of hospital outbreak clusters is crucial for preventing the spread of infections that have epidemic potential. While assessing pathogen similarity through whole genome sequencing (WGS) is considered the gold standard for outbreak detection, its high cost and lengthy turnaround time preclude routine implementation in clinical laboratories. We explore the utility of two rapid and cost-effective alternatives to WGS, matrix-assisted laser desorption ionization-time of flight (MALDI-TOF) mass spectrometry and antimicrobial resistance (AR) patterns. We develop a machine learning framework that extracts informative representations from MALDI-TOF spectra and AR patterns for outbreak detection and explore their fusion. Through multi-species analyses, we demonstrate that in some cases MALDI-TOF and AR have the potential to reduce reliance on WGS, enabling more accessible and rapid outbreak surveillance.",
+    "pdf_link": "https://arxiv.org/pdf/2602.16737v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "tldr": "Machine learning models using MALDI-TOF mass spectrometry and antimicrobial resistance patterns provide rapid, cost-effective alternatives to whole genome sequencing for detecting hospital outbreak clusters.",
+    "keywords": [
+      "machine learning",
+      "mass spectrometry",
+      "feature extraction",
+      "clustering",
+      "outbreak detection"
+    ],
+    "relevance_score": 8
   },
   {
     "id": "2602.16357v1",
@@ -219,15 +219,15 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "SPOI-AE uses physics-informed neural networks to solve the nonlinear optical inversion and spectral unmixing problems in photoacoustic imaging, providing accurate chromophore concentration estimates validated on in vivo data.",
+    "tldr": "A physics-informed autoencoder addresses nonlinear optical inversion and spectral unmixing in photoacoustic imaging to estimate chromophore concentrations and tissue oxygen saturation in vivo.",
     "keywords": [
-      "Physics-Informed Neural Network",
-      "Autoencoder",
-      "Spectral Unmixing",
-      "Inverse Problem",
-      "Optical Imaging"
+      "physics-informed neural networks",
+      "autoencoder",
+      "spectral unmixing",
+      "inverse problems",
+      "image reconstruction"
     ],
-    "relevance_score": 7
+    "relevance_score": 8
   },
   {
     "id": "2602.16749v1",
@@ -248,14 +248,14 @@
       "q-bio.QM",
       "cs.LG"
     ],
-    "tldr": "U-FedTomAtt is an ultra-lightweight federated learning framework with attention mechanisms and adaptive aggregation for distributed tomato disease recognition on resource-constrained edge devices.",
+    "tldr": "An ultra-lightweight federated learning framework with attention mechanisms and adaptive weight aggregation achieves over 99% accuracy for tomato disease recognition on resource-constrained edge devices.",
     "keywords": [
-      "Federated Learning",
-      "Attention Mechanism",
-      "Linear Transformer",
-      "Adaptive Aggregation",
-      "Distributed Learning"
+      "federated learning",
+      "attention mechanism",
+      "model compression",
+      "adaptive aggregation",
+      "image classification"
     ],
-    "relevance_score": 5
+    "relevance_score": 6
   }
 ]
