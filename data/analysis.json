@@ -1,261 +1,108 @@
 [
   {
-    "id": "2602.16696v1",
-    "title": "Parameter-free representations outperform single-cell foundation models on downstream benchmarks",
+    "id": "2602.19775v1",
+    "title": "Exact Discrete Stochastic Simulation with Deep-Learning-Scale Gradient Optimization",
     "authors": [
-      "Huan Souza",
-      "Pankaj Mehta"
+      "Jose M. G. Vilar",
+      "Leonor Saiz"
     ],
-    "published_date": "2026-02-18T18:42:29Z",
-    "abstract": "Single-cell RNA sequencing (scRNA-seq) data exhibit strong and reproducible statistical structure. This has motivated the development of large-scale foundation models, such as TranscriptFormer, that use transformer-based architectures to learn a generative model for gene expression by embedding genes into a latent vector space. These embeddings have been used to obtain state-of-the-art (SOTA) performance on downstream tasks such as cell-type classification, disease-state prediction, and cross-species learning. Here, we ask whether similar performance can be achieved without utilizing computationally intensive deep learning-based representations. Using simple, interpretable pipelines that rely on careful normalization and linear methods, we obtain SOTA or near SOTA performance across multiple benchmarks commonly used to evaluate single-cell foundation models, including outperforming foundation models on out-of-distribution tasks involving novel cell types and organisms absent from the training data. Our findings highlight the need for rigorous benchmarking and suggest that the biology of cell identity can be captured by simple linear representations of single cell gene expression data.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16696v1",
+    "published_date": "2026-02-23T12:29:43Z",
+    "abstract": "Exact stochastic simulation of continuous-time Markov chains (CTMCs) is essential when discreteness and noise drive system behavior, but the hard categorical event selection in Gillespie-type algorithms blocks gradient-based learning. We eliminate this constraint by decoupling forward simulation from backward differentiation, with hard categorical sampling generating exact trajectories and gradients propagating through a continuous massively-parallel Gumbel-Softmax straight-through surrogate. Our approach enables accurate optimization at parameter scales over four orders of magnitude beyond existing simulators. We validate for accuracy, scalability, and reliability on a reversible dimerization model (0.09% error), a genetic oscillator (1.2% error), a 203,796-parameter gene regulatory network achieving 98.4% MNIST accuracy (a prototypical deep-learning multilayer perceptron benchmark), and experimental patch-clamp recordings of ion channel gating (R^2 = 0.987) in the single-channel regime. Our GPU implementation delivers 1.9 billion steps per second, matching the scale of non-differentiable simulators. By making exact stochastic simulation massively parallel and autodiff-compatible, our results enable high-dimensional parameter inference and inverse design across systems biology, chemical kinetics, physics, and related CTMC-governed domains.",
+    "pdf_link": "https://arxiv.org/pdf/2602.19775v1",
     "categories": [
-      "q-bio.GN",
+      "q-bio.QM",
+      "cond-mat.stat-mech",
       "cs.LG",
-      "q-bio.QM"
+      "physics.comp-ph",
+      "q-bio.MN"
     ],
-    "tldr": "Simple linear methods for single-cell RNA-seq data analysis achieve state-of-the-art performance comparable to or better than computationally intensive transformer-based foundation models on cell-type classification and cross-species tasks.",
+    "tldr": "Introduces a massively parallel, autodiff-compatible exact stochastic simulator for continuous-time Markov chains, decoupling Gillespie sampling from backward differentiation via a Gumbel-Softmax surrogate, enabling deep-learning-scale parameter inference.",
     "keywords": [
-      "linear dimensionality reduction",
-      "normalization methods",
-      "cell-type classification",
-      "transformer embeddings",
-      "generative models"
+      "Gillespie Algorithm",
+      "Gumbel-Softmax Straight-Through Estimator",
+      "Continuous-Time Markov Chains",
+      "Gene Regulatory Networks",
+      "Automatic Differentiation"
     ],
-    "relevance_score": 9
+    "relevance_score": 10
   },
   {
-    "id": "2602.16004v1",
-    "title": "Time-Varying Directed Interactions in Functional Brain Networks: Modeling and Validation",
+    "id": "2602.18915v1",
+    "title": "AAVGen: Precision Engineering of Adeno-associated Viral Capsids for Renal Selective Targeting",
     "authors": [
-      "Nan Xu",
-      "Xiaodi Zhang",
-      "Wen-Ju Pan",
-      "Jeremy L. Smith",
-      "Eric H. Schumacher",
-      "Jason W. Allen",
-      "Vince D. Calhoun",
-      "Shella D. Keilholz"
+      "Mohammadreza Ghaffarzadeh-Esfahani",
+      "Yousof Gheisari"
     ],
-    "published_date": "2026-02-17T20:51:07Z",
-    "abstract": "Understanding the dynamic nature of brain connectivity is critical for elucidating neural processing, behavior, and brain disorders. Traditional approaches such as sliding-window correlation (SWC) characterize time-varying undirected associations but do not resolve directional interactions, limiting inference about time-resolved information flow in brain networks. We introduce sliding-window prediction correlation (SWpC), which embeds a directional linear time-invariant (LTI) model within each sliding window to estimate time-varying directed functional connectivity (FC). SWpC yields two complementary descriptors of directed interactions: a strength measure (prediction correlation) and a duration measure (window-wise duration of information transfer). Using concurrent local field potential (LFP) and fMRI BOLD recordings from rat somatosensory cortices, we demonstrate stable directionality estimates in both LFP band-limited power and BOLD. Using Human Connectome Project (HCP) motor task fMRI, SWpC detects significant task-evoked changes in directed FC strength and duration and shows higher sensitivity than SWC for identifying task-evoked connectivity differences. Finally, in post-concussion vestibular dysfunction (PCVD), SWpC reveals reproducible vestibular-multisensory brain-state shifts and improves healthy-control vs subacute patient (HC-ST) discrimination using state-derived features. Together, these results show that SWpC provides biologically interpretable, time-resolved directed connectivity patterns across multimodal validation and clinical application settings, supporting both basic and translational neuroscience.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16004v1",
-    "categories": [
-      "q-bio.NC",
-      "q-bio.QM"
-    ],
-    "tldr": "A sliding-window prediction correlation method estimates time-varying directed functional connectivity in brain networks using linear time-invariant models, validated across multimodal neuroimaging data and clinical applications.",
-    "keywords": [
-      "sliding-window analysis",
-      "directed functional connectivity",
-      "linear time-invariant model",
-      "network dynamics",
-      "fMRI analysis"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2602.16504v1",
-    "title": "GRIMM: Genetic stRatification for Inference in Molecular Modeling",
-    "authors": [
-      "Ashley Babjac",
-      "Adrienne Hoarfrost"
-    ],
-    "published_date": "2026-02-18T14:46:18Z",
-    "abstract": "The vast majority of biological sequences encode unknown functions and bear little resemblance to experimentally characterized proteins, limiting both our understanding of biology and our ability to harness functional potential for the bioeconomy. Predicting enzyme function from sequence remains a central challenge in computational biology, complicated by low sequence diversity and imbalanced label support in publicly available datasets. Models trained on these data can overestimate performance and fail to generalize. To address this, we introduce GRIMM (Genetic stRatification for Inference in Molecular Modeling), a benchmark for enzyme function prediction that employs genetic stratification: sequences are clustered by similarity and clusters are assigned exclusively to training, validation, or test sets. This ensures that sequences from the same cluster do not appear in multiple partitions. GRIMM produces multiple test sets: a closed-set test with the same label distribution as training (Test-1) and an open-set test containing novel labels (Test-2), serving as a realistic out-of-distribution proxy for discovering novel enzyme functions. While demonstrated on enzymes, this approach is generalizable to any sequence-based classification task where inputs can be clustered by similarity. By formalizing a splitting strategy often used implicitly, GRIMM provides a unified and reproducible framework for closed- and open-set evaluation. The method is lightweight, requiring only sequence clustering and label annotations, and can be adapted to different similarity thresholds, data scales, and biological tasks. GRIMM enables more realistic evaluation of functional prediction models on both familiar and unseen classes and establishes a benchmark that more faithfully assesses model performance and generalizability.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16504v1",
-    "categories": [
-      "q-bio.QM"
-    ],
-    "tldr": "GRIMM introduces a genetic stratification benchmark for enzyme function prediction that clusters sequences by similarity and prevents cluster overlap between training and test sets, enabling rigorous evaluation on both closed-set and open-set (novel label) tasks.",
-    "keywords": [
-      "sequence clustering",
-      "genetic stratification",
-      "enzyme function prediction",
-      "out-of-distribution evaluation",
-      "benchmarking methodology"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2602.15451v1",
-    "title": "Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer",
-    "authors": [
-      "Hayato Kunugi",
-      "Mohsen Rahmani",
-      "Yosuke Iyama",
-      "Yutaro Hirono",
-      "Akira Suma",
-      "Matthew Woolway",
-      "Vladimir Vargas-Calder\u00f3n",
-      "William Kim",
-      "Kevin Chern",
-      "Mohammad Amin",
-      "Masaru Tateno"
-    ],
-    "published_date": "2026-02-17T09:38:11Z",
-    "abstract": "Deep generative modeling to stochastically design small molecules is an emerging technology for accelerating drug discovery and development. However, one major issue in molecular generative models is their lower frequency of drug-like compounds. To resolve this problem, we developed a novel framework for optimization of deep generative models integrated with a D-Wave quantum annealing computer, where our Neural Hash Function (NHF) presented herein is used both as the regularization and binarization schemes simultaneously, of which the latter is for transformation between continuous and discrete signals of the classical and quantum neural networks, respectively, in the error evaluation (i.e., objective) function. The compounds generated via the quantum-annealing generative models exhibited higher quality in both validity and drug-likeness than those generated via the fully-classical models, and was further indicated to exceed even the training data in terms of drug-likeness features, without any restraints and conditions to deliberately induce such an optimization. These results indicated an advantage of quantum annealing to aim at a stochastic generator integrated with our novel neural network architectures, for the extended performance of feature space sampling and extraction of characteristic features in drug design.",
-    "pdf_link": "https://arxiv.org/pdf/2602.15451v1",
+    "published_date": "2026-02-21T17:46:34Z",
+    "abstract": "Adeno-associated viruses (AAVs) are promising vectors for gene therapy, but their native serotypes face limitations in tissue tropism, immune evasion, and production efficiency. Engineering capsids to overcome these hurdles is challenging due to the vast sequence space and the difficulty of simultaneously optimizing multiple functional properties. The complexity also adds when it comes to the kidney, which presents unique anatomical barriers and cellular targets that require precise and efficient vector engineering. Here, we present AAVGen, a generative artificial intelligence framework for de novo design of AAV capsids with enhanced multi-trait profiles. AAVGen integrates a protein language model (PLM) with supervised fine-tuning (SFT) and a reinforcement learning technique termed Group Sequence Policy Optimization (GSPO). The model is guided by a composite reward signal derived from three ESM-2-based regression predictors, each trained to predict a key property: production fitness, kidney tropism, and thermostability. Our results demonstrate that AAVGen produces a diverse library of novel VP1 protein sequences. In silico validations revealed that the majority of the generated variants have superior performance across all three employed indices, indicating successful multi-objective optimization. Furthermore, structural analysis via AlphaFold3 confirms that the generated sequences preserve the canonical capsid folding despite sequence diversification. AAVGen establishes a foundation for data-driven viral vector engineering, accelerating the development of next-generation AAV vectors with tailored functional characteristics.",
+    "pdf_link": "https://arxiv.org/pdf/2602.18915v1",
     "categories": [
       "q-bio.QM",
       "cs.AI",
-      "cs.LG",
-      "quant-ph"
+      "cs.CL",
+      "cs.LG"
     ],
-    "tldr": "A quantum annealing-integrated generative model with a Neural Hash Function improves molecular design by generating drug-like compounds that exceed training data quality through optimized feature space sampling.",
+    "tldr": "AAVGen couples a protein language model with reinforcement learning and ESM-2-based fitness predictors to de novo design AAV capsids optimized for production fitness, kidney tropism, and thermostability.",
     "keywords": [
-      "quantum annealing",
-      "generative models",
-      "neural hash function",
-      "molecular design",
-      "drug discovery"
+      "Protein Language Model",
+      "Supervised Fine-Tuning",
+      "Group Sequence Policy Optimization",
+      "ESM-2",
+      "Multi-Objective Sequence Design"
     ],
     "relevance_score": 9
   },
   {
-    "id": "2602.15677v1",
-    "title": "CAMEL: An ECG Language Model for Forecasting Cardiac Events",
+    "id": "2602.19196v1",
+    "title": "An Interpretable Data-Driven Model of the Flight Dynamics of Hawks",
     "authors": [
-      "Neelay Velingker",
-      "Alaia Solko-Breslin",
-      "Mayank Keoliya",
-      "Seewon Choi",
-      "Jiayi Xin",
-      "Anika Marathe",
-      "Alireza Oraii",
-      "Rajat Deo",
-      "Sameed Khatana",
-      "Rajeev Alur",
-      "Mayur Naik",
-      "Eric Wong"
+      "Lydia France",
+      "Karl Lapo",
+      "J. Nathan Kutz"
     ],
-    "published_date": "2026-02-17T16:02:52Z",
-    "abstract": "Electrocardiograms (ECG) are electrical recordings of the heart that are critical for diagnosing cardiovascular conditions. ECG language models (ELMs) have recently emerged as a promising framework for ECG classification accompanied by report generation. However, current models cannot forecast future cardiac events despite the immense clinical value for planning earlier intervention. To address this gap, we propose CAMEL, the first ELM that is capable of inference over longer signal durations which enables its forecasting capability. Our key insight is a specialized ECG encoder which enables cross-understanding of ECG signals with text. We train CAMEL using established LLM training procedures, combining LoRA adaptation with a curriculum learning pipeline. Our curriculum includes ECG classification, metrics calculations, and multi-turn conversations to elicit reasoning. CAMEL demonstrates strong zero-shot performance across 6 tasks and 9 datasets, including ECGForecastBench, a new benchmark that we introduce for forecasting arrhythmias. CAMEL is on par with or surpasses ELMs and fully supervised baselines both in- and out-of-distribution, achieving SOTA results on ECGBench (+7.0% absolute average gain) as well as ECGForecastBench (+12.4% over fully supervised models and +21.1% over zero-shot ELMs).",
-    "pdf_link": "https://arxiv.org/pdf/2602.15677v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ],
-    "tldr": "CAMEL is an ECG language model combining specialized encoders, LoRA adaptation, and curriculum learning to forecast cardiac arrhythmias, achieving state-of-the-art performance on multiple ECG classification and forecasting benchmarks.",
-    "keywords": [
-      "language models",
-      "LoRA adaptation",
-      "curriculum learning",
-      "time series forecasting",
-      "ECG signal processing"
-    ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2602.15740v1",
-    "title": "MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis",
-    "authors": [
-      "Fatemeh Khalvandi",
-      "Saadat Izadi",
-      "Abdolah Chalechale"
-    ],
-    "published_date": "2026-02-17T17:15:32Z",
-    "abstract": "Alzheimer's disease (AD) is a progressive neurodegenerative condition necessitating early and precise diagnosis to provide prompt clinical management. Given the paramount importance of early diagnosis, recent studies have increasingly focused on computer-aided diagnostic models to enhance precision and reliability. However, most graph-based approaches still rely on fixed structural designs, which restrict their flexibility and limit generalization across heterogeneous patient data. To overcome these limitations, the Meta-Relational Copula-Based Graph Attention Network (MRC-GAT) is proposed as an efficient multimodal model for AD classification tasks. The proposed architecture, copula-based similarity alignment, relational attention, and node fusion are integrated as the core components of episodic meta-learning, such that the multimodal features, including risk factors (RF), Cognitive test scores, and MRI attributes, are first aligned via a copula-based transformation in a common statistical space and then combined by a multi-relational attention mechanism. According to evaluations performed on the TADPOLE and NACC datasets, the MRC-GAT model achieved accuracies of 96.87% and 92.31%, respectively, demonstrating state-of-the-art performance compared to existing diagnostic models. Finally, the proposed model confirms the robustness and applicability of the proposed method by providing interpretability at various stages of disease diagnosis.",
-    "pdf_link": "https://arxiv.org/pdf/2602.15740v1",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "q-bio.QM"
-    ],
-    "tldr": "A meta-learning graph attention network uses copula-based transformations to align multimodal features (risk factors, cognitive tests, MRI) for interpretable Alzheimer's disease classification, achieving over 96% accuracy.",
-    "keywords": [
-      "graph attention network",
-      "copula-based transformation",
-      "meta-learning",
-      "multimodal fusion",
-      "disease classification"
-    ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2602.16737v1",
-    "title": "Exploring the Utility of MALDI-TOF Mass Spectrometry and Antimicrobial Resistance in Hospital Outbreak Detection",
-    "authors": [
-      "Chang Liu",
-      "Jieshi Chen",
-      "Alexander J. Sundermann",
-      "Kathleen Shutt",
-      "Marissa P. Griffith",
-      "Lora Lee Pless",
-      "Lee H. Harrison",
-      "Artur W. Dubrawski"
-    ],
-    "published_date": "2026-02-17T20:59:31Z",
-    "abstract": "Accurate and timely identification of hospital outbreak clusters is crucial for preventing the spread of infections that have epidemic potential. While assessing pathogen similarity through whole genome sequencing (WGS) is considered the gold standard for outbreak detection, its high cost and lengthy turnaround time preclude routine implementation in clinical laboratories. We explore the utility of two rapid and cost-effective alternatives to WGS, matrix-assisted laser desorption ionization-time of flight (MALDI-TOF) mass spectrometry and antimicrobial resistance (AR) patterns. We develop a machine learning framework that extracts informative representations from MALDI-TOF spectra and AR patterns for outbreak detection and explore their fusion. Through multi-species analyses, we demonstrate that in some cases MALDI-TOF and AR have the potential to reduce reliance on WGS, enabling more accessible and rapid outbreak surveillance.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16737v1",
+    "published_date": "2026-02-22T13:58:03Z",
+    "abstract": "Despite significant analysis of bird flight, generative physics models for flight dynamics do not currently exist. Yet the underlying mechanisms responsible for various flight manoeuvres are important for understanding how agile flight can be accomplished. Even in a simple flight, multiple objectives are at play, complicating analysis of the overall flight mechanism. Using the data-driven method of dynamic mode decomposition (DMD) on motion capture recordings of hawks, we show that multiple behavioral states such as flapping, turning, landing, and gliding, can be modeled by simple and interpretable modal structures (i.e. the underlying wing-tail shape) which can be linearly combined to reproduce the experimental flight observations. Moreover, the DMD model can be used to extrapolate naturalistic flapping. Flight is highly individual, with differences in style across the hawks, but we find they share a common set of dynamic modes. The DMD model is a direct fit to data, unlike traditional models constructed from physics principles which can rarely be tested on real data and whose assumptions are typically invalid in real flight. The DMD approach gives a highly accurate reconstruction of the flight dynamics with only three parameters needed to characterize flapping, and a fourth to integrate turning manoeuvres. The DMD analysis further shows that the underlying mechanism of flight, much like simplest walking models, displays a parametric coupling between dominant modes suggesting efficiency for locomotion.",
+    "pdf_link": "https://arxiv.org/pdf/2602.19196v1",
     "categories": [
       "q-bio.QM",
-      "cs.LG"
-    ],
-    "tldr": "Machine learning models using MALDI-TOF mass spectrometry and antimicrobial resistance patterns provide rapid, cost-effective alternatives to whole genome sequencing for detecting hospital outbreak clusters.",
-    "keywords": [
-      "machine learning",
-      "mass spectrometry",
-      "feature extraction",
-      "clustering",
-      "outbreak detection"
-    ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2602.16357v1",
-    "title": "Optical Inversion and Spectral Unmixing of Spectroscopic Photoacoustic Images with Physics-Informed Neural Networks",
-    "authors": [
-      "Sarkis Ter Martirosyan",
-      "Xinyue Huang",
-      "David Qin",
-      "Anthony Yu",
-      "Stanislav Emelianov"
-    ],
-    "published_date": "2026-02-18T10:44:45Z",
-    "abstract": "Accurate estimation of the relative concentrations of chromophores in a spectroscopic photoacoustic (sPA) image can reveal immense structural, functional, and molecular information about physiological processes. However, due to nonlinearities and ill-posedness inherent to sPA imaging, concentration estimation is intractable. The Spectroscopic Photoacoustic Optical Inversion Autoencoder (SPOI-AE) aims to address the sPA optical inversion and spectral unmixing problems without assuming linearity. Herein, SPOI-AE was trained and tested on \\textit{in vivo} mouse lymph node sPA images with unknown ground truth chromophore concentrations. SPOI-AE better reconstructs input sPA pixels than conventional algorithms while providing biologically coherent estimates for optical parameters, chromophore concentrations, and the percent oxygen saturation of tissue. SPOI-AE's unmixing accuracy was validated using a simulated mouse lymph node phantom ground truth.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16357v1",
-    "categories": [
+      "cs.CE",
       "cs.LG",
-      "q-bio.QM"
+      "physics.flu-dyn"
     ],
-    "tldr": "A physics-informed autoencoder addresses nonlinear optical inversion and spectral unmixing in photoacoustic imaging to estimate chromophore concentrations and tissue oxygen saturation in vivo.",
+    "tldr": "Applies Dynamic Mode Decomposition to motion-capture recordings of hawk flight, deriving a compact modal model that reconstructs multiple flight behaviors using only three to four parameters.",
     "keywords": [
-      "physics-informed neural networks",
-      "autoencoder",
-      "spectral unmixing",
-      "inverse problems",
-      "image reconstruction"
+      "Dynamic Mode Decomposition",
+      "Parametric Mode Coupling",
+      "Modal Decomposition",
+      "Motion Capture",
+      "Linear State-Space Reconstruction"
     ],
-    "relevance_score": 8
+    "relevance_score": 7
   },
   {
-    "id": "2602.16749v1",
-    "title": "U-FedTomAtt: Ultra-lightweight Federated Learning with Attention for Tomato Disease Recognition",
+    "id": "2602.19295v1",
+    "title": "Time-Varying Hazard Patterns and Co-Mutation Profiles of KRAS G12C and G12D in Real-World NSCLC",
     "authors": [
-      "Romiyal George",
-      "Sathiyamohan Nishankar",
-      "Selvarajah Thuseethan",
-      "Chathrie Wimalasooriya",
-      "Yakub Sebastian",
-      "Roshan G. Ragel",
-      "Zhongwei Liang"
+      "Robert Amevor",
+      "Dennis Baidoo",
+      "Emmanuel Kubuafor"
     ],
-    "published_date": "2026-02-18T05:00:38Z",
-    "abstract": "Federated learning has emerged as a privacy-preserving and efficient approach for deploying intelligent agricultural solutions. Accurate edge-based diagnosis across geographically dispersed farms is crucial for recognising tomato diseases in sustainable farming. Traditional centralised training aggregates raw data on a central server, leading to communication overhead, privacy risks and latency. Meanwhile, edge devices require lightweight networks to operate effectively within limited resources. In this paper, we propose U-FedTomAtt, an ultra-lightweight federated learning framework with attention for tomato disease recognition in resource-constrained and distributed environments. The model comprises only 245.34K parameters and 71.41 MFLOPS. First, we propose an ultra-lightweight neural network with dilated bottleneck (DBNeck) modules and a linear transformer to minimise computational and memory overhead. To mitigate potential accuracy loss, a novel local-global residual attention (LoGRA) module is incorporated. Second, we propose the federated dual adaptive weight aggregation (FedDAWA) algorithm that enhances global model accuracy. Third, our framework is validated using three benchmark datasets for tomato diseases under simulated federated settings. Experimental results show that the proposed method achieves 0.9910% and 0.9915% Top-1 accuracy and 0.9923% and 0.9897% F1-scores on SLIF-Tomato and PlantVillage tomato datasets, respectively.",
-    "pdf_link": "https://arxiv.org/pdf/2602.16749v1",
+    "published_date": "2026-02-22T18:07:58Z",
+    "abstract": "Background: KRAS mutations are the largest oncogenic subset in NSCLC. While KRAS G12C is now targetable, no approved therapies exist for G12D. We examined time-to-next-treatment (TTNT) and overall survival (OS) differences between G12C and G12D, allowing for time-varying hazard effects. Methods: De-identified data from AACR Project GENIE BPC NSCLC v2.0-public were analyzed. TTNT served as a real-world surrogate for progression-free survival. Co-mutations (TP53, STK11, KEAP1, SMARCA4, MET), TMB, and PD-L1 were harmonized. Kaplan-Meier, multivariable Cox, and a pre-specified piecewise Cox model (split at median TTNT = 23 months) were applied. Schoenfeld residuals assessed proportional hazards; bootstrap resampling (B=1000) evaluated stability. Results: Among 162 TTNT-evaluable patients (G12C n=130; G12D n=32), median TTNT was 28.6 versus 32.0 months (log-rank p=0.79). Adjusted Cox regression showed no overall hazard difference (HR=0.85; 95% CI 0.53-1.37; p=0.50), but Schoenfeld testing indicated borderline non-proportionality (p=0.053). Piecewise Cox modeling revealed time-varying effects: early TTNT hazard favored G12D (HR=0.41; 95% CI 0.17-0.97; p=0.043) with significant KRAS x period interaction (HR=3.33; p=0.021) and late-period attenuation (HR=1.38; 95% CI 0.77-2.47; p=0.285). Bootstrap resampling confirmed this pattern (median HRearly=0.39; HRlate=1.41). Among 278 OS-evaluable patients (133 deaths), G12D showed improved OS (adjusted HR=0.63; 95% CI 0.39-0.99; p=0.048). G12C tumors exhibited higher TMB (9.79 vs 7.83 mut/Mb; p=0.002) and greater STK11/KEAP1 enrichment. Conclusions: KRAS G12D demonstrated early TTNT advantage and improved OS. Late-period TTNT differences were non-significant (post-hoc power: 12.3%). These exploratory findings require validation in larger cohorts but support allele-specific therapeutic development for G12D.",
+    "pdf_link": "https://arxiv.org/pdf/2602.19295v1",
     "categories": [
       "q-bio.QM",
-      "cs.LG"
+      "stat.AP",
+      "stat.ME"
     ],
-    "tldr": "An ultra-lightweight federated learning framework with attention mechanisms and adaptive weight aggregation achieves over 99% accuracy for tomato disease recognition on resource-constrained edge devices.",
+    "tldr": "Uses piecewise Cox regression with Schoenfeld-residual diagnostics and bootstrap resampling to uncover time-varying survival differences between KRAS G12C and G12D mutations in real-world NSCLC patients.",
     "keywords": [
-      "federated learning",
-      "attention mechanism",
-      "model compression",
-      "adaptive aggregation",
-      "image classification"
+      "Piecewise Cox Regression",
+      "Kaplan-Meier Estimator",
+      "Schoenfeld Residuals",
+      "Bootstrap Resampling",
+      "Proportional Hazards Model"
     ],
-    "relevance_score": 6
+    "relevance_score": 5
   }
 ]

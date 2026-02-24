@@ -1,360 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-Bio Watchtower — Daily arXiv Digest</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q-Bio Watchtower — 2026-02-24</title>
+  <style>
+    /* ── Reset & Base ──────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #ffffff;
-            color: #1a1a1a;
-            line-height: 1.6;
-        }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
-        header {
-            background-color: #2c3e50;
-            color: #ffffff;
-            padding: 2rem 1rem;
-            text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+    /* ── Header ─────────────────────────────────────────────────── */
+    header {
+      background: #2c3e50;
+      color: #ffffff;
+      padding: 36px 48px 28px;
+      border-bottom: 4px solid #3498db;
+    }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
+    header h1 {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      margin-bottom: 8px;
+    }
 
-        header .subtitle {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 0.25rem;
-        }
+    header h1 .accent { color: #3498db; }
 
-        header .meta {
-            font-size: 0.95rem;
-            opacity: 0.8;
-        }
+    header p.subtitle {
+      font-size: 1rem;
+      color: #bdc3c7;
+      margin-bottom: 4px;
+    }
 
-        main {
-            max-width: 1400px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+    header p.meta {
+      font-size: 0.88rem;
+      color: #95a5a6;
+    }
 
-        .summary-section {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 4px;
-        }
+    /* ── Main Layout ─────────────────────────────────────────────── */
+    main {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 40px 48px 56px;
+    }
 
-        .summary-section h2 {
-            color: #2c3e50;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
+    /* ── Section Headings ────────────────────────────────────────── */
+    .section-heading {
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 18px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #3498db;
+    }
 
-        .summary-section p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-        }
+    /* ── Table ───────────────────────────────────────────────────── */
+    .table-wrapper {
+      overflow-x: auto;
+      margin-bottom: 52px;
+    }
 
-        .table-container {
-            overflow-x: auto;
-            margin-bottom: 2rem;
-        }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+    thead tr {
+      background: #2c3e50;
+      color: #ffffff;
+    }
 
-        thead {
-            background-color: #2c3e50;
-            color: #ffffff;
-        }
+    thead th {
+      padding: 12px 14px;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      border: 1px solid #34495e;
+      text-transform: uppercase;
+      font-size: 0.82rem;
+    }
 
-        thead th {
-            padding: 1rem 0.75rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.95rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+    tbody tr:nth-child(odd)  { background: #f9f9f9; }
+    tbody tr:nth-child(even) { background: #ffffff;  }
+    tbody tr:hover { background: #eaf4fd; }
 
-        tbody tr {
-            border-bottom: 1px solid #ddd;
-        }
+    tbody td {
+      padding: 12px 14px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
 
-        tbody tr:nth-child(odd) {
-            background-color: #f9f9f9;
-        }
+    /* Rank */
+    td.rank {
+      text-align: center;
+      font-weight: 700;
+      color: #2c3e50;
+      font-size: 1rem;
+      white-space: nowrap;
+      width: 56px;
+    }
 
-        tbody tr:nth-child(even) {
-            background-color: #ffffff;
-        }
+    /* Title */
+    td.title { min-width: 240px; }
+    td.title a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 1.45;
+    }
+    td.title a:hover { text-decoration: underline; color: #2980b9; }
 
-        tbody tr:hover {
-            background-color: #f0f0f0;
-        }
+    /* Authors */
+    td.authors { color: #444; font-size: 0.84rem; min-width: 170px; }
 
-        tbody td {
-            padding: 1rem 0.75rem;
-            vertical-align: top;
-            font-size: 0.95rem;
-            border: 1px solid #ddd;
-        }
+    /* Date */
+    td.date { white-space: nowrap; color: #555; font-size: 0.84rem; min-width: 100px; }
 
-        .rank-cell {
-            text-align: center;
-            font-weight: 600;
-            color: #2c3e50;
-            width: 60px;
-        }
+    /* TL;DR */
+    td.tldr { font-size: 0.84rem; color: #333; min-width: 290px; max-width: 420px; }
 
-        .title-cell {
-            min-width: 250px;
-        }
+    /* Keywords */
+    td.keywords { font-size: 0.82rem; color: #555; min-width: 200px; max-width: 240px; }
 
-        .title-cell a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 500;
-            line-height: 1.4;
-        }
+    /* Score */
+    td.score { text-align: center; width: 76px; white-space: nowrap; }
 
-        .title-cell a:hover {
-            text-decoration: underline;
-        }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+    }
+    .badge-green  { background: #27ae60; }
+    .badge-orange { background: #f39c12; }
+    .badge-grey   { background: #95a5a6; }
 
-        .authors-cell {
-            min-width: 180px;
-            font-size: 0.9rem;
-            color: #555;
-        }
+    /* ── Narrative Summary ───────────────────────────────────────── */
+    .narrative {
+      background: #f4f8fb;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+      padding: 22px 26px;
+      margin-bottom: 52px;
+    }
 
-        .date-cell {
-            min-width: 100px;
-            white-space: nowrap;
-        }
+    .narrative h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 12px;
+    }
 
-        .tldr-cell {
-            min-width: 300px;
-            max-width: 500px;
-        }
+    .narrative p {
+      font-size: 0.95rem;
+      color: #2c3e50;
+      line-height: 1.8;
+    }
 
-        .keywords-cell {
-            min-width: 200px;
-            font-size: 0.9rem;
-            color: #666;
-        }
+    /* ── Footer ──────────────────────────────────────────────────── */
+    footer {
+      background: #2c3e50;
+      color: #95a5a6;
+      text-align: center;
+      padding: 18px 48px;
+      font-size: 0.82rem;
+      letter-spacing: 0.02em;
+    }
 
-        .score-cell {
-            text-align: center;
-            width: 80px;
-        }
+    footer strong { color: #bdc3c7; }
 
-        .score-badge {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: #ffffff;
-        }
-
-        .score-high {
-            background-color: #27ae60;
-        }
-
-        .score-medium {
-            background-color: #f39c12;
-        }
-
-        .score-low {
-            background-color: #95a5a6;
-        }
-
-        footer {
-            background-color: #2c3e50;
-            color: #ffffff;
-            text-align: center;
-            padding: 1.5rem 1rem;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            .table-container {
-                font-size: 0.85rem;
-            }
-
-            tbody td {
-                padding: 0.75rem 0.5rem;
-            }
-        }
-    </style>
+    /* ── Responsive ──────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      header, main, footer { padding-left: 16px; padding-right: 16px; }
+      header h1 { font-size: 1.55rem; }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Q-Bio Watchtower</h1>
-        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-02-23</div>
-        <div class="meta">9 papers · Published Feb 17–18, 2026</div>
-    </header>
 
-    <main>
-        <section class="summary-section">
-            <h2>Today's Highlights</h2>
-            <p>
-                This digest features a strong emphasis on machine learning methodologies applied to biological and clinical challenges, spanning single-cell genomics, neuroimaging, molecular design, and disease diagnostics. Notably, several papers demonstrate that simpler, more interpretable approaches—such as linear methods for scRNA-seq analysis and MALDI-TOF for outbreak detection—can match or exceed the performance of complex deep learning models, suggesting a maturation in the field toward rigorous benchmarking and method validation. Key technical innovations include sliding-window prediction correlation for time-varying brain connectivity, genetic stratification benchmarks for enzyme function prediction, quantum annealing-enhanced generative models for drug design, and multimodal fusion strategies using graph attention networks and physics-informed neural networks for medical imaging and diagnostics.
-            </p>
-        </section>
+<!-- ══════════════════════════════════════════════════════ HEADER -->
+<header>
+  <h1>Q-Bio <span class="accent">Watchtower</span></h1>
+  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-02-24 UTC</p>
+  <p class="meta">4 papers reviewed &nbsp;&middot;&nbsp; Published date range: 2026-02-21 &ndash; 2026-02-23</p>
+</header>
 
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="rank-cell">Rank</th>
-                        <th class="title-cell">Title</th>
-                        <th class="authors-cell">Authors</th>
-                        <th class="date-cell">Published Date</th>
-                        <th class="tldr-cell">TL;DR</th>
-                        <th class="keywords-cell">Keywords</th>
-                        <th class="score-cell">Relevance</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="rank-cell">1</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.16696v1" target="_blank">Parameter-free representations outperform single-cell foundation models on downstream benchmarks</a>
-                        </td>
-                        <td class="authors-cell">Huan Souza, Pankaj Mehta</td>
-                        <td class="date-cell">2026-02-18</td>
-                        <td class="tldr-cell">Simple linear methods for single-cell RNA-seq data analysis achieve state-of-the-art performance comparable to or better than computationally intensive transformer-based foundation models on cell-type classification and cross-species tasks.</td>
-                        <td class="keywords-cell">linear dimensionality reduction, normalization methods, cell-type classification, transformer embeddings, generative models</td>
-                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">2</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.16004v1" target="_blank">Time-Varying Directed Interactions in Functional Brain Networks: Modeling and Validation</a>
-                        </td>
-                        <td class="authors-cell">Nan Xu, Xiaodi Zhang, Wen-Ju Pan, et al.</td>
-                        <td class="date-cell">2026-02-17</td>
-                        <td class="tldr-cell">A sliding-window prediction correlation method estimates time-varying directed functional connectivity in brain networks using linear time-invariant models, validated across multimodal neuroimaging data and clinical applications.</td>
-                        <td class="keywords-cell">sliding-window analysis, directed functional connectivity, linear time-invariant model, network dynamics, fMRI analysis</td>
-                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">3</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.16504v1" target="_blank">GRIMM: Genetic stRatification for Inference in Molecular Modeling</a>
-                        </td>
-                        <td class="authors-cell">Ashley Babjac, Adrienne Hoarfrost</td>
-                        <td class="date-cell">2026-02-18</td>
-                        <td class="tldr-cell">GRIMM introduces a genetic stratification benchmark for enzyme function prediction that clusters sequences by similarity and prevents cluster overlap between training and test sets, enabling rigorous evaluation on both closed-set and open-set (novel label) tasks.</td>
-                        <td class="keywords-cell">sequence clustering, genetic stratification, enzyme function prediction, out-of-distribution evaluation, benchmarking methodology</td>
-                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">4</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.15451v1" target="_blank">Molecular Design beyond Training Data with Novel Extended Objective Functionals of Generative AI Models Driven by Quantum Annealing Computer</a>
-                        </td>
-                        <td class="authors-cell">Hayato Kunugi, Mohsen Rahmani, Yosuke Iyama, et al.</td>
-                        <td class="date-cell">2026-02-17</td>
-                        <td class="tldr-cell">A quantum annealing-integrated generative model with a Neural Hash Function improves molecular design by generating drug-like compounds that exceed training data quality through optimized feature space sampling.</td>
-                        <td class="keywords-cell">quantum annealing, generative models, neural hash function, molecular design, drug discovery</td>
-                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">5</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.15677v1" target="_blank">CAMEL: An ECG Language Model for Forecasting Cardiac Events</a>
-                        </td>
-                        <td class="authors-cell">Neelay Velingker, Alaia Solko-Breslin, Mayank Keoliya, et al.</td>
-                        <td class="date-cell">2026-02-17</td>
-                        <td class="tldr-cell">CAMEL is an ECG language model combining specialized encoders, LoRA adaptation, and curriculum learning to forecast cardiac arrhythmias, achieving state-of-the-art performance on multiple ECG classification and forecasting benchmarks.</td>
-                        <td class="keywords-cell">language models, LoRA adaptation, curriculum learning, time series forecasting, ECG signal processing</td>
-                        <td class="score-cell"><span class="score-badge score-high">8</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">6</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.15740v1" target="_blank">MRC-GAT: A Meta-Relational Copula-Based Graph Attention Network for Interpretable Multimodal Alzheimer's Disease Diagnosis</a>
-                        </td>
-                        <td class="authors-cell">Fatemeh Khalvandi, Saadat Izadi, Abdolah Chalechale</td>
-                        <td class="date-cell">2026-02-17</td>
-                        <td class="tldr-cell">A meta-learning graph attention network uses copula-based transformations to align multimodal features (risk factors, cognitive tests, MRI) for interpretable Alzheimer's disease classification, achieving over 96% accuracy.</td>
-                        <td class="keywords-cell">graph attention network, copula-based transformation, meta-learning, multimodal fusion, disease classification</td>
-                        <td class="score-cell"><span class="score-badge score-high">8</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">7</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.16737v1" target="_blank">Exploring the Utility of MALDI-TOF Mass Spectrometry and Antimicrobial Resistance in Hospital Outbreak Detection</a>
-                        </td>
-                        <td class="authors-cell">Chang Liu, Jieshi Chen, Alexander J. Sundermann, et al.</td>
-                        <td class="date-cell">2026-02-17</td>
-                        <td class="tldr-cell">Machine learning models using MALDI-TOF mass spectrometry and antimicrobial resistance patterns provide rapid, cost-effective alternatives to whole genome sequencing for detecting hospital outbreak clusters.</td>
-                        <td class="keywords-cell">machine learning, mass spectrometry, feature extraction, clustering, outbreak detection</td>
-                        <td class="score-cell"><span class="score-badge score-high">8</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">8</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.16357v1" target="_blank">Optical Inversion and Spectral Unmixing of Spectroscopic Photoacoustic Images with Physics-Informed Neural Networks</a>
-                        </td>
-                        <td class="authors-cell">Sarkis Ter Martirosyan, Xinyue Huang, David Qin, et al.</td>
-                        <td class="date-cell">2026-02-18</td>
-                        <td class="tldr-cell">A physics-informed autoencoder addresses nonlinear optical inversion and spectral unmixing in photoacoustic imaging to estimate chromophore concentrations and tissue oxygen saturation in vivo.</td>
-                        <td class="keywords-cell">physics-informed neural networks, autoencoder, spectral unmixing, inverse problems, image reconstruction</td>
-                        <td class="score-cell"><span class="score-badge score-high">8</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">9</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2602.16749v1" target="_blank">U-FedTomAtt: Ultra-lightweight Federated Learning with Attention for Tomato Disease Recognition</a>
-                        </td>
-                        <td class="authors-cell">Romiyal George, Sathiyamohan Nishankar, Selvarajah Thuseethan, et al.</td>
-                        <td class="date-cell">2026-02-18</td>
-                        <td class="tldr-cell">An ultra-lightweight federated learning framework with attention mechanisms and adaptive weight aggregation achieves over 99% accuracy for tomato disease recognition on resource-constrained edge devices.</td>
-                        <td class="keywords-cell">federated learning, attention mechanism, model compression, adaptive aggregation, image classification</td>
-                        <td class="score-cell"><span class="score-badge score-medium">6</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </main>
+<!-- ═══════════════════════════════════════════════════════= MAIN -->
+<main>
 
-    <footer>
-        Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM · 2026-02-23T07:06:06Z
-    </footer>
+  <!-- ── Ranked Paper Table ─────────────────────────────────────── -->
+  <div><span class="section-heading">Ranked Papers</span></div>
+
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Title</th>
+          <th>Authors</th>
+          <th>Published Date</th>
+          <th>TL;DR</th>
+          <th>Keywords</th>
+          <th>Relevance Score</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- ── Rank 1 · Score 10 ────────────────────────────────── -->
+        <tr>
+          <td class="rank">1</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2602.19775v1" target="_blank" rel="noopener noreferrer">
+              Exact Discrete Stochastic Simulation with Deep-Learning-Scale Gradient Optimization
+            </a>
+          </td>
+          <td class="authors">Jose M. G. Vilar, Leonor Saiz</td>
+          <td class="date">2026-02-23</td>
+          <td class="tldr">
+            Introduces a massively parallel, autodiff-compatible exact stochastic simulator for
+            continuous-time Markov chains, decoupling Gillespie sampling from backward differentiation
+            via a Gumbel-Softmax surrogate, enabling deep-learning-scale parameter inference.
+          </td>
+          <td class="keywords">
+            Gillespie Algorithm, Gumbel-Softmax Straight-Through Estimator,
+            Continuous-Time Markov Chains, Gene Regulatory Networks, Automatic Differentiation
+          </td>
+          <td class="score"><span class="badge badge-green">10</span></td>
+        </tr>
+
+        <!-- ── Rank 2 · Score 9 ─────────────────────────────────── -->
+        <tr>
+          <td class="rank">2</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2602.18915v1" target="_blank" rel="noopener noreferrer">
+              AAVGen: Precision Engineering of Adeno-associated Viral Capsids for Renal Selective Targeting
+            </a>
+          </td>
+          <td class="authors">Mohammadreza Ghaffarzadeh-Esfahani, Yousof Gheisari</td>
+          <td class="date">2026-02-21</td>
+          <td class="tldr">
+            AAVGen couples a protein language model with reinforcement learning and ESM-2-based fitness
+            predictors to de novo design AAV capsids optimized for production fitness, kidney tropism,
+            and thermostability.
+          </td>
+          <td class="keywords">
+            Protein Language Model, Supervised Fine-Tuning, Group Sequence Policy Optimization,
+            ESM-2, Multi-Objective Sequence Design
+          </td>
+          <td class="score"><span class="badge badge-green">9</span></td>
+        </tr>
+
+        <!-- ── Rank 3 · Score 7 ─────────────────────────────────── -->
+        <tr>
+          <td class="rank">3</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2602.19196v1" target="_blank" rel="noopener noreferrer">
+              An Interpretable Data-Driven Model of the Flight Dynamics of Hawks
+            </a>
+          </td>
+          <td class="authors">Lydia France, Karl Lapo, J. Nathan Kutz</td>
+          <td class="date">2026-02-22</td>
+          <td class="tldr">
+            Applies Dynamic Mode Decomposition to motion-capture recordings of hawk flight, deriving a
+            compact modal model that reconstructs multiple flight behaviors using only three to four parameters.
+          </td>
+          <td class="keywords">
+            Dynamic Mode Decomposition, Parametric Mode Coupling, Modal Decomposition,
+            Motion Capture, Linear State-Space Reconstruction
+          </td>
+          <td class="score"><span class="badge badge-orange">7</span></td>
+        </tr>
+
+        <!-- ── Rank 4 · Score 5 ─────────────────────────────────── -->
+        <tr>
+          <td class="rank">4</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2602.19295v1" target="_blank" rel="noopener noreferrer">
+              Time-Varying Hazard Patterns and Co-Mutation Profiles of KRAS G12C and G12D in Real-World NSCLC
+            </a>
+          </td>
+          <td class="authors">Robert Amevor, Dennis Baidoo, Emmanuel Kubuafor</td>
+          <td class="date">2026-02-22</td>
+          <td class="tldr">
+            Uses piecewise Cox regression with Schoenfeld-residual diagnostics and bootstrap resampling
+            to uncover time-varying survival differences between KRAS G12C and G12D mutations in
+            real-world NSCLC patients.
+          </td>
+          <td class="keywords">
+            Piecewise Cox Regression, Kaplan-Meier Estimator, Schoenfeld Residuals,
+            Bootstrap Resampling, Proportional Hazards Model
+          </td>
+          <td class="score"><span class="badge badge-orange">5</span></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ── Narrative Summary ──────────────────────────────────────── -->
+  <section class="narrative">
+    <h2>Key Themes &amp; Trends</h2>
+    <p>
+      Today's 4 q-bio.QM preprints showcase a strong convergence of machine learning and
+      quantitative biology, with the two highest-scoring papers jointly advancing
+      <em>differentiable simulation</em> and <em>generative sequence design</em>: the
+      top-ranked work makes exact Gillespie-type stochastic simulation fully autodiff-compatible
+      at deep-learning scale through a Gumbel-Softmax straight-through surrogate, while the
+      runner-up applies protein language models with reinforcement learning to engineer
+      kidney-targeting AAV capsids through multi-objective sequence optimization — both
+      reflecting a broader push to marry classical biological models with modern gradient-based
+      learning pipelines. Complementary work demonstrates how data-driven modal decomposition
+      (DMD) can replace first-principles physics models for complex locomotion, reducing hawk
+      flight dynamics to a compact three-parameter linear representation, and a clinical study
+      shows that time-varying piecewise Cox regression with bootstrap validation can resolve
+      allele-specific survival differences in NSCLC that standard proportional-hazards
+      frameworks mask, underscoring rigorous statistical methodology as a key trend across
+      the day's papers.
+    </p>
+  </section>
+
+</main>
+
+<!-- ════════════════════════════════════════════════════════ FOOTER -->
+<footer>
+  <strong>Generated by Q-Bio Watchtower</strong>
+  &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM
+  &nbsp;&middot;&nbsp; 2026-02-24 UTC
+</footer>
+
 </body>
 </html>
