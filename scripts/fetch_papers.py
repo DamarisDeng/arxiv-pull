@@ -13,7 +13,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 
-API_URL = "http://export.arxiv.org/api/query"
+API_URL = "https://export.arxiv.org/api/query"
 CATEGORY = "q-bio.QM"
 MAX_PER_PAGE = 100
 RETENTION_HOURS = 73  # 3 days + 1-hour buffer for arXiv submission lag
@@ -46,8 +46,9 @@ def fetch_page(start: int) -> str:
     return ""
 
 
-def fetch_all_recent() -> str:
+def fetch_all_recent() -> list[str]:
     """Fetch pages until we've covered all results or gone past retention window."""
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=RETENTION_HOURS)
     first_page = fetch_page(0)
     root = ET.fromstring(first_page)
     total = int(root.findtext("{http://a9.com/-/spec/opensearch/1.1/}totalResults") or "0")
@@ -55,19 +56,29 @@ def fetch_all_recent() -> str:
 
     fetched = MAX_PER_PAGE
     while fetched < total:
+        # Stop early if last entry on last page is outside retention window
+        last_root = ET.fromstring(pages[-1])
+        entries = last_root.findall(f"{{{ATOM_NS}}}entry")
+        if entries:
+            last_pub = entries[-1].findtext(f"{{{ATOM_NS}}}published") or ""
+            try:
+                if datetime.fromisoformat(last_pub.replace("Z", "+00:00")) < cutoff:
+                    break
+            except ValueError:
+                pass
         time.sleep(1)  # rate-limit
         pages.append(fetch_page(fetched))
         fetched += MAX_PER_PAGE
 
-    return "\n".join(pages)
+    return pages
 
 # ---------------------------------------------------------------------------
 # Parse
 # ---------------------------------------------------------------------------
 
-def parse_entries(xml_text: str) -> list[dict]:
+def parse_entries(pages: list[str]) -> list[dict]:
     papers = []
-    for page_xml in xml_text.split("\n"):
+    for page_xml in pages:
         if not page_xml.strip():
             continue
         try:
