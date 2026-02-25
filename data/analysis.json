@@ -16,41 +16,143 @@
       "physics.comp-ph",
       "q-bio.MN"
     ],
-    "tldr": "Introduces a massively parallel, autodiff-compatible exact stochastic simulator for continuous-time Markov chains, decoupling Gillespie sampling from backward differentiation via a Gumbel-Softmax surrogate, enabling deep-learning-scale parameter inference.",
+    "tldr": "A novel framework decouples exact stochastic simulation of continuous-time Markov chains from gradient-based optimization via a Gumbel-Softmax straight-through surrogate, scaling to deep-learning-sized gene regulatory networks and enabling high-dimensional parameter inference.",
     "keywords": [
       "Gillespie Algorithm",
-      "Gumbel-Softmax Straight-Through Estimator",
-      "Continuous-Time Markov Chains",
-      "Gene Regulatory Networks",
+      "Gumbel-Softmax Surrogate",
+      "Continuous-Time Markov Chain",
+      "Gene Regulatory Network",
       "Automatic Differentiation"
     ],
     "relevance_score": 10
   },
   {
-    "id": "2602.18915v1",
-    "title": "AAVGen: Precision Engineering of Adeno-associated Viral Capsids for Renal Selective Targeting",
+    "id": "2602.20209v1",
+    "title": "Regressor-guided Diffusion Model for De Novo Peptide Sequencing with Explicit Mass Control",
     "authors": [
-      "Mohammadreza Ghaffarzadeh-Esfahani",
-      "Yousof Gheisari"
+      "Shaorong Chen",
+      "Jingbo Zhou",
+      "Jun Xia"
     ],
-    "published_date": "2026-02-21T17:46:34Z",
-    "abstract": "Adeno-associated viruses (AAVs) are promising vectors for gene therapy, but their native serotypes face limitations in tissue tropism, immune evasion, and production efficiency. Engineering capsids to overcome these hurdles is challenging due to the vast sequence space and the difficulty of simultaneously optimizing multiple functional properties. The complexity also adds when it comes to the kidney, which presents unique anatomical barriers and cellular targets that require precise and efficient vector engineering. Here, we present AAVGen, a generative artificial intelligence framework for de novo design of AAV capsids with enhanced multi-trait profiles. AAVGen integrates a protein language model (PLM) with supervised fine-tuning (SFT) and a reinforcement learning technique termed Group Sequence Policy Optimization (GSPO). The model is guided by a composite reward signal derived from three ESM-2-based regression predictors, each trained to predict a key property: production fitness, kidney tropism, and thermostability. Our results demonstrate that AAVGen produces a diverse library of novel VP1 protein sequences. In silico validations revealed that the majority of the generated variants have superior performance across all three employed indices, indicating successful multi-objective optimization. Furthermore, structural analysis via AlphaFold3 confirms that the generated sequences preserve the canonical capsid folding despite sequence diversification. AAVGen establishes a foundation for data-driven viral vector engineering, accelerating the development of next-generation AAV vectors with tailored functional characteristics.",
-    "pdf_link": "https://arxiv.org/pdf/2602.18915v1",
+    "published_date": "2026-02-23T03:26:25Z",
+    "abstract": "The discovery of novel proteins relies on sensitive protein identification, for which de novo peptide sequencing (DNPS) from mass spectra is a crucial approach. While deep learning has advanced DNPS, existing models inadequately enforce the fundamental mass consistency constraint, that a predicted peptide's mass must match the experimental measured precursor mass. Previous DNPS methods often treat this critical information as a simple input feature or use it in post-processing, leading to numerous implausible predictions that do not adhere to this fundamental physical property. To address this limitation, we introduce DiffuNovo, a novel regressor-guided diffusion model for de novo peptide sequencing that provides explicit peptide-level mass control. Our approach integrates the mass constraint at two critical stages: during training, a novel peptide-level mass loss guides model optimization, while at inference, regressor-based guidance from gradient-based updates in the latent space steers the generation to compel the predicted peptide adheres to the mass constraint. Comprehensive evaluations on established benchmarks demonstrate that DiffuNovo surpasses state-of-the-art methods in DNPS accuracy. Additionally, as the first DNPS model to employ a diffusion model as its core backbone, DiffuNovo leverages the powerful controllability of diffusion architecture and achieves a significant reduction in mass error, thereby producing much more physically plausible peptides. These innovations represent a substantial advancement toward robust and broadly applicable DNPS. The source code is available in the supplementary material.",
+    "pdf_link": "https://arxiv.org/pdf/2602.20209v1",
     "categories": [
       "q-bio.QM",
-      "cs.AI",
-      "cs.CL",
       "cs.LG"
     ],
-    "tldr": "AAVGen couples a protein language model with reinforcement learning and ESM-2-based fitness predictors to de novo design AAV capsids optimized for production fitness, kidney tropism, and thermostability.",
+    "tldr": "DiffuNovo introduces a regressor-guided diffusion model for de novo peptide sequencing that enforces precursor mass consistency through a dedicated training loss and latent-space gradient guidance, achieving state-of-the-art accuracy.",
     "keywords": [
-      "Protein Language Model",
-      "Supervised Fine-Tuning",
-      "Group Sequence Policy Optimization",
-      "ESM-2",
-      "Multi-Objective Sequence Design"
+      "Diffusion Model",
+      "De Novo Peptide Sequencing",
+      "Mass Spectrometry",
+      "Regressor Guidance",
+      "Latent Space Optimization"
     ],
     "relevance_score": 9
+  },
+  {
+    "id": "2602.20495v1",
+    "title": "Unveiling Scaling Laws of Parameter Identifiability and Uncertainty Quantification in Data-Driven Biological Modeling",
+    "authors": [
+      "Shun Wang",
+      "Wenrui Hao"
+    ],
+    "published_date": "2026-02-24T02:51:05Z",
+    "abstract": "Integrating high-dimensional biological data into data-driven mechanistic modeling requires rigorous practical identifiability to ensure interpretability and generalizability. However, coordinate identifiability analysis often suffers from numerical instabilities near singular local minimizers. We present a computational framework that uncovers fundamental scaling laws governing practical identifiability through asymptotic analysis. By synthesizing Fisher information with perturbed Hessian matrices, we establish a hierarchical approach to quantify coordinate identifiability and inform uncertainty quantification within non-identifiable subspaces across different orders. Supported by rigorous mathematical analysis and validated on synthetic and real-world data, our framework was applied to HIV-host dynamics and spatiotemporal amyloid-beta propagation. These applications demonstrate the framework's efficiency in elucidating critical mechanisms underlying HIV diagnostics and Alzheimer's disease progression. In the era of large-scale mechanistic digital twins, our framework provides the scaling laws for data-driven modeling in terms of both parameter identifiability and uncertainty, ensuring that data-driven inferences are grounded in verifiable biological reality.",
+    "pdf_link": "https://arxiv.org/pdf/2602.20495v1",
+    "categories": [
+      "q-bio.QM"
+    ],
+    "tldr": "A computational framework combining Fisher information with perturbed Hessian matrices uncovers fundamental scaling laws for parameter identifiability and uncertainty quantification in data-driven biological models, validated on HIV dynamics.",
+    "keywords": [
+      "Fisher Information Matrix",
+      "Hessian Perturbation",
+      "Parameter Identifiability",
+      "Uncertainty Quantification",
+      "Mechanistic Modeling"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2602.20344v1",
+    "title": "Hierarchical Molecular Representation Learning via Fragment-Based Self-Supervised Embedding Prediction",
+    "authors": [
+      "Jiele Wu",
+      "Haozhe Ma",
+      "Zhihan Guo",
+      "Thanh Vinh Vo",
+      "Tze Yun Leong"
+    ],
+    "published_date": "2026-02-23T20:41:44Z",
+    "abstract": "Graph self-supervised learning (GSSL) has demonstrated strong potential for generating expressive graph embeddings without the need for human annotations, making it particularly valuable in domains with high labeling costs such as molecular graph analysis. However, existing GSSL methods mostly focus on node- or edge-level information, often ignoring chemically relevant substructures which strongly influence molecular properties. In this work, we propose Graph Semantic Predictive Network (GraSPNet), a hierarchical self-supervised framework that explicitly models both atomic-level and fragment-level semantics. GraSPNet decomposes molecular graphs into chemically meaningful fragments without predefined vocabularies and learns node- and fragment-level representations through multi-level message passing with masked semantic prediction at both levels. This hierarchical semantic supervision enables GraSPNet to learn multi-resolution structural information that is both expressive and transferable. Extensive experiments on multiple molecular property prediction benchmarks demonstrate that GraSPNet learns chemically meaningful representations and consistently outperforms state-of-the-art GSSL methods in transfer learning settings.",
+    "pdf_link": "https://arxiv.org/pdf/2602.20344v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "tldr": "GraSPNet proposes a hierarchical self-supervised graph neural network that decomposes molecular graphs into chemically meaningful fragments and learns multi-resolution atomic and fragment-level representations, consistently outperforming existing methods.",
+    "keywords": [
+      "Graph Self-Supervised Learning",
+      "Message Passing Neural Network",
+      "Molecular Property Prediction",
+      "Masked Semantic Prediction",
+      "GraSPNet"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2602.20198v1",
+    "title": "KEMP-PIP: A Feature-Fusion Based Approach for Pro-inflammatory Peptide Prediction",
+    "authors": [
+      "Soumik Deb Niloy",
+      "Md. Fahmid-Ul-Alam Juboraj",
+      "Swakkhar Shatabda"
+    ],
+    "published_date": "2026-02-22T08:09:01Z",
+    "abstract": "Pro-inflammatory peptides (PIPs) play critical roles in immune signaling and inflammation but are difficult to identify experimentally due to costly and time-consuming assays. To address this challenge, we present KEMP-PIP, a hybrid machine learning framework that integrates deep protein embeddings with handcrafted descriptors for robust PIP prediction. Our approach combines contextual embeddings from pretrained ESM protein language models with multi-scale k-mer frequencies, physicochemical descriptors, and modlAMP sequence features. Feature pruning and class-weighted logistic regression manage high dimensionality and class imbalance, while ensemble averaging with an optimized decision threshold enhances the sensitivity--specificity balance. Through systematic ablation studies, we demonstrate that integrating complementary feature sets consistently improves predictive performance. On the standard benchmark dataset, KEMP-PIP achieves an MCC of 0.505, accuracy of 0.752, and AUC of 0.762, outperforming ProIn-fuse, MultiFeatVotPIP, and StackPIP. Relative to StackPIP, these results represent improvements of 9.5% in MCC and 4.8% in both accuracy and AUC. The KEMP-PIP web server is freely available at https://nilsparrow1920-kemp-pip.hf.space/ and the full implementation at https://github.com/S18-Niloy/KEMP-PIP.",
+    "pdf_link": "https://arxiv.org/pdf/2602.20198v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "tldr": "KEMP-PIP fuses ESM protein language model embeddings with k-mer frequencies and physicochemical descriptors in a class-weighted ensemble classifier, outperforming state-of-the-art methods for pro-inflammatory peptide prediction.",
+    "keywords": [
+      "Protein Language Model (ESM)",
+      "K-Mer Frequency Features",
+      "Ensemble Averaging",
+      "Class-Weighted Logistic Regression",
+      "Peptide Sequence Analysis"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2602.20289v1",
+    "title": "The Sim-to-Real Gap in MRS Quantification: A Systematic Deep Learning Validation for GABA",
+    "authors": [
+      "Zien Ma",
+      "S. M. Shermer",
+      "Oktay Karakuş",
+      "Frank C. Langbein"
+    ],
+    "published_date": "2026-02-23T19:16:03Z",
+    "abstract": "Magnetic resonance spectroscopy (MRS) is used to quantify metabolites in vivo and estimate biomarkers for conditions ranging from neurological disorders to cancers. Quantifying low-concentration metabolites such as GABA ($γ$-aminobutyric acid) is challenging due to low signal-to-noise ratio (SNR) and spectral overlap. We investigate and validate deep learning for quantifying complex, low-SNR, overlapping signals from MEGA-PRESS spectra, devise a convolutional neural network (CNN) and a Y-shaped autoencoder (YAE), and select the best models via Bayesian optimisation on 10,000 simulated spectra from slice-profile-aware MEGA-PRESS simulations. The selected models are trained on 100,000 simulated spectra. We validate their performance on 144 spectra from 112 experimental phantoms containing five metabolites of interest (GABA, Glu, Gln, NAA, Cr) with known ground truth concentrations across solution and gel series acquired at 3 T under varied bandwidths and implementations. These models are further assessed against the widely used LCModel quantification tool. On simulations, both models achieve near-perfect agreement (small MAEs; regression slopes $\\approx 1.00$, $R^2 \\approx 1.00$). On experimental phantom data, errors initially increased substantially. However, modelling variable linewidths in the training data significantly reduced this gap. The best augmented deep learning models achieved a mean MAE for GABA over all phantom spectra of 0.151 (YAE) and 0.160 (FCNN) in max-normalised relative concentrations, outperforming the conventional baseline LCModel (0.220). A sim-to-real gap remains, but physics-informed data augmentation substantially reduced it. Phantom ground truth is needed to judge whether a method will perform reliably on real data.",
+    "pdf_link": "https://arxiv.org/pdf/2602.20289v1",
+    "categories": [
+      "eess.SP",
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "tldr": "CNN and Y-shaped autoencoder models trained on physics-informed simulated MEGA-PRESS spectra outperform the conventional LCModel tool for in-vitro GABA quantification, with variable-linewidth data augmentation substantially closing the simulation-to-real-data performance gap.",
+    "keywords": [
+      "Convolutional Neural Network",
+      "Y-Shaped Autoencoder",
+      "Bayesian Optimisation",
+      "Magnetic Resonance Spectroscopy",
+      "Physics-Informed Data Augmentation"
+    ],
+    "relevance_score": 7
   },
   {
     "id": "2602.19196v1",
@@ -69,15 +171,44 @@
       "cs.LG",
       "physics.flu-dyn"
     ],
-    "tldr": "Applies Dynamic Mode Decomposition to motion-capture recordings of hawk flight, deriving a compact modal model that reconstructs multiple flight behaviors using only three to four parameters.",
+    "tldr": "Dynamic Mode Decomposition applied to motion-capture recordings of hawks identifies a compact set of shared interpretable wing-tail modal structures that reconstruct diverse flight behaviours with only three or four parameters.",
     "keywords": [
       "Dynamic Mode Decomposition",
-      "Parametric Mode Coupling",
-      "Modal Decomposition",
+      "Modal Analysis",
       "Motion Capture",
-      "Linear State-Space Reconstruction"
+      "Linear Modal Superposition",
+      "Parametric Mode Coupling"
     ],
-    "relevance_score": 7
+    "relevance_score": 6
+  },
+  {
+    "id": "2602.20218v1",
+    "title": "Targeted T2-FLAIR Dropout Training Improves Robustness of nnU-Net Glioblastoma Segmentation to Missing T2-FLAIR",
+    "authors": [
+      "Marco Öchsner",
+      "Lena Kaiser",
+      "Robert Stahl",
+      "Nathalie L. Albert",
+      "Thomas Liebig",
+      "Robert Forbrig",
+      "Jonas Reis"
+    ],
+    "published_date": "2026-02-23T08:51:19Z",
+    "abstract": "Purpose: To determine whether targeted T2 fluid-attenuated inversion recovery (T2-FLAIR) dropout training improves glioblastoma MRI tumor segmentation robustness to missing T2-FLAIR without degrading performance when T2-FLAIR is available. Materials and Methods: This retrospective multi-dataset study developed nnU-Net models on BraTS 2021 (n=848) and externally tested them on UPenn-GBM glioblastoma MRI (n=403; 2006-2018; age 18-89 years; 60% male). Models were trained with no dropout or targeted T2-FLAIR dropout (probability rate r=0.35 or 0.50) by replacing only the T2-FLAIR channel with zeros. Inference used T2-FLAIR-present and T2-FLAIR-absent scenarios (T2-FLAIR set to zero). The primary endpoint was Dice similarity coefficient (DSC); secondary endpoints were 95th percentile Hausdorff distance and Bland-Altman whole-tumor volume bias. Equivalence was assessed with two one-sided tests using +/-1.5 DSC percentage points, and noninferiority versus HD-GLIO used a -1.5-point margin. Results: With T2-FLAIR present, median overall DSC was 94.8% (interquartile range, 90.0%-97.1%) with dropout and 95.0% (interquartile range, 90.3%-97.1%) without dropout (equivalence supported, p<0.001). With T2-FLAIR absent, median overall DSC improved from 81.0% (interquartile range, 75.1%-86.4%) without dropout to 93.4% (interquartile range, 89.1%-96.2%) with dropout (r=0.35); edema DSC improved from 14.0% to 87.0%, edema 95th percentile Hausdorff distance improved from 22.44 mm to 2.45 mm, and whole-tumor volume bias improved from -45.6 mL to 0.83 mL. Dropout was noninferior to HD-GLIO under T2-FLAIR-present (all p<0.001). Conclusion: Targeted T2-FLAIR dropout preserved segmentation performance when T2-FLAIR was available and reduced segmentation error and whole-tumor volume bias when T2-FLAIR was absent.",
+    "pdf_link": "https://arxiv.org/pdf/2602.20218v1",
+    "categories": [
+      "eess.IV",
+      "q-bio.QM"
+    ],
+    "tldr": "Targeted T2-FLAIR channel dropout during nnU-Net training preserves glioblastoma segmentation accuracy when T2-FLAIR is available while dramatically recovering edema Dice from 14% to 87% when the modality is absent.",
+    "keywords": [
+      "NnU-Net",
+      "Dropout Regularisation",
+      "Dice Similarity Coefficient",
+      "Hausdorff Distance",
+      "MRI Tumour Segmentation"
+    ],
+    "relevance_score": 6
   },
   {
     "id": "2602.19295v1",
@@ -88,20 +219,20 @@
       "Emmanuel Kubuafor"
     ],
     "published_date": "2026-02-22T18:07:58Z",
-    "abstract": "Background: KRAS mutations are the largest oncogenic subset in NSCLC. While KRAS G12C is now targetable, no approved therapies exist for G12D. We examined time-to-next-treatment (TTNT) and overall survival (OS) differences between G12C and G12D, allowing for time-varying hazard effects. Methods: De-identified data from AACR Project GENIE BPC NSCLC v2.0-public were analyzed. TTNT served as a real-world surrogate for progression-free survival. Co-mutations (TP53, STK11, KEAP1, SMARCA4, MET), TMB, and PD-L1 were harmonized. Kaplan-Meier, multivariable Cox, and a pre-specified piecewise Cox model (split at median TTNT = 23 months) were applied. Schoenfeld residuals assessed proportional hazards; bootstrap resampling (B=1000) evaluated stability. Results: Among 162 TTNT-evaluable patients (G12C n=130; G12D n=32), median TTNT was 28.6 versus 32.0 months (log-rank p=0.79). Adjusted Cox regression showed no overall hazard difference (HR=0.85; 95% CI 0.53-1.37; p=0.50), but Schoenfeld testing indicated borderline non-proportionality (p=0.053). Piecewise Cox modeling revealed time-varying effects: early TTNT hazard favored G12D (HR=0.41; 95% CI 0.17-0.97; p=0.043) with significant KRAS x period interaction (HR=3.33; p=0.021) and late-period attenuation (HR=1.38; 95% CI 0.77-2.47; p=0.285). Bootstrap resampling confirmed this pattern (median HRearly=0.39; HRlate=1.41). Among 278 OS-evaluable patients (133 deaths), G12D showed improved OS (adjusted HR=0.63; 95% CI 0.39-0.99; p=0.048). G12C tumors exhibited higher TMB (9.79 vs 7.83 mut/Mb; p=0.002) and greater STK11/KEAP1 enrichment. Conclusions: KRAS G12D demonstrated early TTNT advantage and improved OS. Late-period TTNT differences were non-significant (post-hoc power: 12.3%). These exploratory findings require validation in larger cohorts but support allele-specific therapeutic development for G12D.",
+    "abstract": "Background: KRAS mutations are the largest oncogenic subset in NSCLC. While KRAS G12C is now targetable, no approved therapies exist for G12D. We examined time-to-next-treatment (TTNT) and overall survival (OS) differences between G12C and G12D, allowing for time-varying hazard effects. Methods: De-identified data from AACR Project GENIE BPC NSCLC v2.0-public were analyzed. TTNT served as a real-world surrogate for progression-free survival. Co-mutations (TP53, STK11, KEAP1, SMARCA4, MET), TMB, and PD-L1 were harmonized. Kaplan-Meier, multivariable Cox, and a pre-specified piecewise Cox model (split at median TTNT = 23 months) were applied. Schoenfeld residuals assessed proportional hazards; bootstrap resampling (B=1000) evaluated stability. Results: Among 162 TTNT-evaluable patients (G12C n=130; G12D n=32), median TTNT was 28.6 versus 32.0 months (log-rank p=0.79). Adjusted Cox regression showed no overall hazard difference (HR=0.85; 95% CI 0.53-1.37; p=0.50), but Schoenfeld testing indicated borderline non-proportionality (p=0.053). Piecewise Cox modeling revealed time-varying effects: early TTNT hazard favored G12D (HR=0.41; 95% CI 0.17-0.97; p=0.043) with significant KRAS x period interaction (HR=3.33; p=0.021) and late-period attenuation (HR=1.38; 95% CI 0.77-2.47; p=0.285). Bootstrap resampling confirmed this pattern (median HRearly=0.39; HRlate=1.41). Among 278 OS-evaluable patients (133 deaths), G12D showed improved OS (adjusted HR=0.63; 95% CI 0.39-0.99; p=0.048). G12C tumors exhibited higher TMB (9.79 vs 7.83 mut/Mb; p=0.002) and greater STK11/KEAP1 enrichment. Results: KRAS G12D demonstrated early TTNT advantage and improved OS. Late-period TTNT differences were non-significant (post-hoc power: 12.3%). These exploratory findings require validation in larger cohorts but support allele-specific therapeutic development for G12D.",
     "pdf_link": "https://arxiv.org/pdf/2602.19295v1",
     "categories": [
       "q-bio.QM",
       "stat.AP",
       "stat.ME"
     ],
-    "tldr": "Uses piecewise Cox regression with Schoenfeld-residual diagnostics and bootstrap resampling to uncover time-varying survival differences between KRAS G12C and G12D mutations in real-world NSCLC patients.",
+    "tldr": "Piecewise Cox regression and bootstrap resampling of real-world NSCLC data reveal time-varying survival differences between KRAS G12C and G12D mutations, with G12D showing an early time-to-next-treatment advantage.",
     "keywords": [
-      "Piecewise Cox Regression",
-      "Kaplan-Meier Estimator",
+      "Cox Proportional Hazards Model",
+      "Kaplan-Meier Analysis",
       "Schoenfeld Residuals",
       "Bootstrap Resampling",
-      "Proportional Hazards Model"
+      "Time-Varying Hazard"
     ],
     "relevance_score": 5
   }
