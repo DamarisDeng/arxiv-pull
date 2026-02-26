@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Bio Watchtower — 2026-02-25 UTC</title>
+  <title>Q-Bio Watchtower — 2026-02-26 UTC</title>
   <style>
     /* ── Reset & Base ─────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -210,10 +210,10 @@
      HEADER
 ════════════════════════════════════════════════════════════════ -->
 <header>
-  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-02-25 UTC</h1>
-  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-02-25 UTC</p>
+  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-02-26 UTC</h1>
+  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-02-26 UTC</p>
   <p class="meta">
-    9 papers &nbsp;&middot;&nbsp; Published date range: 2026-02-22 &ndash; 2026-02-24
+    8 papers &nbsp;&middot;&nbsp; Published date range: 2026-02-23 &ndash; 2026-02-25
     &nbsp;&middot;&nbsp; Sorted by relevance score (highest first)
   </p>
 </header>
@@ -253,8 +253,8 @@
           </td>
           <td class="authors">Jose M. G. Vilar, Leonor Saiz</td>
           <td class="date">2026-02-23</td>
-          <td class="tldr">A novel framework decouples exact stochastic simulation of continuous-time Markov chains from gradient-based optimization via a Gumbel-Softmax straight-through surrogate, scaling to deep-learning-sized gene regulatory networks and enabling high-dimensional parameter inference.</td>
-          <td class="keywords">Gillespie Algorithm, Gumbel-Softmax Surrogate, Continuous-Time Markov Chain, Gene Regulatory Network, Automatic Differentiation</td>
+          <td class="tldr">A differentiable exact stochastic simulator decouples Gillespie-type forward simulation from autodiff via a massively parallel Gumbel-Softmax surrogate, enabling gradient-based parameter inference at deep-learning scale.</td>
+          <td class="keywords">Gillespie Algorithm, Gumbel-Softmax Straight-Through Estimator, Continuous-Time Markov Chains (CTMCs), Autodiff-Compatible Exact Simulation, MNIST-Scale Stochastic Gene Network</td>
           <td class="score"><span class="badge badge-green">10</span></td>
         </tr>
 
@@ -262,30 +262,30 @@
         <tr>
           <td class="rank">2</td>
           <td class="title">
-            <a href="https://arxiv.org/pdf/2602.20209v1" target="_blank" rel="noopener noreferrer">
-              Regressor-guided Diffusion Model for De Novo Peptide Sequencing with Explicit Mass Control
-            </a>
-          </td>
-          <td class="authors">Shaorong Chen, Jingbo Zhou, Jun Xia</td>
-          <td class="date">2026-02-23</td>
-          <td class="tldr">DiffuNovo introduces a regressor-guided diffusion model for de novo peptide sequencing that enforces precursor mass consistency through a dedicated training loss and latent-space gradient guidance, achieving state-of-the-art accuracy.</td>
-          <td class="keywords">Diffusion Model, De Novo Peptide Sequencing, Mass Spectrometry, Regressor Guidance, Latent Space Optimization</td>
-          <td class="score"><span class="badge badge-green">9</span></td>
-        </tr>
-
-        <!-- ── Rank 3 · Score 9 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">3</td>
-          <td class="title">
             <a href="https://arxiv.org/pdf/2602.20495v1" target="_blank" rel="noopener noreferrer">
               Unveiling Scaling Laws of Parameter Identifiability and Uncertainty Quantification in Data-Driven Biological Modeling
             </a>
           </td>
           <td class="authors">Shun Wang, Wenrui Hao</td>
           <td class="date">2026-02-24</td>
-          <td class="tldr">A computational framework combining Fisher information with perturbed Hessian matrices uncovers fundamental scaling laws for parameter identifiability and uncertainty quantification in data-driven biological models, validated on HIV dynamics.</td>
-          <td class="keywords">Fisher Information Matrix, Hessian Perturbation, Parameter Identifiability, Uncertainty Quantification, Mechanistic Modeling</td>
+          <td class="tldr">A computational framework combining Fisher information with perturbed Hessian matrices uncovers scaling laws for practical parameter identifiability and uncertainty quantification in mechanistic biological models.</td>
+          <td class="keywords">Fisher Information Matrix, Perturbed Hessian Analysis, Parameter Identifiability, Asymptotic Identifiability Analysis, HIV-Host ODE Dynamics Modeling</td>
           <td class="score"><span class="badge badge-green">9</span></td>
+        </tr>
+
+        <!-- ── Rank 3 · Score 8 ──────────────────────────────────── -->
+        <tr>
+          <td class="rank">3</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2602.21393v1" target="_blank" rel="noopener noreferrer">
+              An information-based model selection criterion for data-driven model discovery
+            </a>
+          </td>
+          <td class="authors">Michael C Chung, Alen Zacharia, Juan Guan</td>
+          <td class="date">2026-02-24</td>
+          <td class="tldr">SLIC, a novel sample-length-scaling logarithmic information criterion paired with an adaptive sparse regression algorithm, automatically selects the correct symbolic model from nonlinear ODE and PDE data, outperforming existing information criteria.</td>
+          <td class="keywords">SINDy Sparse Identification, Data-Driven Model Discovery (SINDy-Family), Information Criterion (SLIC), Symbolic Regression, Lorenz System Identification</td>
+          <td class="score"><span class="badge badge-green">8</span></td>
         </tr>
 
         <!-- ── Rank 4 · Score 8 ──────────────────────────────────── -->
@@ -298,8 +298,8 @@
           </td>
           <td class="authors">Jiele Wu, Haozhe Ma, Zhihan Guo et al.</td>
           <td class="date">2026-02-23</td>
-          <td class="tldr">GraSPNet proposes a hierarchical self-supervised graph neural network that decomposes molecular graphs into chemically meaningful fragments and learns multi-resolution atomic and fragment-level representations, consistently outperforming existing methods.</td>
-          <td class="keywords">Graph Self-Supervised Learning, Message Passing Neural Network, Molecular Property Prediction, Masked Semantic Prediction, GraSPNet</td>
+          <td class="tldr">GraSPNet, a hierarchical graph self-supervised framework, captures atomic- and fragment-level molecular semantics via multi-level message passing and masked prediction, outperforming state-of-the-art methods on property benchmarks.</td>
+          <td class="keywords">Masked Semantic Embedding Prediction, GraSPNet Architecture, Hierarchical Message Passing, Fragment-Level Molecular Decomposition, Self-Supervised Fragment Representation</td>
           <td class="score"><span class="badge badge-green">8</span></td>
         </tr>
 
@@ -307,14 +307,14 @@
         <tr>
           <td class="rank">5</td>
           <td class="title">
-            <a href="https://arxiv.org/pdf/2602.20198v1" target="_blank" rel="noopener noreferrer">
-              KEMP-PIP: A Feature-Fusion Based Approach for Pro-inflammatory Peptide Prediction
+            <a href="https://arxiv.org/pdf/2602.21648v1" target="_blank" rel="noopener noreferrer">
+              Multimodal Survival Modeling and Fairness-Aware Clinical Machine Learning for 5-Year Breast Cancer Risk Prediction
             </a>
           </td>
-          <td class="authors">Soumik Deb Niloy, Md. Fahmid-Ul-Alam Juboraj, Swakkhar Shatabda</td>
-          <td class="date">2026-02-22</td>
-          <td class="tldr">KEMP-PIP fuses ESM protein language model embeddings with k-mer frequencies and physicochemical descriptors in a class-weighted ensemble classifier, outperforming state-of-the-art methods for pro-inflammatory peptide prediction.</td>
-          <td class="keywords">Protein Language Model (ESM), K-Mer Frequency Features, Ensemble Averaging, Class-Weighted Logistic Regression, Peptide Sequence Analysis</td>
+          <td class="authors">Toktam Khatibi</td>
+          <td class="date">2026-02-25</td>
+          <td class="tldr">A reproducible multimodal ML framework integrating transcriptomic and CNA features with clinical variables via CoxNet and XGBoost achieves high-AUC breast cancer survival prediction with fairness diagnostics.</td>
+          <td class="keywords">Elastic-Net Cox Regression (CoxNet), XGBoost Survival Modeling, Time-Dependent AUC Estimation, Variance-Based Feature Filtering, Subgroup AUC Parity Diagnostics</td>
           <td class="score"><span class="badge badge-green">8</span></td>
         </tr>
 
@@ -322,30 +322,30 @@
         <tr>
           <td class="rank">6</td>
           <td class="title">
+            <a href="https://arxiv.org/pdf/2602.21993v1" target="_blank" rel="noopener noreferrer">
+              Prediction of source nutrients for microorganisms using metabolic networks
+            </a>
+          </td>
+          <td class="authors">Olivia Bulka, Chabname Ghassemi Nedjad, Lo&iuml;c Paulev&eacute; et al.</td>
+          <td class="date">2026-02-25</td>
+          <td class="tldr">Reviews how genome-scale metabolic network modeling can computationally predict nutrient requirements for uncultivated microorganisms, providing a worked protocol from toy to genome-scale networks to guide culture and isolation experiments.</td>
+          <td class="keywords">Genome-Scale Metabolic Reconstruction, Genome-Scale Metabolic Networks, Constraint-Based Modeling, Flux Balance Analysis, Uncultivated Microorganism Phenotyping</td>
+          <td class="score"><span class="badge badge-orange">7</span></td>
+        </tr>
+
+        <!-- ── Rank 7 · Score 7 ──────────────────────────────────── -->
+        <tr>
+          <td class="rank">7</td>
+          <td class="title">
             <a href="https://arxiv.org/pdf/2602.20289v1" target="_blank" rel="noopener noreferrer">
               The Sim-to-Real Gap in MRS Quantification: A Systematic Deep Learning Validation for GABA
             </a>
           </td>
           <td class="authors">Zien Ma, S. M. Shermer, Oktay Karakuş et al.</td>
           <td class="date">2026-02-23</td>
-          <td class="tldr">CNN and Y-shaped autoencoder models trained on physics-informed simulated MEGA-PRESS spectra outperform the conventional LCModel tool for in-vitro GABA quantification, with variable-linewidth data augmentation substantially closing the simulation-to-real-data performance gap.</td>
-          <td class="keywords">Convolutional Neural Network, Y-Shaped Autoencoder, Bayesian Optimisation, Magnetic Resonance Spectroscopy, Physics-Informed Data Augmentation</td>
+          <td class="tldr">CNN and Y-shaped autoencoder models trained on physics-informed simulated MEGA-PRESS spectra outperform the conventional LCModel tool for in-vitro GABA quantification, with physics-aware linewidth augmentation substantially bridging the simulation-to-real data gap.</td>
+          <td class="keywords">Fully-Connected CNN For MRS, Y-Shaped Autoencoder (YAE), Bayesian Hyperparameter Optimisation, Physics-Informed Data Augmentation, MEGA-PRESS Spectroscopy</td>
           <td class="score"><span class="badge badge-orange">7</span></td>
-        </tr>
-
-        <!-- ── Rank 7 · Score 6 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">7</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2602.19196v1" target="_blank" rel="noopener noreferrer">
-              An Interpretable Data-Driven Model of the Flight Dynamics of Hawks
-            </a>
-          </td>
-          <td class="authors">Lydia France, Karl Lapo, J. Nathan Kutz</td>
-          <td class="date">2026-02-22</td>
-          <td class="tldr">Dynamic Mode Decomposition applied to motion-capture recordings of hawks identifies a compact set of shared interpretable wing-tail modal structures that reconstruct diverse flight behaviours with only three or four parameters.</td>
-          <td class="keywords">Dynamic Mode Decomposition, Modal Analysis, Motion Capture, Linear Modal Superposition, Parametric Mode Coupling</td>
-          <td class="score"><span class="badge badge-orange">6</span></td>
         </tr>
 
         <!-- ── Rank 8 · Score 6 ──────────────────────────────────── -->
@@ -358,24 +358,9 @@
           </td>
           <td class="authors">Marco &Ouml;chsner, Lena Kaiser, Robert Stahl et al.</td>
           <td class="date">2026-02-23</td>
-          <td class="tldr">Targeted T2-FLAIR channel dropout during nnU-Net training preserves glioblastoma segmentation accuracy when T2-FLAIR is available while dramatically recovering edema Dice from 14% to 87% when the modality is absent.</td>
-          <td class="keywords">NnU-Net, Dropout Regularisation, Dice Similarity Coefficient, Hausdorff Distance, MRI Tumour Segmentation</td>
+          <td class="tldr">Targeted T2-FLAIR channel dropout during nnU-Net training preserves glioblastoma segmentation performance when T2-FLAIR is available while dramatically recovering accuracy (DSC 81.0% &rarr; 93.4%) when the modality is absent at inference.</td>
+          <td class="keywords">NnU-Net, Modality Dropout Training, Dice Similarity Coefficient (DSC), Hausdorff Distance, BraTS Glioblastoma Segmentation</td>
           <td class="score"><span class="badge badge-orange">6</span></td>
-        </tr>
-
-        <!-- ── Rank 9 · Score 5 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">9</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2602.19295v1" target="_blank" rel="noopener noreferrer">
-              Time-Varying Hazard Patterns and Co-Mutation Profiles of KRAS G12C and G12D in Real-World NSCLC
-            </a>
-          </td>
-          <td class="authors">Robert Amevor, Dennis Baidoo, Emmanuel Kubuafor</td>
-          <td class="date">2026-02-22</td>
-          <td class="tldr">Piecewise Cox regression and bootstrap resampling of real-world NSCLC data reveal time-varying survival differences between KRAS G12C and G12D mutations, with G12D showing an early time-to-next-treatment advantage.</td>
-          <td class="keywords">Cox Proportional Hazards Model, Kaplan-Meier Analysis, Schoenfeld Residuals, Bootstrap Resampling, Time-Varying Hazard</td>
-          <td class="score"><span class="badge badge-orange">5</span></td>
         </tr>
 
       </tbody>
@@ -388,24 +373,24 @@
       <span class="icon">&#8801;</span> Narrative Summary
     </h2>
     <div class="narrative-box">
-      Today's q-bio.QM preprints are unified by a drive to make deep learning genuinely
-      compatible with the physical and probabilistic constraints of biological systems: the
-      top-ranked work renders exact stochastic simulation fully differentiable via a
-      Gumbel-Softmax surrogate, while DiffuNovo enforces mass consistency in peptide models
-      through latent-space gradient guidance, KEMP-PIP fuses protein language model embeddings
-      with hand-crafted descriptors for immune peptide classification, and GraSPNet extends
-      self-supervised graph learning to chemically meaningful molecular fragments&mdash;collectively
-      signaling a maturation toward gradient-friendly, physics-respecting architectures across
-      molecular and cellular scales. A strong secondary theme is rigorous uncertainty and
-      robustness management, appearing as Fisher-information-based parameter identifiability
-      scaling laws for mechanistic biological models, physics-informed data augmentation to
-      close the simulation-to-real gap in MRS metabolite quantification, and modality-dropout
-      training that recovers near-complete glioblastoma segmentation accuracy when a key MRI
-      contrast is missing. Rounding out the digest, data-driven Dynamic Mode Decomposition of
-      hawk flight and piecewise survival analysis of KRAS mutation subtypes in real-world NSCLC
-      demonstrate the field's reach from organism-scale biomechanics to clinical genomics,
-      underscoring interpretable, constraint-aware modeling as the unifying thread across all
-      scales of quantitative biology this week.
+      Today's eight q-bio.QM preprints are anchored by a strong theme of differentiable and
+      gradient-compatible mechanistic modeling: the top-ranked paper renders exact Gillespie
+      stochastic simulation fully autodiff-compatible at deep-learning scale via a massively
+      parallel Gumbel-Softmax surrogate, a companion framework uncovers Fisher-information-based
+      scaling laws for parameter identifiability and uncertainty quantification in biological ODEs,
+      and the SLIC information criterion enables automatic symbolic model discovery from nonlinear
+      ODE and PDE data &mdash; collectively signaling a maturation toward rigorous, interpretable,
+      gradient-friendly inference across systems biology and chemical kinetics. Machine learning
+      applied to molecular and clinical data forms a strong second thread, with GraSPNet
+      introducing hierarchical self-supervised fragment-level molecular representations, a
+      fairness-audited multimodal CoxNet/XGBoost framework delivering high-AUC breast cancer
+      survival prediction, and genome-scale metabolic network modeling offering computational
+      prescreening of growth media for uncultivated microorganisms. Rounding out the digest,
+      physics-informed deep learning substantially closes the simulation-to-real gap in MEGA-PRESS
+      GABA quantification, and targeted modality-dropout training dramatically recovers
+      glioblastoma segmentation accuracy (DSC 81% &rarr; 93%) when T2-FLAIR is absent at
+      inference &mdash; underscoring robustness-oriented and physics-respecting architectures as
+      the defining methodological threads of this cycle.
     </div>
   </section>
 
@@ -417,7 +402,7 @@
 <footer>
   Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp;
   Data source: <a href="https://arxiv.org/list/q-bio.QM/recent" target="_blank" rel="noopener noreferrer">arXiv q-bio.QM</a>
-  &nbsp;&middot;&nbsp; 2026-02-25T07:03:33Z UTC
+  &nbsp;&middot;&nbsp; 2026-02-26T00:00:00Z UTC
 </footer>
 
 </body>
