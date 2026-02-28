@@ -1,5 +1,28 @@
 [
   {
+    "id": "2602.23269v1",
+    "title": "An Active Learning Framework for Data-Efficient, Human-in-the-Loop Enzyme Function Prediction",
+    "authors": [
+      "Ashley Babjac",
+      "Adrienne Hoarfrost"
+    ],
+    "published_date": "2026-02-26T17:42:06Z",
+    "abstract": "Generalizable protein function prediction is increasingly constrained by the growing mismatch between exponentially expanding sequences of environmental proteins and the comparatively slow accumulation of experimentally verified functional data. Active learning offers a promising path forward for accelerating biological function prediction, by selecting the most informative proteins to experimentally annotate for data-efficient training, yet its potential remains largely unexplored. We introduce HATTER (Human-in-the-loop Adaptive Toolkit for Transferable Enzyme Representations), a modular framework that integrates multiple active learning strategies with human-in-the-loop experimental annotation to efficiently fine tune function prediction models. We compare active learning training to standard supervised training for biological enzyme function prediction, demonstrating that active learning achieves performance comparable to standard training across diverse protein sequence evaluation datasets while requiring fewer model updates, processing less data, and substantially reducing computational cost. Interestingly, point-based uncertainty sampling methods like entropy or margin sampling perform as well or better than more complex acquisition functions such as bayesian sampling or BALD, highlighting the relative importance of sequence diversity in training datasets and model architecture design. These results demonstrate that human-in-the-loop active learning can efficiently accelerate enzyme discovery, providing a flexible platform for adaptive, scalable, and expert-guided protein function prediction.",
+    "pdf_link": "https://arxiv.org/pdf/2602.23269v1",
+    "categories": [
+      "q-bio.QM"
+    ],
+    "tldr": "HATTER integrates multiple active learning strategies with human-in-the-loop annotation to data-efficiently fine-tune enzyme function prediction models, showing that simple uncertainty sampling (entropy/margin) rivals more complex acquisition functions like BALD.",
+    "keywords": [
+      "Active Learning",
+      "Uncertainty Sampling",
+      "BALD",
+      "Transfer Learning",
+      "Protein Sequence Analysis"
+    ],
+    "relevance_score": 9
+  },
+  {
     "id": "2602.22289v1",
     "title": "What Topological and Geometric Structure Do Biological Foundation Models Learn? Evidence from 141 Hypotheses",
     "authors": [
@@ -13,64 +36,13 @@
       "cs.LG",
       "q-bio.GN"
     ],
-    "tldr": "Autonomous hypothesis screening finds biological foundation models scGPT and Geneformer learn genuine, partially shared geometric and topological gene-embedding structure, confirmed via persistent homology and manifold analysis.",
+    "tldr": "Autonomous large-scale hypothesis screening reveals biological foundation models (scGPT, Geneformer) learn genuine geometric structure via persistent homology and CCA alignment, shared across models but tissue-localized.",
     "keywords": [
       "Persistent Homology",
-      "Geodesic Manifold Distance Metric",
-      "Canonical Correlation Analysis (CCA)",
-      "Transformer Embeddings",
-      "Community Structure Detection"
-    ],
-    "relevance_score": 10
-  },
-  {
-    "id": "2602.23269v1",
-    "title": "An Active Learning Framework for Data-Efficient, Human-in-the-Loop Enzyme Function Prediction",
-    "authors": [
-      "Ashley Babjac",
-      "Adrienne Hoarfrost"
-    ],
-    "published_date": "2026-02-26T17:42:06Z",
-    "abstract": "Generalizable protein function prediction is increasingly constrained by the growing mismatch between exponentially expanding sequences of environmental proteins and the comparatively slow accumulation of experimentally verified functional data. Active learning offers a promising path forward for accelerating biological function prediction, by selecting the most informative proteins to experimentally annotate for data-efficient training, yet its potential remains largely unexplored. We introduce HATTER (Human-in-the-loop Adaptive Toolkit for Transferable Enzyme Representations), a modular framework that integrates multiple active learning strategies with human-in-the-loop experimental annotation to efficiently fine tune function prediction models. We compare active learning training to standard supervised training for biological enzyme function prediction, demonstrating that active learning achieves performance comparable to standard training across diverse protein sequence evaluation datasets while requiring fewer model updates, processing less data, and substantially reducing computational cost. Interestingly, point-based uncertainty sampling methods like entropy or margin sampling perform as well or better than more complex acquisition functions such as bayesian sampling or BALD, highlighting the relative importance of sequence diversity in training datasets and model architecture design. These results demonstrate that human-in-the-loop active learning can efficiently accelerate enzyme discovery, providing a flexible platform for adaptive, scalable, and expert-guided protein function prediction.",
-    "pdf_link": "https://arxiv.org/pdf/2602.23269v1",
-    "categories": [
-      "q-bio.QM"
-    ],
-    "tldr": "HATTER, a human-in-the-loop active learning framework, matches supervised enzyme-function prediction using less data, showing entropy/margin uncertainty sampling rivals complex acquisition functions like BALD.",
-    "keywords": [
-      "Entropy-Based Uncertainty Sampling",
-      "Margin Sampling Strategy",
-      "Environmental Protein Sequence Encoder",
-      "Bayesian Active Learning By Disagreement (BALD)",
-      "Fine-Tuned Enzyme Representation Model"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2602.22263v1",
-    "title": "CryoNet.Refine: A One-step Diffusion Model for Rapid Refinement of Structural Models with Cryo-EM Density Map Restraints",
-    "authors": [
-      "Fuyao Huang",
-      "Xiaozhu Yu",
-      "Kui Xu",
-      "Qiangfeng Cliff Zhang"
-    ],
-    "published_date": "2026-02-25T04:18:18Z",
-    "abstract": "High-resolution structure determination by cryo-electron microscopy (cryo-EM) requires the accurate fitting of an atomic model into an experimental density map. Traditional refinement pipelines such as Phenix.real_space_refine and Rosetta are computationally expensive, demand extensive manual tuning, and present a significant bottleneck for researchers. We present CryoNet.Refine, an end-to-end deep learning framework that automates and accelerates molecular structure refinement. Our approach utilizes a one-step diffusion model that integrates a density-aware loss function with robust stereochemical restraints, enabling rapid optimization of a structure against experimental data. CryoNet.Refine provides a unified and versatile solution capable of refining protein complexes as well as DNA/RNA-protein complexes. In benchmarks against Phenix.real_space_refine, CryoNet.Refine consistently achieves substantial improvements in both model-map correlation and overall geometric quality metrics. By offering a scalable, automated, and powerful alternative, CryoNet.Refine aims to serve as an essential tool for next-generation cryo-EM structure refinement. Web server: https://cryonet.ai/refine; Source code: https://github.com/kuixu/cryonet.refine.",
-    "pdf_link": "https://arxiv.org/pdf/2602.22263v1",
-    "categories": [
-      "q-bio.BM",
-      "cs.AI",
-      "eess.IV",
-      "q-bio.QM"
-    ],
-    "tldr": "CryoNet.Refine is a one-step diffusion model that automates cryo-EM atomic structure refinement against experimental density maps, outperforming Phenix.real_space_refine on model-map correlation and geometric quality.",
-    "keywords": [
-      "One-Step Diffusion Model",
-      "Cryo-EM Structure Refinement",
-      "Density-Aware Loss Function",
-      "Stereochemical Restraint Optimization",
-      "Atomic Model Fitting"
+      "Canonical Correlation Analysis",
+      "Manifold Learning",
+      "Graph Community Detection",
+      "Transformer Embeddings"
     ],
     "relevance_score": 9
   },
@@ -87,66 +59,15 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "A multimodal framework compares elastic-net Cox regression (CoxNet) and XGBoost for 5-year breast cancer survival prediction on METABRIC transcriptomic data, with fairness auditing across demographic subgroups.",
+    "tldr": "A reproducible multimodal framework integrates CoxNet and XGBoost with transcriptomic and copy-number alteration features from METABRIC for 5-year breast cancer survival prediction, with fairness auditing across clinical subgroups.",
     "keywords": [
-      "Cox Proportional Hazards Model (CoxNet)",
-      "XGBoost Gradient Boosting",
-      "Time-Dependent AUC Evaluation",
-      "Elastic-Net Regularization",
-      "Fairness-Aware Modeling"
+      "CoxNet",
+      "XGBoost",
+      "Survival Analysis",
+      "Dimensionality Reduction",
+      "Fairness Auditing"
     ],
     "relevance_score": 8
-  },
-  {
-    "id": "2602.21993v1",
-    "title": "Prediction of source nutrients for microorganisms using metabolic networks",
-    "authors": [
-      "Olivia Bulka",
-      "Chabname Ghassemi Nedjad",
-      "Loïc Paulevé",
-      "Sylvain Prigent",
-      "Clémence Frioux"
-    ],
-    "published_date": "2026-02-25T15:13:07Z",
-    "abstract": "Metagenomics has lowered the barrier to microbial discovery--enabling the identification of novel microbes without isolation--but cultures remain imperative for the deep study of microbes. Cultivation and isolation of non-model microbes remains a major challenge, despite advances in high-throughput culturomic methods. The quantity of simultaneous experimental variables is constrained by time and resources, but the list can be reduced using computational biology. Given an annotated genome, metabolic modelling can be used to predict source nutrients required for the growth of a microbe, which acts as an initial screen to inform culture and isolation experiments. This chapter provides an overview of metabolic networks and modelling and how they can be used to predict the nutrient requirements of a microorganism, followed by a sample protocol using a toy metabolic network, which is then expanded to a genome-scale metabolic network application. These methods can be applied to any metabolic network of interest--which in turn can be created from any genome of interest--and are a starting point for experimental validation of source nutrients required for microorganisms that remain uncultivated to date.",
-    "pdf_link": "https://arxiv.org/pdf/2602.21993v1",
-    "categories": [
-      "q-bio.MN",
-      "q-bio.QM"
-    ],
-    "tldr": "Genome-scale metabolic network modeling computationally predicts source nutrients for microbial growth, providing a screen to guide cultivation experiments for previously uncultivated microorganisms.",
-    "keywords": [
-      "Genome-Scale Metabolic Models",
-      "Flux Balance Analysis",
-      "Constraint-Based Modeling",
-      "Genome Annotation-Based Cultivation Prediction",
-      "Metabolic Network Reconstruction"
-    ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2602.21393v1",
-    "title": "An information-based model selection criterion for data-driven model discovery",
-    "authors": [
-      "Michael C Chung",
-      "Alen Zacharia",
-      "Juan Guan"
-    ],
-    "published_date": "2026-02-24T21:45:10Z",
-    "abstract": "Data-driven model discovery (DDMD) algorithms are powerful tools for extracting interpretable symbolic models from data. However, identifying the model that best balances goodness-of-fit and sparsity is often a laborious process requiring user fine-tuning, is prone to overfitting, and results may significantly vary depending on model initialization and specific training procedure. Here, we present a sparse regression algorithm that automatically and adaptively generates candidate models, and uses a novel sample-length-scaling logarithmic information criterion (SLIC) to identify the best model from these candidates. We demonstrate that SLIC greatly outperforms other popular information criteria in extracting the correct model from the data of several nonlinear ordinary and partial differential equations. Then, we demonstrate SLIC's ability to discover interpretable models from experimental datasets in fluid dynamics and nanotechnology that generate new testable predictions.",
-    "pdf_link": "https://arxiv.org/pdf/2602.21393v1",
-    "categories": [
-      "q-bio.QM"
-    ],
-    "tldr": "A sparse regression algorithm with the novel Sample-Length-Scaling Information Criterion (SLIC) automates model selection for data-driven discovery of nonlinear ODEs and PDEs, outperforming AIC and BIC.",
-    "keywords": [
-      "Sparse Regression",
-      "Sample-Length-Scaling Information Criterion (SLIC)",
-      "Symbolic Regression",
-      "SINDy",
-      "Nonlinear Dynamical Systems"
-    ],
-    "relevance_score": 7
   },
   {
     "id": "2602.23324v1",
@@ -166,13 +87,40 @@
       "cond-mat.stat-mech",
       "q-bio.QM"
     ],
-    "tldr": "Information-theoretic optimization shows discrete turn-angle strategies outperform gradual steering under sensory constraints, with phase transitions between reversals, tumbles, and multi-angle optimal strategies.",
+    "tldr": "Information-theoretic optimization demonstrates that discrete turn-angle strategies outperform gradual steering for maximising up-gradient navigation speed under sensory information constraints, predicting transitions between run-and-tumble and reversal strategies as information availability changes.",
     "keywords": [
-      "Shannon Information Rate",
+      "Information Theory",
       "Optimal Control",
       "Run-And-Tumble Dynamics",
-      "Gradient Navigation",
-      "Behavioral Strategy Optimization"
+      "Dynamical Systems",
+      "Gradient Navigation"
+    ],
+    "relevance_score": 7
+  },
+  {
+    "id": "2602.21993v1",
+    "title": "Prediction of source nutrients for microorganisms using metabolic networks",
+    "authors": [
+      "Olivia Bulka",
+      "Chabname Ghassemi Nedjad",
+      "Loïc Paulevé",
+      "Sylvain Prigent",
+      "Clémence Frioux"
+    ],
+    "published_date": "2026-02-25T15:13:07Z",
+    "abstract": "Metagenomics has lowered the barrier to microbial discovery--enabling the identification of novel microbes without isolation--but cultures remain imperative for the deep study of microbes. Cultivation and isolation of non-model microbes remains a major challenge, despite advances in high-throughput culturomic methods. The quantity of simultaneous experimental variables is constrained by time and resources, but the list can be reduced using computational biology. Given an annotated genome, metabolic modelling can be used to predict source nutrients required for the growth of a microbe, which acts as an initial screen to inform culture and isolation experiments. This chapter provides an overview of metabolic networks and modelling and how they can be used to predict the nutrient requirements of a microorganism, followed by a sample protocol using a toy metabolic network, which is then expanded to a genome-scale metabolic network application. These methods can be applied to any metabolic network of interest--which in turn can be created from any genome of interest--and are a starting point for experimental validation of source nutrients required for microorganisms that remain uncultivated to date.",
+    "pdf_link": "https://arxiv.org/pdf/2602.21993v1",
+    "categories": [
+      "q-bio.MN",
+      "q-bio.QM"
+    ],
+    "tldr": "Metabolic network modelling applied to annotated microbial genomes can computationally predict source nutrient requirements, providing a rational first screen to guide culturing experiments for previously uncultivated microorganisms.",
+    "keywords": [
+      "Metabolic Networks",
+      "Genome-Scale Metabolic Models",
+      "Flux Balance Analysis",
+      "Constraint-Based Modelling",
+      "Metagenomics"
     ],
     "relevance_score": 7
   },
@@ -189,14 +137,14 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "XGBoost best forecasts population-level antimicrobial resistance (R²=0.854) across WHO GLASS data; a Retrieval-Augmented Generation pipeline with ChromaDB provides evidence-grounded policy decision support.",
+    "tldr": "XGBoost best forecasts AMR trends on WHO GLASS data (R²=0.854), paired with a RAG pipeline for source-attributed antimicrobial resistance policy decision support.",
     "keywords": [
       "XGBoost",
       "LightGBM",
-      "Long Short-Term Memory (LSTM)",
+      "LSTM",
       "Ridge Regression",
-      "Retrieval-Augmented Generation (RAG)"
+      "Retrieval-Augmented Generation"
     ],
-    "relevance_score": 7
+    "relevance_score": 6
   }
 ]

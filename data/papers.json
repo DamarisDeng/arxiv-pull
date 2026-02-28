@@ -92,39 +92,5 @@
       "cs.LG",
       "q-bio.QM"
     ]
-  },
-  {
-    "id": "2602.22263v1",
-    "title": "CryoNet.Refine: A One-step Diffusion Model for Rapid Refinement of Structural Models with Cryo-EM Density Map Restraints",
-    "authors": [
-      "Fuyao Huang",
-      "Xiaozhu Yu",
-      "Kui Xu",
-      "Qiangfeng Cliff Zhang"
-    ],
-    "published_date": "2026-02-25T04:18:18Z",
-    "abstract": "High-resolution structure determination by cryo-electron microscopy (cryo-EM) requires the accurate fitting of an atomic model into an experimental density map. Traditional refinement pipelines such as Phenix.real_space_refine and Rosetta are computationally expensive, demand extensive manual tuning, and present a significant bottleneck for researchers. We present CryoNet.Refine, an end-to-end deep learning framework that automates and accelerates molecular structure refinement. Our approach utilizes a one-step diffusion model that integrates a density-aware loss function with robust stereochemical restraints, enabling rapid optimization of a structure against experimental data. CryoNet.Refine provides a unified and versatile solution capable of refining protein complexes as well as DNA/RNA-protein complexes. In benchmarks against Phenix.real_space_refine, CryoNet.Refine consistently achieves substantial improvements in both model-map correlation and overall geometric quality metrics. By offering a scalable, automated, and powerful alternative, CryoNet.Refine aims to serve as an essential tool for next-generation cryo-EM structure refinement. Web server: https://cryonet.ai/refine; Source code: https://github.com/kuixu/cryonet.refine.",
-    "pdf_link": "https://arxiv.org/pdf/2602.22263v1",
-    "categories": [
-      "q-bio.BM",
-      "cs.AI",
-      "eess.IV",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2602.21393v1",
-    "title": "An information-based model selection criterion for data-driven model discovery",
-    "authors": [
-      "Michael C Chung",
-      "Alen Zacharia",
-      "Juan Guan"
-    ],
-    "published_date": "2026-02-24T21:45:10Z",
-    "abstract": "Data-driven model discovery (DDMD) algorithms are powerful tools for extracting interpretable symbolic models from data. However, identifying the model that best balances goodness-of-fit and sparsity is often a laborious process requiring user fine-tuning, is prone to overfitting, and results may significantly vary depending on model initialization and specific training procedure. Here, we present a sparse regression algorithm that automatically and adaptively generates candidate models, and uses a novel sample-length-scaling logarithmic information criterion (SLIC) to identify the best model from these candidates. We demonstrate that SLIC greatly outperforms other popular information criteria in extracting the correct model from the data of several nonlinear ordinary and partial differential equations. Then, we demonstrate SLIC's ability to discover interpretable models from experimental datasets in fluid dynamics and nanotechnology that generate new testable predictions.",
-    "pdf_link": "https://arxiv.org/pdf/2602.21393v1",
-    "categories": [
-      "q-bio.QM"
-    ]
   }
 ]
