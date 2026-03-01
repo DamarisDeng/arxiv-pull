@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Bio Watchtower — 2026-02-28</title>
+  <title>Q-Bio Watchtower — 2026-03-01</title>
   <style>
     /* ── Reset & Base ─────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -130,7 +130,7 @@
     }
 
     /* Title */
-    td.title { min-width: 220px; max-width: 280px; }
+    td.title { min-width: 220px; max-width: 290px; }
     td.title a {
       color: #3498db;
       text-decoration: none;
@@ -140,7 +140,7 @@
     td.title a:hover { text-decoration: underline; color: #2980b9; }
 
     /* Authors */
-    td.authors { color: #444; font-size: 0.84rem; min-width: 155px; max-width: 195px; }
+    td.authors { color: #444; font-size: 0.84rem; min-width: 155px; max-width: 200px; }
 
     /* Date */
     td.date { white-space: nowrap; color: #555; font-size: 0.84rem; min-width: 98px; }
@@ -149,7 +149,7 @@
     td.tldr { font-size: 0.845rem; color: #333; line-height: 1.55; min-width: 270px; max-width: 430px; }
 
     /* Keywords */
-    td.keywords { font-size: 0.82rem; color: #555; font-style: italic; min-width: 190px; max-width: 240px; }
+    td.keywords { font-size: 0.82rem; color: #555; font-style: italic; min-width: 190px; max-width: 250px; }
 
     /* Score */
     td.score { text-align: center; width: 74px; white-space: nowrap; }
@@ -192,9 +192,6 @@
       letter-spacing: 0.02em;
     }
 
-    footer a { color: #3498db; text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
-
     /* ── Responsive ───────────────────────────────────────────────────── */
     @media (max-width: 768px) {
       header { padding: 24px 16px 20px; }
@@ -210,10 +207,10 @@
      HEADER
 ════════════════════════════════════════════════════════════════ -->
 <header>
-  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-02-28</h1>
-  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-02-28 UTC</p>
+  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-03-01</h1>
+  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-01 UTC</p>
   <p class="meta">
-    6 papers &nbsp;&middot;&nbsp; Published date range: 2026-02-25 &ndash; 2026-02-26
+    3 papers &nbsp;&middot;&nbsp; Published date range: 2026-02-26 &ndash; 2026-02-26
     &nbsp;&middot;&nbsp; Sorted by relevance score (highest first)
   </p>
 </header>
@@ -245,7 +242,7 @@
 
         <!-- ── Rank 1 · Score 9 ──────────────────────────────────── -->
         <tr>
-          <td class="rank">1</td>
+          <td class="rank">#1</td>
           <td class="title">
             <a href="https://arxiv.org/pdf/2602.23269v1" target="_blank" rel="noopener noreferrer">
               An Active Learning Framework for Data-Efficient, Human-in-the-Loop Enzyme Function Prediction
@@ -253,74 +250,14 @@
           </td>
           <td class="authors">Ashley Babjac, Adrienne Hoarfrost</td>
           <td class="date">2026-02-26</td>
-          <td class="tldr">HATTER integrates multiple active learning strategies with human-in-the-loop annotation to data-efficiently fine-tune enzyme function prediction models, showing that simple uncertainty sampling (entropy/margin) rivals more complex acquisition functions like BALD.</td>
-          <td class="keywords">Active Learning, Uncertainty Sampling, BALD, Transfer Learning, Protein Sequence Analysis</td>
-          <td class="score"><span class="badge badge-green">9 / 10</span></td>
+          <td class="tldr">HATTER is a modular human-in-the-loop active learning framework that fine-tunes enzyme function prediction models to match standard supervised training performance while using significantly less data and compute.</td>
+          <td class="keywords">Active Learning, Uncertainty Sampling (Entropy/Margin), Bayesian Active Learning by Disagreement (BALD), Protein Sequence Analysis, Transfer Learning</td>
+          <td class="score"><span class="badge badge-green">9</span></td>
         </tr>
 
-        <!-- ── Rank 2 · Score 9 ──────────────────────────────────── -->
+        <!-- ── Rank 2 · Score 8 ──────────────────────────────────── -->
         <tr>
-          <td class="rank">2</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2602.22289v1" target="_blank" rel="noopener noreferrer">
-              What Topological and Geometric Structure Do Biological Foundation Models Learn? Evidence from 141 Hypotheses
-            </a>
-          </td>
-          <td class="authors">Ihor Kendiukhov</td>
-          <td class="date">2026-02-25</td>
-          <td class="tldr">Autonomous large-scale hypothesis screening reveals biological foundation models (scGPT, Geneformer) learn genuine geometric structure via persistent homology and CCA alignment, shared across models but tissue-localized.</td>
-          <td class="keywords">Persistent Homology, Canonical Correlation Analysis, Manifold Learning, Graph Community Detection, Transformer Embeddings</td>
-          <td class="score"><span class="badge badge-green">9 / 10</span></td>
-        </tr>
-
-        <!-- ── Rank 3 · Score 8 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">3</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2602.21648v1" target="_blank" rel="noopener noreferrer">
-              Multimodal Survival Modeling and Fairness-Aware Clinical Machine Learning for 5-Year Breast Cancer Risk Prediction
-            </a>
-          </td>
-          <td class="authors">Toktam Khatibi</td>
-          <td class="date">2026-02-25</td>
-          <td class="tldr">A reproducible multimodal framework integrates CoxNet and XGBoost with transcriptomic and copy-number alteration features from METABRIC for 5-year breast cancer survival prediction, with fairness auditing across clinical subgroups.</td>
-          <td class="keywords">CoxNet, XGBoost, Survival Analysis, Dimensionality Reduction, Fairness Auditing</td>
-          <td class="score"><span class="badge badge-green">8 / 10</span></td>
-        </tr>
-
-        <!-- ── Rank 4 · Score 7 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">4</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2602.23324v1" target="_blank" rel="noopener noreferrer">
-              Discrete turn strategies emerge in information-limited navigation
-            </a>
-          </td>
-          <td class="authors">Jose M. Betancourt, Matthew P. Leighton, Thierry Emonet et al.</td>
-          <td class="date">2026-02-26</td>
-          <td class="tldr">Information-theoretic optimization demonstrates that discrete turn-angle strategies outperform gradual steering for maximising up-gradient navigation speed under sensory information constraints, predicting transitions between run-and-tumble and reversal strategies as information availability changes.</td>
-          <td class="keywords">Information Theory, Optimal Control, Run-And-Tumble Dynamics, Dynamical Systems, Gradient Navigation</td>
-          <td class="score"><span class="badge badge-orange">7 / 10</span></td>
-        </tr>
-
-        <!-- ── Rank 5 · Score 7 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">5</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2602.21993v1" target="_blank" rel="noopener noreferrer">
-              Prediction of source nutrients for microorganisms using metabolic networks
-            </a>
-          </td>
-          <td class="authors">Olivia Bulka, Chabname Ghassemi Nedjad, Lo&iuml;c Paulev&eacute; et al.</td>
-          <td class="date">2026-02-25</td>
-          <td class="tldr">Metabolic network modelling applied to annotated microbial genomes can computationally predict source nutrient requirements, providing a rational first screen to guide culturing experiments for previously uncultivated microorganisms.</td>
-          <td class="keywords">Metabolic Networks, Genome-Scale Metabolic Models, Flux Balance Analysis, Constraint-Based Modelling, Metagenomics</td>
-          <td class="score"><span class="badge badge-orange">7 / 10</span></td>
-        </tr>
-
-        <!-- ── Rank 6 · Score 6 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">6</td>
+          <td class="rank">#2</td>
           <td class="title">
             <a href="https://arxiv.org/pdf/2602.22673v1" target="_blank" rel="noopener noreferrer">
               Forecasting Antimicrobial Resistance Trends Using Machine Learning on WHO GLASS Surveillance Data: A Retrieval-Augmented Generation Approach for Policy Decision Support
@@ -328,9 +265,24 @@
           </td>
           <td class="authors">Md Tanvir Hasan Turja</td>
           <td class="date">2026-02-26</td>
-          <td class="tldr">XGBoost best forecasts AMR trends on WHO GLASS data (R&sup2;=0.854), paired with a RAG pipeline for source-attributed antimicrobial resistance policy decision support.</td>
-          <td class="keywords">XGBoost, LightGBM, LSTM, Ridge Regression, Retrieval-Augmented Generation</td>
-          <td class="score"><span class="badge badge-orange">6 / 10</span></td>
+          <td class="tldr">A two-component ML framework benchmarks six models on WHO GLASS AMR surveillance data, with XGBoost achieving best performance (R&sup2;=0.854), paired with a Retrieval-Augmented Generation pipeline for policy decision support.</td>
+          <td class="keywords">XGBoost, LightGBM, LSTM, Retrieval-Augmented Generation (RAG), Ridge Regression</td>
+          <td class="score"><span class="badge badge-green">8</span></td>
+        </tr>
+
+        <!-- ── Rank 3 · Score 6 ──────────────────────────────────── -->
+        <tr>
+          <td class="rank">#3</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2602.23324v1" target="_blank" rel="noopener noreferrer">
+              Discrete turn strategies emerge in information-limited navigation
+            </a>
+          </td>
+          <td class="authors">Jose M. Betancourt, Matthew P. Leighton, Thierry Emonet et al.</td>
+          <td class="date">2026-02-26</td>
+          <td class="tldr">Information-theoretic optimization shows organisms navigating sensory gradients achieve better performance with discrete turn angles than gradual steering, revealing strategy transitions as information availability changes.</td>
+          <td class="keywords">Mutual Information Maximization, Optimal Control, Run-and-Tumble Model, Stochastic Navigation Model, Gradient Ascent Navigation</td>
+          <td class="score"><span class="badge badge-orange">6</span></td>
         </tr>
 
       </tbody>
@@ -343,24 +295,21 @@
       <span class="icon">&#8801;</span> Narrative Summary
     </h2>
     <div class="narrative-box">
-      Today's q-bio.QM submissions are unified by a strong theme of machine learning meeting
-      rigorous biological quantification: highlights include an active learning toolkit (HATTER)
-      that reduces experimental annotation cost for enzyme function prediction, a large-scale
-      topological audit revealing that biological foundation models such as scGPT and Geneformer
-      share genuine geometric structure in their gene-embedding spaces (confirmed by persistent
-      homology at p&nbsp;&lt;&nbsp;0.05 across all 12 transformer layers), and a fairness-aware
-      multimodal survival framework achieving AUC&nbsp;&gt;&nbsp;96&nbsp;% for 5-year breast
-      cancer risk prediction on the METABRIC cohort.
-      Beyond deep learning, information-theoretic optimal-control analysis explains why bacteria
-      adopt discrete turn-angle strategies over gradual steering, while genome-scale metabolic
-      modelling offers a computational first screen for culturing uncultivated microbes &mdash;
-      illustrating the continued importance of formal mathematical biology alongside purely
-      data-driven methods.
-      Across the collection, gradient-boosted trees (XGBoost, LightGBM), transformer embeddings,
-      uncertainty-based active learning, and constraint-based metabolic modelling emerge as the
-      dominant methodological pillars, with reproducibility, fairness auditing, and
-      evidence-grounded policy support becoming increasingly central concerns in translational
-      computational biology.
+      Today's q-bio.QM papers converge on a shared preoccupation with <strong>data efficiency and
+      principled quantification under real-world constraints</strong> — whether those constraints are
+      the scarcity of experimentally annotated enzyme sequences, the uneven geographic distribution of
+      antimicrobial resistance surveillance records, or the limited sensory information available to a
+      navigating bacterium. The top two papers both deploy modern machine learning pipelines to overcome
+      annotation bottlenecks in biology: HATTER demonstrates that simple entropy- and margin-based
+      uncertainty sampling within a human-in-the-loop active learning loop can match far costlier
+      acquisition strategies for enzyme function prediction, while the AMR forecasting work shows that
+      XGBoost anchored by prior-year resistance rates generalises well across WHO regions and can be
+      coupled with a Retrieval-Augmented Generation layer to produce grounded, hallucination-constrained
+      policy outputs. Rounding out the set, an information-theoretic optimal-control analysis of
+      microbial chemotaxis reveals that discrete reorientation strategies emerge naturally when sensory
+      information is limited &mdash; a result that bridges statistical physics and quantitative biology
+      and underscores <em>mutual-information maximization</em> as a cross-cutting methodological theme
+      across all three works.
     </div>
   </section>
 
@@ -370,9 +319,7 @@
      FOOTER
 ════════════════════════════════════════════════════════════════ -->
 <footer>
-  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp;
-  Data source: <a href="https://arxiv.org/list/q-bio.QM/recent" target="_blank" rel="noopener noreferrer">arXiv q-bio.QM</a>
-  &nbsp;&middot;&nbsp; 2026-02-28T00:00:00Z UTC
+  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM &nbsp;&middot;&nbsp; 2026-03-01 UTC
 </footer>
 
 </body>
