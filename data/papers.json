@@ -1,48 +1,18 @@
 [
   {
-    "id": "2602.23324v1",
-    "title": "Discrete turn strategies emerge in information-limited navigation",
+    "id": "2602.24258v1",
+    "title": "A model of tuberculosis progression using CompuCell3D",
     "authors": [
-      "Jose M. Betancourt",
-      "Matthew P. Leighton",
-      "Thierry Emonet",
-      "Benjamin B. Machta",
-      "Michael C. Abbott"
+      "James W. G. Doran",
+      "Christopher F. Rowlatt",
+      "Gibin G. Powathil",
+      "Ruth Bowness",
+      "Christian A. Yates"
     ],
-    "published_date": "2026-02-26T18:32:51Z",
-    "abstract": "Navigation up a sensory gradient is one of the simplest behaviours, and the simplest strategy is run and tumble. But some organisms use other strategies, such as reversing direction or turning by some angle. Here we ask what drives the choice of strategy, which we frame as maximising up-gradient speed using a given amount of sensory information per unit time. We find that, without directional information on which way to turn, behavioural strategies which make sudden turns perform better than gradual steering. We see various transitions where a different strategy becomes optimal, such as a switch from reversing direction to fully re-orienting tumbles as more information becomes available. And, among more complex re-orientation strategies, we show that discrete turn angles are best, and see transitions in how many such angles the optimal strategy employs.",
-    "pdf_link": "https://arxiv.org/pdf/2602.23324v1",
+    "published_date": "2026-02-27T18:30:35Z",
+    "abstract": "Tuberculosis (TB) is an airborne disease caused by the bacterium Mycobacterium tuberculosis (M. tb). Prior to the COVID-19 pandemic, TB was the leading cause of death from an infectious agent globally. However, most people exposed to M. tb do not develop active TB and go on to display symptoms. Instead, in the majority of cases, the bacteria are contained within a granuloma (an aggregation of immune cells) without being eliminated; this is called latent TB. The spatial organisation of the bacteria and immune cells is important in determining whether an individual exposed to M. tb will develop latent or active TB. In this paper, we present a multi-cell, multiscale model of TB progression to investigate the importance of the spatial organisation. This is a novel TB within-host dynamics modelling framework, having been developed using CompuCell3D (CC3D), an open-source computer software used for simulating cellular biological processes both within and between cells. We used this model to compare the generated results with those from a previously developed within-host infectious disease model. We found that, although the results of our CC3D model mostly agree qualitatively with those from the previously developed model, there are quantitative differences. Additionally, we conducted a robustness analysis of key model parameters from the CC3D model to determine their importance to the CC3D model output, using a methodology specifically designed for agent-based models. The model output appears to be robust in response to perturbations in parameters controlling chemotactic movement, but less so in response to perturbations in parameters controlling persistence of movement in cells, cell adhesion and volume constraints. This work compares our CC3D model of TB progression with another agent-based modelling approach to the same problem.",
+    "pdf_link": "https://arxiv.org/pdf/2602.24258v1",
     "categories": [
-      "physics.bio-ph",
-      "cond-mat.stat-mech",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2602.23269v1",
-    "title": "An Active Learning Framework for Data-Efficient, Human-in-the-Loop Enzyme Function Prediction",
-    "authors": [
-      "Ashley Babjac",
-      "Adrienne Hoarfrost"
-    ],
-    "published_date": "2026-02-26T17:42:06Z",
-    "abstract": "Generalizable protein function prediction is increasingly constrained by the growing mismatch between exponentially expanding sequences of environmental proteins and the comparatively slow accumulation of experimentally verified functional data. Active learning offers a promising path forward for accelerating biological function prediction, by selecting the most informative proteins to experimentally annotate for data-efficient training, yet its potential remains largely unexplored. We introduce HATTER (Human-in-the-loop Adaptive Toolkit for Transferable Enzyme Representations), a modular framework that integrates multiple active learning strategies with human-in-the-loop experimental annotation to efficiently fine tune function prediction models. We compare active learning training to standard supervised training for biological enzyme function prediction, demonstrating that active learning achieves performance comparable to standard training across diverse protein sequence evaluation datasets while requiring fewer model updates, processing less data, and substantially reducing computational cost. Interestingly, point-based uncertainty sampling methods like entropy or margin sampling perform as well or better than more complex acquisition functions such as bayesian sampling or BALD, highlighting the relative importance of sequence diversity in training datasets and model architecture design. These results demonstrate that human-in-the-loop active learning can efficiently accelerate enzyme discovery, providing a flexible platform for adaptive, scalable, and expert-guided protein function prediction.",
-    "pdf_link": "https://arxiv.org/pdf/2602.23269v1",
-    "categories": [
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2602.22673v1",
-    "title": "Forecasting Antimicrobial Resistance Trends Using Machine Learning on WHO GLASS Surveillance Data: A Retrieval-Augmented Generation Approach for Policy Decision Support",
-    "authors": [
-      "Md Tanvir Hasan Turja"
-    ],
-    "published_date": "2026-02-26T06:45:08Z",
-    "abstract": "Antimicrobial resistance (AMR) is a growing global crisis projected to cause 10 million deaths per year by 2050. While the WHO Global Antimicrobial Resistance and Use Surveillance System (GLASS) provides standardized surveillance data across 44 countries, few studies have applied machine learning to forecast population-level resistance trends from this data. This paper presents a two-component framework for AMR trend forecasting and evidence-grounded policy decision support. We benchmark six models -- Naive, Linear Regression, Ridge Regression, XGBoost, LightGBM, and LSTM -- on 5,909 WHO GLASS observations across six WHO regions (2021-2023). XGBoost achieved the best performance with a test MAE of 7.07% and R-squared of 0.854, outperforming the naive baseline by 83.1%. Feature importance analysis identified the prior-year resistance rate as the dominant predictor (50.5% importance), while regional MAE ranged from 4.16% (European Region) to 10.14% (South-East Asia Region). We additionally implemented a Retrieval-Augmented Generation (RAG) pipeline combining a ChromaDB vector store of WHO policy documents with a locally deployed Phi-3 Mini language model, producing source-attributed, hallucination-constrained policy answers. Code and data are available at https://github.com/TanvirTurja",
-    "pdf_link": "https://arxiv.org/pdf/2602.22673v1",
-    "categories": [
-      "cs.LG",
       "q-bio.QM"
     ]
   }

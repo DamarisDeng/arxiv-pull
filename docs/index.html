@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Bio Watchtower — 2026-03-01</title>
+  <title>Q-Bio Watchtower — 2026-03-02</title>
   <style>
     /* ── Reset & Base ─────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -14,6 +14,9 @@
       color: #1a1a1a;
       line-height: 1.6;
       font-size: 15px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     /* ── Header ───────────────────────────────────────────────────────── */
@@ -46,9 +49,11 @@
 
     /* ── Main Layout ──────────────────────────────────────────────────── */
     main {
+      flex: 1;
       max-width: 1360px;
       margin: 0 auto;
       padding: 40px 48px 56px;
+      width: 100%;
     }
 
     /* ── Section Headings ─────────────────────────────────────────────── */
@@ -190,6 +195,7 @@
       padding: 18px 48px;
       border-top: 3px solid #3498db;
       letter-spacing: 0.02em;
+      margin-top: auto;
     }
 
     /* ── Responsive ───────────────────────────────────────────────────── */
@@ -207,10 +213,10 @@
      HEADER
 ════════════════════════════════════════════════════════════════ -->
 <header>
-  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-03-01</h1>
-  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-01 UTC</p>
+  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-03-02</h1>
+  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-02 UTC</p>
   <p class="meta">
-    3 papers &nbsp;&middot;&nbsp; Published date range: 2026-02-26 &ndash; 2026-02-26
+    1 paper &nbsp;&middot;&nbsp; Published date range: 2026-02-27 &ndash; 2026-02-27
     &nbsp;&middot;&nbsp; Sorted by relevance score (highest first)
   </p>
 </header>
@@ -240,49 +246,19 @@
       </thead>
       <tbody>
 
-        <!-- ── Rank 1 · Score 9 ──────────────────────────────────── -->
+        <!-- ── Rank 1 · Score 7 · orange badge ──────────────────── -->
         <tr>
           <td class="rank">#1</td>
           <td class="title">
-            <a href="https://arxiv.org/pdf/2602.23269v1" target="_blank" rel="noopener noreferrer">
-              An Active Learning Framework for Data-Efficient, Human-in-the-Loop Enzyme Function Prediction
+            <a href="https://arxiv.org/pdf/2602.24258v1" target="_blank" rel="noopener noreferrer">
+              A model of tuberculosis progression using CompuCell3D
             </a>
           </td>
-          <td class="authors">Ashley Babjac, Adrienne Hoarfrost</td>
-          <td class="date">2026-02-26</td>
-          <td class="tldr">HATTER is a modular human-in-the-loop active learning framework that fine-tunes enzyme function prediction models to match standard supervised training performance while using significantly less data and compute.</td>
-          <td class="keywords">Active Learning, Uncertainty Sampling (Entropy/Margin), Bayesian Active Learning by Disagreement (BALD), Protein Sequence Analysis, Transfer Learning</td>
-          <td class="score"><span class="badge badge-green">9</span></td>
-        </tr>
-
-        <!-- ── Rank 2 · Score 8 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">#2</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2602.22673v1" target="_blank" rel="noopener noreferrer">
-              Forecasting Antimicrobial Resistance Trends Using Machine Learning on WHO GLASS Surveillance Data: A Retrieval-Augmented Generation Approach for Policy Decision Support
-            </a>
-          </td>
-          <td class="authors">Md Tanvir Hasan Turja</td>
-          <td class="date">2026-02-26</td>
-          <td class="tldr">A two-component ML framework benchmarks six models on WHO GLASS AMR surveillance data, with XGBoost achieving best performance (R&sup2;=0.854), paired with a Retrieval-Augmented Generation pipeline for policy decision support.</td>
-          <td class="keywords">XGBoost, LightGBM, LSTM, Retrieval-Augmented Generation (RAG), Ridge Regression</td>
-          <td class="score"><span class="badge badge-green">8</span></td>
-        </tr>
-
-        <!-- ── Rank 3 · Score 6 ──────────────────────────────────── -->
-        <tr>
-          <td class="rank">#3</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2602.23324v1" target="_blank" rel="noopener noreferrer">
-              Discrete turn strategies emerge in information-limited navigation
-            </a>
-          </td>
-          <td class="authors">Jose M. Betancourt, Matthew P. Leighton, Thierry Emonet et al.</td>
-          <td class="date">2026-02-26</td>
-          <td class="tldr">Information-theoretic optimization shows organisms navigating sensory gradients achieve better performance with discrete turn angles than gradual steering, revealing strategy transitions as information availability changes.</td>
-          <td class="keywords">Mutual Information Maximization, Optimal Control, Run-and-Tumble Model, Stochastic Navigation Model, Gradient Ascent Navigation</td>
-          <td class="score"><span class="badge badge-orange">6</span></td>
+          <td class="authors">James W. G. Doran, Christopher F. Rowlatt, Gibin G. Powathil et al.</td>
+          <td class="date">2026-02-27</td>
+          <td class="tldr">A multiscale CompuCell3D agent-based model of tuberculosis reveals that spatial immune-cell organisation governs latent vs. active disease, with cell adhesion and movement persistence as the most influential parameters.</td>
+          <td class="keywords">Agent-Based Modeling (ABM), CompuCell3D (CC3D), Multiscale Modeling, Robustness/Sensitivity Analysis, Within-Host Infectious Disease Dynamics</td>
+          <td class="score"><span class="badge badge-orange">7</span></td>
         </tr>
 
       </tbody>
@@ -295,21 +271,19 @@
       <span class="icon">&#8801;</span> Narrative Summary
     </h2>
     <div class="narrative-box">
-      Today's q-bio.QM papers converge on a shared preoccupation with <strong>data efficiency and
-      principled quantification under real-world constraints</strong> — whether those constraints are
-      the scarcity of experimentally annotated enzyme sequences, the uneven geographic distribution of
-      antimicrobial resistance surveillance records, or the limited sensory information available to a
-      navigating bacterium. The top two papers both deploy modern machine learning pipelines to overcome
-      annotation bottlenecks in biology: HATTER demonstrates that simple entropy- and margin-based
-      uncertainty sampling within a human-in-the-loop active learning loop can match far costlier
-      acquisition strategies for enzyme function prediction, while the AMR forecasting work shows that
-      XGBoost anchored by prior-year resistance rates generalises well across WHO regions and can be
-      coupled with a Retrieval-Augmented Generation layer to produce grounded, hallucination-constrained
-      policy outputs. Rounding out the set, an information-theoretic optimal-control analysis of
-      microbial chemotaxis reveals that discrete reorientation strategies emerge naturally when sensory
-      information is limited &mdash; a result that bridges statistical physics and quantitative biology
-      and underscores <em>mutual-information maximization</em> as a cross-cutting methodological theme
-      across all three works.
+      Today's sole q-bio.QM submission centres on <strong>spatially-explicit, agent-based modelling
+      of within-host infectious disease dynamics</strong>, presenting a novel CompuCell3D framework
+      that simulates tuberculosis granuloma formation to probe how the spatial arrangement of immune
+      cells and bacteria tips the balance between latent containment and active disease progression.
+      The work showcases a key methodological trend toward open-source, multiscale simulation
+      platforms &mdash; coupling cell-level biophysics (adhesion, chemotaxis, and volume constraints)
+      with population-level immune kinetics &mdash; and applies a robustness and sensitivity analysis
+      pipeline specifically tailored for stochastic agent-based models, identifying cell adhesion and
+      movement persistence as the parameters with the greatest influence on simulation outcomes.
+      Taken together, this contribution underscores the field's broader shift from purely
+      equation-based ODE/PDE approaches toward hybrid spatial frameworks capable of resolving
+      immune-niche heterogeneity, opening avenues for parameter inference and virtual-patient studies
+      in computational infectious disease research.
     </div>
   </section>
 
@@ -319,7 +293,7 @@
      FOOTER
 ════════════════════════════════════════════════════════════════ -->
 <footer>
-  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM &nbsp;&middot;&nbsp; 2026-03-01 UTC
+  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM &nbsp;&middot;&nbsp; 2026-03-02 UTC
 </footer>
 
 </body>
