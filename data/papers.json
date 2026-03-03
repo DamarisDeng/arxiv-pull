@@ -1,18 +1,194 @@
 [
   {
-    "id": "2602.24258v1",
-    "title": "A model of tuberculosis progression using CompuCell3D",
+    "id": "2603.02165v1",
+    "title": "Investigating the short-term effects of particulate matter (PM) chemical components on mortality and the potential modifying effect of extreme temperature: A time-series analysis in London",
     "authors": [
-      "James W. G. Doran",
-      "Christopher F. Rowlatt",
-      "Gibin G. Powathil",
-      "Ruth Bowness",
-      "Christian A. Yates"
+      "Xiaolu Zhang",
+      "Anna Font",
+      "Anja Tremper",
+      "Max Priestman",
+      "Shawn Y. Lee",
+      "David C. Green",
+      "Dimitris Evangelopoulos",
+      "Gang I. Chen"
     ],
-    "published_date": "2026-02-27T18:30:35Z",
-    "abstract": "Tuberculosis (TB) is an airborne disease caused by the bacterium Mycobacterium tuberculosis (M. tb). Prior to the COVID-19 pandemic, TB was the leading cause of death from an infectious agent globally. However, most people exposed to M. tb do not develop active TB and go on to display symptoms. Instead, in the majority of cases, the bacteria are contained within a granuloma (an aggregation of immune cells) without being eliminated; this is called latent TB. The spatial organisation of the bacteria and immune cells is important in determining whether an individual exposed to M. tb will develop latent or active TB. In this paper, we present a multi-cell, multiscale model of TB progression to investigate the importance of the spatial organisation. This is a novel TB within-host dynamics modelling framework, having been developed using CompuCell3D (CC3D), an open-source computer software used for simulating cellular biological processes both within and between cells. We used this model to compare the generated results with those from a previously developed within-host infectious disease model. We found that, although the results of our CC3D model mostly agree qualitatively with those from the previously developed model, there are quantitative differences. Additionally, we conducted a robustness analysis of key model parameters from the CC3D model to determine their importance to the CC3D model output, using a methodology specifically designed for agent-based models. The model output appears to be robust in response to perturbations in parameters controlling chemotactic movement, but less so in response to perturbations in parameters controlling persistence of movement in cells, cell adhesion and volume constraints. This work compares our CC3D model of TB progression with another agent-based modelling approach to the same problem.",
-    "pdf_link": "https://arxiv.org/pdf/2602.24258v1",
+    "published_date": "2026-03-02T18:28:40Z",
+    "abstract": "Particulate matter (PM) is linked to adverse health outcomes, yet the roles of specific PM components and their modification by extreme temperature remain unclear. We examined short-term associations between ten PM chemical components and daily mortality in Greater London (2015-2018). PM components include inorganic aerosols (black carbon from wood burning (BCwb) and traffic exhaust (BCtr), SO4, NO3, and NH4) and organic aerosols (hydrocarbon-like organic aerosol (HOA), biomass burning OA (BBOA), cooking-like OA (COA), more and less oxidized oxygenated OA (MO-OOA and LO-OOA)). We applied quasi-Poisson generalized additive models and weighted quantile sum (WQS) regression to estimate single-pollutant, multi-pollutant, and mixture effects, respectively, and included interaction terms to test effect modification by heat waves and cold spells. All ten components showed positive associations with all-cause mortality in single-pollutant models with stronger estimated risks for respiratory mortality, particularly for NH4, NO3, SO4. In mixture analyses, the WQS index was significantly associated with all-cause mortality (RR = 1.015, 95% CI: 1.006-1.024 per 25th-percentile increase) and showed a marginally significance with respiratory mortality (RR = 1.018, 95% CI: 0.994-1.042). MO-OOA and COA contributed most to all-cause mortality, while BBOA and BC Wood dominated respiratory effects. Heat waves consistently amplified respiratory risks in both single-pollutant and mixture models with little evidence for cardiovascular mortality. Overall, MO-OOA demonstrated harmful associations across outcomes, suggesting potential toxicity link to secondary atmospheric oxidation processes. These findings support source-specific control strategies and highlight the importance of accounting for extreme temperature in air pollution mitigation policies.",
+    "pdf_link": "https://arxiv.org/pdf/2603.02165v1",
     "categories": [
+      "physics.ao-ph",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.01965v1",
+    "title": "CoVAE: correlated multimodal generative modeling",
+    "authors": [
+      "Federico Caretti",
+      "Guido Sanguinetti"
+    ],
+    "published_date": "2026-03-02T15:14:59Z",
+    "abstract": "Multimodal Variational Autoencoders have emerged as a popular tool to extract effective representations from rich multimodal data. However, such models rely on fusion strategies in latent space that destroy the joint statistical structure of the multimodal data, with profound implications for generation and uncertainty quantification. In this work, we introduce Correlated Variational Autoencoders (CoVAE), a new generative architecture that captures the correlations between modalities. We test CoVAE on a number of real and synthetic data sets demonstrating both accurate cross-modal reconstruction and effective quantification of the associated uncertainties.",
+    "pdf_link": "https://arxiv.org/pdf/2603.01965v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.01849v1",
+    "title": "Characterization of the novel transposon Tn7722 harboring bla NDM-1 : Insights into the evolutionary dynamics of resistance in Klebsiella pneumoniae",
+    "authors": [
+      "Tram Vo",
+      "Aïcha Hamieh",
+      "Marc Levy",
+      "Pierre Pontarotti",
+      "Jean-Marc Rolain",
+      "Vicky Merhej"
+    ],
+    "published_date": "2026-03-02T13:30:25Z",
+    "abstract": "Background: Klebsiella pneumoniae is a major opportunistic pathogen responsible for various invasive infections. The rise of carbapenem-resistant K. pneumoniae, primarily due to acquisition of bla NDM genes, presents a serious global health threat. In French Polynesia, where international travel is frequent, sporadic cases of NDM-producing Enterobacteriales have emerged. This study aims to characterize the genomic features of NDM-producing K. pneumoniae isolates collected in French Polynesia and evaluate the roles of clonal expansion and horizontal gene transfer mediated by mobile genetic elements in bla NDM spread. Materials and Methods: Between July 2006 and September 2021, 17 carbapenemase-producing K. pneumoniae isolates were identified from 715 clinical samples in Tahiti. Whole-genome sequencing using Illumina MiSeq and Oxford Nanopore technologies was performed. Results: Seven NDM-producing K. pneumoniae strains were identified, five bla NDM-1 and two bla NDM-9 variants. All isolates were resistant to ertapenem (MICs 1 to >32 mg/L), with three resistants to imipenem (MICs 8 to >32 mg/L) and six to meropenem (MICs 2 to >8 mg/L). A novel IS26mediated composite transposon, Tn7722 (16,246 bp), was detected in four isolates on IncF and IncR plasmids. This transposon also carried qnrS1 and aph(3')-VI genes, conferring resistance to fluoroquinolones and aminoglycosides. Tn7722-like elements were found in diverse bacterial genomes worldwide, suggesting it facilitates bla NDM transmission across multiple species and regions. Conclusion: NDM-producing K. pneumoniae in French Polynesia remain sporadic but genetically diverse, without evidence of local outbreak. It underscores the role of plasmid and Tn7722-driven evolution and adaptation. Ongoing genomic surveillance is vital to track the evolution of highrisk clones and MGEs guiding effective containment.",
+    "pdf_link": "https://arxiv.org/pdf/2603.01849v1",
+    "categories": [
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.01682v1",
+    "title": "Modeling and Analysis of Fish Interaction Networks under Projected Visual Stimuli",
+    "authors": [
+      "Hiroaki Kawashima",
+      "Raj Rajeshwar Malinda",
+      "Saeko Takizawa"
+    ],
+    "published_date": "2026-03-02T10:12:42Z",
+    "abstract": "This paper addresses the estimation of a dynamic interaction network, a network of influence among individuals, under projected visual stimuli to quantify the influences of inter-individual interactions and external stimuli on collective behavior. Building upon our previously proposed network estimation model, which assumes a Boids-type model and employs a sparse regression framework to infer inter-individual influence networks from trajectory data, we extend the formulation by introducing a stimulus term. This enables the model to capture how individuals react to and propagate externally projected visual stimuli within the group. The resulting framework allows simultaneous estimation of inter-individual and stimulus-related interaction strengths. We also introduce entropy-based indices to capture the possible biases of individuals' influence. Our experiments with fish schools under projector-based visual stimuli demonstrate the effectiveness of the proposed indices in quantifying schooling behavior and identifying influential individuals within the group, serving as the basis for real-time, interpretable metrics of collective dynamics.",
+    "pdf_link": "https://arxiv.org/pdf/2603.01682v1",
+    "categories": [
+      "cs.SI",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.01537v1",
+    "title": "Pharmacology Knowledge Graphs: Do We Need Chemical Structure for Drug Repurposing?",
+    "authors": [
+      "Youssef Abo-Dahab",
+      "Ruby Hernandez",
+      "Ismael Caleb Arechiga Duran"
+    ],
+    "published_date": "2026-03-02T07:07:32Z",
+    "abstract": "The contributions of model complexity, data volume, and feature modalities to knowledge graph-based drug repurposing remain poorly quantified under rigorous temporal validation. We constructed a pharmacology knowledge graph from ChEMBL 36 comprising 5,348 entities including 3,127 drugs, 1,156 proteins, and 1,065 indications. A strict temporal split was enforced with training data up to 2022 and testing data from 2023 to 2025, together with biologically verified hard negatives mined from failed assays and clinical trials. We benchmarked five knowledge graph embedding models and a standard graph neural network with 3.44 million parameters that incorporates drug chemical structure using a graph attention encoder and ESM-2 protein embeddings. Scaling experiments ranging from 0.78 to 9.75 million parameters and from 25 to 100 percent of the data, together with feature ablation studies, were used to isolate the contributions of model capacity, graph density, and node feature modalities. Removing the graph attention based drug structure encoder and retaining only topological embeddings combined with ESM-2 protein features improved drug protein PR-AUC from 0.5631 to 0.5785 while reducing VRAM usage from 5.30 GB to 353 MB. Replacing the drug encoder with Morgan fingerprints further degraded performance, indicating that explicit chemical structure representations can be detrimental for predicting pharmacological network interactions. Increasing model size beyond 2.44 million parameters yielded diminishing returns, whereas increasing training data consistently improved performance. External validation confirmed 6 of the top 14 novel predictions as established therapeutic indications. These results show that drug pharmacological behavior can be accurately predicted using target-centric information and drug network topology alone, without requiring explicit chemical structure representations.",
+    "pdf_link": "https://arxiv.org/pdf/2603.01537v1",
+    "categories": [
+      "cs.AI",
+      "q-bio.BM",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.01396v1",
+    "title": "HarmonyCell: Automating Single-Cell Perturbation Modeling under Semantic and Distribution Shifts",
+    "authors": [
+      "Wenxuan Huang",
+      "Mingyu Tsoi",
+      "Yanhao Huang",
+      "Xinjie Mao",
+      "Xue Xia",
+      "Hao Wu",
+      "Jiaqi Wei",
+      "Yuejin Yang",
+      "Lang Yu",
+      "Cheng Tan",
+      "Xiang Zhang",
+      "Zhangyang Gao",
+      "Siqi Sun"
+    ],
+    "published_date": "2026-03-02T02:48:40Z",
+    "abstract": "Single-cell perturbation studies face dual heterogeneity bottlenecks: (i) semantic heterogeneity--identical biological concepts encoded under incompatible metadata schemas across datasets; and (ii) statistical heterogeneity--distribution shifts from biological variation demanding dataset-specific inductive biases. We propose HarmonyCell, an end-to-end agent framework resolving each challenge through a dedicated mechanism: an LLM-driven Semantic Unifier autonomously maps disparate metadata into a canonical interface without manual intervention; and an adaptive Monte Carlo Tree Search engine operates over a hierarchical action space to synthesize architectures with optimal statistical inductive biases for distribution shifts. Evaluated across diverse perturbation tasks under both semantic and distribution shifts, HarmonyCell achieves a 95% valid execution rate on heterogeneous input datasets (versus 0% for general agents) while matching or even exceeding expert-designed baselines in rigorous out-of-distribution evaluations. This dual-track orchestration enables scalable automatic virtual cell modeling without dataset-specific engineering.",
+    "pdf_link": "https://arxiv.org/pdf/2603.01396v1",
+    "categories": [
+      "cs.AI",
+      "cs.CE",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.00798v1",
+    "title": "Efficient Conformal Volumetry for Template-Based Segmentation",
+    "authors": [
+      "Matt Y. Cheung",
+      "Ashok Veeraraghavan",
+      "Guha Balakrishnan"
+    ],
+    "published_date": "2026-02-28T20:16:15Z",
+    "abstract": "Template-based segmentation, a widely used paradigm in medical imaging, propagates anatomical labels via deformable registration from a labeled atlas to a target image, and is often used to compute volumetric biomarkers for downstream decision-making. While conformal prediction (CP) provides finite-sample valid intervals for scalar metrics, existing segmentation-based uncertainty quantification (UQ) approaches either rely on learned model features, often unavailable in classic template-based pipelines, or treat the registration process as a black box, resulting in overly conservative intervals when applied directly in output space. We introduce ConVOLT, a CP framework that achieves efficient volumetric UQ by conditioning calibration on properties of the estimated deformation field from template-based segmentation. ConVOLT calibrates a learned volumetric scaling factor from deformation space features. We evaluate ConVOLT on template-based segmentation tasks involving global, regional, and label volumetry across multiple datasets and registration methods. ConVOLT achieves target coverage while producing substantially tighter intervals than output-space conformal baselines. Our work paves way to exploit the registration process for efficient UQ in medical imaging pipelines.",
+    "pdf_link": "https://arxiv.org/pdf/2603.00798v1",
+    "categories": [
+      "eess.IV",
+      "cs.CV",
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.00709v1",
+    "title": "A Closed-loop Framework to Discriminate Models Using Optimal Control",
+    "authors": [
+      "Laurent Pagnier",
+      "Melvyn Tyloo",
+      "Akshita Jindal",
+      "Pragati Thakur",
+      "Kyle C. A. Wedgwood"
+    ],
+    "published_date": "2026-02-28T15:32:26Z",
+    "abstract": "Predicting the response of an observed system to a known input is a fruitful first step to accurately control the system's dynamics. Despite the recent advances in fully data-driven algorithms, the most interpretable way to reach this goal is through mechanistic mathematical modeling. Here, we leverage optimal control and propose a closed-loop iterative method to choose among a set of candidate models the one that most accurately predict an observed system. We assume that one has control over an input of the observed system and access to measurements of its response. Our approach is to identify the input control that maximally discriminates the response of the candidate models, allowing us to determine which model is best by comparing such responses with the observed data. We demonstrate our proposed framework in numerical simulations before applying it during an electrophysiology experiment, successfully discriminating between different models for photocurrents produced via opsin dynamics.",
+    "pdf_link": "https://arxiv.org/pdf/2603.00709v1",
+    "categories": [
+      "math.DS",
+      "eess.SY",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.00678v1",
+    "title": "From Syntax to Semantics: Geometric Stability as the Missing Axis of Perturbation Biology",
+    "authors": [
+      "Prashant C. Raju"
+    ],
+    "published_date": "2026-02-28T14:42:50Z",
+    "abstract": "The capacity to precisely edit genomes has outpaced our ability to predict the consequences. A cell can be genetically perfect and therapeutically useless: edited exactly as intended, yet unstable, drifting toward unintended fates, or selected for properties that compromise safety. This paradox reflects a deeper gap in how we evaluate biological intervention. Current frameworks excel at measuring what was done to a cell but remain blind to what the cell has become. We argue that this blindness stems from treating cells as collections of independent variables rather than as dynamical systems occupying positions on high-dimensional state manifolds. Drawing on Waddington's epigenetic landscape, we propose geometric stability as a missing axis of evaluation: the directional coherence of cellular responses to perturbation. This metric distinguishes interventions that guide cells coherently toward stable states from those that scatter them across the state manifold. Validation across diverse perturbation datasets reveals that geometric stability captures regulatory architecture invisible to conventional metrics, discriminating pleiotropic master regulators from lineage-specific factors without prior biological annotation. As precision medicine increasingly relies on cellular reprogramming, the question shifts from ``did the intervention occur?'' to ``is the resulting state stable?'' Geometric stability provides a framework for answering.",
+    "pdf_link": "https://arxiv.org/pdf/2603.00678v1",
+    "categories": [
+      "q-bio.QM",
+      "q-bio.CB",
+      "q-bio.GN"
+    ]
+  },
+  {
+    "id": "2603.00614v1",
+    "title": "Designing the Haystack: Programmable Chemical Space for Generative Molecular Discovery",
+    "authors": [
+      "Yuchen Zhu",
+      "Donghai Zhao",
+      "Yangyang Zhang",
+      "Yitong Li",
+      "Xiaorui Wang",
+      "Shuwang Li",
+      "Yue Kong",
+      "Beichen Zhang",
+      "Ricki Chen",
+      "Chang Liu",
+      "Xingcai Zhang",
+      "Tingjun Hou",
+      "Chang-Yu Hsieh"
+    ],
+    "published_date": "2026-02-28T12:16:01Z",
+    "abstract": "Chemical space exploration underlies drug discovery, yet most generative models treat chemical space as a fixed, implicitly learned distribution, focusing on sampling molecules rather than deliberately designing the space itself. We introduce SpaceGFN, a generative framework that elevates chemical space to a programmable computational object: a controllable degree of freedom enabling explicit construction and adaptive traversal of structured molecular universes. SpaceGFN decouples space definition from exploration. Users specify building blocks and reaction rules to construct chemically and synthetically coherent spaces, while a GFlowNet performs efficient, property-biased sampling within them. In Discovery mode, we demonstrate programmable space design through two strategies. A pseudo-natural product space assembles natural product-like architectures. An evolution-inspired (Evo) space recombines endogenous metabolite fragments via enzyme-consistent transformations, introducing an evolutionary prior into chemical generation. This bias yields favorable shifts in predicted metabolic and toxicological profiles while preserving pharmacological diversity, supported by broad docking enrichment across therapeutic targets. In Editing mode, SpaceGFN enables reaction-consistent lead optimization through a curated toolkit of executable synthetic transformations, allowing local, synthesis-aware modification of existing compounds instead of unrestricted graph mutation. Across 96 drug targets, SpaceGFN achieves strong optimization performance while maintaining structural diversity under synthetic constraints. By integrating programmable chemical universe construction with flow-based exploration and reaction-level editing, SpaceGFN establishes a general paradigm for deliberate navigation of therapeutic chemical space.",
+    "pdf_link": "https://arxiv.org/pdf/2603.00614v1",
+    "categories": [
+      "physics.chem-ph",
+      "q-bio.BM",
       "q-bio.QM"
     ]
   }
