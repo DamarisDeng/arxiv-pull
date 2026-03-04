@@ -1,25 +1,27 @@
 [
   {
-    "id": "2603.00678v1",
-    "title": "From Syntax to Semantics: Geometric Stability as the Missing Axis of Perturbation Biology",
+    "id": "2603.02753v1",
+    "title": "Deep learning-guided evolutionary optimization for protein design",
     "authors": [
-      "Prashant C. Raju"
+      "Erik Hartman",
+      "Di Tang",
+      "Johan Malmström"
     ],
-    "published_date": "2026-02-28T14:42:50Z",
-    "abstract": "The capacity to precisely edit genomes has outpaced our ability to predict the consequences. A cell can be genetically perfect and therapeutically useless: edited exactly as intended, yet unstable, drifting toward unintended fates, or selected for properties that compromise safety. This paradox reflects a deeper gap in how we evaluate biological intervention. Current frameworks excel at measuring what was done to a cell but remain blind to what the cell has become. We argue that this blindness stems from treating cells as collections of independent variables rather than as dynamical systems occupying positions on high-dimensional state manifolds. Drawing on Waddington's epigenetic landscape, we propose geometric stability as a missing axis of evaluation: the directional coherence of cellular responses to perturbation. This metric distinguishes interventions that guide cells coherently toward stable states from those that scatter them across the state manifold. Validation across diverse perturbation datasets reveals that geometric stability captures regulatory architecture invisible to conventional metrics, discriminating pleiotropic master regulators from lineage-specific factors without prior biological annotation. As precision medicine increasingly relies on cellular reprogramming, the question shifts from ``did the intervention occur?'' to ``is the resulting state stable?'' Geometric stability provides a framework for answering.",
-    "pdf_link": "https://arxiv.org/pdf/2603.00678v1",
+    "published_date": "2026-03-03T08:53:12Z",
+    "abstract": "Designing novel proteins with desired characteristics remains a significant challenge due to the large sequence space and the complexity of sequence-function relationships. Efficient exploration of this space to identify sequences that meet specific design criteria is crucial for advancing therapeutics and biotechnology. Here, we present BoGA (Bayesian Optimization Genetic Algorithm), a framework that combines evolutionary search with Bayesian optimization to efficiently navigate the sequence space. By integrating a genetic algorithm as a stochastic proposal generator within a surrogate modeling loop, BoGA prioritizes candidates based on prior evaluations and surrogate model predictions, enabling data-efficient optimization. We demonstrate the utility of BoGA through benchmarking on sequence and structure design tasks, followed by its application in designing peptide binders against pneumolysin, a key virulence factor of \\textit{Streptococcus pneumoniae}. BoGA accelerates the discovery of high-confidence binders, demonstrating the potential for efficient protein design across diverse objectives. The algorithm is implemented within the BoPep suite and is available under an MIT license at \\href{https://github.com/ErikHartman/bopep}{GitHub}.",
+    "pdf_link": "https://arxiv.org/pdf/2603.02753v1",
     "categories": [
+      "cs.LG",
       "q-bio.QM",
-      "q-bio.CB",
-      "q-bio.GN"
+      "stat.ML"
     ],
-    "tldr": "Geometric stability—derived from dynamical systems theory on high-dimensional state manifolds—is proposed as a novel evaluation axis that discriminates coherent from incoherent cellular perturbation responses without prior biological annotation.",
+    "tldr": "Presents BoGA, a Bayesian Optimization Genetic Algorithm coupling evolutionary search with a surrogate model loop to data-efficiently design peptide binders for protein engineering.",
     "keywords": [
-      "Waddington Epigenetic Landscape",
-      "State Manifold Analysis",
-      "Dynamical Systems",
-      "Single-Cell Perturbation Biology",
-      "Geometric Stability Metric"
+      "Bayesian Optimization",
+      "Genetic Algorithm",
+      "Surrogate Modeling",
+      "Sequence-Function Modeling",
+      "Protein Design"
     ],
     "relevance_score": 9
   },
@@ -49,77 +51,67 @@
       "cs.CE",
       "q-bio.QM"
     ],
-    "tldr": "HarmonyCell is an LLM-driven agent framework that applies Monte Carlo Tree Search over a hierarchical action space to automatically resolve semantic and distributional heterogeneity across single-cell perturbation datasets.",
+    "tldr": "HarmonyCell pairs an LLM-driven semantic unifier with a Monte Carlo Tree Search synthesizer to automate single-cell perturbation modeling across heterogeneous datasets, achieving a 95% valid execution rate.",
     "keywords": [
       "Monte Carlo Tree Search",
-      "LLM-Driven Architecture Search",
+      "Large Language Models",
       "Single-Cell Perturbation Modeling",
-      "Distribution Shift Adaptation",
-      "Neural Architecture Synthesis"
+      "Neural Architecture Search",
+      "Out-of-Distribution Generalization"
     ],
     "relevance_score": 9
   },
   {
-    "id": "2603.00709v1",
-    "title": "A Closed-loop Framework to Discriminate Models Using Optimal Control",
+    "id": "2603.03237v1",
+    "title": "Topology of Multi-species Localization",
     "authors": [
-      "Laurent Pagnier",
-      "Melvyn Tyloo",
-      "Akshita Jindal",
-      "Pragati Thakur",
-      "Kyle C. A. Wedgwood"
+      "Abhinav Natarajan",
+      "Thomas Chaplin",
+      "Joshua A. Bull",
+      "Eoghan J. Mulholland-Illingworth",
+      "Simon J. Leedham",
+      "Helen M. Byrne",
+      "Maria-Jose Jimenez",
+      "Heather A. Harrington"
     ],
-    "published_date": "2026-02-28T15:32:26Z",
-    "abstract": "Predicting the response of an observed system to a known input is a fruitful first step to accurately control the system's dynamics. Despite the recent advances in fully data-driven algorithms, the most interpretable way to reach this goal is through mechanistic mathematical modeling. Here, we leverage optimal control and propose a closed-loop iterative method to choose among a set of candidate models the one that most accurately predict an observed system. We assume that one has control over an input of the observed system and access to measurements of its response. Our approach is to identify the input control that maximally discriminates the response of the candidate models, allowing us to determine which model is best by comparing such responses with the observed data. We demonstrate our proposed framework in numerical simulations before applying it during an electrophysiology experiment, successfully discriminating between different models for photocurrents produced via opsin dynamics.",
-    "pdf_link": "https://arxiv.org/pdf/2603.00709v1",
+    "published_date": "2026-03-03T18:29:29Z",
+    "abstract": "Spatial relationships in multi-species data can indicate and affect system outcomes and behaviors, ranging from disease progression in cancer to coral reef resilience in ecology; therefore, quantifying these relationships is an important problem across scientific disciplines. Persistent homology (PH), a key mathematical and computational tool in topological data analysis (TDA), provides a multiscale description of the shape of data. While it effectively describes spatial organization of species, such as cellular patterns in pathology, it cannot detect the shape relations between different types of species. Traditionally, PH analyzes single-species data, which limits the spatial analysis of interactions between different species. Leveraging recent developments in TDA and computational geometry, we introduce a scalable approach to quantify higher-order interactions in multi-species data. The framework can distinguish the presence of shape features or patterns in the data that are (i) common to multiple species of points, (ii) present in some species but disappear in the presence of other species, (iii) only visible when multiple species are considered together, and (iv) formed by some species and remain visible in the presence of others. We demonstrate our approach on two example applications. We identify (1) different behavioral regimes in a synthetic tumor micro-environment model, and (2) interspecies spatial interactions that are most significantly altered in colorectal cancer tissue samples during disease progression.",
+    "pdf_link": "https://arxiv.org/pdf/2603.03237v1",
     "categories": [
-      "math.DS",
-      "eess.SY",
+      "math.AT",
       "q-bio.QM"
     ],
-    "tldr": "A closed-loop optimal control framework iteratively synthesizes maximally discriminating input signals to select among competing mechanistic mathematical models, demonstrated on opsin photocurrent dynamics in an electrophysiology experiment.",
+    "tldr": "Introduces a scalable multi-species persistent homology framework that quantifies higher-order inter-species spatial interactions, demonstrated on synthetic tumor microenvironment models and colorectal cancer tissue.",
     "keywords": [
-      "Optimal Control",
-      "Mechanistic Mathematical Modeling",
-      "Dynamical Systems",
-      "Model Selection",
-      "Opsin Dynamics"
+      "Persistent Homology",
+      "Topological Data Analysis",
+      "Computational Geometry",
+      "Multi-Species Spatial Analysis",
+      "Filtration"
     ],
-    "relevance_score": 8
+    "relevance_score": 9
   },
   {
-    "id": "2603.00614v1",
-    "title": "Designing the Haystack: Programmable Chemical Space for Generative Molecular Discovery",
+    "id": "2603.01965v1",
+    "title": "CoVAE: correlated multimodal generative modeling",
     "authors": [
-      "Yuchen Zhu",
-      "Donghai Zhao",
-      "Yangyang Zhang",
-      "Yitong Li",
-      "Xiaorui Wang",
-      "Shuwang Li",
-      "Yue Kong",
-      "Beichen Zhang",
-      "Ricki Chen",
-      "Chang Liu",
-      "Xingcai Zhang",
-      "Tingjun Hou",
-      "Chang-Yu Hsieh"
+      "Federico Caretti",
+      "Guido Sanguinetti"
     ],
-    "published_date": "2026-02-28T12:16:01Z",
-    "abstract": "Chemical space exploration underlies drug discovery, yet most generative models treat chemical space as a fixed, implicitly learned distribution, focusing on sampling molecules rather than deliberately designing the space itself. We introduce SpaceGFN, a generative framework that elevates chemical space to a programmable computational object: a controllable degree of freedom enabling explicit construction and adaptive traversal of structured molecular universes. SpaceGFN decouples space definition from exploration. Users specify building blocks and reaction rules to construct chemically and synthetically coherent spaces, while a GFlowNet performs efficient, property-biased sampling within them. In Discovery mode, we demonstrate programmable space design through two strategies. A pseudo-natural product space assembles natural product-like architectures. An evolution-inspired (Evo) space recombines endogenous metabolite fragments via enzyme-consistent transformations, introducing an evolutionary prior into chemical generation. This bias yields favorable shifts in predicted metabolic and toxicological profiles while preserving pharmacological diversity, supported by broad docking enrichment across therapeutic targets. In Editing mode, SpaceGFN enables reaction-consistent lead optimization through a curated toolkit of executable synthetic transformations, allowing local, synthesis-aware modification of existing compounds instead of unrestricted graph mutation. Across 96 drug targets, SpaceGFN achieves strong optimization performance while maintaining structural diversity under synthetic constraints. By integrating programmable chemical universe construction with flow-based exploration and reaction-level editing, SpaceGFN establishes a general paradigm for deliberate navigation of therapeutic chemical space.",
-    "pdf_link": "https://arxiv.org/pdf/2603.00614v1",
+    "published_date": "2026-03-02T15:14:59Z",
+    "abstract": "Multimodal Variational Autoencoders have emerged as a popular tool to extract effective representations from rich multimodal data. However, such models rely on fusion strategies in latent space that destroy the joint statistical structure of the multimodal data, with profound implications for generation and uncertainty quantification. In this work, we introduce Correlated Variational Autoencoders (CoVAE), a new generative architecture that captures the correlations between modalities. We test CoVAE on a number of real and synthetic data sets demonstrating both accurate cross-modal reconstruction and effective quantification of the associated uncertainties.",
+    "pdf_link": "https://arxiv.org/pdf/2603.01965v1",
     "categories": [
-      "physics.chem-ph",
-      "q-bio.BM",
+      "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "SpaceGFN couples programmable chemical space construction—via reaction rules and building blocks—with GFlowNet-based property-biased sampling and reaction-level lead optimization, enabling synthesis-aware generative drug discovery across 96 therapeutic targets.",
+    "tldr": "CoVAE is a correlated variational autoencoder architecture that preserves inter-modality statistical structure in latent space, enabling accurate cross-modal reconstruction and principled uncertainty quantification across multimodal datasets.",
     "keywords": [
-      "GFlowNet",
-      "Generative Molecular Design",
-      "Chemical Space Exploration",
-      "Reaction-Aware Optimization",
-      "Molecular Docking Enrichment"
+      "Variational Autoencoder",
+      "Multimodal Generative Modeling",
+      "Latent Space Correlation",
+      "Uncertainty Quantification",
+      "Deep Generative Models"
     ],
     "relevance_score": 8
   },
@@ -139,10 +131,10 @@
       "q-bio.BM",
       "q-bio.QM"
     ],
-    "tldr": "Temporal benchmarking shows topological knowledge graph embeddings with ESM-2 protein features outperform explicit chemical structure encoders for drug repurposing, suggesting pharmacological behavior is predictable from network topology alone.",
+    "tldr": "Temporal benchmarking of knowledge graph embedding models for drug repurposing reveals that ESM-2 protein embeddings with topological node features outperform explicit chemical structure encoders.",
     "keywords": [
       "Knowledge Graph Embeddings",
-      "Graph Neural Networks",
+      "Graph Neural Network",
       "Graph Attention Network",
       "ESM-2 Protein Embeddings",
       "Drug Repurposing"
@@ -150,53 +142,27 @@
     "relevance_score": 8
   },
   {
-    "id": "2603.01965v1",
-    "title": "CoVAE: correlated multimodal generative modeling",
+    "id": "2603.02274v1",
+    "title": "Contextual Invertible World Models: A Neuro-Symbolic Agentic Framework for Colorectal Cancer Drug Response",
     "authors": [
-      "Federico Caretti",
-      "Guido Sanguinetti"
+      "Christopher Baker",
+      "Karen Rafferty",
+      "Hui Wang"
     ],
-    "published_date": "2026-03-02T15:14:59Z",
-    "abstract": "Multimodal Variational Autoencoders have emerged as a popular tool to extract effective representations from rich multimodal data. However, such models rely on fusion strategies in latent space that destroy the joint statistical structure of the multimodal data, with profound implications for generation and uncertainty quantification. In this work, we introduce Correlated Variational Autoencoders (CoVAE), a new generative architecture that captures the correlations between modalities. We test CoVAE on a number of real and synthetic data sets demonstrating both accurate cross-modal reconstruction and effective quantification of the associated uncertainties.",
-    "pdf_link": "https://arxiv.org/pdf/2603.01965v1",
+    "published_date": "2026-03-01T16:15:58Z",
+    "abstract": "Precision oncology is currently limited by the small-N, large-P paradox, where high-dimensional genomic data is abundant, but high-quality drug response samples are often sparse. While deep learning models achieve high predictive accuracy, they remain black boxes that fail to provide the causal mechanisms required for clinical decision-making. We present a Neuro-Symbolic Agentic Framework that bridges this gap by integrating a quantitative machine learning World Model with an LLM-based agentic reasoning layer. Our system utilises a forensic data pipeline built on the Sanger GDSC dataset (N=83), achieving a robust predictive correlation (r=0.504) and a significant performance gain through the explicit modelling of clinical context, specifically Microsatellite Instability (MSI) status. We introduce the concept of Inverse Reasoning, where the agentic layer performs in silico CRISPR perturbations to predict how specific genomic edits, such as APC or TP53 repair, alter drug sensitivity. By distinguishing between therapeutic opportunity and contextual resistance, and validating these findings against human clinical data (p=0.023), our framework provides a transparent, biologically grounded path towards explainable AI in cancer research.",
+    "pdf_link": "https://arxiv.org/pdf/2603.02274v1",
     "categories": [
-      "cs.LG",
-      "q-bio.QM"
+      "q-bio.QM",
+      "cs.AI"
     ],
-    "tldr": "CoVAE introduces a Correlated Variational Autoencoder architecture that explicitly preserves inter-modal statistical correlations in latent space, achieving accurate cross-modal reconstruction and well-calibrated uncertainty quantification on real and synthetic multimodal datasets.",
+    "tldr": "A neuro-symbolic framework couples a machine learning world model with LLM-based inverse reasoning to predict colorectal cancer drug response and simulate in silico CRISPR perturbations.",
     "keywords": [
-      "Variational Autoencoders",
-      "Multimodal Generative Modeling",
-      "Latent Space Correlation",
-      "Uncertainty Quantification",
-      "Cross-Modal Inference"
-    ],
-    "relevance_score": 7
-  },
-  {
-    "id": "2603.00798v1",
-    "title": "Efficient Conformal Volumetry for Template-Based Segmentation",
-    "authors": [
-      "Matt Y. Cheung",
-      "Ashok Veeraraghavan",
-      "Guha Balakrishnan"
-    ],
-    "published_date": "2026-02-28T20:16:15Z",
-    "abstract": "Template-based segmentation, a widely used paradigm in medical imaging, propagates anatomical labels via deformable registration from a labeled atlas to a target image, and is often used to compute volumetric biomarkers for downstream decision-making. While conformal prediction (CP) provides finite-sample valid intervals for scalar metrics, existing segmentation-based uncertainty quantification (UQ) approaches either rely on learned model features, often unavailable in classic template-based pipelines, or treat the registration process as a black box, resulting in overly conservative intervals when applied directly in output space. We introduce ConVOLT, a CP framework that achieves efficient volumetric UQ by conditioning calibration on properties of the estimated deformation field from template-based segmentation. ConVOLT calibrates a learned volumetric scaling factor from deformation space features. We evaluate ConVOLT on template-based segmentation tasks involving global, regional, and label volumetry across multiple datasets and registration methods. ConVOLT achieves target coverage while producing substantially tighter intervals than output-space conformal baselines. Our work paves way to exploit the registration process for efficient UQ in medical imaging pipelines.",
-    "pdf_link": "https://arxiv.org/pdf/2603.00798v1",
-    "categories": [
-      "eess.IV",
-      "cs.CV",
-      "cs.LG",
-      "q-bio.QM"
-    ],
-    "tldr": "ConVOLT is a conformal prediction framework that conditions calibration on deformation field properties from template-based segmentation, producing substantially tighter volumetric uncertainty intervals than output-space baselines for medical imaging biomarkers.",
-    "keywords": [
-      "Conformal Prediction",
-      "Deformable Image Registration",
-      "Uncertainty Quantification",
-      "Template-Based Segmentation",
-      "Volumetric Biomarkers"
+      "Neuro-Symbolic AI",
+      "World Model",
+      "In Silico CRISPR Perturbation",
+      "LLM-Based Reasoning",
+      "Drug Sensitivity Prediction"
     ],
     "relevance_score": 7
   },
@@ -215,15 +181,42 @@
       "cs.SI",
       "q-bio.QM"
     ],
-    "tldr": "A sparse regression framework extending the Boids collective-motion model estimates dynamic inter-individual and stimulus-driven interaction networks in fish schools, with entropy-based indices that identify influential individuals in real time.",
+    "tldr": "Extends a sparse regression Boids model with an external stimulus term and entropy-based influence indices to simultaneously infer dynamic inter-individual and stimulus-driven interaction networks in fish schools from trajectory data.",
     "keywords": [
       "Sparse Regression",
-      "Boids Collective Motion Model",
+      "Boids Model",
       "Dynamic Network Estimation",
-      "Entropy-Based Influence Indices",
+      "Entropy-Based Indices",
       "Collective Behavior Modeling"
     ],
     "relevance_score": 7
+  },
+  {
+    "id": "2603.02665v1",
+    "title": "Stochastic modeling of long-legged ant A. gracilipes locomotion in laboratory experiments",
+    "authors": [
+      "Jack Featherstone",
+      "Anouk Béraud",
+      "Meta Virant-Doberlet",
+      "Antonio Celani",
+      "Mahesh Bandi"
+    ],
+    "published_date": "2026-03-03T06:52:15Z",
+    "abstract": "Stochastic modeling of movement behavior provides a valuable way to understand how complex motion can be generated from relatively simple building blocks. Ants demonstrate sophisticated social behavior ranging from foraging to nest relocation; while emphasis is often placed on the communication methods used to synchronize individuals, the movement paradigms of those individuals are of tantamount importance. Here, we apply a stochastic modeling approach to better understand the movement of isolated long-legged ant (A. gracilipes) specimens, informed by extensive laboratory tracking experiments. We find that a combination of active Brownian and run-and-tumble models reproduces the trajectory statistics observed in experiments, both qualitatively and quantitatively. We identify reproducible probability distributions for the turn angles, run times, and waiting times across specimens, and find good agreement between analytical predictions and quantities empirically measured from the trajectories. Having such a model allows for a better understanding and predictions of movement ecology from both simulations and analytics, and even can give insight into the underlying generative mechanisms of motion and the ants' sensory systems.",
+    "pdf_link": "https://arxiv.org/pdf/2603.02665v1",
+    "categories": [
+      "q-bio.QM",
+      "physics.bio-ph"
+    ],
+    "tldr": "A composite Active Brownian and run-and-tumble stochastic model fitted to lab tracking data reproduces A. gracilipes trajectory statistics including turn-angle and waiting-time distributions.",
+    "keywords": [
+      "Active Brownian Motion",
+      "Run-And-Tumble Model",
+      "Stochastic Modeling",
+      "Trajectory Statistics",
+      "Movement Ecology"
+    ],
+    "relevance_score": 6
   },
   {
     "id": "2603.02165v1",
@@ -245,13 +238,13 @@
       "physics.ao-ph",
       "q-bio.QM"
     ],
-    "tldr": "Quasi-Poisson generalized additive models and weighted quantile sum regression on 2015–2018 London data link all ten PM components to increased mortality, with heat waves amplifying respiratory risks.",
+    "tldr": "Quasi-Poisson GAMs and weighted quantile sum regression applied to 2015–2018 London mortality data show ten PM components positively linked to all-cause mortality, amplified by heat waves for respiratory outcomes.",
     "keywords": [
       "Quasi-Poisson Generalized Additive Models",
-      "Weighted Quantile Sum (WQS) Regression",
+      "Weighted Quantile Sum Regression",
       "Time-Series Analysis",
-      "Mixture Modeling",
-      "Effect Modification"
+      "Mixture Effects Modeling",
+      "Air Pollution Epidemiology"
     ],
     "relevance_score": 5
   },
@@ -272,13 +265,13 @@
     "categories": [
       "q-bio.QM"
     ],
-    "tldr": "Whole-genome sequencing of carbapenem-resistant Klebsiella pneumoniae from French Polynesia reveals a novel IS26-mediated transposon (Tn7722) carrying bla NDM-1 that drives plasmid-mediated resistance spread.",
+    "tldr": "Whole-genome sequencing of K. pneumoniae from French Polynesia identifies a novel IS26-mediated transposon (Tn7722) carrying blaNDM-1, facilitating multi-species carbapenem resistance spread via horizontal gene transfer.",
     "keywords": [
       "Whole-Genome Sequencing",
-      "Illumina MiSeq / Oxford Nanopore",
+      "Mobile Genetic Elements",
       "Horizontal Gene Transfer",
-      "Comparative Genomics",
-      "Mobile Genetic Elements"
+      "Transposon Analysis",
+      "Antimicrobial Resistance Genomics"
     ],
     "relevance_score": 4
   }
