@@ -15,49 +15,13 @@
       "q-bio.QM",
       "stat.ML"
     ],
-    "tldr": "Presents BoGA, a Bayesian Optimization Genetic Algorithm coupling evolutionary search with a surrogate model loop to data-efficiently design peptide binders for protein engineering.",
+    "tldr": "BoGA combines a genetic algorithm with Bayesian optimization in a surrogate modeling loop for data-efficient protein sequence exploration, successfully designing high-confidence peptide binders against diverse targets.",
     "keywords": [
       "Bayesian Optimization",
       "Genetic Algorithm",
       "Surrogate Modeling",
-      "Sequence-Function Modeling",
-      "Protein Design"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2603.01396v1",
-    "title": "HarmonyCell: Automating Single-Cell Perturbation Modeling under Semantic and Distribution Shifts",
-    "authors": [
-      "Wenxuan Huang",
-      "Mingyu Tsoi",
-      "Yanhao Huang",
-      "Xinjie Mao",
-      "Xue Xia",
-      "Hao Wu",
-      "Jiaqi Wei",
-      "Yuejin Yang",
-      "Lang Yu",
-      "Cheng Tan",
-      "Xiang Zhang",
-      "Zhangyang Gao",
-      "Siqi Sun"
-    ],
-    "published_date": "2026-03-02T02:48:40Z",
-    "abstract": "Single-cell perturbation studies face dual heterogeneity bottlenecks: (i) semantic heterogeneity--identical biological concepts encoded under incompatible metadata schemas across datasets; and (ii) statistical heterogeneity--distribution shifts from biological variation demanding dataset-specific inductive biases. We propose HarmonyCell, an end-to-end agent framework resolving each challenge through a dedicated mechanism: an LLM-driven Semantic Unifier autonomously maps disparate metadata into a canonical interface without manual intervention; and an adaptive Monte Carlo Tree Search engine operates over a hierarchical action space to synthesize architectures with optimal statistical inductive biases for distribution shifts. Evaluated across diverse perturbation tasks under both semantic and distribution shifts, HarmonyCell achieves a 95% valid execution rate on heterogeneous input datasets (versus 0% for general agents) while matching or even exceeding expert-designed baselines in rigorous out-of-distribution evaluations. This dual-track orchestration enables scalable automatic virtual cell modeling without dataset-specific engineering.",
-    "pdf_link": "https://arxiv.org/pdf/2603.01396v1",
-    "categories": [
-      "cs.AI",
-      "cs.CE",
-      "q-bio.QM"
-    ],
-    "tldr": "HarmonyCell pairs an LLM-driven semantic unifier with a Monte Carlo Tree Search synthesizer to automate single-cell perturbation modeling across heterogeneous datasets, achieving a 95% valid execution rate.",
-    "keywords": [
-      "Monte Carlo Tree Search",
-      "Large Language Models",
-      "Single-Cell Perturbation Modeling",
-      "Neural Architecture Search",
-      "Out-of-Distribution Generalization"
+      "Protein Sequence Design",
+      "Peptide Binder Design"
     ],
     "relevance_score": 9
   },
@@ -81,37 +45,38 @@
       "math.AT",
       "q-bio.QM"
     ],
-    "tldr": "Introduces a scalable multi-species persistent homology framework that quantifies higher-order inter-species spatial interactions, demonstrated on synthetic tumor microenvironment models and colorectal cancer tissue.",
+    "tldr": "A scalable persistent homology framework for multi-species point clouds quantifies higher-order spatial interactions between cell types, distinguishing behavioral regimes in synthetic tumor microenvironments and real colorectal cancer tissue.",
     "keywords": [
       "Persistent Homology",
-      "Topological Data Analysis",
-      "Computational Geometry",
-      "Multi-Species Spatial Analysis",
-      "Filtration"
+      "Topological Data Analysis (TDA)",
+      "Multi-Species Point Clouds",
+      "Tumor Microenvironment Modeling",
+      "Computational Geometry"
     ],
     "relevance_score": 9
   },
   {
-    "id": "2603.01965v1",
-    "title": "CoVAE: correlated multimodal generative modeling",
+    "id": "2603.01682v2",
+    "title": "Modeling and Analysis of Fish Interaction Networks under Projected Visual Stimuli",
     "authors": [
-      "Federico Caretti",
-      "Guido Sanguinetti"
+      "Hiroaki Kawashima",
+      "Raj Rajeshwar Malinda",
+      "Saeko Takizawa"
     ],
-    "published_date": "2026-03-02T15:14:59Z",
-    "abstract": "Multimodal Variational Autoencoders have emerged as a popular tool to extract effective representations from rich multimodal data. However, such models rely on fusion strategies in latent space that destroy the joint statistical structure of the multimodal data, with profound implications for generation and uncertainty quantification. In this work, we introduce Correlated Variational Autoencoders (CoVAE), a new generative architecture that captures the correlations between modalities. We test CoVAE on a number of real and synthetic data sets demonstrating both accurate cross-modal reconstruction and effective quantification of the associated uncertainties.",
-    "pdf_link": "https://arxiv.org/pdf/2603.01965v1",
+    "published_date": "2026-03-02T10:12:42Z",
+    "abstract": "This paper addresses the estimation of a dynamic interaction network, a network of influence among individuals, under projected visual stimuli to quantify the influences of inter-individual interactions and external stimuli on collective behavior. Building upon our previously proposed network estimation model, which assumes a Boids-type model and employs a sparse regression framework to infer inter-individual influence networks from trajectory data, we extend the formulation by introducing a stimulus term. This enables the model to capture how individuals react to and propagate externally projected visual stimuli within the group. The resulting framework allows simultaneous estimation of inter-individual and stimulus-related interaction strengths. We also introduce entropy-based indices to capture the possible biases of individuals' influence. Our experiments with fish schools under projector-based visual stimuli demonstrate the effectiveness of the proposed indices in quantifying schooling behavior and identifying influential individuals within the group, serving as the basis for real-time, interpretable metrics of collective dynamics.",
+    "pdf_link": "https://arxiv.org/pdf/2603.01682v2",
     "categories": [
-      "cs.LG",
+      "cs.SI",
       "q-bio.QM"
     ],
-    "tldr": "CoVAE is a correlated variational autoencoder architecture that preserves inter-modality statistical structure in latent space, enabling accurate cross-modal reconstruction and principled uncertainty quantification across multimodal datasets.",
+    "tldr": "A sparse regression framework built on a Boids-type dynamical model simultaneously estimates inter-individual and stimulus-driven interaction networks in fish schools, with entropy-based indices providing interpretable real-time metrics of collective behavior.",
     "keywords": [
-      "Variational Autoencoder",
-      "Multimodal Generative Modeling",
-      "Latent Space Correlation",
-      "Uncertainty Quantification",
-      "Deep Generative Models"
+      "Sparse Regression",
+      "Network Estimation",
+      "Boids Dynamical Model",
+      "Entropy-Based Influence Indices",
+      "Collective Behavior Dynamics"
     ],
     "relevance_score": 8
   },
@@ -131,63 +96,64 @@
       "q-bio.BM",
       "q-bio.QM"
     ],
-    "tldr": "Temporal benchmarking of knowledge graph embedding models for drug repurposing reveals that ESM-2 protein embeddings with topological node features outperform explicit chemical structure encoders.",
+    "tldr": "Rigorous temporal validation on a ChEMBL-derived pharmacology knowledge graph shows that target-centric network topology with ESM-2 protein embeddings outperforms explicit chemical structure encoders for drug repurposing.",
     "keywords": [
-      "Knowledge Graph Embeddings",
-      "Graph Neural Network",
+      "Knowledge Graph Embedding",
       "Graph Attention Network",
       "ESM-2 Protein Embeddings",
-      "Drug Repurposing"
+      "Drug Repurposing",
+      "Temporal Validation"
     ],
     "relevance_score": 8
   },
   {
-    "id": "2603.02274v1",
-    "title": "Contextual Invertible World Models: A Neuro-Symbolic Agentic Framework for Colorectal Cancer Drug Response",
+    "id": "2603.01965v1",
+    "title": "CoVAE: correlated multimodal generative modeling",
     "authors": [
-      "Christopher Baker",
-      "Karen Rafferty",
-      "Hui Wang"
+      "Federico Caretti",
+      "Guido Sanguinetti"
     ],
-    "published_date": "2026-03-01T16:15:58Z",
-    "abstract": "Precision oncology is currently limited by the small-N, large-P paradox, where high-dimensional genomic data is abundant, but high-quality drug response samples are often sparse. While deep learning models achieve high predictive accuracy, they remain black boxes that fail to provide the causal mechanisms required for clinical decision-making. We present a Neuro-Symbolic Agentic Framework that bridges this gap by integrating a quantitative machine learning World Model with an LLM-based agentic reasoning layer. Our system utilises a forensic data pipeline built on the Sanger GDSC dataset (N=83), achieving a robust predictive correlation (r=0.504) and a significant performance gain through the explicit modelling of clinical context, specifically Microsatellite Instability (MSI) status. We introduce the concept of Inverse Reasoning, where the agentic layer performs in silico CRISPR perturbations to predict how specific genomic edits, such as APC or TP53 repair, alter drug sensitivity. By distinguishing between therapeutic opportunity and contextual resistance, and validating these findings against human clinical data (p=0.023), our framework provides a transparent, biologically grounded path towards explainable AI in cancer research.",
-    "pdf_link": "https://arxiv.org/pdf/2603.02274v1",
+    "published_date": "2026-03-02T15:14:59Z",
+    "abstract": "Multimodal Variational Autoencoders have emerged as a popular tool to extract effective representations from rich multimodal data. However, such models rely on fusion strategies in latent space that destroy the joint statistical structure of the multimodal data, with profound implications for generation and uncertainty quantification. In this work, we introduce Correlated Variational Autoencoders (CoVAE), a new generative architecture that captures the correlations between modalities. We test CoVAE on a number of real and synthetic data sets demonstrating both accurate cross-modal reconstruction and effective quantification of the associated uncertainties.",
+    "pdf_link": "https://arxiv.org/pdf/2603.01965v1",
     "categories": [
-      "q-bio.QM",
-      "cs.AI"
+      "cs.LG",
+      "q-bio.QM"
     ],
-    "tldr": "A neuro-symbolic framework couples a machine learning world model with LLM-based inverse reasoning to predict colorectal cancer drug response and simulate in silico CRISPR perturbations.",
+    "tldr": "CoVAE is a novel variational autoencoder that preserves inter-modal correlations in the latent space, achieving superior cross-modal reconstruction and well-calibrated uncertainty quantification over standard fusion-based approaches.",
     "keywords": [
-      "Neuro-Symbolic AI",
-      "World Model",
-      "In Silico CRISPR Perturbation",
-      "LLM-Based Reasoning",
-      "Drug Sensitivity Prediction"
+      "Variational Autoencoder (VAE)",
+      "Multimodal Generative Modeling",
+      "Latent Space Correlation",
+      "Cross-Modal Reconstruction",
+      "Uncertainty Quantification"
     ],
     "relevance_score": 7
   },
   {
-    "id": "2603.01682v1",
-    "title": "Modeling and Analysis of Fish Interaction Networks under Projected Visual Stimuli",
+    "id": "2603.04074v1",
+    "title": "Dose-Dependent Cardiac Complexity Changes in Children Following Prenatal Glucocorticoid Exposure: Complementary Evidence from Multiscale Entropy Analysis and ECG Foundation Models",
     "authors": [
-      "Hiroaki Kawashima",
-      "Raj Rajeshwar Malinda",
-      "Saeko Takizawa"
+      "Nicolas B. Garnier",
+      "Michelle Dreiling",
+      "Valeska Kozik",
+      "Matthias Schwab",
+      "Florian Rakers",
+      "Martin G Frasch"
     ],
-    "published_date": "2026-03-02T10:12:42Z",
-    "abstract": "This paper addresses the estimation of a dynamic interaction network, a network of influence among individuals, under projected visual stimuli to quantify the influences of inter-individual interactions and external stimuli on collective behavior. Building upon our previously proposed network estimation model, which assumes a Boids-type model and employs a sparse regression framework to infer inter-individual influence networks from trajectory data, we extend the formulation by introducing a stimulus term. This enables the model to capture how individuals react to and propagate externally projected visual stimuli within the group. The resulting framework allows simultaneous estimation of inter-individual and stimulus-related interaction strengths. We also introduce entropy-based indices to capture the possible biases of individuals' influence. Our experiments with fish schools under projector-based visual stimuli demonstrate the effectiveness of the proposed indices in quantifying schooling behavior and identifying influential individuals within the group, serving as the basis for real-time, interpretable metrics of collective dynamics.",
-    "pdf_link": "https://arxiv.org/pdf/2603.01682v1",
+    "published_date": "2026-03-04T13:48:07Z",
+    "abstract": "\\noindent\\textbf{Background} Prenatal glucocorticoid exposure alters cardiac development, but whether persistent cardiac effects in childhood follow a dose-response relationship remains unknown. We recently showed that ECG foundation models detect robust cardiac differences between steroid-exposed and control children, while traditional heart rate variability metrics lose significance after covariate adjustment. Here, we investigate the dose-response dimension using complementary analytical approaches. \\noindent\\textbf{Methods} We studied 49 children (ages 8--15) whose mothers received betamethasone during pregnancy for multiple sclerosis: 12 low-dose ({$<$}5\\,g cumulative), 13 high-dose ({$\\geq$}5\\,g), and 24 controls. Five-minute ECG recordings during the Trier Social Stress Test yielded 251 observations. We computed 12 multiscale complexity features and tested 11 ECG foundation model (FM) dimensions using linear mixed models, Kruskal--Wallis tests with Dunn's post-hoc comparisons, Spearman correlations, and Jonckheere--Terpstra trend tests. \\noindent\\textbf{Findings} The binary exposed-versus-controls comparison showed no significant complexity effects ($p>0.39$). However, dose-based analysis revealed that high-dose children exhibited significantly faster entropy rate ($h$) decay rates than low-dose children ($p=0.031$); neither sample entropy nor approximate entropy decay rates reached significance ($p=0.18$ and $p=0.12$, respectively). Effects localized to the mental arithmetic stress segment (Kruskal--Wallis $p=0.005$; Dunn's $p=0.004$). A cross-condition robustness analysis confirmed that $h$ decay rate is invariant to input signal choice and normalization ($r>0.98$), while sample and approximate entropy are not. In contrast, the 11 FM dimensions showed weak dose-response evidence: only 1 of 22 covariate-adjusted contrasts survived FDR correction, with paradoxically stronger low-dose effects. \\noindent\\textbf{Interpretation} The entropy rate decay rate -- uniquely robust across input conditions -- reveals a dose-dependent effect on cardiac autonomic dynamics under cognitive stress, while FM dimensions detect a dose-independent morphological ``exposure fingerprint.'' These exploratory findings suggest a two-component model of prenatal glucocorticoid cardiac programming -- ~morphological (dose-independent) and dynamical (dose-dependent)~ -- providing more complete characterization than either approach alone. Given the small sample size, these results should be considered hypothesis-generating and require replication in larger cohorts.",
+    "pdf_link": "https://arxiv.org/pdf/2603.04074v1",
     "categories": [
-      "cs.SI",
       "q-bio.QM"
     ],
-    "tldr": "Extends a sparse regression Boids model with an external stimulus term and entropy-based influence indices to simultaneously infer dynamic inter-individual and stimulus-driven interaction networks in fish schools from trajectory data.",
+    "tldr": "Multiscale entropy analysis reveals dose-dependent cardiac autonomic programming from prenatal glucocorticoid exposure in children, while ECG foundation models capture complementary dose-independent morphological cardiac changes.",
     "keywords": [
-      "Sparse Regression",
-      "Boids Model",
-      "Dynamic Network Estimation",
-      "Entropy-Based Indices",
-      "Collective Behavior Modeling"
+      "Multiscale Entropy Analysis",
+      "ECG Foundation Models",
+      "Linear Mixed Models",
+      "Kruskal-Wallis Test",
+      "Jonckheere-Terpstra Trend Test"
     ],
     "relevance_score": 7
   },
@@ -208,13 +174,43 @@
       "q-bio.QM",
       "physics.bio-ph"
     ],
-    "tldr": "A composite Active Brownian and run-and-tumble stochastic model fitted to lab tracking data reproduces A. gracilipes trajectory statistics including turn-angle and waiting-time distributions.",
+    "tldr": "A combined active Brownian and run-and-tumble stochastic model accurately reproduces turn-angle, run-time, and waiting-time trajectory statistics of isolated long-legged ants, yielding quantitative insight into their movement ecology and sensory mechanisms.",
     "keywords": [
       "Active Brownian Motion",
       "Run-And-Tumble Model",
       "Stochastic Modeling",
       "Trajectory Statistics",
       "Movement Ecology"
+    ],
+    "relevance_score": 7
+  },
+  {
+    "id": "2603.04081v1",
+    "title": "Revisiting the Role of Foundation Models in Cell-Level Histopathological Image Analysis under Small-Patch Constraints -- Effects of Training Data Scale and Blur Perturbations on CNNs and Vision Transformers",
+    "authors": [
+      "Hiroki Kagiyama",
+      "Toru Nagasaka",
+      "Yukari Adachi",
+      "Takaaki Tachibana",
+      "Ryota Ito",
+      "Mitsugu Fujita",
+      "Kimihiro Yamashita",
+      "Yoshihiro Kakeji"
+    ],
+    "published_date": "2026-03-04T13:52:19Z",
+    "abstract": "Background and objective: Cell-level pathological image analysis requires working with extremely small image patches (40x40 pixels), far below standard ImageNet resolutions. It remains unclear whether modern deep learning architectures and foundation models can learn robust and scalable representations under this constraint. We systematically evaluated architectural suitability and data-scale effects for small-patch cell classification. Methods: We analyzed 303 colorectal cancer specimens with CD103/CD8 immunostaining, generating 185,432 annotated cell images. Eight task-specific architectures were trained from scratch at multiple data scales (FlagLimit: 256--16,384 samples per class), and three foundation models were evaluated via linear probing and fine-tuning after resizing inputs to 224x224 pixels. Robustness to blur was assessed using pre- and post-resize Gaussian perturbations. Results: Task-specific models improved consistently with increasing data scale, whereas foundation models saturated at moderate sample sizes. A Vision Transformer optimized for small patches (CustomViT) achieved the highest accuracy, outperforming all foundation models with substantially lower inference cost. Blur robustness was comparable across architectures, with no qualitative advantage observed for foundation models. Conclusion: For cell-level classification under extreme spatial constraints, task-specific architectures are more effective and efficient than foundation models once sufficient training data are available. Higher clean accuracy does not imply superior robustness, and large pre-trained models offer limited benefit in the small-patch regime.",
+    "pdf_link": "https://arxiv.org/pdf/2603.04081v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.QM"
+    ],
+    "tldr": "Task-specific architectures, especially a custom Vision Transformer, outperform large foundation models for small-patch cell classification in colorectal cancer histopathology when sufficient training data are available.",
+    "keywords": [
+      "Vision Transformer (ViT)",
+      "CNN",
+      "Foundation Model Fine-Tuning",
+      "Linear Probing",
+      "Gaussian Blur Perturbation"
     ],
     "relevance_score": 6
   },
@@ -238,13 +234,13 @@
       "physics.ao-ph",
       "q-bio.QM"
     ],
-    "tldr": "Quasi-Poisson GAMs and weighted quantile sum regression applied to 2015–2018 London mortality data show ten PM components positively linked to all-cause mortality, amplified by heat waves for respiratory outcomes.",
+    "tldr": "Quasi-Poisson models link specific PM chemical components—especially MO-OOA—to elevated all-cause and respiratory mortality in London, with heat waves consistently amplifying respiratory risk.",
     "keywords": [
-      "Quasi-Poisson Generalized Additive Models",
-      "Weighted Quantile Sum Regression",
+      "Quasi-Poisson Generalized Additive Model",
+      "Weighted Quantile Sum (WQS) Regression",
       "Time-Series Analysis",
       "Mixture Effects Modeling",
-      "Air Pollution Epidemiology"
+      "Distributed Lag Model"
     ],
     "relevance_score": 5
   },
@@ -265,14 +261,66 @@
     "categories": [
       "q-bio.QM"
     ],
-    "tldr": "Whole-genome sequencing of K. pneumoniae from French Polynesia identifies a novel IS26-mediated transposon (Tn7722) carrying blaNDM-1, facilitating multi-species carbapenem resistance spread via horizontal gene transfer.",
+    "tldr": "Whole-genome sequencing of K. pneumoniae from French Polynesia identifies a novel IS26-mediated composite transposon (Tn7722) carrying bla NDM-1 that drives carbapenem resistance spread via plasmid-based horizontal gene transfer.",
     "keywords": [
       "Whole-Genome Sequencing",
-      "Mobile Genetic Elements",
       "Horizontal Gene Transfer",
-      "Transposon Analysis",
-      "Antimicrobial Resistance Genomics"
+      "Mobile Genetic Elements",
+      "Transposon Characterization",
+      "Genomic Surveillance"
     ],
     "relevance_score": 4
+  },
+  {
+    "id": "2603.03603v1",
+    "title": "Detection and Identification of Penguins Using Appearance and Motion Features",
+    "authors": [
+      "Kasumi Seko",
+      "Hiroki Kinoshita",
+      "Raj Rajeshwar Malinda",
+      "Hiroaki Kawashima"
+    ],
+    "published_date": "2026-03-04T00:25:55Z",
+    "abstract": "In animal facilities, continuous surveillance of penguins is essential yet technically challenging due to their homogeneous visual characteristics, rapid and frequent posture changes, and substantial environmental noise such as water reflections. In this study, we propose a framework that enhances both detection and identification performance by integrating appearance and motion features. For detection, we adapted YOLO11 to process consecutive frames to overcome the lack of temporal consistency in single-frame detectors. This approach leverages motion cues to detect targets even when distinct visual features are obscured. Our evaluation shows that fine-tuning the model with two-frame inputs improves mAP@0.5 from 0.922 to 0.933, outperforming the baseline, and successfully recovers individuals that are indistinguishable in static images. For identification, we introduce a tracklet-based contrastive learning approach applied after tracking. Through qualitative visualization, we demonstrate that the method produces coherent feature embeddings, bringing samples from the same individual closer in the feature space, suggesting the potential for mitigating ID switching.",
+    "pdf_link": "https://arxiv.org/pdf/2603.03603v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.QM"
+    ],
+    "tldr": "Integrating two-frame temporal inputs into YOLO11 and applying tracklet-based contrastive learning after tracking improves both detection (mAP@0.5: 0.922→0.933) and individual re-identification of visually homogeneous penguins in surveillance footage.",
+    "keywords": [
+      "YOLO11",
+      "Contrastive Learning",
+      "Tracklet-Based Re-Identification",
+      "Mean Average Precision (mAP)",
+      "Temporal Feature Fusion"
+    ],
+    "relevance_score": 3
+  },
+  {
+    "id": "2603.03604v1",
+    "title": "Tracking Feral Horses in Aerial Video Using Oriented Bounding Boxes",
+    "authors": [
+      "Saeko Takizawa",
+      "Tamao Maeda",
+      "Shinya Yamamoto",
+      "Hiroaki Kawashima"
+    ],
+    "published_date": "2026-03-04T00:27:57Z",
+    "abstract": "The social structures of group-living animals such as feral horses are diverse and remain insufficiently understood, even within a single species. To investigate group dynamics, aerial videos are often utilized to track individuals and analyze their movement trajectories, which are essential for evaluating inter-individual interactions and comparing social behaviors. Accurate individual tracking is therefore crucial. In multi-animal tracking, axis-aligned bounding boxes (bboxes) are widely used; however, for aerial top-view footage of entire groups, their performance degrades due to complex backgrounds, small target sizes, high animal density, and varying body orientations. To address this issue, we employ oriented bounding boxes (OBBs), which include rotation angles and reduce unnecessary background. Nevertheless, current OBB detectors such as YOLO-OBB restrict angles within a 180$^{\\circ}$ range, making it impossible to distinguish head from tail and often causing sudden 180$^{\\circ}$ flips across frames, which severely disrupts continuous tracking. To overcome this limitation, we propose a head-orientation estimation method that crops OBB-centered patches, applies three detectors (head, tail, and head-tail), and determines the final label through IoU-based majority voting. Experiments using 299 test images show that our method achieves 99.3% accuracy, outperforming individual models, demonstrating its effectiveness for robust OBB-based tracking.",
+    "pdf_link": "https://arxiv.org/pdf/2603.03604v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.QM"
+    ],
+    "tldr": "A head-orientation method using IoU-based majority voting across patch-level detectors resolves YOLO-OBB's 180° ambiguity, achieving 99.3% accuracy for robust continuous tracking of feral horses in aerial video.",
+    "keywords": [
+      "Oriented Bounding Boxes (OBB)",
+      "YOLO-OBB",
+      "IoU-Based Majority Voting",
+      "Multi-Animal Tracking",
+      "Head-Orientation Estimation"
+    ],
+    "relevance_score": 3
   }
 ]

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Bio Watchtower — 2026-03-04</title>
+  <title>Q-Bio Watchtower — 2026-03-05</title>
   <style>
     /* ── Reset & Base ─────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -109,7 +109,7 @@
       font-weight: 700;
       letter-spacing: 0.04em;
       white-space: nowrap;
-      border: 1px solid #1a2b3c;
+      border: 1px solid #ddd;
       text-transform: uppercase;
       font-size: 0.80rem;
     }
@@ -214,10 +214,10 @@
      HEADER
 ════════════════════════════════════════════════════════════════ -->
 <header>
-  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-03-04</h1>
-  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-04 UTC</p>
+  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-03-05</h1>
+  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-05 UTC</p>
   <p class="meta">
-    10 papers &nbsp;&middot;&nbsp; Published date range: 2026-03-01 &ndash; 2026-03-03
+    12 papers &nbsp;&middot;&nbsp; Published date range: 2026-03-02 &ndash; 2026-03-04
     &nbsp;&middot;&nbsp; Sorted by relevance score (highest first)
   </p>
 </header>
@@ -257,8 +257,8 @@
           </td>
           <td class="authors">Erik Hartman, Di Tang, Johan Malmström</td>
           <td class="date">2026-03-03</td>
-          <td class="tldr">Presents BoGA, a Bayesian Optimization Genetic Algorithm coupling evolutionary search with a surrogate model loop to data-efficiently design peptide binders for protein engineering.</td>
-          <td class="keywords">Bayesian Optimization, Genetic Algorithm, Surrogate Modeling, Sequence-Function Modeling, Protein Design</td>
+          <td class="tldr">BoGA combines a genetic algorithm with Bayesian optimization in a surrogate modeling loop for data-efficient protein sequence exploration, successfully designing high-confidence peptide binders against diverse targets.</td>
+          <td class="keywords">Bayesian Optimization, Genetic Algorithm, Surrogate Modeling, Protein Sequence Design, Peptide Binder Design</td>
           <td class="score"><span class="badge badge-green">9</span></td>
         </tr>
 
@@ -266,50 +266,35 @@
         <tr>
           <td class="rank">#2</td>
           <td class="title">
-            <a href="https://arxiv.org/pdf/2603.01396v1" target="_blank" rel="noopener noreferrer">
-              HarmonyCell: Automating Single-Cell Perturbation Modeling under Semantic and Distribution Shifts
-            </a>
-          </td>
-          <td class="authors">Wenxuan Huang, Mingyu Tsoi, Yanhao Huang et al.</td>
-          <td class="date">2026-03-02</td>
-          <td class="tldr">HarmonyCell pairs an LLM-driven semantic unifier with a Monte Carlo Tree Search synthesizer to automate single-cell perturbation modeling across heterogeneous datasets, achieving a 95% valid execution rate.</td>
-          <td class="keywords">Monte Carlo Tree Search, Large Language Models, Single-Cell Perturbation Modeling, Neural Architecture Search, Out-of-Distribution Generalization</td>
-          <td class="score"><span class="badge badge-green">9</span></td>
-        </tr>
-
-        <!-- ── Rank 3 · Score 9 · green badge ───────────────────── -->
-        <tr>
-          <td class="rank">#3</td>
-          <td class="title">
             <a href="https://arxiv.org/pdf/2603.03237v1" target="_blank" rel="noopener noreferrer">
               Topology of Multi-species Localization
             </a>
           </td>
           <td class="authors">Abhinav Natarajan, Thomas Chaplin, Joshua A. Bull et al.</td>
           <td class="date">2026-03-03</td>
-          <td class="tldr">Introduces a scalable multi-species persistent homology framework that quantifies higher-order inter-species spatial interactions, demonstrated on synthetic tumor microenvironment models and colorectal cancer tissue.</td>
-          <td class="keywords">Persistent Homology, Topological Data Analysis, Computational Geometry, Multi-Species Spatial Analysis, Filtration</td>
+          <td class="tldr">A scalable persistent homology framework for multi-species point clouds quantifies higher-order spatial interactions between cell types, distinguishing behavioral regimes in synthetic tumor microenvironments and real colorectal cancer tissue.</td>
+          <td class="keywords">Persistent Homology, Topological Data Analysis (TDA), Multi-Species Point Clouds, Tumor Microenvironment Modeling, Computational Geometry</td>
           <td class="score"><span class="badge badge-green">9</span></td>
+        </tr>
+
+        <!-- ── Rank 3 · Score 8 · green badge ───────────────────── -->
+        <tr>
+          <td class="rank">#3</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2603.01682v2" target="_blank" rel="noopener noreferrer">
+              Modeling and Analysis of Fish Interaction Networks under Projected Visual Stimuli
+            </a>
+          </td>
+          <td class="authors">Hiroaki Kawashima, Raj Rajeshwar Malinda, Saeko Takizawa</td>
+          <td class="date">2026-03-02</td>
+          <td class="tldr">A sparse regression framework built on a Boids-type dynamical model simultaneously estimates inter-individual and stimulus-driven interaction networks in fish schools, with entropy-based indices providing interpretable real-time metrics of collective behavior.</td>
+          <td class="keywords">Sparse Regression, Network Estimation, Boids Dynamical Model, Entropy-Based Influence Indices, Collective Behavior Dynamics</td>
+          <td class="score"><span class="badge badge-green">8</span></td>
         </tr>
 
         <!-- ── Rank 4 · Score 8 · green badge ───────────────────── -->
         <tr>
           <td class="rank">#4</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2603.01965v1" target="_blank" rel="noopener noreferrer">
-              CoVAE: correlated multimodal generative modeling
-            </a>
-          </td>
-          <td class="authors">Federico Caretti, Guido Sanguinetti</td>
-          <td class="date">2026-03-02</td>
-          <td class="tldr">CoVAE is a correlated variational autoencoder architecture that preserves inter-modality statistical structure in latent space, enabling accurate cross-modal reconstruction and principled uncertainty quantification across multimodal datasets.</td>
-          <td class="keywords">Variational Autoencoder, Multimodal Generative Modeling, Latent Space Correlation, Uncertainty Quantification, Deep Generative Models</td>
-          <td class="score"><span class="badge badge-green">8</span></td>
-        </tr>
-
-        <!-- ── Rank 5 · Score 8 · green badge ───────────────────── -->
-        <tr>
-          <td class="rank">#5</td>
           <td class="title">
             <a href="https://arxiv.org/pdf/2603.01537v1" target="_blank" rel="noopener noreferrer">
               Pharmacology Knowledge Graphs: Do We Need Chemical Structure for Drug Repurposing?
@@ -317,23 +302,38 @@
           </td>
           <td class="authors">Youssef Abo-Dahab, Ruby Hernandez, Ismael Caleb Arechiga Duran</td>
           <td class="date">2026-03-02</td>
-          <td class="tldr">Temporal benchmarking of knowledge graph embedding models for drug repurposing reveals that ESM-2 protein embeddings with topological node features outperform explicit chemical structure encoders.</td>
-          <td class="keywords">Knowledge Graph Embeddings, Graph Neural Network, Graph Attention Network, ESM-2 Protein Embeddings, Drug Repurposing</td>
+          <td class="tldr">Rigorous temporal validation on a ChEMBL-derived pharmacology knowledge graph shows that target-centric network topology with ESM-2 protein embeddings outperforms explicit chemical structure encoders for drug repurposing.</td>
+          <td class="keywords">Knowledge Graph Embedding, Graph Attention Network, ESM-2 Protein Embeddings, Drug Repurposing, Temporal Validation</td>
           <td class="score"><span class="badge badge-green">8</span></td>
+        </tr>
+
+        <!-- ── Rank 5 · Score 7 · orange badge ──────────────────── -->
+        <tr>
+          <td class="rank">#5</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2603.01965v1" target="_blank" rel="noopener noreferrer">
+              CoVAE: correlated multimodal generative modeling
+            </a>
+          </td>
+          <td class="authors">Federico Caretti, Guido Sanguinetti</td>
+          <td class="date">2026-03-02</td>
+          <td class="tldr">CoVAE is a novel variational autoencoder that preserves inter-modal correlations in the latent space, achieving superior cross-modal reconstruction and well-calibrated uncertainty quantification over standard fusion-based approaches.</td>
+          <td class="keywords">Variational Autoencoder (VAE), Multimodal Generative Modeling, Latent Space Correlation, Cross-Modal Reconstruction, Uncertainty Quantification</td>
+          <td class="score"><span class="badge badge-orange">7</span></td>
         </tr>
 
         <!-- ── Rank 6 · Score 7 · orange badge ──────────────────── -->
         <tr>
           <td class="rank">#6</td>
           <td class="title">
-            <a href="https://arxiv.org/pdf/2603.02274v1" target="_blank" rel="noopener noreferrer">
-              Contextual Invertible World Models: A Neuro-Symbolic Agentic Framework for Colorectal Cancer Drug Response
+            <a href="https://arxiv.org/pdf/2603.04074v1" target="_blank" rel="noopener noreferrer">
+              Dose-Dependent Cardiac Complexity Changes in Children Following Prenatal Glucocorticoid Exposure: Complementary Evidence from Multiscale Entropy Analysis and ECG Foundation Models
             </a>
           </td>
-          <td class="authors">Christopher Baker, Karen Rafferty, Hui Wang</td>
-          <td class="date">2026-03-01</td>
-          <td class="tldr">A neuro-symbolic framework couples a machine learning world model with LLM-based inverse reasoning to predict colorectal cancer drug response and simulate in silico CRISPR perturbations.</td>
-          <td class="keywords">Neuro-Symbolic AI, World Model, In Silico CRISPR Perturbation, LLM-Based Reasoning, Drug Sensitivity Prediction</td>
+          <td class="authors">Nicolas B. Garnier, Michelle Dreiling, Valeska Kozik et al.</td>
+          <td class="date">2026-03-04</td>
+          <td class="tldr">Multiscale entropy analysis reveals dose-dependent cardiac autonomic programming from prenatal glucocorticoid exposure in children, while ECG foundation models capture complementary dose-independent morphological cardiac changes.</td>
+          <td class="keywords">Multiscale Entropy Analysis, ECG Foundation Models, Linear Mixed Models, Kruskal-Wallis Test, Jonckheere-Terpstra Trend Test</td>
           <td class="score"><span class="badge badge-orange">7</span></td>
         </tr>
 
@@ -341,14 +341,14 @@
         <tr>
           <td class="rank">#7</td>
           <td class="title">
-            <a href="https://arxiv.org/pdf/2603.01682v1" target="_blank" rel="noopener noreferrer">
-              Modeling and Analysis of Fish Interaction Networks under Projected Visual Stimuli
+            <a href="https://arxiv.org/pdf/2603.02665v1" target="_blank" rel="noopener noreferrer">
+              Stochastic modeling of long-legged ant <em>A. gracilipes</em> locomotion in laboratory experiments
             </a>
           </td>
-          <td class="authors">Hiroaki Kawashima, Raj Rajeshwar Malinda, Saeko Takizawa</td>
-          <td class="date">2026-03-02</td>
-          <td class="tldr">Extends a sparse regression Boids model with an external stimulus term and entropy-based influence indices to simultaneously infer dynamic inter-individual and stimulus-driven interaction networks in fish schools from trajectory data.</td>
-          <td class="keywords">Sparse Regression, Boids Model, Dynamic Network Estimation, Entropy-Based Indices, Collective Behavior Modeling</td>
+          <td class="authors">Jack Featherstone, Ano&uuml;k B&eacute;raud, Meta Virant-Doberlet et al.</td>
+          <td class="date">2026-03-03</td>
+          <td class="tldr">A combined active Brownian and run-and-tumble stochastic model accurately reproduces turn-angle, run-time, and waiting-time trajectory statistics of isolated long-legged ants, yielding quantitative insight into their movement ecology and sensory mechanisms.</td>
+          <td class="keywords">Active Brownian Motion, Run-And-Tumble Model, Stochastic Modeling, Trajectory Statistics, Movement Ecology</td>
           <td class="score"><span class="badge badge-orange">7</span></td>
         </tr>
 
@@ -356,14 +356,14 @@
         <tr>
           <td class="rank">#8</td>
           <td class="title">
-            <a href="https://arxiv.org/pdf/2603.02665v1" target="_blank" rel="noopener noreferrer">
-              Stochastic modeling of long-legged ant <em>A. gracilipes</em> locomotion in laboratory experiments
+            <a href="https://arxiv.org/pdf/2603.04081v1" target="_blank" rel="noopener noreferrer">
+              Revisiting the Role of Foundation Models in Cell-Level Histopathological Image Analysis under Small-Patch Constraints &mdash; Effects of Training Data Scale and Blur Perturbations on CNNs and Vision Transformers
             </a>
           </td>
-          <td class="authors">Jack Featherstone, Ano&uuml;k B&eacute;raud, Meta Virant-Doberlet et al.</td>
-          <td class="date">2026-03-03</td>
-          <td class="tldr">A composite Active Brownian and run-and-tumble stochastic model fitted to lab tracking data reproduces <em>A. gracilipes</em> trajectory statistics including turn-angle and waiting-time distributions.</td>
-          <td class="keywords">Active Brownian Motion, Run-And-Tumble Model, Stochastic Modeling, Trajectory Statistics, Movement Ecology</td>
+          <td class="authors">Hiroki Kagiyama, Toru Nagasaka, Yukari Adachi et al.</td>
+          <td class="date">2026-03-04</td>
+          <td class="tldr">Task-specific architectures, especially a custom Vision Transformer, outperform large foundation models for small-patch cell classification in colorectal cancer histopathology when sufficient training data are available.</td>
+          <td class="keywords">Vision Transformer (ViT), CNN, Foundation Model Fine-Tuning, Linear Probing, Gaussian Blur Perturbation</td>
           <td class="score"><span class="badge badge-orange">6</span></td>
         </tr>
 
@@ -377,8 +377,8 @@
           </td>
           <td class="authors">Xiaolu Zhang, Anna Font, Anja Tremper et al.</td>
           <td class="date">2026-03-02</td>
-          <td class="tldr">Quasi-Poisson GAMs and weighted quantile sum regression applied to 2015&ndash;2018 London mortality data show ten PM components positively linked to all-cause mortality, amplified by heat waves for respiratory outcomes.</td>
-          <td class="keywords">Quasi-Poisson Generalized Additive Models, Weighted Quantile Sum Regression, Time-Series Analysis, Mixture Effects Modeling, Air Pollution Epidemiology</td>
+          <td class="tldr">Quasi-Poisson models link specific PM chemical components—especially MO-OOA—to elevated all-cause and respiratory mortality in London, with heat waves consistently amplifying respiratory risk.</td>
+          <td class="keywords">Quasi-Poisson Generalized Additive Model, Weighted Quantile Sum (WQS) Regression, Time-Series Analysis, Mixture Effects Modeling, Distributed Lag Model</td>
           <td class="score"><span class="badge badge-orange">5</span></td>
         </tr>
 
@@ -392,9 +392,39 @@
           </td>
           <td class="authors">Tram Vo, A&iuml;cha Hamieh, Marc Levy et al.</td>
           <td class="date">2026-03-02</td>
-          <td class="tldr">Whole-genome sequencing of <em>K. pneumoniae</em> from French Polynesia identifies a novel IS26-mediated transposon (Tn7722) carrying blaNDM-1, facilitating multi-species carbapenem resistance spread via horizontal gene transfer.</td>
-          <td class="keywords">Whole-Genome Sequencing, Mobile Genetic Elements, Horizontal Gene Transfer, Transposon Analysis, Antimicrobial Resistance Genomics</td>
+          <td class="tldr">Whole-genome sequencing of K. pneumoniae from French Polynesia identifies a novel IS26-mediated composite transposon (Tn7722) carrying bla NDM-1 that drives carbapenem resistance spread via plasmid-based horizontal gene transfer.</td>
+          <td class="keywords">Whole-Genome Sequencing, Horizontal Gene Transfer, Mobile Genetic Elements, Transposon Characterization, Genomic Surveillance</td>
           <td class="score"><span class="badge badge-grey">4</span></td>
+        </tr>
+
+        <!-- ── Rank 11 · Score 3 · grey badge ───────────────────── -->
+        <tr>
+          <td class="rank">#11</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2603.03603v1" target="_blank" rel="noopener noreferrer">
+              Detection and Identification of Penguins Using Appearance and Motion Features
+            </a>
+          </td>
+          <td class="authors">Kasumi Seko, Hiroki Kinoshita, Raj Rajeshwar Malinda et al.</td>
+          <td class="date">2026-03-04</td>
+          <td class="tldr">Integrating two-frame temporal inputs into YOLO11 and applying tracklet-based contrastive learning after tracking improves both detection (mAP@0.5: 0.922→0.933) and individual re-identification of visually homogeneous penguins in surveillance footage.</td>
+          <td class="keywords">YOLO11, Contrastive Learning, Tracklet-Based Re-Identification, Mean Average Precision (mAP), Temporal Feature Fusion</td>
+          <td class="score"><span class="badge badge-grey">3</span></td>
+        </tr>
+
+        <!-- ── Rank 12 · Score 3 · grey badge ───────────────────── -->
+        <tr>
+          <td class="rank">#12</td>
+          <td class="title">
+            <a href="https://arxiv.org/pdf/2603.03604v1" target="_blank" rel="noopener noreferrer">
+              Tracking Feral Horses in Aerial Video Using Oriented Bounding Boxes
+            </a>
+          </td>
+          <td class="authors">Saeko Takizawa, Tamao Maeda, Shinya Yamamoto et al.</td>
+          <td class="date">2026-03-04</td>
+          <td class="tldr">A head-orientation method using IoU-based majority voting across patch-level detectors resolves YOLO-OBB's 180° ambiguity, achieving 99.3% accuracy for robust continuous tracking of feral horses in aerial video.</td>
+          <td class="keywords">Oriented Bounding Boxes (OBB), YOLO-OBB, IoU-Based Majority Voting, Multi-Animal Tracking, Head-Orientation Estimation</td>
+          <td class="score"><span class="badge badge-grey">3</span></td>
         </tr>
 
       </tbody>
@@ -407,21 +437,19 @@
       <span class="icon">&#8801;</span> Narrative Summary
     </h2>
     <div class="narrative-box">
-      Today's q-bio.QM output is dominated by a wave of machine learning and probabilistic methods
-      being tightly coupled to high-stakes biological problems: surrogate-guided evolutionary search
-      drives data-efficient protein and peptide design (BoGA), LLM-orchestrated Monte Carlo Tree Search
-      automates single-cell perturbation architecture selection (HarmonyCell), and correlated variational
-      autoencoders preserve inter-modality structure for principled uncertainty quantification
-      (CoVAE)&mdash;together signalling a maturation of deep generative and agentic workflows across
-      molecular biology.
-      A second strong theme is the rise of topology and graph-based reasoning: multi-species persistent
-      homology opens new avenues for quantifying higher-order spatial interactions in tumour tissue, while
-      knowledge-graph embeddings challenge the assumption that explicit chemical structure is necessary for
-      drug repurposing, with network topology and protein language model features proving sufficient.
-      Rounding out the digest, physics-inspired stochastic models elucidate ant locomotion and fish-school
-      dynamics through sparse regression and entropy-based indices, while epidemiological applications of
-      GAMs and whole-genome sequencing address air-pollution mortality and carbapenem-resistance
-      evolution&mdash;underscoring q-bio.QM&rsquo;s breadth from single-molecule design all the way to
+      Today's q-bio.QM digest is anchored by two high-scoring methodological advances:
+      Bayesian optimization fused with genetic algorithms (BoGA) drives data-efficient protein and
+      peptide design, while a scalable multi-species persistent homology framework opens new avenues
+      for quantifying higher-order spatial interactions in tumour tissue &mdash; together signalling
+      a maturation of principled mathematical methods applied to core molecular and cellular biology tasks.
+      Deep learning pervades the mid-tier papers as well, with correlated variational autoencoders
+      preserving inter-modal latent structure, graph neural networks challenging the assumed necessity
+      of chemical structure for drug repurposing, and a custom Vision Transformer outperforming large
+      foundation models in small-patch histopathology &mdash; collectively pushing q-bio.QM toward
+      leaner, more interpretable architectures.
+      Stochastic and network-theoretic models round out the digest, spanning fish-school interaction
+      networks, ant locomotion, dose-dependent cardiac autonomic dynamics, and epidemiological mixture
+      models, underscoring q-bio.QM&rsquo;s breadth from single-molecule design all the way to
       population-level health and genomic surveillance.
     </div>
   </section>
@@ -432,7 +460,7 @@
      FOOTER
 ════════════════════════════════════════════════════════════════ -->
 <footer>
-  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM &nbsp;&middot;&nbsp; 2026-03-04T06:50:46Z UTC
+  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM &nbsp;&middot;&nbsp; 2026-03-05 00:00 UTC
 </footer>
 
 </body>
