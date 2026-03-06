@@ -1,5 +1,65 @@
 [
   {
+    "id": "2603.04638v1",
+    "title": "Spinverse: Differentiable Physics for Permeability-Aware Microstructure Reconstruction from Diffusion MRI",
+    "authors": [
+      "Prathamesh Pradeep Khole",
+      "Mario M. Brenes",
+      "Zahra Kais Petiwala",
+      "Ehsan Mirafzali",
+      "Utkarsh Gupta",
+      "Jing-Rebecca Li",
+      "Andrada Ianus",
+      "Razvan Marinescu"
+    ],
+    "published_date": "2026-03-04T21:57:40Z",
+    "abstract": "Diffusion MRI (dMRI) is sensitive to microstructural barriers, yet most existing methods either assume impermeable boundaries or estimate voxel-level parameters without recovering explicit interfaces. We present Spinverse, a permeability-aware reconstruction method that inverts dMRI measurements through a fully differentiable Bloch-Torrey simulator. Spinverse represents tissue on a fixed tetrahedral grid and treats each interior face permeability as a learnable parameter; low-permeability faces act as diffusion barriers, so microstructural boundaries whose topology is not fixed a priori (up to the resolution of the ambient mesh) emerge without changing mesh connectivity or vertex positions. Given a target signal, we optimize face permeabilities by backpropagating a signal-matching loss through the PDE forward model, and recover an interface by thresholding the learned permeability field. To mitigate the ill-posedness of permeability inversion, we use mesh-based geometric priors; to avoid local minima, we use a staged multi-sequence optimization curriculum. Across a collection of synthetic voxel meshes, Spinverse reconstructs diverse geometries and demonstrates that sequence scheduling and regularization are critical to avoid outline-only solutions while improving both boundary accuracy and structural validity.",
+    "pdf_link": "https://arxiv.org/pdf/2603.04638v1",
+    "categories": [
+      "cs.CV",
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.04622v1",
+    "title": "INTENSE: Detecting and disentangling neuronal selectivity in calcium imaging data",
+    "authors": [
+      "Nikita Pospelov",
+      "Viktor Plusnin",
+      "Olga Rogozhnikova",
+      "Anna Ivanova",
+      "Vladimir Sotskov",
+      "Ksenia Toropova",
+      "Olga Ivashkina",
+      "Vladik Avetisov",
+      "Konstantin Anokhin"
+    ],
+    "published_date": "2026-03-04T21:31:29Z",
+    "abstract": "Neurons encode information about the environment through their activity. As animals explore the environment, neurons rapidly acquire selectivity for distinct features of the external world; characterizing how these selectivity patterns emerge, reorganize, and overlap is key to linking neural activity to behavior and cognition. Calcium imaging in freely behaving animals can record large neuronal populations, but quantifying neuron-behavior selectivity directly from continuous fluorescence is challenging because both signals are temporally autocorrelated and calcium kinetics introduce time lags. Here we present INTENSE (INformation-Theoretic Evaluation of Neuronal SElectivity), an open-source framework that uses mutual information to detect neuron-behavior associations from raw calcium fluorescence data. INTENSE controls false discoveries using circular-shift permutation testing that preserves temporal structure and optimizes temporal delays to account for indicator kinetics and prospective/retrospective encoding. To separate genuine mixed selectivity from associations driven by behavioral covariance, INTENSE applies conditional mutual information-based disentanglement. We validated INTENSE on synthetic datasets, demonstrating robust detection across diverse signal-to-noise ratios and reliability conditions, whereas methods lacking temporal controls show poor performance. Applied to CA1 miniscope recordings in mice freely exploring an open field, INTENSE reveals robust selectivity to multiple variables (place, head direction, object interaction, locomotion) and refines mixed-selectivity estimates by distinguishing redundant from genuinely multi-variable encoding. Together, INTENSE enables high-throughput, information-theoretic selectivity mapping with principled control of temporal structure and behavioral covariance, bridging large-scale recordings to circuit-level hypotheses.",
+    "pdf_link": "https://arxiv.org/pdf/2603.04622v1",
+    "categories": [
+      "q-bio.NC",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.04480v1",
+    "title": "AbAffinity: A Large Language Model for Predicting Antibody Binding Affinity against SARS-CoV-2",
+    "authors": [
+      "Faisal Bin Ashraf",
+      "Animesh Ray",
+      "Stefano Lonardi"
+    ],
+    "published_date": "2026-03-04T18:09:10Z",
+    "abstract": "Machine learning-based antibody design is emerging as one of the most promising approaches to combat infectious diseases, due to significant advancements in the field of artificial intelligence and an exponential surge in experimental antibody data (in particular related to COVID-19). The ability of an antibody to bind to an antigens (called binding affinity) is one of the the most critical properties in designing neutralizing antibodies. In this study we introduce Ab-Affinity, a new large language model that can accurately predict the binding affinity of antibodies against a target peptide, e.g., the SARS-CoV-2 spike protein. Code and model are available at https://github.com/ucrbioinfo/AbAffinity.",
+    "pdf_link": "https://arxiv.org/pdf/2603.04480v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ]
+  },
+  {
     "id": "2603.04081v1",
     "title": "Revisiting the Role of Foundation Models in Cell-Level Histopathological Image Analysis under Small-Patch Constraints -- Effects of Training Data Scale and Blur Perturbations on CNNs and Vision Transformers",
     "authors": [
@@ -99,7 +159,7 @@
     "authors": [
       "Erik Hartman",
       "Di Tang",
-      "Johan Malmstr\u00f6m"
+      "Johan Malmström"
     ],
     "published_date": "2026-03-03T08:53:12Z",
     "abstract": "Designing novel proteins with desired characteristics remains a significant challenge due to the large sequence space and the complexity of sequence-function relationships. Efficient exploration of this space to identify sequences that meet specific design criteria is crucial for advancing therapeutics and biotechnology. Here, we present BoGA (Bayesian Optimization Genetic Algorithm), a framework that combines evolutionary search with Bayesian optimization to efficiently navigate the sequence space. By integrating a genetic algorithm as a stochastic proposal generator within a surrogate modeling loop, BoGA prioritizes candidates based on prior evaluations and surrogate model predictions, enabling data-efficient optimization. We demonstrate the utility of BoGA through benchmarking on sequence and structure design tasks, followed by its application in designing peptide binders against pneumolysin, a key virulence factor of \\textit{Streptococcus pneumoniae}. BoGA accelerates the discovery of high-confidence binders, demonstrating the potential for efficient protein design across diverse objectives. The algorithm is implemented within the BoPep suite and is available under an MIT license at \\href{https://github.com/ErikHartman/bopep}{GitHub}.",
@@ -115,7 +175,7 @@
     "title": "Stochastic modeling of long-legged ant A. gracilipes locomotion in laboratory experiments",
     "authors": [
       "Jack Featherstone",
-      "Anouk B\u00e9raud",
+      "Anouk Béraud",
       "Meta Virant-Doberlet",
       "Antonio Celani",
       "Mahesh Bandi"
@@ -126,93 +186,6 @@
     "categories": [
       "q-bio.QM",
       "physics.bio-ph"
-    ]
-  },
-  {
-    "id": "2603.02165v1",
-    "title": "Investigating the short-term effects of particulate matter (PM) chemical components on mortality and the potential modifying effect of extreme temperature: A time-series analysis in London",
-    "authors": [
-      "Xiaolu Zhang",
-      "Anna Font",
-      "Anja Tremper",
-      "Max Priestman",
-      "Shawn Y. Lee",
-      "David C. Green",
-      "Dimitris Evangelopoulos",
-      "Gang I. Chen"
-    ],
-    "published_date": "2026-03-02T18:28:40Z",
-    "abstract": "Particulate matter (PM) is linked to adverse health outcomes, yet the roles of specific PM components and their modification by extreme temperature remain unclear. We examined short-term associations between ten PM chemical components and daily mortality in Greater London (2015-2018). PM components include inorganic aerosols (black carbon from wood burning (BCwb) and traffic exhaust (BCtr), SO4, NO3, and NH4) and organic aerosols (hydrocarbon-like organic aerosol (HOA), biomass burning OA (BBOA), cooking-like OA (COA), more and less oxidized oxygenated OA (MO-OOA and LO-OOA)). We applied quasi-Poisson generalized additive models and weighted quantile sum (WQS) regression to estimate single-pollutant, multi-pollutant, and mixture effects, respectively, and included interaction terms to test effect modification by heat waves and cold spells. All ten components showed positive associations with all-cause mortality in single-pollutant models with stronger estimated risks for respiratory mortality, particularly for NH4, NO3, SO4. In mixture analyses, the WQS index was significantly associated with all-cause mortality (RR = 1.015, 95% CI: 1.006-1.024 per 25th-percentile increase) and showed a marginally significance with respiratory mortality (RR = 1.018, 95% CI: 0.994-1.042). MO-OOA and COA contributed most to all-cause mortality, while BBOA and BC Wood dominated respiratory effects. Heat waves consistently amplified respiratory risks in both single-pollutant and mixture models with little evidence for cardiovascular mortality. Overall, MO-OOA demonstrated harmful associations across outcomes, suggesting potential toxicity link to secondary atmospheric oxidation processes. These findings support source-specific control strategies and highlight the importance of accounting for extreme temperature in air pollution mitigation policies.",
-    "pdf_link": "https://arxiv.org/pdf/2603.02165v1",
-    "categories": [
-      "physics.ao-ph",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2603.01965v1",
-    "title": "CoVAE: correlated multimodal generative modeling",
-    "authors": [
-      "Federico Caretti",
-      "Guido Sanguinetti"
-    ],
-    "published_date": "2026-03-02T15:14:59Z",
-    "abstract": "Multimodal Variational Autoencoders have emerged as a popular tool to extract effective representations from rich multimodal data. However, such models rely on fusion strategies in latent space that destroy the joint statistical structure of the multimodal data, with profound implications for generation and uncertainty quantification. In this work, we introduce Correlated Variational Autoencoders (CoVAE), a new generative architecture that captures the correlations between modalities. We test CoVAE on a number of real and synthetic data sets demonstrating both accurate cross-modal reconstruction and effective quantification of the associated uncertainties.",
-    "pdf_link": "https://arxiv.org/pdf/2603.01965v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2603.01849v1",
-    "title": "Characterization of the novel transposon Tn7722 harboring bla NDM-1 : Insights into the evolutionary dynamics of resistance in Klebsiella pneumoniae",
-    "authors": [
-      "Tram Vo",
-      "A\u00efcha Hamieh",
-      "Marc Levy",
-      "Pierre Pontarotti",
-      "Jean-Marc Rolain",
-      "Vicky Merhej"
-    ],
-    "published_date": "2026-03-02T13:30:25Z",
-    "abstract": "Background: Klebsiella pneumoniae is a major opportunistic pathogen responsible for various invasive infections. The rise of carbapenem-resistant K. pneumoniae, primarily due to acquisition of bla NDM genes, presents a serious global health threat. In French Polynesia, where international travel is frequent, sporadic cases of NDM-producing Enterobacteriales have emerged. This study aims to characterize the genomic features of NDM-producing K. pneumoniae isolates collected in French Polynesia and evaluate the roles of clonal expansion and horizontal gene transfer mediated by mobile genetic elements in bla NDM spread. Materials and Methods: Between July 2006 and September 2021, 17 carbapenemase-producing K. pneumoniae isolates were identified from 715 clinical samples in Tahiti. Whole-genome sequencing using Illumina MiSeq and Oxford Nanopore technologies was performed. Results: Seven NDM-producing K. pneumoniae strains were identified, five bla NDM-1 and two bla NDM-9 variants. All isolates were resistant to ertapenem (MICs 1 to >32 mg/L), with three resistants to imipenem (MICs 8 to >32 mg/L) and six to meropenem (MICs 2 to >8 mg/L). A novel IS26mediated composite transposon, Tn7722 (16,246 bp), was detected in four isolates on IncF and IncR plasmids. This transposon also carried qnrS1 and aph(3')-VI genes, conferring resistance to fluoroquinolones and aminoglycosides. Tn7722-like elements were found in diverse bacterial genomes worldwide, suggesting it facilitates bla NDM transmission across multiple species and regions. Conclusion: NDM-producing K. pneumoniae in French Polynesia remain sporadic but genetically diverse, without evidence of local outbreak. It underscores the role of plasmid and Tn7722-driven evolution and adaptation. Ongoing genomic surveillance is vital to track the evolution of highrisk clones and MGEs guiding effective containment.",
-    "pdf_link": "https://arxiv.org/pdf/2603.01849v1",
-    "categories": [
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2603.01682v2",
-    "title": "Modeling and Analysis of Fish Interaction Networks under Projected Visual Stimuli",
-    "authors": [
-      "Hiroaki Kawashima",
-      "Raj Rajeshwar Malinda",
-      "Saeko Takizawa"
-    ],
-    "published_date": "2026-03-02T10:12:42Z",
-    "abstract": "This paper addresses the estimation of a dynamic interaction network, a network of influence among individuals, under projected visual stimuli to quantify the influences of inter-individual interactions and external stimuli on collective behavior. Building upon our previously proposed network estimation model, which assumes a Boids-type model and employs a sparse regression framework to infer inter-individual influence networks from trajectory data, we extend the formulation by introducing a stimulus term. This enables the model to capture how individuals react to and propagate externally projected visual stimuli within the group. The resulting framework allows simultaneous estimation of inter-individual and stimulus-related interaction strengths. We also introduce entropy-based indices to capture the possible biases of individuals' influence. Our experiments with fish schools under projector-based visual stimuli demonstrate the effectiveness of the proposed indices in quantifying schooling behavior and identifying influential individuals within the group, serving as the basis for real-time, interpretable metrics of collective dynamics.",
-    "pdf_link": "https://arxiv.org/pdf/2603.01682v2",
-    "categories": [
-      "cs.SI",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2603.01537v1",
-    "title": "Pharmacology Knowledge Graphs: Do We Need Chemical Structure for Drug Repurposing?",
-    "authors": [
-      "Youssef Abo-Dahab",
-      "Ruby Hernandez",
-      "Ismael Caleb Arechiga Duran"
-    ],
-    "published_date": "2026-03-02T07:07:32Z",
-    "abstract": "The contributions of model complexity, data volume, and feature modalities to knowledge graph-based drug repurposing remain poorly quantified under rigorous temporal validation. We constructed a pharmacology knowledge graph from ChEMBL 36 comprising 5,348 entities including 3,127 drugs, 1,156 proteins, and 1,065 indications. A strict temporal split was enforced with training data up to 2022 and testing data from 2023 to 2025, together with biologically verified hard negatives mined from failed assays and clinical trials. We benchmarked five knowledge graph embedding models and a standard graph neural network with 3.44 million parameters that incorporates drug chemical structure using a graph attention encoder and ESM-2 protein embeddings. Scaling experiments ranging from 0.78 to 9.75 million parameters and from 25 to 100 percent of the data, together with feature ablation studies, were used to isolate the contributions of model capacity, graph density, and node feature modalities. Removing the graph attention based drug structure encoder and retaining only topological embeddings combined with ESM-2 protein features improved drug protein PR-AUC from 0.5631 to 0.5785 while reducing VRAM usage from 5.30 GB to 353 MB. Replacing the drug encoder with Morgan fingerprints further degraded performance, indicating that explicit chemical structure representations can be detrimental for predicting pharmacological network interactions. Increasing model size beyond 2.44 million parameters yielded diminishing returns, whereas increasing training data consistently improved performance. External validation confirmed 6 of the top 14 novel predictions as established therapeutic indications. These results show that drug pharmacological behavior can be accurately predicted using target-centric information and drug network topology alone, without requiring explicit chemical structure representations.",
-    "pdf_link": "https://arxiv.org/pdf/2603.01537v1",
-    "categories": [
-      "cs.AI",
-      "q-bio.BM",
-      "q-bio.QM"
     ]
   }
 ]
