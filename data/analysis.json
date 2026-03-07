@@ -1,86 +1,5 @@
 [
   {
-    "id": "2603.04480v1",
-    "title": "AbAffinity: A Large Language Model for Predicting Antibody Binding Affinity against SARS-CoV-2",
-    "authors": [
-      "Faisal Bin Ashraf",
-      "Animesh Ray",
-      "Stefano Lonardi"
-    ],
-    "published_date": "2026-03-04T18:09:10Z",
-    "abstract": "Machine learning-based antibody design is emerging as one of the most promising approaches to combat infectious diseases, due to significant advancements in the field of artificial intelligence and an exponential surge in experimental antibody data (in particular related to COVID-19). The ability of an antibody to bind to an antigens (called binding affinity) is one of the the most critical properties in designing neutralizing antibodies. In this study we introduce Ab-Affinity, a new large language model that can accurately predict the binding affinity of antibodies against a target peptide, e.g., the SARS-CoV-2 spike protein. Code and model are available at https://github.com/ucrbioinfo/AbAffinity.",
-    "pdf_link": "https://arxiv.org/pdf/2603.04480v1",
-    "categories": [
-      "q-bio.QM",
-      "cs.LG"
-    ],
-    "tldr": "AbAffinity is a large language model that accurately predicts antibody binding affinity against the SARS-CoV-2 spike protein, advancing ML-guided neutralizing antibody design.",
-    "keywords": [
-      "AbAffinity Protein Language Model",
-      "Antibody Binding Affinity Regression",
-      "Supervised Binding Affinity Regression",
-      "Pre-Trained Language Model Fine-Tuning",
-      "SARS-CoV-2 Spike Protein"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2603.02753v1",
-    "title": "Deep learning-guided evolutionary optimization for protein design",
-    "authors": [
-      "Erik Hartman",
-      "Di Tang",
-      "Johan Malmström"
-    ],
-    "published_date": "2026-03-03T08:53:12Z",
-    "abstract": "Designing novel proteins with desired characteristics remains a significant challenge due to the large sequence space and the complexity of sequence-function relationships. Efficient exploration of this space to identify sequences that meet specific design criteria is crucial for advancing therapeutics and biotechnology. Here, we present BoGA (Bayesian Optimization Genetic Algorithm), a framework that combines evolutionary search with Bayesian optimization to efficiently navigate the sequence space. By integrating a genetic algorithm as a stochastic proposal generator within a surrogate modeling loop, BoGA prioritizes candidates based on prior evaluations and surrogate model predictions, enabling data-efficient optimization. We demonstrate the utility of BoGA through benchmarking on sequence and structure design tasks, followed by its application in designing peptide binders against pneumolysin, a key virulence factor of \\textit{Streptococcus pneumoniae}. BoGA accelerates the discovery of high-confidence binders, demonstrating the potential for efficient protein design across diverse objectives. The algorithm is implemented within the BoPep suite and is available under an MIT license at \\href{https://github.com/ErikHartman/bopep}{GitHub}.",
-    "pdf_link": "https://arxiv.org/pdf/2603.02753v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM",
-      "stat.ML"
-    ],
-    "tldr": "BoGA combines a genetic algorithm as a stochastic proposal generator within a Bayesian optimization surrogate loop to efficiently navigate protein sequence space and design high-confidence peptide binders against pneumolysin.",
-    "keywords": [
-      "Bayesian Optimization",
-      "Genetic Algorithm",
-      "Surrogate Model-Guided Optimization",
-      "Genetic Algorithm Stochastic Proposal Generator",
-      "BoPep Optimization Suite"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2603.03237v1",
-    "title": "Topology of Multi-species Localization",
-    "authors": [
-      "Abhinav Natarajan",
-      "Thomas Chaplin",
-      "Joshua A. Bull",
-      "Eoghan J. Mulholland-Illingworth",
-      "Simon J. Leedham",
-      "Helen M. Byrne",
-      "Maria-Jose Jimenez",
-      "Heather A. Harrington"
-    ],
-    "published_date": "2026-03-03T18:29:29Z",
-    "abstract": "Spatial relationships in multi-species data can indicate and affect system outcomes and behaviors, ranging from disease progression in cancer to coral reef resilience in ecology; therefore, quantifying these relationships is an important problem across scientific disciplines. Persistent homology (PH), a key mathematical and computational tool in topological data analysis (TDA), provides a multiscale description of the shape of data. While it effectively describes spatial organization of species, such as cellular patterns in pathology, it cannot detect the shape relations between different types of species. Traditionally, PH analyzes single-species data, which limits the spatial analysis of interactions between different species. Leveraging recent developments in TDA and computational geometry, we introduce a scalable approach to quantify higher-order interactions in multi-species data. The framework can distinguish the presence of shape features or patterns in the data that are (i) common to multiple species of points, (ii) present in some species but disappear in the presence of other species, (iii) only visible when multiple species are considered together, and (iv) formed by some species and remain visible in the presence of others. We demonstrate our approach on two example applications. We identify (1) different behavioral regimes in a synthetic tumor micro-environment model, and (2) interspecies spatial interactions that are most significantly altered in colorectal cancer tissue samples during disease progression.",
-    "pdf_link": "https://arxiv.org/pdf/2603.03237v1",
-    "categories": [
-      "math.AT",
-      "q-bio.QM"
-    ],
-    "tldr": "A scalable persistent-homology framework is introduced to quantify higher-order spatial interactions between multiple species types, revealing distinct tumor microenvironment regimes and colorectal cancer progression signatures.",
-    "keywords": [
-      "Persistent Homology",
-      "Topological Data Analysis (TDA)",
-      "Multi-Species Localization Filtration",
-      "Multi-Species Betti Number Computation",
-      "Species Co-Localization Filtration Complex"
-    ],
-    "relevance_score": 9
-  },
-  {
     "id": "2603.04622v1",
     "title": "INTENSE: Detecting and disentangling neuronal selectivity in calcium imaging data",
     "authors": [
@@ -101,13 +20,38 @@
       "q-bio.NC",
       "q-bio.QM"
     ],
-    "tldr": "INTENSE is an open-source information-theoretic framework using mutual information and circular-shift permutation testing to robustly detect and disentangle neuron–behaviour selectivity from calcium imaging fluorescence data.",
+    "tldr": "INTENSE is an open-source information-theoretic framework that uses mutual information with circular-shift permutation testing and conditional mutual information disentanglement to robustly map neuron-behavior selectivity from raw calcium fluorescence recordings.",
     "keywords": [
       "Mutual Information",
       "Circular-Shift Permutation Testing",
-      "Conditional Mutual Information",
-      "Calcium Kinetics Delay Optimization",
-      "CA1 Miniscope Neuronal Selectivity Mapping"
+      "Conditional Mutual Information Disentanglement",
+      "Temporal Autocorrelation Correction",
+      "Calcium Imaging Fluorescence Modeling"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.04480v1",
+    "title": "AbAffinity: A Large Language Model for Predicting Antibody Binding Affinity against SARS-CoV-2",
+    "authors": [
+      "Faisal Bin Ashraf",
+      "Animesh Ray",
+      "Stefano Lonardi"
+    ],
+    "published_date": "2026-03-04T18:09:10Z",
+    "abstract": "Machine learning-based antibody design is emerging as one of the most promising approaches to combat infectious diseases, due to significant advancements in the field of artificial intelligence and an exponential surge in experimental antibody data (in particular related to COVID-19). The ability of an antibody to bind to an antigens (called binding affinity) is one of the the most critical properties in designing neutralizing antibodies. In this study we introduce Ab-Affinity, a new large language model that can accurately predict the binding affinity of antibodies against a target peptide, e.g., the SARS-CoV-2 spike protein. Code and model are available at https://github.com/ucrbioinfo/AbAffinity.",
+    "pdf_link": "https://arxiv.org/pdf/2603.04480v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ],
+    "tldr": "AbAffinity is a large language model trained to accurately predict antibody binding affinity against the SARS-CoV-2 spike protein from antibody sequence data.",
+    "keywords": [
+      "Large Language Model (LLM)",
+      "Antibody Binding Affinity Prediction",
+      "Protein Sequence Analysis",
+      "Sequence-Based Antibody Affinity Regression",
+      "SARS-CoV-2 Spike Protein Modeling"
     ],
     "relevance_score": 8
   },
@@ -132,13 +76,13 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "Spinverse inverts diffusion MRI signals through a fully differentiable Bloch-Torrey PDE simulator to reconstruct permeability-aware tissue microstructures without assuming fixed boundary topology.",
+    "tldr": "Spinverse inverts diffusion MRI signals through a fully differentiable Bloch-Torrey PDE simulator to reconstruct permeability-aware tissue microstructure on a tetrahedral mesh by learning per-face permeabilities via backpropagation.",
     "keywords": [
-      "Differentiable Physics",
-      "Bloch-Torrey Simulator",
-      "Tetrahedral Mesh",
-      "Backpropagation Through PDE",
-      "Multi-Sequence Optimization Curriculum"
+      "Differentiable Bloch-Torrey PDE Simulator",
+      "Tetrahedral Mesh Representation",
+      "Multi-Sequence Curriculum Optimization",
+      "Geometric Regularization Priors",
+      "Permeability Inversion"
     ],
     "relevance_score": 8
   },
@@ -159,13 +103,13 @@
     "categories": [
       "q-bio.QM"
     ],
-    "tldr": "Multiscale entropy analysis reveals a dose-dependent effect of prenatal glucocorticoid exposure on cardiac autonomic dynamics in children, while ECG foundation models capture a dose-independent morphological fingerprint.",
+    "tldr": "Multiscale entropy analysis of ECG recordings reveals a dose-dependent entropy-rate decay signature of prenatal betamethasone exposure on cardiac autonomic dynamics, complementing a dose-independent morphological fingerprint from ECG foundation models.",
     "keywords": [
-      "Multiscale Entropy",
-      "Sample Entropy",
-      "Approximate Entropy",
+      "Multiscale Entropy Analysis",
       "Linear Mixed Models",
-      "Jonckheere-Terpstra Trend Test"
+      "Kruskal-Wallis / Dunn's Post-Hoc Test",
+      "Jonckheere-Terpstra Trend Test",
+      "ECG Foundation Model Embedding"
     ],
     "relevance_score": 7
   },
@@ -189,93 +133,14 @@
       "cs.CV",
       "q-bio.QM"
     ],
-    "tldr": "For small-patch cell classification in colorectal cancer histopathology, a task-specific Vision Transformer (CustomViT) outperforms all evaluated foundation models, showing that architecture specialization beats large pre-training under extreme spatial constraints.",
+    "tldr": "A systematic benchmark shows that a task-specific Vision Transformer optimized for 40×40-pixel patches outperforms all tested foundation models on cell-level histopathological classification, with no foundation-model advantage in blur robustness.",
     "keywords": [
-      "Vision Transformer",
+      "Vision Transformer (ViT)",
+      "Convolutional Neural Network (CNN)",
       "CustomViT Small-Patch Architecture",
-      "Linear Probing",
-      "Full-Weight Foundation Model Fine-Tuning",
-      "Gaussian Blur Perturbation"
+      "CD103/CD8 Immunostaining Cell Classification",
+      "Gaussian Blur Perturbation Robustness"
     ],
-    "relevance_score": 7
-  },
-  {
-    "id": "2603.02665v1",
-    "title": "Stochastic modeling of long-legged ant A. gracilipes locomotion in laboratory experiments",
-    "authors": [
-      "Jack Featherstone",
-      "Anouk Béraud",
-      "Meta Virant-Doberlet",
-      "Antonio Celani",
-      "Mahesh Bandi"
-    ],
-    "published_date": "2026-03-03T06:52:15Z",
-    "abstract": "Stochastic modeling of movement behavior provides a valuable way to understand how complex motion can be generated from relatively simple building blocks. Ants demonstrate sophisticated social behavior ranging from foraging to nest relocation; while emphasis is often placed on the communication methods used to synchronize individuals, the movement paradigms of those individuals are of tantamount importance. Here, we apply a stochastic modeling approach to better understand the movement of isolated long-legged ant (A. gracilipes) specimens, informed by extensive laboratory tracking experiments. We find that a combination of active Brownian and run-and-tumble models reproduces the trajectory statistics observed in experiments, both qualitatively and quantitatively. We identify reproducible probability distributions for the turn angles, run times, and waiting times across specimens, and find good agreement between analytical predictions and quantities empirically measured from the trajectories. Having such a model allows for a better understanding and predictions of movement ecology from both simulations and analytics, and even can give insight into the underlying generative mechanisms of motion and the ants' sensory systems.",
-    "pdf_link": "https://arxiv.org/pdf/2603.02665v1",
-    "categories": [
-      "q-bio.QM",
-      "physics.bio-ph"
-    ],
-    "tldr": "A combination of active Brownian and run-and-tumble stochastic models accurately reproduces the movement trajectory statistics of isolated long-legged ants (A. gracilipes), providing quantitative insight into their locomotion and sensory systems.",
-    "keywords": [
-      "Active Brownian Particle Model",
-      "Run-And-Tumble Dynamics",
-      "Probability Distribution Fitting",
-      "Turn Angle Distribution",
-      "Waiting Time Distribution"
-    ],
-    "relevance_score": 7
-  },
-  {
-    "id": "2603.03604v1",
-    "title": "Tracking Feral Horses in Aerial Video Using Oriented Bounding Boxes",
-    "authors": [
-      "Saeko Takizawa",
-      "Tamao Maeda",
-      "Shinya Yamamoto",
-      "Hiroaki Kawashima"
-    ],
-    "published_date": "2026-03-04T00:27:57Z",
-    "abstract": "The social structures of group-living animals such as feral horses are diverse and remain insufficiently understood, even within a single species. To investigate group dynamics, aerial videos are often utilized to track individuals and analyze their movement trajectories, which are essential for evaluating inter-individual interactions and comparing social behaviors. Accurate individual tracking is therefore crucial. In multi-animal tracking, axis-aligned bounding boxes (bboxes) are widely used; however, for aerial top-view footage of entire groups, their performance degrades due to complex backgrounds, small target sizes, high animal density, and varying body orientations. To address this issue, we employ oriented bounding boxes (OBBs), which include rotation angles and reduce unnecessary background. Nevertheless, current OBB detectors such as YOLO-OBB restrict angles within a 180$^{\\circ}$ range, making it impossible to distinguish head from tail and often causing sudden 180$^{\\circ}$ flips across frames, which severely disrupts continuous tracking. To overcome this limitation, we propose a head-orientation estimation method that crops OBB-centered patches, applies three detectors (head, tail, and head-tail), and determines the final label through IoU-based majority voting. Experiments using 299 test images show that our method achieves 99.3% accuracy, outperforming individual models, demonstrating its effectiveness for robust OBB-based tracking.",
-    "pdf_link": "https://arxiv.org/pdf/2603.03604v1",
-    "categories": [
-      "cs.CV",
-      "q-bio.QM"
-    ],
-    "tldr": "An IoU-based majority-voting head-orientation estimator built on top of oriented bounding box detection achieves 99.3% accuracy for continuous individual tracking of feral horses in aerial video.",
-    "keywords": [
-      "Oriented Bounding Boxes (OBB)",
-      "YOLO-OBB",
-      "IoU-Based Majority Voting",
-      "Three-Detector Head-Tail Ensemble",
-      "Head-Orientation Estimation"
-    ],
-    "relevance_score": 4
-  },
-  {
-    "id": "2603.03603v1",
-    "title": "Detection and Identification of Penguins Using Appearance and Motion Features",
-    "authors": [
-      "Kasumi Seko",
-      "Hiroki Kinoshita",
-      "Raj Rajeshwar Malinda",
-      "Hiroaki Kawashima"
-    ],
-    "published_date": "2026-03-04T00:25:55Z",
-    "abstract": "In animal facilities, continuous surveillance of penguins is essential yet technically challenging due to their homogeneous visual characteristics, rapid and frequent posture changes, and substantial environmental noise such as water reflections. In this study, we propose a framework that enhances both detection and identification performance by integrating appearance and motion features. For detection, we adapted YOLO11 to process consecutive frames to overcome the lack of temporal consistency in single-frame detectors. This approach leverages motion cues to detect targets even when distinct visual features are obscured. Our evaluation shows that fine-tuning the model with two-frame inputs improves mAP@0.5 from 0.922 to 0.933, outperforming the baseline, and successfully recovers individuals that are indistinguishable in static images. For identification, we introduce a tracklet-based contrastive learning approach applied after tracking. Through qualitative visualization, we demonstrate that the method produces coherent feature embeddings, bringing samples from the same individual closer in the feature space, suggesting the potential for mitigating ID switching.",
-    "pdf_link": "https://arxiv.org/pdf/2603.03603v1",
-    "categories": [
-      "cs.CV",
-      "q-bio.QM"
-    ],
-    "tldr": "Combining multi-frame YOLO11 detection with tracklet-based contrastive learning improves both penguin detection (mAP@0.5: 0.922 → 0.933) and individual re-identification by leveraging temporal motion cues and coherent feature embeddings.",
-    "keywords": [
-      "YOLO11",
-      "Tracklet-Based Contrastive Learning",
-      "Tracklet-Based Identification",
-      "Two-Frame Temporal Motion Detection",
-      "Contrastive Feature Space Optimization"
-    ],
-    "relevance_score": 3
+    "relevance_score": 6
   }
 ]
