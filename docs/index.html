@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Bio Watchtower — 2026-03-07</title>
+  <title>Q-Bio Watchtower — 2026-03-08</title>
   <style>
     /* ── Reset & Base ─────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -83,94 +83,36 @@
       flex-shrink: 0;
     }
 
-    /* ── Table ────────────────────────────────────────────────────────── */
-    .table-wrapper {
-      overflow-x: auto;
-      border-radius: 6px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+    /* ── Zero-Paper Banner ────────────────────────────────────────────── */
+    .no-papers-wrapper {
       margin-bottom: 52px;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 900px;
-      font-size: 0.875rem;
-    }
-
-    thead tr {
-      background: #2c3e50;
-      color: #ffffff;
-    }
-
-    thead th {
-      padding: 13px 14px;
-      text-align: left;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      white-space: nowrap;
-      border: 1px solid #ddd;
-      text-transform: uppercase;
-      font-size: 0.80rem;
-    }
-
-    tbody tr:nth-child(odd)  { background: #f9f9f9; }
-    tbody tr:nth-child(even) { background: #ffffff;  }
-    tbody tr:hover           { background: #eaf4fb;  }
-
-    tbody td {
-      padding: 13px 14px;
-      border: 1px solid #ddd;
-      vertical-align: top;
-    }
-
-    /* Rank */
-    td.rank {
+    .no-papers-banner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      border: 2px dashed #bdc3c7;
+      border-radius: 8px;
+      background: #f9f9f9;
+      padding: 48px 32px;
       text-align: center;
-      font-weight: 700;
-      color: #2c3e50;
-      font-size: 1rem;
-      white-space: nowrap;
-      width: 56px;
     }
 
-    /* Title */
-    td.title { min-width: 220px; max-width: 300px; }
-    td.title a {
-      color: #3498db;
-      text-decoration: none;
+    .no-papers-banner .np-icon {
+      font-size: 2.2rem;
+      line-height: 1;
+      flex-shrink: 0;
+      color: #95a5a6;
+    }
+
+    .no-papers-banner p {
+      font-size: 1.1rem;
       font-weight: 600;
-      line-height: 1.45;
+      color: #555;
+      letter-spacing: 0.01em;
     }
-    td.title a:hover { text-decoration: underline; color: #2980b9; }
-
-    /* Authors */
-    td.authors { color: #444; font-size: 0.84rem; min-width: 155px; max-width: 210px; }
-
-    /* Date */
-    td.date { white-space: nowrap; color: #555; font-size: 0.84rem; min-width: 98px; }
-
-    /* TL;DR */
-    td.tldr { font-size: 0.845rem; color: #333; line-height: 1.55; min-width: 270px; max-width: 440px; }
-
-    /* Keywords */
-    td.keywords { font-size: 0.82rem; color: #555; font-style: italic; min-width: 195px; max-width: 260px; }
-
-    /* Score */
-    td.score { text-align: center; width: 74px; white-space: nowrap; }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 12px;
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: 0.03em;
-    }
-    .badge-green  { background: #27ae60; }
-    .badge-orange { background: #f39c12; }
-    .badge-grey   { background: #95a5a6; }
 
     /* ── Narrative Summary ────────────────────────────────────────────── */
     .narrative-section { margin-bottom: 0; }
@@ -205,6 +147,7 @@
       header h1 { font-size: 1.5rem; }
       main { padding: 24px 14px 36px; }
       footer { padding: 16px 14px; }
+      .no-papers-banner { padding: 36px 18px; flex-direction: column; }
     }
   </style>
 </head>
@@ -214,11 +157,10 @@
      HEADER
 ════════════════════════════════════════════════════════════════ -->
 <header>
-  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-03-07</h1>
-  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-07 UTC</p>
+  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-03-08</h1>
+  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-08 UTC</p>
   <p class="meta">
-    5 papers &nbsp;&middot;&nbsp; Published date range: 2026-03-04
-    &nbsp;&middot;&nbsp; Sorted by relevance score (highest first)
+    0 papers &nbsp;&middot;&nbsp; arXiv weekend gap &mdash; no new submissions in the last 3 days
   </p>
 </header>
 
@@ -227,103 +169,16 @@
 ════════════════════════════════════════════════════════════════ -->
 <main>
 
-  <!-- ── Ranked Paper Table ──────────────────────────────────────── -->
+  <!-- ── Ranked Paper Table (zero-paper state) ───────────────────── -->
   <h2 class="section-heading">
     <span class="icon">&#8679;</span> Ranked Papers
   </h2>
 
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Rank</th>
-          <th>Title</th>
-          <th>Authors</th>
-          <th>Published Date</th>
-          <th>TL;DR</th>
-          <th>Keywords</th>
-          <th>Relevance Score</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <!-- ── Rank 1 · Score 9 · green badge ── INTENSE ───────────── -->
-        <tr>
-          <td class="rank">#1</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2603.04622v1" target="_blank" rel="noopener noreferrer">
-              INTENSE: Detecting and Disentangling Neuronal Selectivity in Calcium Imaging Data
-            </a>
-          </td>
-          <td class="authors">Nikita Pospelov, Viktor Plusnin, Olga Rogozhnikova et al.</td>
-          <td class="date">2026-03-04</td>
-          <td class="tldr">INTENSE is an open-source information-theoretic framework that uses mutual information with circular-shift permutation testing and conditional mutual information disentanglement to robustly map neuron-behavior selectivity from raw calcium fluorescence recordings.</td>
-          <td class="keywords">Mutual Information, Circular-Shift Permutation Testing, Conditional Mutual Information Disentanglement, Temporal Autocorrelation Correction, Calcium Imaging Fluorescence Modeling</td>
-          <td class="score"><span class="badge badge-green">9</span></td>
-        </tr>
-
-        <!-- ── Rank 2 · Score 8 · green badge ── AbAffinity ────────── -->
-        <tr>
-          <td class="rank">#2</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2603.04480v1" target="_blank" rel="noopener noreferrer">
-              AbAffinity: A Large Language Model for Predicting Antibody Binding Affinity against SARS-CoV-2
-            </a>
-          </td>
-          <td class="authors">Faisal Bin Ashraf, Animesh Ray, Stefano Lonardi</td>
-          <td class="date">2026-03-04</td>
-          <td class="tldr">AbAffinity is a large language model trained to accurately predict antibody binding affinity against the SARS-CoV-2 spike protein from antibody sequence data.</td>
-          <td class="keywords">Large Language Model (LLM), Antibody Binding Affinity Prediction, Protein Sequence Analysis, Sequence-Based Antibody Affinity Regression, SARS-CoV-2 Spike Protein Modeling</td>
-          <td class="score"><span class="badge badge-green">8</span></td>
-        </tr>
-
-        <!-- ── Rank 3 · Score 8 · green badge ── Spinverse ─────────── -->
-        <tr>
-          <td class="rank">#3</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2603.04638v1" target="_blank" rel="noopener noreferrer">
-              Spinverse: Differentiable Physics for Permeability-Aware Microstructure Reconstruction from Diffusion MRI
-            </a>
-          </td>
-          <td class="authors">Prathamesh Pradeep Khole, Mario M. Brenes, Zahra Kais Petiwala et al.</td>
-          <td class="date">2026-03-04</td>
-          <td class="tldr">Spinverse inverts diffusion MRI signals through a fully differentiable Bloch-Torrey PDE simulator to reconstruct permeability-aware tissue microstructure on a tetrahedral mesh by learning per-face permeabilities via backpropagation.</td>
-          <td class="keywords">Differentiable Bloch-Torrey PDE Simulator, Tetrahedral Mesh Representation, Multi-Sequence Curriculum Optimization, Geometric Regularization Priors, Permeability Inversion</td>
-          <td class="score"><span class="badge badge-green">8</span></td>
-        </tr>
-
-        <!-- ── Rank 4 · Score 7 · orange badge ── Cardiac Complexity ─ -->
-        <tr>
-          <td class="rank">#4</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2603.04074v1" target="_blank" rel="noopener noreferrer">
-              Dose-Dependent Cardiac Complexity Changes in Children Following Prenatal Glucocorticoid Exposure: Complementary Evidence from Multiscale Entropy Analysis and ECG Foundation Models
-            </a>
-          </td>
-          <td class="authors">Nicolas B. Garnier, Michelle Dreiling, Valeska Kozik et al.</td>
-          <td class="date">2026-03-04</td>
-          <td class="tldr">Multiscale entropy analysis of ECG recordings reveals a dose-dependent entropy-rate decay signature of prenatal betamethasone exposure on cardiac autonomic dynamics, complementing a dose-independent morphological fingerprint from ECG foundation models.</td>
-          <td class="keywords">Multiscale Entropy Analysis, Linear Mixed Models, Kruskal-Wallis / Dunn&rsquo;s Post-Hoc Test, Jonckheere-Terpstra Trend Test, ECG Foundation Model Embedding</td>
-          <td class="score"><span class="badge badge-orange">7</span></td>
-        </tr>
-
-        <!-- ── Rank 5 · Score 6 · orange badge ── Histopathology ────── -->
-        <tr>
-          <td class="rank">#5</td>
-          <td class="title">
-            <a href="https://arxiv.org/pdf/2603.04081v1" target="_blank" rel="noopener noreferrer">
-              Revisiting the Role of Foundation Models in Cell-Level Histopathological Image Analysis under Small-Patch Constraints &mdash; Effects of Training Data Scale and Blur Perturbations on CNNs and Vision Transformers
-            </a>
-          </td>
-          <td class="authors">Hiroki Kagiyama, Toru Nagasaka, Yukari Adachi et al.</td>
-          <td class="date">2026-03-04</td>
-          <td class="tldr">A systematic benchmark shows that a task-specific Vision Transformer optimized for 40&times;40-pixel patches outperforms all tested foundation models on cell-level histopathological classification, with no foundation-model advantage in blur robustness.</td>
-          <td class="keywords">Vision Transformer (ViT), Convolutional Neural Network (CNN), CustomViT Small-Patch Architecture, CD103/CD8 Immunostaining Cell Classification, Gaussian Blur Perturbation Robustness</td>
-          <td class="score"><span class="badge badge-orange">6</span></td>
-        </tr>
-
-      </tbody>
-    </table>
+  <div class="no-papers-wrapper">
+    <div class="no-papers-banner">
+      <span class="np-icon">&#128203;</span>
+      <p>No new q-bio.QM papers in the last 3 days.</p>
+    </div>
   </div>
 
   <!-- ── Narrative Summary ───────────────────────────────────────── -->
@@ -332,23 +187,10 @@
       <span class="icon">&#8801;</span> Narrative Summary
     </h2>
     <div class="narrative-box">
-      Today&rsquo;s five q-bio.QM papers converge on a dominant theme of <strong>physics- and
-      information-theoretically grounded computational methods for biological signal analysis</strong>:
-      INTENSE (score&nbsp;9) leverages mutual information with rigorous circular-shift permutation
-      controls to disentangle neuronal selectivity patterns in calcium imaging data, while Spinverse
-      (score&nbsp;8) embeds a fully differentiable Bloch-Torrey PDE solver into a gradient-based
-      inversion loop to recover explicit tissue microstructure from diffusion MRI &mdash; both
-      representing a maturation toward principled, physics-aware quantitative biology tools.
-      A complementary cluster highlights the expanding role of <strong>deep learning and large language
-      models in molecular and clinical biomarkers</strong>: AbAffinity (score&nbsp;8) demonstrates
-      that a transformer-based LLM can accurately predict antibody binding affinity against SARS-CoV-2,
-      while the cardiac complexity study (score&nbsp;7) combines multiscale entropy with ECG foundation
-      model embeddings to characterise a dose-dependent prenatal glucocorticoid signature in children.
-      Methodologically, the day&rsquo;s most cautionary contribution shows that <strong>task-specific
-      architectures consistently outperform large foundation models</strong> under extreme 40&times;40-pixel
-      spatial constraints in histopathology (score&nbsp;6), underscoring that domain-optimised design
-      and sufficient labelled data remain critical and that pre-training scale alone does not
-      guarantee robustness or efficiency gains in low-resolution biomedical imaging regimes.
+      No q-bio.QM preprints were posted to arXiv in the look-back window ending 2026-03-08,
+      reflecting the expected weekend submission gap (arXiv does not process new listings on
+      Saturdays or Sundays). The digest will resume automatically on the next business day
+      when new quantitative biology submissions become available.
     </div>
   </section>
 
@@ -358,7 +200,7 @@
      FOOTER
 ════════════════════════════════════════════════════════════════ -->
 <footer>
-  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM &nbsp;&middot;&nbsp; 2026-03-07 00:00 UTC
+  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM &nbsp;&middot;&nbsp; 2026-03-08 06:44 UTC
 </footer>
 
 </body>
