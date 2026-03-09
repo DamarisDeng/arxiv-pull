@@ -1,1 +1,40 @@
-[]
+[
+  {
+    "id": "2603.06567v1",
+    "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
+    "authors": [
+      "Eric Qu",
+      "Brandon M. Wood",
+      "Aditi S. Krishnapriyan",
+      "Zachary W. Ulissi"
+    ],
+    "published_date": "2026-03-06T18:57:04Z",
+    "abstract": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
+    "pdf_link": "https://arxiv.org/pdf/2603.06567v1",
+    "categories": [
+      "cs.LG",
+      "cond-mat.mtrl-sci",
+      "cs.CE",
+      "physics.chem-ph",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.06087v1",
+    "title": "Multicellular Tumour Spheroids Exposure to Pulsed Electric Field: A Combined Experimental and Mathematical Modelling Study Highlighting Temporal Dynamics of DAMP Release and Accelerated Regrowth at Intermediate Field Intensities",
+    "authors": [
+      "Emma Leschiera",
+      "Nicolas Mattei",
+      "Marie-Pierre Rols",
+      "Muriel Golzio",
+      "Jelena Kolosnjaj-Tabi",
+      "Clair Poignard"
+    ],
+    "published_date": "2026-03-06T09:41:44Z",
+    "abstract": "Electroporation is increasingly used as a percutaneous ablation technique for tumours located near vital structures. Although effective, tumour regrowth may still occur. At the same time, in vitro studies on cell monolayers have shown that electroporation can trigger immunogenic cell death (ICD) through the release of damage-associated molecular patterns (DAMPs). These molecules can stimulate the immune system and could counteract tumour regrowth. To fully exploit electroporation, two key questions must be addressed: (1) what dynamics drive tumour regrowth, and (2) how ICD unfolds in space and time within three-dimensional cellular structures, which better mimic in vivo conditions than 2D cultures. Here, we combine in vitro experiments with a hybrid individual-based/continuous computational model to explore tumour spheroid regrowth and ICD potential under different pulse intensities. Experiments quantify spheroid viability, growth rate, and the release of ATP and HMGB1. In parallel, the hybrid model predicts the dynamics of proliferative, quiescent, and necrotic cells. Both approaches show that cell death and DAMP release scale with pulse intensity. The model, validated against experimental data, further highlights the dual role of quiescent cells: some die and free space and resources, while others survive and resume proliferation. Together, these findings demonstrate how spheroid fate depends on pulse strength and emphasize the importance of accounting for quiescent cells when designing electroporation-based therapies.",
+    "pdf_link": "https://arxiv.org/pdf/2603.06087v1",
+    "categories": [
+      "q-bio.QM"
+    ]
+  }
+]

@@ -3,17 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Bio Watchtower — 2026-03-08</title>
+  <title>Q-Bio Watchtower — 2026-03-09</title>
   <style>
     /* ── Reset & Base ─────────────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #ffffff;
+      background: #f4f6f8;
       color: #1a1a1a;
       line-height: 1.6;
-      font-size: 15px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
@@ -32,122 +31,251 @@
       font-weight: 700;
       letter-spacing: -0.5px;
       margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     header h1 .accent { color: #3498db; }
+    header h1 .icon   { font-size: 1.7rem; line-height: 1; }
 
     header p.subtitle {
       font-size: 0.97rem;
       color: #bdc3c7;
-      margin-bottom: 4px;
+      margin-bottom: 14px;
     }
 
-    header p.meta {
-      font-size: 0.87rem;
-      color: #95a5a6;
+    header .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    header .pill {
+      background: rgba(52, 152, 219, 0.22);
+      border: 1px solid rgba(52, 152, 219, 0.48);
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      color: #cce4f7;
+      font-weight: 500;
     }
 
     /* ── Main Layout ──────────────────────────────────────────────────── */
     main {
       flex: 1;
-      max-width: 1400px;
+      max-width: 1360px;
+      width: 100%;
       margin: 0 auto;
       padding: 40px 48px 56px;
-      width: 100%;
     }
 
     /* ── Section Headings ─────────────────────────────────────────────── */
     .section-heading {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: #2c3e50;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
       margin-bottom: 18px;
-      padding-bottom: 8px;
+      padding-bottom: 9px;
       border-bottom: 2px solid #3498db;
       display: flex;
       align-items: center;
       gap: 9px;
     }
 
-    .section-heading .icon {
+    .section-heading .icon-sq {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
       background: #3498db;
       color: #fff;
       border-radius: 4px;
-      font-size: 0.78rem;
+      font-size: 0.82rem;
       font-weight: 800;
       flex-shrink: 0;
     }
 
-    /* ── Zero-Paper Banner ────────────────────────────────────────────── */
-    .no-papers-wrapper {
-      margin-bottom: 52px;
-    }
-
-    .no-papers-banner {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      border: 2px dashed #bdc3c7;
+    /* ── Table Wrapper ────────────────────────────────────────────────── */
+    .table-wrapper {
+      overflow-x: auto;
       border-radius: 8px;
-      background: #f9f9f9;
-      padding: 48px 32px;
-      text-align: center;
+      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.09);
+      margin-bottom: 44px;
     }
 
-    .no-papers-banner .np-icon {
-      font-size: 2.2rem;
-      line-height: 1;
-      flex-shrink: 0;
-      color: #95a5a6;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #ffffff;
+      font-size: 0.875rem;
     }
 
-    .no-papers-banner p {
-      font-size: 1.1rem;
+    /* Header row */
+    thead tr {
+      background: #2c3e50;
+      color: #ffffff;
+    }
+
+    thead th {
+      padding: 13px 16px;
+      text-align: left;
       font-weight: 600;
-      color: #555;
-      letter-spacing: 0.01em;
+      font-size: 0.77rem;
+      text-transform: uppercase;
+      letter-spacing: 0.55px;
+      border: 1px solid #3d5166;
+      white-space: nowrap;
     }
 
-    /* ── Narrative Summary ────────────────────────────────────────────── */
+    /* Body rows — alternating */
+    tbody tr:nth-child(odd)  { background: #f9f9f9; }
+    tbody tr:nth-child(even) { background: #ffffff; }
+    tbody tr:hover           { background: #eaf4fc; transition: background 0.13s ease; }
+
+    tbody td {
+      padding: 14px 16px;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+
+    /* ── Column: Rank ─── */
+    .col-rank {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #7f8c8d;
+      width: 56px;
+      white-space: nowrap;
+    }
+
+    /* ── Column: Title ─── */
+    .col-title { min-width: 280px; }
+
+    .paper-title-link {
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: #2471a3;
+      text-decoration: none;
+      line-height: 1.45;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .paper-title-link:hover {
+      color: #3498db;
+      text-decoration: underline;
+    }
+
+    .arxiv-id {
+      display: inline-block;
+      font-size: 0.71rem;
+      color: #888;
+      background: #efefef;
+      border-radius: 4px;
+      padding: 2px 8px;
+      font-family: "Courier New", monospace;
+      letter-spacing: 0.15px;
+    }
+
+    /* ── Column: Authors ─── */
+    .col-authors {
+      color: #555;
+      font-size: 0.83rem;
+      min-width: 145px;
+      line-height: 1.55;
+    }
+
+    /* ── Column: Date ─── */
+    .col-date {
+      white-space: nowrap;
+      color: #666;
+      font-size: 0.83rem;
+    }
+
+    /* ── Column: TL;DR ─── */
+    .col-tldr {
+      font-size: 0.85rem;
+      color: #333;
+      min-width: 260px;
+      line-height: 1.6;
+    }
+
+    /* ── Column: Keywords ─── */
+    .col-keywords {
+      font-size: 0.8rem;
+      color: #555;
+      font-style: italic;
+      min-width: 200px;
+      line-height: 1.65;
+    }
+
+    /* ── Column: Score ─── */
+    .col-score {
+      text-align: center;
+      width: 72px;
+    }
+
+    .score-badge {
+      display: inline-block;
+      padding: 5px 11px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #ffffff;
+      min-width: 40px;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    /* Score colour tiers per spec */
+    .score-green  { background: #27ae60; }   /* 8–10 */
+    .score-orange { background: #f39c12; }   /* 5–7  */
+    .score-grey   { background: #95a5a6; }   /* 0–4  */
+
+    /* ── Narrative Section ────────────────────────────────────────────── */
     .narrative-section { margin-bottom: 0; }
 
     .narrative-box {
-      background: #f4f8fb;
+      background: #ffffff;
       border-left: 4px solid #3498db;
-      border-radius: 0 6px 6px 0;
-      padding: 22px 28px;
-      color: #1a1a1a;
-      font-size: 0.94rem;
-      line-height: 1.80;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.07);
-      max-width: 980px;
+      border-radius: 0 8px 8px 0;
+      padding: 24px 30px;
+      font-size: 0.95rem;
+      color: #222;
+      line-height: 1.8;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      max-width: 1020px;
     }
 
     /* ── Footer ───────────────────────────────────────────────────────── */
     footer {
       background: #2c3e50;
-      color: #95a5a6;
+      color: #8fafc8;
       text-align: center;
-      font-size: 0.81rem;
+      font-size: 0.8rem;
       padding: 18px 48px;
       border-top: 3px solid #3498db;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.3px;
       margin-top: auto;
     }
 
+    footer a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    footer a:hover { text-decoration: underline; }
+
     /* ── Responsive ───────────────────────────────────────────────────── */
-    @media (max-width: 768px) {
-      header { padding: 24px 16px 20px; }
+    @media (max-width: 900px) {
+      header  { padding: 24px 18px 20px; }
       header h1 { font-size: 1.5rem; }
-      main { padding: 24px 14px 36px; }
-      footer { padding: 16px 14px; }
-      .no-papers-banner { padding: 36px 18px; flex-direction: column; }
+      main    { padding: 28px 14px 40px; }
+      footer  { padding: 16px 14px; }
     }
   </style>
 </head>
@@ -157,11 +285,17 @@
      HEADER
 ════════════════════════════════════════════════════════════════ -->
 <header>
-  <h1>Q-Bio <span class="accent">Watchtower</span> &mdash; 2026-03-08</h1>
-  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-08 UTC</p>
-  <p class="meta">
-    0 papers &nbsp;&middot;&nbsp; arXiv weekend gap &mdash; no new submissions in the last 3 days
-  </p>
+  <h1>
+    <span class="icon">&#128300;</span>
+    Q-Bio&nbsp;<span class="accent">Watchtower</span>
+    &mdash; 2026-03-09
+  </h1>
+  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-09 UTC</p>
+  <div class="meta-pills">
+    <span class="pill">&#128196;&nbsp; 2 papers</span>
+    <span class="pill">&#128197;&nbsp; Published: 2026-03-06</span>
+    <span class="pill">&#128193;&nbsp; Source: arXiv q-bio.QM</span>
+  </div>
 </header>
 
 <!-- ════════════════════════════════════════════════════════════════
@@ -169,28 +303,133 @@
 ════════════════════════════════════════════════════════════════ -->
 <main>
 
-  <!-- ── Ranked Paper Table (zero-paper state) ───────────────────── -->
+  <!-- ── Ranked Paper Table ────────────────────────────────────────── -->
   <h2 class="section-heading">
-    <span class="icon">&#8679;</span> Ranked Papers
+    <span class="icon-sq">&#8679;</span> Ranked Papers
   </h2>
 
-  <div class="no-papers-wrapper">
-    <div class="no-papers-banner">
-      <span class="np-icon">&#128203;</span>
-      <p>No new q-bio.QM papers in the last 3 days.</p>
-    </div>
-  </div>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Title</th>
+          <th>Authors</th>
+          <th>Published</th>
+          <th>TL;DR</th>
+          <th>Keywords</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
 
-  <!-- ── Narrative Summary ───────────────────────────────────────── -->
+        <!-- ───────────────────────────────────────────────────────────
+             Row 1 | arXiv:2603.06087v1 | Score: 8  (green)
+        ─────────────────────────────────────────────────────────────── -->
+        <tr>
+          <td class="col-rank">#1</td>
+
+          <td class="col-title">
+            <a class="paper-title-link"
+               href="https://arxiv.org/pdf/2603.06087v1"
+               target="_blank"
+               rel="noopener noreferrer">
+              Multicellular Tumour Spheroids Exposure to Pulsed Electric Field:
+              A Combined Experimental and Mathematical Modelling Study Highlighting
+              Temporal Dynamics of DAMP Release and Accelerated Regrowth at
+              Intermediate Field Intensities
+            </a>
+            <span class="arxiv-id">arXiv:2603.06087v1</span>
+          </td>
+
+          <td class="col-authors">
+            Emma Leschiera, Nicolas Mattei, Marie-Pierre Rols <em>et&nbsp;al.</em>
+          </td>
+
+          <td class="col-date">2026-03-06</td>
+
+          <td class="col-tldr">
+            A hybrid mathematical model validated against in vitro experiments
+            reveals how pulsed electric field intensity governs tumour spheroid
+            cell-death dynamics, DAMP release, and accelerated regrowth.
+          </td>
+
+          <td class="col-keywords">
+            Hybrid Individual-Based Model,
+            Mathematical Tumour Spheroid Model,
+            Electroporation,
+            Immunogenic Cell Death (ICD),
+            Dynamical Systems (ODE/PDE Cell-Population Model)
+          </td>
+
+          <td class="col-score">
+            <span class="score-badge score-green">8</span>
+          </td>
+        </tr>
+
+        <!-- ───────────────────────────────────────────────────────────
+             Row 2 | arXiv:2603.06567v1 | Score: 6  (orange)
+        ─────────────────────────────────────────────────────────────── -->
+        <tr>
+          <td class="col-rank">#2</td>
+
+          <td class="col-title">
+            <a class="paper-title-link"
+               href="https://arxiv.org/pdf/2603.06567v1"
+               target="_blank"
+               rel="noopener noreferrer">
+              A recipe for scalable attention-based MLIPs: unlocking long-range
+              accuracy with all-to-all node attention
+            </a>
+            <span class="arxiv-id">arXiv:2603.06567v1</span>
+          </td>
+
+          <td class="col-authors">
+            Eric Qu, Brandon M. Wood, Aditi S. Krishnapriyan <em>et&nbsp;al.</em>
+          </td>
+
+          <td class="col-date">2026-03-06</td>
+
+          <td class="col-tldr">
+            AllScAIP is a scalable, all-to-all attention-based machine-learning
+            interatomic potential that overcomes long-range interaction limitations,
+            achieving state-of-the-art energy/force accuracy on biomolecular systems
+            and enabling stable long-timescale molecular dynamics simulations.
+          </td>
+
+          <td class="col-keywords">
+            Machine Learning Interatomic Potentials (MLIPs),
+            All-To-All Attention Mechanism,
+            Molecular Dynamics Simulation,
+            Graph Neural Network,
+            Energy/Force Prediction
+          </td>
+
+          <td class="col-score">
+            <span class="score-badge score-orange">6</span>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div><!-- /.table-wrapper -->
+
+  <!-- ── Narrative Summary ─────────────────────────────────────────── -->
   <section class="narrative-section">
     <h2 class="section-heading">
-      <span class="icon">&#8801;</span> Narrative Summary
+      <span class="icon-sq">&#8801;</span> Narrative Summary
     </h2>
     <div class="narrative-box">
-      No q-bio.QM preprints were posted to arXiv in the look-back window ending 2026-03-08,
-      reflecting the expected weekend submission gap (arXiv does not process new listings on
-      Saturdays or Sundays). The digest will resume automatically on the next business day
-      when new quantitative biology submissions become available.
+      Today&#8217;s digest features two papers advancing quantitative biology through
+      complementary computational paradigms.
+      The top-ranked study fuses wet-lab electroporation experiments with a hybrid
+      individual-based/continuous mathematical model, revealing that intermediate
+      pulsed electric field intensities accelerate tumour spheroid regrowth by
+      sparing quiescent cells while triggering immunogenic DAMP release.
+      The second paper introduces AllScAIP, a scalable all-to-all attention
+      architecture for machine-learning interatomic potentials that overcomes
+      long-range interaction limitations, achieving state-of-the-art accuracy
+      across biomolecular, materials, and catalyst benchmarks.
     </div>
   </section>
 
@@ -200,7 +439,13 @@
      FOOTER
 ════════════════════════════════════════════════════════════════ -->
 <footer>
-  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp; Data source: arXiv q-bio.QM &nbsp;&middot;&nbsp; 2026-03-08 06:44 UTC
+  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp;
+  Data source:
+  <a href="https://arxiv.org/list/q-bio.QM/recent"
+     target="_blank"
+     rel="noopener noreferrer">arXiv q-bio.QM</a>
+  &nbsp;&middot;&nbsp;
+  2026-03-09T00:00:00Z
 </footer>
 
 </body>
