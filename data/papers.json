@@ -1,40 +1,87 @@
 [
   {
-    "id": "2603.06567v1",
-    "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
+    "id": "2603.08444v1",
+    "title": "Hydrodynamic origins of symmetric swimming strategies",
     "authors": [
-      "Eric Qu",
-      "Brandon M. Wood",
-      "Aditi S. Krishnapriyan",
-      "Zachary W. Ulissi"
+      "Takahiro Kanazawa",
+      "Kenta Ishimoto",
+      "Kyogo Kawaguchi"
     ],
-    "published_date": "2026-03-06T18:57:04Z",
-    "abstract": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
-    "pdf_link": "https://arxiv.org/pdf/2603.06567v1",
+    "published_date": "2026-03-09T14:40:32Z",
+    "abstract": "Efficient locomotion is important for the evolution of complex life, yet the physical principles selecting specific swimming strokes often remain entangled with biological constraints. In viscous fluids, the scallop theorem constrains the temporal organization of strokes, but no analogous principle is known for their spatial structure, leaving the prevalence of symmetric gaits across diverse organisms without a physical explanation. Here we show that spatial symmetry acts as an emergent organizing principle for efficiency in viscous fluids. By analysing deformable swimmers whose strokes are not constrained to any particular symmetry class, we identify a hydrodynamic duality: symmetric and anti-symmetric strokes are dynamically equivalent, yielding identical speeds and efficiencies, which we prove are optimal among all strokes. By contrast, the optimal efficiency cannot be achieved by generic non-symmetric strokes. We validate this using numerical simulations of Stokes flow, demonstrating that these symmetry rules persist even in three-dimensional body plans. Our results suggest that the prevalence of symmetric and alternating gaits in nature reflects not merely a developmental constraint, but a physical optimality principle for locomotion in viscous environments, complementing developmental and neural constraints.",
+    "pdf_link": "https://arxiv.org/pdf/2603.08444v1",
     "categories": [
-      "cs.LG",
-      "cond-mat.mtrl-sci",
-      "cs.CE",
-      "physics.chem-ph",
+      "physics.bio-ph",
+      "physics.flu-dyn",
       "q-bio.QM"
     ]
   },
   {
-    "id": "2603.06087v1",
-    "title": "Multicellular Tumour Spheroids Exposure to Pulsed Electric Field: A Combined Experimental and Mathematical Modelling Study Highlighting Temporal Dynamics of DAMP Release and Accelerated Regrowth at Intermediate Field Intensities",
+    "id": "2603.08345v1",
+    "title": "Amortized Phylodynamic Inference with Neural Bayes Estimators and Recursive Neural Networks",
     "authors": [
-      "Emma Leschiera",
-      "Nicolas Mattei",
-      "Marie-Pierre Rols",
-      "Muriel Golzio",
-      "Jelena Kolosnjaj-Tabi",
-      "Clair Poignard"
+      "Alexander E. Zarebski",
+      "Thomas Williams",
+      "Louis du Plessis"
     ],
-    "published_date": "2026-03-06T09:41:44Z",
-    "abstract": "Electroporation is increasingly used as a percutaneous ablation technique for tumours located near vital structures. Although effective, tumour regrowth may still occur. At the same time, in vitro studies on cell monolayers have shown that electroporation can trigger immunogenic cell death (ICD) through the release of damage-associated molecular patterns (DAMPs). These molecules can stimulate the immune system and could counteract tumour regrowth. To fully exploit electroporation, two key questions must be addressed: (1) what dynamics drive tumour regrowth, and (2) how ICD unfolds in space and time within three-dimensional cellular structures, which better mimic in vivo conditions than 2D cultures. Here, we combine in vitro experiments with a hybrid individual-based/continuous computational model to explore tumour spheroid regrowth and ICD potential under different pulse intensities. Experiments quantify spheroid viability, growth rate, and the release of ATP and HMGB1. In parallel, the hybrid model predicts the dynamics of proliferative, quiescent, and necrotic cells. Both approaches show that cell death and DAMP release scale with pulse intensity. The model, validated against experimental data, further highlights the dual role of quiescent cells: some die and free space and resources, while others survive and resume proliferation. Together, these findings demonstrate how spheroid fate depends on pulse strength and emphasize the importance of accounting for quiescent cells when designing electroporation-based therapies.",
-    "pdf_link": "https://arxiv.org/pdf/2603.06087v1",
+    "published_date": "2026-03-09T13:07:01Z",
+    "abstract": "Phylodynamics is used to estimate epidemic dynamics from phylogenetic trees or genomic sequences of pathogens, but the likelihood calculations needed can be challenging for complex models. We present a neural Bayes estimator (NBE) for key epidemic quantities: the reproduction number, prevalence, and cumulative infections through time. By performing quantile regression over tree space, the NBE allows us to estimate posterior medians and credible intervals directly from a reconstructed tree. Our approach uses a recursive neural network as a tree embedding network with a prediction network conditioned on time and quantile level to generate the estimates. In simulation studies, the NBE achieves good predictive performance, with conservative uncertainty estimates. Compared with a BEAST2 fixed-tree analysis, the NBE gives less biased estimates of time-varying reproduction numbers in our test setting. Under a misspecified sampling model, the NBE performance degrades (as expected) but remains reasonable, and fine-tuning a pre-trained model yields estimates comparable to those from a model trained from scratch, at substantially lower computational cost.",
+    "pdf_link": "https://arxiv.org/pdf/2603.08345v1",
+    "categories": [
+      "stat.ME",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.07364v1",
+    "title": "Neural Control and Learning of Simulated Hand Movements With an EMG-Based Closed-Loop Interface",
+    "authors": [
+      "Balint K. Hodossy",
+      "Dario Farina"
+    ],
+    "published_date": "2026-03-07T22:17:38Z",
+    "abstract": "The standard engineering approach when facing uncertainty is modelling. Mixing data from a well-calibrated model with real recordings has led to breakthroughs in many applications of AI, from computer vision to autonomous driving. This type of model-based data augmentation is now beginning to show promising results in biosignal processing as well. However, while these simulated data are necessary, they are not sufficient for virtual neurophysiological experiments. Simply generating neural signals that reproduce a predetermined motor behaviour does not capture the flexibility, variability, and causal structure required to probe neural mechanisms during control tasks. In this study, we present an in silico neuromechanical model that combines a fully forward musculoskeletal simulation, reinforcement learning, and sequential, online electromyography synthesis. This framework provides not only synchronised kinematics, dynamics, and corresponding neural activity, but also explicitly models feedback and feedforward control in a virtual participant. In this way, online control problems can be represented, as the simulated human adapts its behaviour via a learned RL policy in response to a neural interface. For example, the virtual user can learn hand movements robust to perturbations or the control of a virtual gesture decoder. We illustrate the approach using a gesturing task within a biomechanical hand model, and lay the groundwork for using this technique to evaluate neural controllers, augment training datasets, and generate synthetic data for neurological conditions.",
+    "pdf_link": "https://arxiv.org/pdf/2603.07364v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.HC",
+      "q-bio.NC"
+    ]
+  },
+  {
+    "id": "2603.07279v1",
+    "title": "Learning When to Look: On-Demand Keypoint-Video Fusion for Animal Behavior Analysis",
+    "authors": [
+      "Weihan Li",
+      "Jingyang Ke",
+      "Yule Wang",
+      "Chengrui Li",
+      "Anqi Wu"
+    ],
+    "published_date": "2026-03-07T16:43:35Z",
+    "abstract": "Understanding animal behavior from video is essential for neuroscience research. Modern laboratories typically collect two complementary data streams: skeletal keypoints from pose estimation tools and raw video recordings. Keypoint-based methods are efficient but suffer from geometric ambiguity, environmental blindness, and sensitivity to occlusions. Video-based methods capture rich context but require processing every frame, making them impractical for the hundreds of hours of recordings that modern experiments produce. We introduce LookAgain, a multimodal framework that combines the efficiency of keypoints with the representational power of video through on-demand visual grounding. During training, LookAgain uses dense visual features to pretrain a motion encoder and to train a gating module that learns which frames require visual context. During inference, this gating module activates visual processing only when keypoint signals are ambiguous, while maintaining performance comparable to using all frames. Experiments on single-animal and multi-animal benchmarks show that LookAgain achieves strong performance with significantly reduced computational cost, enabling high-quality behavior analysis on long-duration recordings.",
+    "pdf_link": "https://arxiv.org/pdf/2603.07279v1",
     "categories": [
       "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.07254v1",
+    "title": "Minority-Triggered Reorientations Yield Macroscopic Cascades and Enhanced Responsiveness in Swarms",
+    "authors": [
+      "Simon Syga",
+      "Chandraniva Guha Ray",
+      "Josué Manik Nava-Sedeño",
+      "Fernando Peruani",
+      "Andreas Deutsch"
+    ],
+    "published_date": "2026-03-07T15:09:29Z",
+    "abstract": "Collective motion in animals and cells often exhibits rapid reorientations and scale-free velocity correlations. This allows information to spread rapidly through the group, allowing an adequate collective response to environmental changes and threats such as predators. To explain this phenomenon, we introduce a simple, biologically plausible mechanism: a minority-triggered reorientation rule. When local order is high, agents sometimes follow a strongly deviating neighbor instead of the majority. This rule qualitatively changes the macroscopic system behavior compared to traditional flocking models, as it generates heavy-tailed cascades of reorientations over broad parameter ranges. Our mechanism preserves cohesion while markedly enhancing collective responsiveness because localized directional cues elicit amplified group-level reorientation. Our results provide a parsimonious, biologically interpretable route to critical-like fluctuations and high responsiveness during flocking.",
+    "pdf_link": "https://arxiv.org/pdf/2603.07254v1",
+    "categories": [
+      "q-bio.QM",
+      "cond-mat.stat-mech",
+      "physics.bio-ph"
     ]
   }
 ]
