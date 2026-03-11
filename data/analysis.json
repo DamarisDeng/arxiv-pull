@@ -14,97 +14,84 @@
       "stat.ME",
       "q-bio.QM"
     ],
-    "tldr": "Proposes a neural Bayes estimator built on recursive neural networks and quantile regression to directly infer time-varying epidemic parameters from phylogenetic trees with calibrated uncertainty quantification.",
+    "tldr": "A neural Bayes estimator using recursive neural networks performs amortized quantile regression over phylogenetic trees to infer epidemic dynamics faster and with less bias than BEAST2.",
     "keywords": [
       "Neural Bayes Estimator",
       "Recursive Neural Network",
       "Quantile Regression",
       "Phylodynamic Inference",
-      "BEAST2"
+      "Amortized Inference"
     ],
-    "relevance_score": 9
+    "relevance_score": 10
   },
   {
-    "id": "2603.07364v1",
-    "title": "Neural Control and Learning of Simulated Hand Movements With an EMG-Based Closed-Loop Interface",
+    "id": "2603.09033v1",
+    "title": "Sequential learning theory for Markov genealogy processes",
     "authors": [
-      "Balint K. Hodossy",
-      "Dario Farina"
+      "David J Pascall"
     ],
-    "published_date": "2026-03-07T22:17:38Z",
-    "abstract": "The standard engineering approach when facing uncertainty is modelling. Mixing data from a well-calibrated model with real recordings has led to breakthroughs in many applications of AI, from computer vision to autonomous driving. This type of model-based data augmentation is now beginning to show promising results in biosignal processing as well. However, while these simulated data are necessary, they are not sufficient for virtual neurophysiological experiments. Simply generating neural signals that reproduce a predetermined motor behaviour does not capture the flexibility, variability, and causal structure required to probe neural mechanisms during control tasks. In this study, we present an in silico neuromechanical model that combines a fully forward musculoskeletal simulation, reinforcement learning, and sequential, online electromyography synthesis. This framework provides not only synchronised kinematics, dynamics, and corresponding neural activity, but also explicitly models feedback and feedforward control in a virtual participant. In this way, online control problems can be represented, as the simulated human adapts its behaviour via a learned RL policy in response to a neural interface. For example, the virtual user can learn hand movements robust to perturbations or the control of a virtual gesture decoder. We illustrate the approach using a gesturing task within a biomechanical hand model, and lay the groundwork for using this technique to evaluate neural controllers, augment training datasets, and generate synthetic data for neurological conditions.",
-    "pdf_link": "https://arxiv.org/pdf/2603.07364v1",
+    "published_date": "2026-03-10T00:09:44Z",
+    "abstract": "We introduce a filtration-based framework for studying when and why adding taxa improves phylodynamic inference, by constructing a natural ordering of observed tips and applying sequential Bayesian analysis to the resulting filtration. We decompose the expected variance reduction on taxa addition into learning, mismatch, and covariance components, classify estimands into learning classes based on the pathwise behaviour of the mismatch, and show that for absorbing estimands an oracle who knows the latent absorption status obtains event-wise learning guarantees unavailable to the analyst. The gap between oracle and analyst is irreducible assumptions that are likely to hold for many real phylodynamic estimands, establishing a fundamental limit on what sequence data alone can reveal about the latent genealogy.",
+    "pdf_link": "https://arxiv.org/pdf/2603.09033v1",
     "categories": [
       "q-bio.QM",
-      "cs.HC",
-      "q-bio.NC"
+      "math.ST"
     ],
-    "tldr": "Presents an in silico neuromechanical framework integrating musculoskeletal simulation, reinforcement learning, and online EMG synthesis to model closed-loop neural control of hand movements in a virtual participant.",
+    "tldr": "A filtration-based sequential Bayesian framework decomposes variance reduction on taxa addition into learning, mismatch, and covariance components, establishing fundamental inferential limits of sequence data for phylodynamic analysis.",
     "keywords": [
-      "Reinforcement Learning",
-      "Musculoskeletal Simulation",
-      "Electromyography Synthesis",
-      "Feedforward/Feedback Control Model",
-      "Biomechanical Hand Model"
+      "Sequential Bayesian Analysis",
+      "Markov Genealogy Processes",
+      "Filtration Framework",
+      "Phylodynamic Inference",
+      "Variance Decomposition"
     ],
     "relevance_score": 8
   },
   {
-    "id": "2603.07279v1",
-    "title": "Learning When to Look: On-Demand Keypoint-Video Fusion for Animal Behavior Analysis",
+    "id": "2603.09531v1",
+    "title": "Association of Radiologic PPFE Change with Mortality in Lung Cancer Screening Cohorts",
     "authors": [
-      "Weihan Li",
-      "Jingyang Ke",
-      "Yule Wang",
-      "Chengrui Li",
-      "Anqi Wu"
+      "Shahab Aslani",
+      "Mehran Azimbagirad",
+      "Daryl Cheng",
+      "Daisuke Yamada",
+      "Ryoko Egashira",
+      "Adam Szmul",
+      "Justine Chan-Fook",
+      "Robert Chapman",
+      "Alfred Chung Pui So",
+      "Shanshan Wang",
+      "John McCabe",
+      "Tianqi Yang",
+      "Jose M Brenes",
+      "Eyjolfur Gudmundsson",
+      "The SUMMIT Consortium",
+      "Susan M. Astley",
+      "Daniel C. Alexander",
+      "Sam M. Janes",
+      "Joseph Jacob"
     ],
-    "published_date": "2026-03-07T16:43:35Z",
-    "abstract": "Understanding animal behavior from video is essential for neuroscience research. Modern laboratories typically collect two complementary data streams: skeletal keypoints from pose estimation tools and raw video recordings. Keypoint-based methods are efficient but suffer from geometric ambiguity, environmental blindness, and sensitivity to occlusions. Video-based methods capture rich context but require processing every frame, making them impractical for the hundreds of hours of recordings that modern experiments produce. We introduce LookAgain, a multimodal framework that combines the efficiency of keypoints with the representational power of video through on-demand visual grounding. During training, LookAgain uses dense visual features to pretrain a motion encoder and to train a gating module that learns which frames require visual context. During inference, this gating module activates visual processing only when keypoint signals are ambiguous, while maintaining performance comparable to using all frames. Experiments on single-animal and multi-animal benchmarks show that LookAgain achieves strong performance with significantly reduced computational cost, enabling high-quality behavior analysis on long-duration recordings.",
-    "pdf_link": "https://arxiv.org/pdf/2603.07279v1",
-    "categories": [
-      "q-bio.QM"
-    ],
-    "tldr": "Develops LookAgain, a multimodal framework with a learned gating module that fuses skeletal keypoints with on-demand video features to enable efficient, high-accuracy animal behavior classification at scale.",
-    "keywords": [
-      "Multimodal Fusion",
-      "Pose Estimation",
-      "Gating Module",
-      "Motion Encoder Pretraining",
-      "Animal Behavior Classification"
-    ],
-    "relevance_score": 7
-  },
-  {
-    "id": "2603.07254v1",
-    "title": "Minority-Triggered Reorientations Yield Macroscopic Cascades and Enhanced Responsiveness in Swarms",
-    "authors": [
-      "Simon Syga",
-      "Chandraniva Guha Ray",
-      "Josué Manik Nava-Sedeño",
-      "Fernando Peruani",
-      "Andreas Deutsch"
-    ],
-    "published_date": "2026-03-07T15:09:29Z",
-    "abstract": "Collective motion in animals and cells often exhibits rapid reorientations and scale-free velocity correlations. This allows information to spread rapidly through the group, allowing an adequate collective response to environmental changes and threats such as predators. To explain this phenomenon, we introduce a simple, biologically plausible mechanism: a minority-triggered reorientation rule. When local order is high, agents sometimes follow a strongly deviating neighbor instead of the majority. This rule qualitatively changes the macroscopic system behavior compared to traditional flocking models, as it generates heavy-tailed cascades of reorientations over broad parameter ranges. Our mechanism preserves cohesion while markedly enhancing collective responsiveness because localized directional cues elicit amplified group-level reorientation. Our results provide a parsimonious, biologically interpretable route to critical-like fluctuations and high responsiveness during flocking.",
-    "pdf_link": "https://arxiv.org/pdf/2603.07254v1",
+    "published_date": "2026-03-10T11:37:50Z",
+    "abstract": "Background: Pleuroparenchymal fibroelastosis (PPFE) is an upper lobe predominant fibrotic lung abnormality associated with increased mortality in established interstitial lung disease. However, the clinical significance of radiologic PPFE progression in lung cancer screening populations remains unclear. We investigated whether longitudinal change in PPFE quantified on low dose CT independently associates with mortality and respiratory morbidity. Methods: We analysed longitudinal low-dose CT scans and clinical data from two lung cancer screening studies: the National Lung Screening Trial (NLST; n=7980) and the SUMMIT study (n=8561). An automated algorithm quantified PPFE volume on baseline and follow up scans. Annualised change in PPFE (dPPFE) was derived and dichotomised using a distribution based threshold to define progressive PPFE. Associations between dPPFE and mortality were evaluated using Cox proportional hazards models adjusted for demographic and clinical variables. In the SUMMIT cohort, dPPFE was also examined in relation to clinical outcomes. Findings: dPPFE independently associated with mortality in both cohorts (NLST: HR 1.25, 95% CI 1.01-1.56, p=0.042; SUMMIT: HR 3.14, 95% CI 1.66-5.97, p<0.001). Kaplan-Meier curves showed reduced survival among participants with progressive PPFE in both cohorts. In SUMMIT, dPPFE was associated with higher respiratory admissions (IRR 2.79, p<0.001), increased antibiotic and steroid use (IRR 1.55, p=0.010), and a trend towards higher mMRC scores (OR 1.40, p=0.055). Interpretation: Radiologic PPFE progression independently associates with mortality across two large lung cancer screening cohorts and with adverse clinical outcomes. Quantitative assessment of PPFE progression may provide a clinically relevant imaging biomarker for identifying individuals at increased respiratory risk within screening programmes.",
+    "pdf_link": "https://arxiv.org/pdf/2603.09531v1",
     "categories": [
       "q-bio.QM",
-      "cond-mat.stat-mech",
-      "physics.bio-ph"
+      "cs.CV",
+      "eess.IV",
+      "stat.AP"
     ],
-    "tldr": "Establishes a minority-triggered reorientation rule in agent-based flocking models that produces heavy-tailed cascade distributions and scale-free velocity correlations, providing a parsimonious mechanism for critical-like collective responsiveness in biological swarms.",
+    "tldr": "Automated CT volumetric analysis of 16,500 lung cancer screening participants shows annualised PPFE progression independently predicts mortality and adverse respiratory outcomes via Cox proportional hazards modelling.",
     "keywords": [
-      "Agent-Based Flocking Model",
-      "Scale-Free Velocity Correlations",
-      "Heavy-Tailed Cascade Distributions",
-      "Collective Motion Dynamics",
-      "Self-Organized Criticality"
+      "Automated Image Segmentation",
+      "Cox Proportional Hazards Model",
+      "Kaplan-Meier Survival Analysis",
+      "Longitudinal CT Quantification",
+      "Imaging Biomarker"
     ],
     "relevance_score": 6
   },
   {
-    "id": "2603.08444v1",
+    "id": "2603.08444v2",
     "title": "Hydrodynamic origins of symmetric swimming strategies",
     "authors": [
       "Takahiro Kanazawa",
@@ -112,20 +99,20 @@
       "Kyogo Kawaguchi"
     ],
     "published_date": "2026-03-09T14:40:32Z",
-    "abstract": "Efficient locomotion is important for the evolution of complex life, yet the physical principles selecting specific swimming strokes often remain entangled with biological constraints. In viscous fluids, the scallop theorem constrains the temporal organization of strokes, but no analogous principle is known for their spatial structure, leaving the prevalence of symmetric gaits across diverse organisms without a physical explanation. Here we show that spatial symmetry acts as an emergent organizing principle for efficiency in viscous fluids. By analysing deformable swimmers whose strokes are not constrained to any particular symmetry class, we identify a hydrodynamic duality: symmetric and anti-symmetric strokes are dynamically equivalent, yielding identical speeds and efficiencies, which we prove are optimal among all strokes. By contrast, the optimal efficiency cannot be achieved by generic non-symmetric strokes. We validate this using numerical simulations of Stokes flow, demonstrating that these symmetry rules persist even in three-dimensional body plans. Our results suggest that the prevalence of symmetric and alternating gaits in nature reflects not merely a developmental constraint, but a physical optimality principle for locomotion in viscous environments, complementing developmental and neural constraints.",
-    "pdf_link": "https://arxiv.org/pdf/2603.08444v1",
+    "abstract": "Efficient locomotion is important for the evolution of complex life, yet the physical principles selecting specific swimming strokes often remain entangled with biological constraints. In viscous fluids, the scallop theorem constrains the temporal organization of strokes, but no analogous principle is known for their spatial structure, leaving the prevalence of symmetric gaits across diverse organisms without a physical explanation. Here we show that spatial symmetry acts as an emergent organizing principle for efficiency in viscous fluids. By analysing deformable swimmers whose strokes are not constrained to any particular symmetry class, we identify a hydrodynamic duality: symmetric and anti-symmetric strokes are dynamically equivalent, yielding identical speeds and efficiencies, which we prove are optimal among all strokes. We validate this using numerical simulations of Stokes flow, demonstrating that these symmetry rules persist even in three-dimensional body plans. Our results suggest that the prevalence of symmetric and alternating gaits in nature reflects not merely a developmental constraint, but a physical optimality principle for locomotion in viscous environments, complementing developmental and neural constraints.",
+    "pdf_link": "https://arxiv.org/pdf/2603.08444v2",
     "categories": [
       "physics.bio-ph",
       "physics.flu-dyn",
       "q-bio.QM"
     ],
-    "tldr": "Demonstrates via hydrodynamic duality analysis and Stokes flow simulations that spatial symmetry in swimming strokes emerges as a physical optimality principle for locomotion efficiency in viscous fluids.",
+    "tldr": "Unconstrained Stokes flow analysis proves symmetric and anti-symmetric swimming strokes are hydrodynamically dual and jointly optimal, providing a fluid-mechanical explanation for the prevalence of symmetric gaits in nature.",
     "keywords": [
       "Stokes Flow Simulation",
       "Scallop Theorem",
       "Hydrodynamic Duality",
-      "Viscous Locomotion Optimization",
-      "Deformable Swimmer Model"
+      "Dynamical Systems",
+      "Numerical Optimisation"
     ],
     "relevance_score": 5
   }
