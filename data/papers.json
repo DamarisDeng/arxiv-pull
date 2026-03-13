@@ -1,5 +1,133 @@
 [
   {
+    "id": "2603.12253v1",
+    "title": "Binding Free Energies without Alchemy",
+    "authors": [
+      "Michael Brocidiacono",
+      "Brandon Novy",
+      "Rishabh Dey",
+      "Konstantin I. Popov",
+      "Alexander Tropsha"
+    ],
+    "published_date": "2026-03-12T17:58:49Z",
+    "abstract": "Absolute Binding Free Energy (ABFE) methods are among the most accurate computational techniques for predicting protein-ligand binding affinities, but their utility is limited by the need for many simulations of alchemically modified intermediate states. We propose Direct Binding Free Energy (DBFE), an end-state ABFE method in implicit solvent that requires no alchemical intermediates. DBFE outperforms OBC2 double decoupling on a host-guest benchmark and performs comparably to OBC2 MM/GBSA on a protein-ligand benchmark. Since receptor and ligand simulations can be precomputed and amortized across compounds, DBFE requires only one complex simulation per ligand compared to the many lambda windows needed for double decoupling, making it a promising candidate for virtual screening workflows. We publicly release the code for this method at https://github.com/molecularmodelinglab/dbfe.",
+    "pdf_link": "https://arxiv.org/pdf/2603.12253v1",
+    "categories": [
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.12016v1",
+    "title": "Nyxus: A Next Generation Image Feature Extraction Library for the Big Data and AI Era",
+    "authors": [
+      "Nicholas Schaub",
+      "Andriy Kharchenko",
+      "Hamdah Abbasi",
+      "Sameeul Samee",
+      "Hythem Sidky",
+      "Nathan Hotaling"
+    ],
+    "published_date": "2026-03-12T14:58:07Z",
+    "abstract": "Modern imaging instruments can produce terabytes to petabytes of data for a single experiment. The biggest barrier to processing big image datasets has been computational, where image analysis algorithms often lack the efficiency needed to process such large datasets or make tradeoffs in robustness and accuracy. Deep learning algorithms have vastly improved the accuracy of the first step in an analysis workflow (region segmentation), but the expansion of domain specific feature extraction libraries across scientific disciplines has made it difficult to compare the performance and accuracy of extracted features. To address these needs, we developed a novel feature extraction library called Nyxus. Nyxus is designed from the ground up for scalable out-of-core feature extraction for 2D and 3D image data and rigorously tested against established standards. The comprehensive feature set of Nyxus covers multiple biomedical domains including radiomics and cellular analysis, and is designed for computational scalability across CPUs and GPUs. Nyxus has been packaged to be accessible to users of various skill sets and needs: as a Python package for code developers, a command line tool, as a Napari plugin for low to no-code users or users that want to visualize results, and as an Open Container Initiative (OCI) compliant container that can be used in cloud or super-computing workflows aimed at processing large data sets. Further, Nyxus enables a new methodological approach to feature extraction allowing for programmatic tuning of many features sets for optimal computational efficiency or coverage for use in novel machine learning and deep learning applications.",
+    "pdf_link": "https://arxiv.org/pdf/2603.12016v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.11476v1",
+    "title": "Leveraging Phytolith Research using Artificial Intelligence",
+    "authors": [
+      "Andrés G. Mejía Ramón",
+      "Kate Dudgeon",
+      "Nina Witteveen",
+      "Dolores Piperno",
+      "Michael Kloster",
+      "Luigi Palopoli",
+      "Mónica Moraes R.",
+      "José M. Capriles",
+      "Umberto Lombardo"
+    ],
+    "published_date": "2026-03-12T02:57:23Z",
+    "abstract": "Phytolith analysis is a crucial tool for reconstructing past vegetation and human activities, but traditional methods are severely limited by labour-intensive, time-consuming manual microscopy. To address this bottleneck, we present Sorometry: a comprehensive end-to-end artificial intelligence pipeline for the high-throughput digitisation, inference, and interpretation of phytoliths. Our workflow processes z-stacked optical microscope scans to automatically generate synchronised 2D orthoimages and 3D point clouds of individual microscopic particles. We developed a multimodal fusion model that combines ConvNeXt for 2D image analysis and PointNet++ for 3D point cloud analysis, supported by a graphical user interface for expert annotation and review. Tested on reference collections and archaeological samples from the Bolivian Amazon, our fusion model achieved a global classification accuracy of 77.9\\% across 24 diagnostic morphotypes and 84.5% for segmentation quality. Crucially, the integration of 3D data proved essential for distinguishing complex morphotypes (such as grass silica short cell phytoliths) whose diagnostic features are often obscured by their orientation in 2D projections. Beyond individual object classification, Sorometry incorporates Bayesian finite mixture modelling to predict overall plant source contributions at the assemblage level, successfully identifying specific plants like maize and palms in complex mixed samples. This integrated platform transforms phytolith research into an \"omics\"-scale discipline, dramatically expanding analytical capacity, standardising expert judgements, and enabling reproducible, population-level characterisations of archaeological and paleoecological assemblages.",
+    "pdf_link": "https://arxiv.org/pdf/2603.11476v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.11387v1",
+    "title": "Framing local structural identifiability and observability in terms of parameter-state symmetries",
+    "authors": [
+      "Johannes G. Borgqvist",
+      "Alexander P. Browning",
+      "Fredrik Ohlsson",
+      "Ruth E. Baker"
+    ],
+    "published_date": "2026-03-12T00:01:18Z",
+    "abstract": "We introduce a subclass of Lie symmetries, called parameter-state symmetries, to analyse the local structural identifiability and observability of mechanistic models consisting of state-dependent ODEs with observed outputs. These symmetries act on parameters and states while preserving observed outputs at every time point. We prove that locally structurally identifiable parameter combinations and locally structurally observable states correspond to universal invariants of all parameter-state symmetries of a given model. We illustrate the framework on four previously studied mechanistic models, confirming known identifiability results and revealing novel insights into which states are observable, providing a unified symmetry-based approach for analysing structural properties of dynamical systems.",
+    "pdf_link": "https://arxiv.org/pdf/2603.11387v1",
+    "categories": [
+      "math.DS",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.11344v1",
+    "title": "Hybrid eTFCE-GRF: Exact Cluster-Size Retrieval with Analytical p-Values for Voxel-Based Morphometry",
+    "authors": [
+      "Don Yin",
+      "Hao Chen",
+      "Takeshi Miki",
+      "Boxing Liu",
+      "Enyu Yang"
+    ],
+    "published_date": "2026-03-11T22:20:03Z",
+    "abstract": "Threshold-free cluster enhancement (TFCE) integrates cluster extent across thresholds to improve voxel-wise neuroimaging inference, but permutation testing makes it prohibitively slow for large datasets. Probabilistic TFCE (pTFCE) uses analytical Gaussian random field (GRF) p-values but discretises the threshold grid. Exact TFCE (eTFCE) eliminates discretisation via a union-find data structure but still requires permutations. We combine eTFCE's union-find for exact cluster-size retrieval with pTFCE's analytical GRF inference. The union-find builds the cluster hierarchy in one pass over sorted voxels and enables exact size queries at any threshold; GRF theory then converts these sizes to analytical p-values without permutations. Validation on synthetic phantoms (64^3, 80 subjects): FWER controlled at nominal level (0/200 null rejections, 95% CI [0.0%, 1.9%]); power matches baseline pTFCE (Dice >= 0.999); smoothness error below 1%; concordance r > 0.99. On UK Biobank (N=500) and IXI (N=563), significance maps form strict subsets of reference R pTFCE, which supports conservative error control. Implemented in pytfce (pip install pytfce): baseline completes whole-brain VBM in ~5s (75x faster than R pTFCE), hybrid in ~85s (4.6x faster) with exact cluster sizes; both >1000x faster than permutation TFCE.",
+    "pdf_link": "https://arxiv.org/pdf/2603.11344v1",
+    "categories": [
+      "eess.IV",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.11330v1",
+    "title": "Ill-Conditioning in Dictionary-Based Dynamic-Equation Learning: A Systems Biology Case Study",
+    "authors": [
+      "Yuxiang Feng",
+      "Niall M Mangan",
+      "Manu Jayadharan"
+    ],
+    "published_date": "2026-03-11T21:42:02Z",
+    "abstract": "Data-driven discovery of governing equations from time-series data provides a powerful framework for understanding complex biological systems. Library-based approaches that use sparse regression over candidate functions have shown considerable promise, but they face a critical challenge when candidate functions become strongly correlated: numerical ill-conditioning. Poor or restricted sampling, together with particular choices of candidate libraries, can produce strong multicollinearity and numerical instability. In such cases, measurement noise may lead to widely different recovered models, obscuring the true underlying dynamics and hindering accurate system identification. Although sparse regularization promotes parsimonious solutions and can partially mitigate conditioning issues, strong correlations may persist, regularization may bias the recovered models, and the regression problem may remain highly sensitive to small perturbations in the data. We present a systematic analysis of how ill-conditioning affects sparse identification of biological dynamics using benchmark models from systems biology. We show that combinations involving as few as two or three terms can already exhibit strong multicollinearity and extremely large condition numbers. We further show that orthogonal polynomial bases do not consistently resolve ill-conditioning and can perform worse than monomial libraries when the data distribution deviates from the weight function associated with the orthogonal basis. Finally, we demonstrate that when data are sampled from distributions aligned with the appropriate weight functions corresponding to the orthogonal basis, numerical conditioning improves, and orthogonal polynomial bases can yield improved model recovery accuracy across two baseline models.",
+    "pdf_link": "https://arxiv.org/pdf/2603.11330v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG",
+      "math.DS",
+      "math.NA"
+    ]
+  },
+  {
+    "id": "2603.11296v1",
+    "title": "Single molecule localization microscopy challenge: a biologically inspired benchmark for long-sequence modeling",
+    "authors": [
+      "Fatemeh Valeh",
+      "Monika Farsang",
+      "Radu Grosu",
+      "Gerhard Schütz"
+    ],
+    "published_date": "2026-03-11T20:50:01Z",
+    "abstract": "State space models (SSMs) have recently achieved strong performance on long sequence modeling tasks while offering improved memory and computational efficiency compared to transformer based architectures. However, their evaluation has been largely limited to synthetic benchmarks and application domains such as language and audio, leaving their behavior on sparse and stochastic temporal processes in biological imaging unexplored. In this work, we introduce the Single Molecule Localization Microscopy Challenge (SMLM-C), a benchmark dataset consisting of ten SMLM simulations spanning dSTORM and DNA-PAINT modalities with varying hyperparameter designed to evaluate state space models on biologically realistic spatiotemporal point process data with known ground truth. Using a controlled subset of these simulations, we evaluate state space models and find that performance degrades substantially as temporal discontinuity increases, revealing fundamental challenges in modeling heavy-tailed blinking dynamics. These results highlight the need for sequence models better suited to sparse, irregular temporal processes encountered in real world scientific imaging data.",
+    "pdf_link": "https://arxiv.org/pdf/2603.11296v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
     "id": "2603.10704v1",
     "title": "Packaging Jupyter notebooks as installable desktop apps using LabConstrictor",
     "authors": [
@@ -28,6 +156,22 @@
     "abstract": "The COVID-19 pandemic exposed young people to a prolonged and evolving societal stressor, yet it remains unclear whether symptom networks were reorganized or whether control was redistributed across a conserved modular scaffold. Here we analysed repeated cross-sectional data on 47 self-reported mental-health symptoms from 14,181 U.S. young adults aged 18-24 years across five COVID-19 phases between 2020 and 2023. For each phase, we estimated Gaussian graphical models, identified symptom communities, and characterized minimum-dominating-set-based module control. Symptom networks showed broadly conserved community organization across phases, indicating a stable mesoscale scaffold despite marked temporal variation. By contrast, intermodule control shifted from an early configuration centered on stress-related symptoms to a later, more distributed pattern spanning emotional, cognitive and social domains. Resampling analyses showed high stability for node strength and moderate stability for module-to-module control, whereas average within-module control was less robust. These findings suggest that prolonged crisis may preserve the modular architecture of youth psychopathology while redistributing control across symptom domains, and they identify intermodule control as a comparatively robust mesoscale feature for cross-phase comparison.",
     "pdf_link": "https://arxiv.org/pdf/2603.10454v1",
     "categories": [
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.11084v1",
+    "title": "Realizing Common Random Numbers: Event-Keyed Hashing for Causally Valid Stochastic Models",
+    "authors": [
+      "Vince Buffalo",
+      "Carl A. B. Pearson",
+      "Daniel Klein"
+    ],
+    "published_date": "2026-03-11T03:04:47Z",
+    "abstract": "Agent-based models (ABMs) are widely used to estimate causal treatment effects via paired counterfactual simulation. A standard variance reduction technique is common random numbers (CRNs), which couples replicates across intervention scenarios by sharing the same random inputs. In practice, CRNs are implemented by reusing the same base seed, but this relies on a critical assumption: that the same draw index corresponds to the same modeled event across scenarios. Stateful pseudorandom number generators (PRNGs) violate this assumption whenever interventions alter the simulation's execution path, because any change in control flow shifts the draw index used for all downstream events. We argue that this execution-path-dependent draw indexing is not only a variance-reduction nuisance, but represents a fundamental mismatch between the scientific causal structure ABMs are intended to encode and the program-level causal structure induced by stateful PRNG implementations. Formalizing this through the lens of structural causal models (SCMs), we show that standard PRNG practices yield causally incoherent paired counterfactual comparisons even when the mechanistic specification is otherwise sound. We show that a remedy is to combine counter-based random number generators (e.g., Philox/Threefry) with event identifiers. This decouples random number generation from simulation execution order by making random draws explicit functions of the particular modeled event that called them, restoring the stable event-indexed exogenous structure assumed by SCMs.",
+    "pdf_link": "https://arxiv.org/pdf/2603.11084v1",
+    "categories": [
+      "stat.ME",
       "q-bio.QM"
     ]
   },
@@ -100,53 +244,6 @@
       "cs.CV",
       "eess.IV",
       "stat.AP"
-    ]
-  },
-  {
-    "id": "2603.09033v1",
-    "title": "Sequential learning theory for Markov genealogy processes",
-    "authors": [
-      "David J Pascall"
-    ],
-    "published_date": "2026-03-10T00:09:44Z",
-    "abstract": "We introduce a filtration-based framework for studying when and why adding taxa improves phylodynamic inference, by constructing a natural ordering of observed tips and applying sequential Bayesian analysis to the resulting filtration. We decompose the expected variance reduction on taxa addition into learning, mismatch, and covariance components, classify estimands into learning classes based on the pathwise behaviour of the mismatch, and show that for absorbing estimands an oracle who knows the latent absorption status obtains event-wise learning guarantees unavailable to the analyst. The gap between oracle and analyst is irreducible assumptions that are likely to hold for many real phylodynamic estimands, establishing a fundamental limit on what sequence data alone can reveal about the latent genealogy.",
-    "pdf_link": "https://arxiv.org/pdf/2603.09033v1",
-    "categories": [
-      "q-bio.QM",
-      "math.ST"
-    ]
-  },
-  {
-    "id": "2603.08444v2",
-    "title": "Hydrodynamic origins of symmetric swimming strategies",
-    "authors": [
-      "Takahiro Kanazawa",
-      "Kenta Ishimoto",
-      "Kyogo Kawaguchi"
-    ],
-    "published_date": "2026-03-09T14:40:32Z",
-    "abstract": "Efficient locomotion is important for the evolution of complex life, yet the physical principles selecting specific swimming strokes often remain entangled with biological constraints. In viscous fluids, the scallop theorem constrains the temporal organization of strokes, but no analogous principle is known for their spatial structure, leaving the prevalence of symmetric gaits across diverse organisms without a physical explanation. Here we show that spatial symmetry acts as an emergent organizing principle for efficiency in viscous fluids. By analysing deformable swimmers whose strokes are not constrained to any particular symmetry class, we identify a hydrodynamic duality: symmetric and anti-symmetric strokes are dynamically equivalent, yielding identical speeds and efficiencies, which we prove are optimal among all strokes. We validate this using numerical simulations of Stokes flow, demonstrating that these symmetry rules persist even in three-dimensional body plans. Our results suggest that the prevalence of symmetric and alternating gaits in nature reflects not merely a developmental constraint, but a physical optimality principle for locomotion in viscous environments, complementing developmental and neural constraints.",
-    "pdf_link": "https://arxiv.org/pdf/2603.08444v2",
-    "categories": [
-      "physics.bio-ph",
-      "physics.flu-dyn",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2603.08345v1",
-    "title": "Amortized Phylodynamic Inference with Neural Bayes Estimators and Recursive Neural Networks",
-    "authors": [
-      "Alexander E. Zarebski",
-      "Thomas Williams",
-      "Louis du Plessis"
-    ],
-    "published_date": "2026-03-09T13:07:01Z",
-    "abstract": "Phylodynamics is used to estimate epidemic dynamics from phylogenetic trees or genomic sequences of pathogens, but the likelihood calculations needed can be challenging for complex models. We present a neural Bayes estimator (NBE) for key epidemic quantities: the reproduction number, prevalence, and cumulative infections through time. By performing quantile regression over tree space, the NBE allows us to estimate posterior medians and credible intervals directly from a reconstructed tree. Our approach uses a recursive neural network as a tree embedding network with a prediction network conditioned on time and quantile level to generate the estimates. In simulation studies, the NBE achieves good predictive performance, with conservative uncertainty estimates. Compared with a BEAST2 fixed-tree analysis, the NBE gives less biased estimates of time-varying reproduction numbers in our test setting. Under a misspecified sampling model, the NBE performance degrades (as expected) but remains reasonable, and fine-tuning a pre-trained model yields estimates comparable to those from a model trained from scratch, at substantially lower computational cost.",
-    "pdf_link": "https://arxiv.org/pdf/2603.08345v1",
-    "categories": [
-      "stat.ME",
-      "q-bio.QM"
     ]
   }
 ]
