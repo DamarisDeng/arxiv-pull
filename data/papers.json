@@ -1,37 +1,39 @@
 [
   {
-    "id": "2603.12253v1",
-    "title": "Binding Free Energies without Alchemy",
+    "id": "2603.13051v1",
+    "title": "Causal Cellular Context Transfer Learning (C3TL): An Efficient Architecture for Prediction of Unseen Perturbation Effects",
     "authors": [
-      "Michael Brocidiacono",
-      "Brandon Novy",
-      "Rishabh Dey",
-      "Konstantin I. Popov",
-      "Alexander Tropsha"
+      "Michael Scholkemper",
+      "Sach Mukherjee"
     ],
-    "published_date": "2026-03-12T17:58:49Z",
-    "abstract": "Absolute Binding Free Energy (ABFE) methods are among the most accurate computational techniques for predicting protein-ligand binding affinities, but their utility is limited by the need for many simulations of alchemically modified intermediate states. We propose Direct Binding Free Energy (DBFE), an end-state ABFE method in implicit solvent that requires no alchemical intermediates. DBFE outperforms OBC2 double decoupling on a host-guest benchmark and performs comparably to OBC2 MM/GBSA on a protein-ligand benchmark. Since receptor and ligand simulations can be precomputed and amortized across compounds, DBFE requires only one complex simulation per ligand compared to the many lambda windows needed for double decoupling, making it a promising candidate for virtual screening workflows. We publicly release the code for this method at https://github.com/molecularmodelinglab/dbfe.",
-    "pdf_link": "https://arxiv.org/pdf/2603.12253v1",
+    "published_date": "2026-03-13T15:02:49Z",
+    "abstract": "Predicting the effects of chemical and genetic perturbations on quantitative cell states is a central challenge in computational biology, molecular medicine and drug discovery. Recent work has leveraged large-scale single-cell data and massive foundation models to address this task. However, such computational resources and extensive datasets are not always accessible in academic or clinical settings, hence limiting utility. Here we propose a lightweight framework for perturbation effect prediction that exploits the structured nature of biological interventions and specific inductive biases/invariances. Our approach leverages available information concerning perturbation effects to allow generalization to novel contexts and requires only widely-available bulk molecular data. Extensive testing, comparing predictions of context-specific perturbation effects against real, large-scale interventional experiments, demonstrates accurate prediction in new contexts. The proposed approach is competitive with SOTA foundation models but requires simpler data, much smaller model sizes and less time. Focusing on robust bulk signals and efficient architectures, we show that accurate prediction of perturbation effects is possible without proprietary hardware or very large models, hence opening up ways to leverage causal learning approaches in biomedicine generally.",
+    "pdf_link": "https://arxiv.org/pdf/2603.13051v1",
     "categories": [
+      "cs.LG",
       "q-bio.QM"
     ]
   },
   {
-    "id": "2603.12016v1",
-    "title": "Nyxus: A Next Generation Image Feature Extraction Library for the Big Data and AI Era",
+    "id": "2603.12694v1",
+    "title": "RXNRECer Enables Fine-grained Enzymatic Function Annotation through Active Learning and Protein Language Models",
     "authors": [
-      "Nicholas Schaub",
-      "Andriy Kharchenko",
-      "Hamdah Abbasi",
-      "Sameeul Samee",
-      "Hythem Sidky",
-      "Nathan Hotaling"
+      "Zhenkun Shi",
+      "Jun Zhu",
+      "Dehang Wang",
+      "BoYu Chen",
+      "Qianqian Yuan",
+      "Zhitao Mao",
+      "Fan Wei",
+      "Weining Wu",
+      "Xiaoping Liao",
+      "Hongwu Ma"
     ],
-    "published_date": "2026-03-12T14:58:07Z",
-    "abstract": "Modern imaging instruments can produce terabytes to petabytes of data for a single experiment. The biggest barrier to processing big image datasets has been computational, where image analysis algorithms often lack the efficiency needed to process such large datasets or make tradeoffs in robustness and accuracy. Deep learning algorithms have vastly improved the accuracy of the first step in an analysis workflow (region segmentation), but the expansion of domain specific feature extraction libraries across scientific disciplines has made it difficult to compare the performance and accuracy of extracted features. To address these needs, we developed a novel feature extraction library called Nyxus. Nyxus is designed from the ground up for scalable out-of-core feature extraction for 2D and 3D image data and rigorously tested against established standards. The comprehensive feature set of Nyxus covers multiple biomedical domains including radiomics and cellular analysis, and is designed for computational scalability across CPUs and GPUs. Nyxus has been packaged to be accessible to users of various skill sets and needs: as a Python package for code developers, a command line tool, as a Napari plugin for low to no-code users or users that want to visualize results, and as an Open Container Initiative (OCI) compliant container that can be used in cloud or super-computing workflows aimed at processing large data sets. Further, Nyxus enables a new methodological approach to feature extraction allowing for programmatic tuning of many features sets for optimal computational efficiency or coverage for use in novel machine learning and deep learning applications.",
-    "pdf_link": "https://arxiv.org/pdf/2603.12016v1",
+    "published_date": "2026-03-13T06:20:14Z",
+    "abstract": "A key challenge in enzyme annotation is identifying the biochemical reactions catalyzed by proteins. Most existing methods rely on Enzyme Commission (EC) numbers as intermediaries: they first predict an EC number and then retrieve the associated reactions. This indirect strategy introduces ambiguity due to the complex many-to-many mappings among proteins, EC numbers, and reactions, and is further complicated by frequent updates to EC numbers and inconsistencies across databases. To address these challenges, we present RXNRECer, a transformer-based ensemble framework that directly predicts enzyme-catalyzed reactions without relying on EC numbers. It integrates protein language modeling and active learning to capture both high-level sequence semantics and fine-grained transformation patterns. Evaluations on curated cross-validation and temporal test sets demonstrate consistent improvements over six EC-based baselines, with gains of 16.54% in F1 score and 15.43% in accuracy. Beyond accuracy gains, the framework offers clear advantages for downstream applications, including scalable proteome-wide reaction annotation, enhanced specificity in refining generic reaction schemas, systematic annotation of previously uncurated proteins, and reliable identification of enzyme promiscuity. By incorporating large language models, it also provides interpretable rationales for predictions. These capabilities make RXNRECer a robust and versatile solution for EC-free, fine-grained enzyme function prediction, with potential applications across multiple areas of enzyme research and industrial applications.",
+    "pdf_link": "https://arxiv.org/pdf/2603.12694v1",
     "categories": [
-      "cs.CV",
+      "cs.LG",
       "q-bio.QM"
     ]
   }
