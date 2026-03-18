@@ -1,544 +1,466 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Bio Watchtower — 2026-03-11</title>
-  <style>
-    /* ── Reset & Base ─────────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* ── Header ───────────────────────────────────────────────────────── */
-    header {
-      background: #2c3e50;
-      color: #ffffff;
-      padding: 36px 48px 30px;
-      border-bottom: 4px solid #3498db;
-    }
-
-    header h1 {
-      font-size: 2.1rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    header h1 .accent { color: #3498db; }
-    header h1 .icon   { font-size: 1.7rem; line-height: 1; }
-
-    header p.subtitle {
-      font-size: 0.97rem;
-      color: #bdc3c7;
-      margin-bottom: 14px;
-    }
-
-    header .meta-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    header .pill {
-      background: rgba(52, 152, 219, 0.22);
-      border: 1px solid rgba(52, 152, 219, 0.48);
-      border-radius: 20px;
-      padding: 4px 14px;
-      font-size: 0.8rem;
-      color: #cce4f7;
-      font-weight: 500;
-    }
-
-    /* ── Main Layout ──────────────────────────────────────────────────── */
-    main {
-      flex: 1;
-      max-width: 1360px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 40px 48px 56px;
-    }
-
-    /* ── Section Headings ─────────────────────────────────────────────── */
-    .section-heading {
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #2c3e50;
-      text-transform: uppercase;
-      letter-spacing: 0.7px;
-      margin-bottom: 18px;
-      padding-bottom: 9px;
-      border-bottom: 2px solid #3498db;
-      display: flex;
-      align-items: center;
-      gap: 9px;
-    }
-
-    .section-heading .icon-sq {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 24px;
-      height: 24px;
-      background: #3498db;
-      color: #fff;
-      border-radius: 4px;
-      font-size: 0.82rem;
-      font-weight: 800;
-      flex-shrink: 0;
-    }
-
-    /* ── Table Wrapper ────────────────────────────────────────────────── */
-    .table-wrapper {
-      overflow-x: auto;
-      border-radius: 8px;
-      box-shadow: 0 2px 14px rgba(0, 0, 0, 0.09);
-      margin-bottom: 44px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background: #ffffff;
-      font-size: 0.875rem;
-    }
-
-    /* Header row */
-    thead tr {
-      background: #2c3e50;
-      color: #ffffff;
-    }
-
-    thead th {
-      padding: 13px 16px;
-      text-align: left;
-      font-weight: 600;
-      font-size: 0.77rem;
-      text-transform: uppercase;
-      letter-spacing: 0.55px;
-      border: 1px solid #ddd;
-      white-space: nowrap;
-    }
-
-    /* Body rows — alternating */
-    tbody tr:nth-child(odd)  { background: #f9f9f9; }
-    tbody tr:nth-child(even) { background: #ffffff; }
-    tbody tr:hover           { background: #eaf4fc; transition: background 0.13s ease; }
-
-    tbody td {
-      padding: 14px 16px;
-      border: 1px solid #ddd;
-      vertical-align: top;
-    }
-
-    /* ── Column: Rank ─── */
-    .col-rank {
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.15rem;
-      color: #7f8c8d;
-      width: 56px;
-      white-space: nowrap;
-    }
-
-    /* ── Column: Title ─── */
-    .col-title { min-width: 280px; }
-
-    .paper-title-link {
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #3498db;
-      text-decoration: none;
-      line-height: 1.45;
-      display: block;
-      margin-bottom: 5px;
-    }
-
-    .paper-title-link:hover {
-      color: #2980b9;
-      text-decoration: underline;
-    }
-
-    .arxiv-id {
-      display: inline-block;
-      font-size: 0.71rem;
-      color: #888;
-      background: #efefef;
-      border-radius: 4px;
-      padding: 2px 8px;
-      font-family: "Courier New", monospace;
-      letter-spacing: 0.15px;
-    }
-
-    /* ── Column: Authors ─── */
-    .col-authors {
-      color: #555;
-      font-size: 0.83rem;
-      min-width: 145px;
-      line-height: 1.55;
-    }
-
-    /* ── Column: Date ─── */
-    .col-date {
-      white-space: nowrap;
-      color: #666;
-      font-size: 0.83rem;
-    }
-
-    /* ── Column: TL;DR ─── */
-    .col-tldr {
-      font-size: 0.85rem;
-      color: #333;
-      min-width: 260px;
-      line-height: 1.6;
-    }
-
-    /* ── Column: Keywords ─── */
-    .col-keywords {
-      font-size: 0.8rem;
-      color: #555;
-      font-style: italic;
-      min-width: 200px;
-      line-height: 1.65;
-    }
-
-    /* ── Column: Score ─── */
-    .col-score {
-      text-align: center;
-      width: 72px;
-    }
-
-    .score-badge {
-      display: inline-block;
-      padding: 5px 11px;
-      border-radius: 20px;
-      font-weight: 700;
-      font-size: 0.92rem;
-      color: #ffffff;
-      min-width: 40px;
-      text-align: center;
-      letter-spacing: 0.2px;
-    }
-
-    /* Score colour tiers per spec */
-    .score-green  { background: #27ae60; }   /* 8–10 */
-    .score-orange { background: #f39c12; }   /* 5–7  */
-    .score-grey   { background: #95a5a6; }   /* 0–4  */
-
-    /* ── Narrative Section ────────────────────────────────────────────── */
-    .narrative-section { margin-bottom: 0; }
-
-    .narrative-box {
-      background: #ffffff;
-      border-left: 4px solid #3498db;
-      border-radius: 0 8px 8px 0;
-      padding: 24px 30px;
-      font-size: 0.95rem;
-      color: #222;
-      line-height: 1.8;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-      max-width: 1020px;
-    }
-
-    /* ── Footer ───────────────────────────────────────────────────────── */
-    footer {
-      background: #2c3e50;
-      color: #8fafc8;
-      text-align: center;
-      font-size: 0.8rem;
-      padding: 18px 48px;
-      border-top: 3px solid #3498db;
-      letter-spacing: 0.3px;
-      margin-top: auto;
-    }
-
-    footer a {
-      color: #3498db;
-      text-decoration: none;
-    }
-
-    footer a:hover { text-decoration: underline; }
-
-    /* ── Responsive ───────────────────────────────────────────────────── */
-    @media (max-width: 900px) {
-      header  { padding: 24px 18px 20px; }
-      header h1 { font-size: 1.5rem; }
-      main    { padding: 28px 14px 40px; }
-      footer  { padding: 16px 14px; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Bio Watchtower — Daily arXiv Digest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        
+        header .meta {
+            font-size: 0.95em;
+            opacity: 0.8;
+        }
+        
+        main {
+            background-color: #ffffff;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .narrative {
+            background-color: #f9f9f9;
+            padding: 25px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        thead {
+            background-color: #2c3e50;
+            color: white;
+        }
+        
+        thead th {
+            padding: 15px 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+        
+        tbody tr:hover {
+            background-color: #f0f7ff;
+        }
+        
+        tbody td {
+            padding: 15px 12px;
+            vertical-align: top;
+            font-size: 0.9em;
+        }
+        
+        .rank-cell {
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #2c3e50;
+            width: 60px;
+        }
+        
+        .title-cell {
+            font-weight: 500;
+            min-width: 250px;
+        }
+        
+        .title-cell a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .title-cell a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        .authors-cell {
+            color: #555;
+            font-size: 0.85em;
+            max-width: 200px;
+        }
+        
+        .date-cell {
+            color: #666;
+            font-size: 0.85em;
+            white-space: nowrap;
+            width: 100px;
+        }
+        
+        .tldr-cell {
+            color: #333;
+            line-height: 1.5;
+            max-width: 350px;
+        }
+        
+        .keywords-cell {
+            color: #666;
+            font-size: 0.85em;
+            font-style: italic;
+            max-width: 250px;
+        }
+        
+        .score-cell {
+            text-align: center;
+            width: 80px;
+        }
+        
+        .score-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 0.9em;
+            color: white;
+        }
+        
+        .score-high {
+            background-color: #27ae60;
+        }
+        
+        .score-medium {
+            background-color: #f39c12;
+        }
+        
+        .score-low {
+            background-color: #95a5a6;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+            font-size: 0.9em;
+            border-top: 1px solid #ddd;
+            margin-top: 50px;
+        }
+        
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 1200px) {
+            table {
+                font-size: 0.85em;
+            }
+            
+            header h1 {
+                font-size: 2em;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            header {
+                padding: 25px 20px;
+            }
+            
+            header h1 {
+                font-size: 1.5em;
+            }
+            
+            header .subtitle {
+                font-size: 1em;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            thead th,
+            tbody td {
+                padding: 10px 8px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-<!-- ════════════════════════════════════════════════════════════════
-     HEADER
-════════════════════════════════════════════════════════════════ -->
-<header>
-  <h1>
-    <span class="icon">&#128300;</span>
-    Q-Bio&nbsp;<span class="accent">Watchtower</span>
-    &mdash; 2026-03-11
-  </h1>
-  <p class="subtitle">Daily arXiv q-bio.QM Digest &mdash; 2026-03-11 UTC</p>
-  <div class="meta-pills">
-    <span class="pill">&#128196;&nbsp; 4 papers</span>
-    <span class="pill">&#128197;&nbsp; Published: 2026-03-09 &ndash; 2026-03-10</span>
-    <span class="pill">&#128193;&nbsp; Source: arXiv q-bio.QM</span>
-  </div>
-</header>
-
-<!-- ════════════════════════════════════════════════════════════════
-     MAIN
-════════════════════════════════════════════════════════════════ -->
-<main>
-
-  <!-- ── Ranked Paper Table ────────────────────────────────────────── -->
-  <h2 class="section-heading">
-    <span class="icon-sq">&#8679;</span> Ranked Papers
-  </h2>
-
-  <div class="table-wrapper">
-    <table>
-      <thead>
-        <tr>
-          <th>Rank</th>
-          <th>Title</th>
-          <th>Authors</th>
-          <th>Published</th>
-          <th>TL;DR</th>
-          <th>Keywords</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <!-- ───────────────────────────────────────────────────────────
-             Row 1 | arXiv:2603.08345v1 | Score: 10  (green)
-        ─────────────────────────────────────────────────────────────── -->
-        <tr>
-          <td class="col-rank">#1</td>
-
-          <td class="col-title">
-            <a class="paper-title-link"
-               href="https://arxiv.org/pdf/2603.08345v1"
-               target="_blank"
-               rel="noopener noreferrer">
-              Amortized Phylodynamic Inference with Neural Bayes Estimators
-              and Recursive Neural Networks
-            </a>
-            <span class="arxiv-id">arXiv:2603.08345v1</span>
-          </td>
-
-          <td class="col-authors">
-            Alexander E. Zarebski, Thomas Williams, Louis du Plessis
-          </td>
-
-          <td class="col-date">2026-03-09</td>
-
-          <td class="col-tldr">
-            A neural Bayes estimator using recursive neural networks performs
-            amortized quantile regression over phylogenetic trees to infer
-            epidemic dynamics faster and with less bias than BEAST2.
-          </td>
-
-          <td class="col-keywords">
-            Neural Bayes Estimator,
-            Recursive Neural Network,
-            Quantile Regression,
-            Phylodynamic Inference,
-            Amortized Inference
-          </td>
-
-          <td class="col-score">
-            <span class="score-badge score-green">10</span>
-          </td>
-        </tr>
-
-        <!-- ───────────────────────────────────────────────────────────
-             Row 2 | arXiv:2603.09033v1 | Score: 8  (green)
-        ─────────────────────────────────────────────────────────────── -->
-        <tr>
-          <td class="col-rank">#2</td>
-
-          <td class="col-title">
-            <a class="paper-title-link"
-               href="https://arxiv.org/pdf/2603.09033v1"
-               target="_blank"
-               rel="noopener noreferrer">
-              Sequential learning theory for Markov genealogy processes
-            </a>
-            <span class="arxiv-id">arXiv:2603.09033v1</span>
-          </td>
-
-          <td class="col-authors">
-            David J Pascall
-          </td>
-
-          <td class="col-date">2026-03-10</td>
-
-          <td class="col-tldr">
-            A filtration-based sequential Bayesian framework decomposes variance
-            reduction on taxa addition into learning, mismatch, and covariance
-            components, establishing fundamental inferential limits of sequence
-            data for phylodynamic analysis.
-          </td>
-
-          <td class="col-keywords">
-            Sequential Bayesian Analysis,
-            Markov Genealogy Processes,
-            Filtration Framework,
-            Phylodynamic Inference,
-            Variance Decomposition
-          </td>
-
-          <td class="col-score">
-            <span class="score-badge score-green">8</span>
-          </td>
-        </tr>
-
-        <!-- ───────────────────────────────────────────────────────────
-             Row 3 | arXiv:2603.09531v1 | Score: 6  (orange)
-        ─────────────────────────────────────────────────────────────── -->
-        <tr>
-          <td class="col-rank">#3</td>
-
-          <td class="col-title">
-            <a class="paper-title-link"
-               href="https://arxiv.org/pdf/2603.09531v1"
-               target="_blank"
-               rel="noopener noreferrer">
-              Association of Radiologic PPFE Change with Mortality
-              in Lung Cancer Screening Cohorts
-            </a>
-            <span class="arxiv-id">arXiv:2603.09531v1</span>
-          </td>
-
-          <td class="col-authors">
-            Shahab Aslani, Mehran Azimbagirad, Daryl Cheng
-            <em>et&nbsp;al.</em>
-          </td>
-
-          <td class="col-date">2026-03-10</td>
-
-          <td class="col-tldr">
-            Automated CT volumetric analysis of 16,500 lung cancer screening
-            participants shows annualised PPFE progression independently predicts
-            mortality and adverse respiratory outcomes via Cox proportional
-            hazards modelling.
-          </td>
-
-          <td class="col-keywords">
-            Automated Image Segmentation,
-            Cox Proportional Hazards Model,
-            Kaplan-Meier Survival Analysis,
-            Longitudinal CT Quantification,
-            Imaging Biomarker
-          </td>
-
-          <td class="col-score">
-            <span class="score-badge score-orange">6</span>
-          </td>
-        </tr>
-
-        <!-- ───────────────────────────────────────────────────────────
-             Row 4 | arXiv:2603.08444v2 | Score: 5  (orange)
-        ─────────────────────────────────────────────────────────────── -->
-        <tr>
-          <td class="col-rank">#4</td>
-
-          <td class="col-title">
-            <a class="paper-title-link"
-               href="https://arxiv.org/pdf/2603.08444v2"
-               target="_blank"
-               rel="noopener noreferrer">
-              Hydrodynamic origins of symmetric swimming strategies
-            </a>
-            <span class="arxiv-id">arXiv:2603.08444v2</span>
-          </td>
-
-          <td class="col-authors">
-            Takahiro Kanazawa, Kenta Ishimoto, Kyogo Kawaguchi
-          </td>
-
-          <td class="col-date">2026-03-09</td>
-
-          <td class="col-tldr">
-            Unconstrained Stokes flow analysis proves symmetric and
-            anti-symmetric swimming strokes are hydrodynamically dual and
-            jointly optimal, providing a fluid-mechanical explanation for the
-            prevalence of symmetric gaits in nature.
-          </td>
-
-          <td class="col-keywords">
-            Stokes Flow Simulation,
-            Scallop Theorem,
-            Hydrodynamic Duality,
-            Dynamical Systems,
-            Numerical Optimisation
-          </td>
-
-          <td class="col-score">
-            <span class="score-badge score-orange">5</span>
-          </td>
-        </tr>
-
-      </tbody>
-    </table>
-  </div><!-- /.table-wrapper -->
-
-  <!-- ── Narrative Summary ─────────────────────────────────────────── -->
-  <section class="narrative-section">
-    <h2 class="section-heading">
-      <span class="icon-sq">&#8801;</span> Narrative Summary
-    </h2>
-    <div class="narrative-box">
-      Today&#8217;s four q-bio.QM papers are anchored by a pair of complementary
-      phylodynamic inference advances: a neural Bayes estimator that leverages
-      recursive neural networks for amortized quantile regression over tree
-      space (score&nbsp;10), and a rigorous filtration-based sequential Bayesian
-      theory that formally decomposes variance reduction on taxa addition and
-      establishes fundamental statistical limits on what genomic sequence data
-      alone can reveal about latent genealogies (score&nbsp;8).
-      A large-scale clinical imaging study rounds out the computational biology
-      work, demonstrating that automated low-dose CT volumetry of pleuroparenchymal
-      fibroelastosis progression independently predicts all-cause mortality and
-      respiratory morbidity across 16,500 lung cancer screening participants via
-      Cox proportional hazards modelling.
-      Across all papers the dominant methodological signature is principled
-      uncertainty quantification &mdash; spanning posterior credible intervals
-      from neural estimators, oracle-versus-analyst variance gaps in filtration
-      theory, Kaplan&ndash;Meier survival stratification, and Stokes-flow
-      numerical validation of a hydrodynamic optimality duality &mdash; underscoring
-      a field-wide drive to pair predictive power with rigorous inferential
-      guarantees.
+    <div class="container">
+        <header>
+            <h1>Q-Bio Watchtower</h1>
+            <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-18 UTC</div>
+            <div class="meta">13 papers analyzed • Published March 16-17, 2026</div>
+        </header>
+        
+        <main>
+            <section class="section">
+                <h2>📊 Research Overview</h2>
+                <div class="narrative">
+                    <p>Today's digest showcases transformative advances in computational biology, with drug discovery and machine learning at the forefront. The highest-ranked papers demonstrate breakthroughs in phenotypic virtual screening (DECODE framework), continuous-time treatment optimization using stochastic differential equations, and pan-cancer morphological atlases linking histology to molecular outcomes. Key methodological trends include transformer-based temporal attention mechanisms for cell fate prediction, context parallelism frameworks enabling large-scale biomolecular structure modeling beyond 30,000 residues, and hierarchical Bayesian models enhancing psychometric inference from neural data. Across the collection, autoencoder-based representation learning, matched asymptotic expansions for population models, and federated knowledge graph architectures signal a shift toward scalable, interpretable, and clinically translatable quantitative methods.</p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>📑 Ranked Papers</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="rank-cell">Rank</th>
+                            <th class="title-cell">Title</th>
+                            <th class="authors-cell">Authors</th>
+                            <th class="date-cell">Published</th>
+                            <th class="tldr-cell">TL;DR</th>
+                            <th class="keywords-cell">Keywords</th>
+                            <th class="score-cell">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="rank-cell">1</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.15006v1" target="_blank">Empowering Chemical Structures with Biological Insights for Scalable Phenotypic Virtual Screening</a>
+                            </td>
+                            <td class="authors-cell">Xiaoqing Lian, Pengsen Ma, Tengfeng Ma et al.</td>
+                            <td class="date-cell">2026-03-16</td>
+                            <td class="tldr-cell">DECODE extracts biological fingerprints from chemical structures using transcriptomic and morphological data, achieving 20% improvement in mechanism-of-action prediction and 6-fold increase in anti-cancer hit rates.</td>
+                            <td class="keywords-cell">DECODE framework, measurement-invariant biological fingerprint, transcriptomic profiling, morphological profiling, mechanism-of-action prediction</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">10</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">2</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.16789v1" target="_blank">Conservative Continuous-Time Treatment Optimization</a>
+                            </td>
+                            <td class="authors-cell">Nora Schneider, Georg Manten, Niki Kilbertus</td>
+                            <td class="date-cell">2026-03-17</td>
+                            <td class="tldr-cell">Stochastic differential equation framework with signature-based MMD regularization ensures conservative continuous-time treatment optimization from irregularly sampled patient trajectories.</td>
+                            <td class="keywords-cell">stochastic differential equations, signature-based MMD, path space regularization, continuous-time control, conservative optimization</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">9</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">3</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.16587v1" target="_blank">HistoAtlas: A Pan-Cancer Morphology Atlas Linking Histomics to Molecular Programs and Clinical Outcomes</a>
+                            </td>
+                            <td class="authors-cell">Pierre-Antoine Bannier</td>
+                            <td class="date-cell">2026-03-17</td>
+                            <td class="tldr-cell">HistoAtlas extracts 38 interpretable histomic features from 6,745 H&E slides across 21 cancer types, linking morphology to survival, gene expression, and mutations.</td>
+                            <td class="keywords-cell">histomic feature extraction, covariate adjustment, multiple-testing correction, spatial compartment analysis, TCGA integration</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">9</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">4</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.16562v1" target="_blank">Understanding Cell Fate Decisions with Temporal Attention</a>
+                            </td>
+                            <td class="authors-cell">Florian Bürger, Martim Dias Gomes, Adrián E. Granada et al.</td>
+                            <td class="date-cell">2026-03-17</td>
+                            <td class="tldr-cell">Transformer model with temporal attention predicts cell fate from live-cell videos, achieving 0.94 accuracy and revealing morphological cues and p53 signaling dynamics.</td>
+                            <td class="keywords-cell">Transformer attention, temporal masking, gradient-based attribution, p53 signaling dynamics, live-cell imaging</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">9</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">5</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.16185v1" target="_blank">Sample-Efficient Adaptation of Drug-Response Models to Patient Tumors under Strong Biological Domain Shift</a>
+                            </td>
+                            <td class="authors-cell">Camille Jimenez Cortes, Philippe Lalanda, German Vega</td>
+                            <td class="date-cell">2026-03-17</td>
+                            <td class="tldr-cell">Staged transfer-learning framework using autoencoder-based representation learning enables sample-efficient drug-response prediction when transferring from cell lines to patient tumors under biological domain shift.</td>
+                            <td class="keywords-cell">autoencoder-based representation learning, staged transfer-learning framework, few-shot adaptation, pharmacogenomic data, preclinical-to-clinical translation</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">9</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">6</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.14806v1" target="_blank">Fold-CP: A Context Parallelism Framework for Biomolecular Modeling</a>
+                            </td>
+                            <td class="authors-cell">Dejun Lin, Simon Chu, Vishanth Iyer et al.</td>
+                            <td class="date-cell">2026-03-16</td>
+                            <td class="tldr-cell">Fold-CP distributes AlphaFold-style structure prediction across multiple GPUs, enabling atomic-scale modeling of biomolecular assemblies exceeding 30,000 residues with O(N²/P) memory scaling.</td>
+                            <td class="keywords-cell">AlphaFold 3, context parallelism, window-batched local attention, Boltz models, triangular updates</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">9</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">7</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.16741v1" target="_blank">Bayesian Inference of Psychometric Variables From Brain and Behavior in Implicit Association Tests</a>
+                            </td>
+                            <td class="authors-cell">Christian A. Kothe, Sean Mullen, Michael V. Bronstein et al.</td>
+                            <td class="date-cell">2026-03-17</td>
+                            <td class="tldr-cell">Sparse hierarchical Bayesian model improves psychometric inference from Implicit Association Test data, outperforming D-score baselines by leveraging multi-modal neural and behavioral features.</td>
+                            <td class="keywords-cell">hierarchical Bayesian models, D-score, shrinkage LDA, EEGNet, FDR correction</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">8</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">8</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.15217v1" target="_blank">A multiscale discrete-to-continuum framework for structured population models</a>
+                            </td>
+                            <td class="authors-cell">Eleonora Agostinelli, Keith L. Chambers, Helen M. Byrne et al.</td>
+                            <td class="date-cell">2026-03-16</td>
+                            <td class="tldr-cell">Multiscale discrete-to-continuum framework using matched asymptotic expansions systematically derives partial differential equations for structured population models with consistent boundary conditions.</td>
+                            <td class="keywords-cell">matched asymptotic expansions, method of multiple scales, advection-diffusion equation, boundary layer theory, structured population models</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">8</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">9</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.15217v2" target="_blank">A multiscale discrete-to-continuum framework for structured population models</a>
+                            </td>
+                            <td class="authors-cell">Eleonora Agostinelli, Keith L. Chambers, Helen M. Byrne et al.</td>
+                            <td class="date-cell">2026-03-16</td>
+                            <td class="tldr-cell">Multiscale discrete-to-continuum framework using matched asymptotic expansions systematically derives partial differential equations for structured population models with consistent boundary conditions.</td>
+                            <td class="keywords-cell">matched asymptotic expansions, method of multiple scales, advection-diffusion equation, boundary layer theory, structured population models</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">8</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">10</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.15711v1" target="_blank">Knowledge Graph Extraction from Biomedical Literature for Alkaptonuria Rare Disease</a>
+                            </td>
+                            <td class="authors-cell">Giang Pham, Rebecca Finetti, Caterina Graziani et al.</td>
+                            <td class="date-cell">2026-03-16</td>
+                            <td class="tldr-cell">PubTator3-based text mining constructs knowledge graphs for alkaptonuria, revealing systemic interactions, comorbidities, and therapeutic targets for this ultra-rare metabolic disorder.</td>
+                            <td class="keywords-cell">PubTator3, knowledge graph construction, biomedical relation extraction, HGD gene mutations, rare disease informatics</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-medium">7</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">11</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.15080v1" target="_blank">Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database</a>
+                            </td>
+                            <td class="authors-cell">Madhulatha Mandarapu, Sandeep Kunkunuru</td>
+                            <td class="date-cell">2026-03-16</td>
+                            <td class="tldr-cell">Samyama graph database federates Pathways KG and Clinical Trials KG, enabling cross-dataset queries and LLM agent access via Model Context Protocol.</td>
+                            <td class="keywords-cell">Cypher query language, cross-source deduplication, Model Context Protocol, graph federation, Rust graph database</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-medium">7</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">12</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.15080v2" target="_blank">Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database</a>
+                            </td>
+                            <td class="authors-cell">Madhulatha Mandarapu, Sandeep Kunkunuru</td>
+                            <td class="date-cell">2026-03-16</td>
+                            <td class="tldr-cell">Samyama federates three biomedical knowledge graphs totaling 7.9M nodes; schema-driven Model Context Protocol tools achieve 98% accuracy on pharmacology question-answering benchmark.</td>
+                            <td class="keywords-cell">Cypher query language, cross-source deduplication, Model Context Protocol, graph federation, BiomedQA benchmark</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-medium">7</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">13</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.15702v1" target="_blank">Whole slide and microscopy image analysis with QuPath and OMERO</a>
+                            </td>
+                            <td class="authors-cell">Léo Leplat, Alan O'Callaghan, Peter Bankhead</td>
+                            <td class="date-cell">2026-03-16</td>
+                            <td class="tldr-cell">New QuPath extension enables remote access to whole-slide images and metadata from OMERO servers, extending bioimage analysis to distributed image management systems.</td>
+                            <td class="keywords-cell">QuPath, OMERO server, remote pixel access, whole-slide imaging, image management API</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-medium">5</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+        
+        <footer>
+            <p>Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/list/q-bio.QM/recent" target="_blank">arXiv q-bio.QM</a> · 2026-03-18 UTC</p>
+        </footer>
     </div>
-  </section>
-
-</main>
-
-<!-- ════════════════════════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════════════════════ -->
-<footer>
-  Generated by Q-Bio Watchtower &nbsp;&middot;&nbsp;
-  Data source:
-  <a href="https://arxiv.org/list/q-bio.QM/recent"
-     target="_blank"
-     rel="noopener noreferrer">arXiv q-bio.QM</a>
-  &nbsp;&middot;&nbsp;
-  2026-03-11T00:00:00Z
-</footer>
-
 </body>
 </html>

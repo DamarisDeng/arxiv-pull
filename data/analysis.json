@@ -1,118 +1,401 @@
 [
   {
-    "id": "2603.08345v1",
-    "title": "Amortized Phylodynamic Inference with Neural Bayes Estimators and Recursive Neural Networks",
+    "id": "2603.15006v1",
+    "title": "Empowering Chemical Structures with Biological Insights for Scalable Phenotypic Virtual Screening",
     "authors": [
-      "Alexander E. Zarebski",
-      "Thomas Williams",
-      "Louis du Plessis"
+      "Xiaoqing Lian",
+      "Pengsen Ma",
+      "Tengfeng Ma",
+      "Zhonghao Ren",
+      "Xibao Cai",
+      "Zhixiang Cheng",
+      "Bosheng Song",
+      "He Wang",
+      "Xiang Pan",
+      "Yangyang Chen",
+      "Sisi Yuan",
+      "Chen Lin"
     ],
-    "published_date": "2026-03-09T13:07:01Z",
-    "abstract": "Phylodynamics is used to estimate epidemic dynamics from phylogenetic trees or genomic sequences of pathogens, but the likelihood calculations needed can be challenging for complex models. We present a neural Bayes estimator (NBE) for key epidemic quantities: the reproduction number, prevalence, and cumulative infections through time. By performing quantile regression over tree space, the NBE allows us to estimate posterior medians and credible intervals directly from a reconstructed tree. Our approach uses a recursive neural network as a tree embedding network with a prediction network conditioned on time and quantile level to generate the estimates. In simulation studies, the NBE achieves good predictive performance, with conservative uncertainty estimates. Compared with a BEAST2 fixed-tree analysis, the NBE gives less biased estimates of time-varying reproduction numbers in our test setting. Under a misspecified sampling model, the NBE performance degrades (as expected) but remains reasonable, and fine-tuning a pre-trained model yields estimates comparable to those from a model trained from scratch, at substantially lower computational cost.",
-    "pdf_link": "https://arxiv.org/pdf/2603.08345v1",
+    "published_date": "2026-03-16T09:13:08Z",
+    "abstract": "Motivation: The scalable identification of bioactive compounds is essential for contemporary drug discovery. This process faces a key trade-off: structural screening offers scalability but lacks biological context, whereas high-content phenotypic profiling provides deep biological insights but is resource-intensive. The primary challenge is to extract robust biological signals from noisy data and encode them into representations that do not require biological data at inference. Results: This study presents DECODE (DEcomposing Cellular Observations of Drug Effects), a framework that bridges this gap by empowering chemical representations with intrinsic biological semantics to enable structure-based in silico biological profiling. DECODE leverages limited paired transcriptomic and morphological data as supervisory signals during training, enabling the extraction of a measurement-invariant biological fingerprint from chemical structures and explicit filtering of experimental noise. Our evaluations demonstrate that DECODE retrieves functionally similar drugs in zero-shot settings with over 20% relative improvement over chemical baselines in mechanism-of-action (MOA) prediction. Furthermore, the framework achieves a 6-fold increase in hit rates for novel anti-cancer agents during external validation. Availability and implementation: The codes and datasets of DECODE are available at https://github.com/lian-xiao/DECODE.",
+    "pdf_link": "https://arxiv.org/pdf/2603.15006v1",
     "categories": [
-      "stat.ME",
-      "q-bio.QM"
+      "q-bio.QM",
+      "cs.AI",
+      "cs.LG"
     ],
-    "tldr": "A neural Bayes estimator using recursive neural networks performs amortized quantile regression over phylogenetic trees to infer epidemic dynamics faster and with less bias than BEAST2.",
+    "tldr": "DECODE extracts biological fingerprints from chemical structures using transcriptomic and morphological data, achieving 20% improvement in mechanism-of-action prediction and 6-fold increase in anti-cancer hit rates.",
     "keywords": [
-      "Neural Bayes Estimator",
-      "Recursive Neural Network",
-      "Quantile Regression",
-      "Phylodynamic Inference",
-      "Amortized Inference"
+      "DECODE framework",
+      "measurement-invariant biological fingerprint",
+      "transcriptomic profiling",
+      "morphological profiling",
+      "mechanism-of-action prediction"
     ],
     "relevance_score": 10
   },
   {
-    "id": "2603.09033v1",
-    "title": "Sequential learning theory for Markov genealogy processes",
+    "id": "2603.16789v1",
+    "title": "Conservative Continuous-Time Treatment Optimization",
     "authors": [
-      "David J Pascall"
+      "Nora Schneider",
+      "Georg Manten",
+      "Niki Kilbertus"
     ],
-    "published_date": "2026-03-10T00:09:44Z",
-    "abstract": "We introduce a filtration-based framework for studying when and why adding taxa improves phylodynamic inference, by constructing a natural ordering of observed tips and applying sequential Bayesian analysis to the resulting filtration. We decompose the expected variance reduction on taxa addition into learning, mismatch, and covariance components, classify estimands into learning classes based on the pathwise behaviour of the mismatch, and show that for absorbing estimands an oracle who knows the latent absorption status obtains event-wise learning guarantees unavailable to the analyst. The gap between oracle and analyst is irreducible assumptions that are likely to hold for many real phylodynamic estimands, establishing a fundamental limit on what sequence data alone can reveal about the latent genealogy.",
-    "pdf_link": "https://arxiv.org/pdf/2603.09033v1",
+    "published_date": "2026-03-17T17:01:23Z",
+    "abstract": "We develop a conservative continuous-time stochastic control framework for treatment optimization from irregularly sampled patient trajectories. The unknown patient dynamics are modeled as a controlled stochastic differential equation with treatment as a continuous-time control. Naive model-based optimization can exploit model errors and propose out-of-support controls, so optimizing the estimated dynamics may not optimize the true dynamics. To limit extrapolation, we add a consistent signature-based MMD regularizer on path space that penalizes treatment plans whose induced trajectory distribution deviates from observed trajectories. The resulting objective minimizes a computable upper bound on the true cost. Experiments on benchmark datasets show improved robustness and performance compared to non-conservative baselines.",
+    "pdf_link": "https://arxiv.org/pdf/2603.16789v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "tldr": "Stochastic differential equation framework with signature-based MMD regularization ensures conservative continuous-time treatment optimization from irregularly sampled patient trajectories.",
+    "keywords": [
+      "stochastic differential equations",
+      "signature-based MMD",
+      "path space regularization",
+      "continuous-time control",
+      "conservative optimization"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.16587v1",
+    "title": "HistoAtlas: A Pan-Cancer Morphology Atlas Linking Histomics to Molecular Programs and Clinical Outcomes",
+    "authors": [
+      "Pierre-Antoine Bannier"
+    ],
+    "published_date": "2026-03-17T14:36:07Z",
+    "abstract": "We present HistoAtlas, a pan-cancer computational atlas that extracts 38 interpretable histomic features from 6,745 diagnostic H&E slides across 21 TCGA cancer types and systematically links every feature to survival, gene expression, somatic mutations, and immune subtypes. All associations are covariate-adjusted, multiple-testing corrected, and classified into evidence-strength tiers. The atlas recovers known biology, from immune infiltration and prognosis to proliferation and kinase signaling, while uncovering compartment-specific immune signals and morphological subtypes with divergent outcomes. Every result is spatially traceable to tissue compartments and individual cells, statistically calibrated, and openly queryable. HistoAtlas enables systematic, large-scale biomarker discovery from routine H&E without specialized staining or sequencing. Data and an interactive web atlas are freely available at https://histoatlas.com .",
+    "pdf_link": "https://arxiv.org/pdf/2603.16587v1",
     "categories": [
       "q-bio.QM",
-      "math.ST"
+      "cs.CV",
+      "eess.IV"
     ],
-    "tldr": "A filtration-based sequential Bayesian framework decomposes variance reduction on taxa addition into learning, mismatch, and covariance components, establishing fundamental inferential limits of sequence data for phylodynamic analysis.",
+    "tldr": "HistoAtlas extracts 38 interpretable histomic features from 6,745 H&E slides across 21 cancer types, linking morphology to survival, gene expression, and mutations.",
     "keywords": [
-      "Sequential Bayesian Analysis",
-      "Markov Genealogy Processes",
-      "Filtration Framework",
-      "Phylodynamic Inference",
-      "Variance Decomposition"
+      "histomic feature extraction",
+      "covariate adjustment",
+      "multiple-testing correction",
+      "spatial compartment analysis",
+      "TCGA integration"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.16562v1",
+    "title": "Understanding Cell Fate Decisions with Temporal Attention",
+    "authors": [
+      "Florian Bürger",
+      "Martim Dias Gomes",
+      "Adrián E. Granada",
+      "Noémie Moreau",
+      "Katarzyna Bozek"
+    ],
+    "published_date": "2026-03-17T14:22:53Z",
+    "abstract": "Understanding non-genetic determinants of cell fate is critical for developing and improving cancer therapies, as genetically identical cells can exhibit divergent outcomes under the same treatment conditions. In this work, we present a deep learning approach for cell fate prediction from raw long-term live-cell recordings of cancer cell populations under chemotherapeutic treatment. Our Transformer model is trained to predict cell fate directly from raw image sequences, without relying on predefined morphological or molecular features. Beyond classification, we introduce a comprehensive explainability framework for interpreting the temporal and morphological cues guiding the model's predictions. We demonstrate that prediction of cell outcomes is possible based on the video only, our model achieves balanced accuracy of 0.94 and an F1-score of 0.93. Attention and masking experiments further indicate that the signal predictive of the cell fate is not uniquely located in the final frames of a cell trajectory, as reliable predictions are possible up to 10 h before the event. Our analysis reveals distinct temporal distribution of predictive information in the mitotic and apoptotic sequences, as well as the role of cell morphology and p53 signaling in determining cell outcomes. Together, these findings demonstrate that attention-based temporal models enable accurate cell fate prediction while providing biologically interpretable insights into non-genetic determinants of cellular decision-making. The code is available at https://github.com/bozeklab/Cell-Fate-Prediction.",
+    "pdf_link": "https://arxiv.org/pdf/2603.16562v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.CB",
+      "q-bio.QM"
+    ],
+    "tldr": "Transformer model with temporal attention predicts cell fate from live-cell videos, achieving 0.94 accuracy and revealing morphological cues and p53 signaling dynamics.",
+    "keywords": [
+      "Transformer attention",
+      "temporal masking",
+      "gradient-based attribution",
+      "p53 signaling dynamics",
+      "live-cell imaging"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.16185v1",
+    "title": "Sample-Efficient Adaptation of Drug-Response Models to Patient Tumors under Strong Biological Domain Shift",
+    "authors": [
+      "Camille Jimenez Cortes",
+      "Philippe Lalanda",
+      "German Vega"
+    ],
+    "published_date": "2026-03-17T07:12:38Z",
+    "abstract": "Predicting drug response in patients from preclinical data remains a major challenge in precision oncology due to the substantial biological gap between in vitro cell lines and patient tumors. Rather than aiming to improve absolute in vitro prediction accuracy, this work examines whether explicitly separating representation learning from task supervision enables more sample-efficient adaptation of drug-response models to patient data under strong biological domain shift. We propose a staged transfer-learning framework in which cellular and drug representations are first learned independently from large collections of unlabeled pharmacogenomic data using autoencoder-based representation learning. These representations are then aligned with drug-response labels on cell-line data and subsequently adapted to patient tumors using few-shot supervision. Through a systematic evaluation spanning in-domain, cross-dataset, and patient-level settings, we show that unsupervised pretraining provides limited benefit when source and target domains overlap substantially, but yields clear gains when adapting to patient tumors with very limited labeled data. In particular, the proposed framework achieves faster performance improvements during few-shot patient-level adaptation while maintaining comparable accuracy to single-phase baselines on standard cell-line benchmarks. Overall, these results demonstrate that learning structured and transferable representations from unlabeled molecular profiles can substantially reduce the amount of clinical supervision required for effective drug-response prediction, offering a practical pathway toward data-efficient preclinical-to-clinical translation.",
+    "pdf_link": "https://arxiv.org/pdf/2603.16185v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "tldr": "Staged transfer-learning framework using autoencoder-based representation learning enables sample-efficient drug-response prediction when transferring from cell lines to patient tumors under biological domain shift.",
+    "keywords": [
+      "autoencoder-based representation learning",
+      "staged transfer-learning framework",
+      "few-shot adaptation",
+      "pharmacogenomic data",
+      "preclinical-to-clinical translation"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.14806v1",
+    "title": "Fold-CP: A Context Parallelism Framework for Biomolecular Modeling",
+    "authors": [
+      "Dejun Lin",
+      "Simon Chu",
+      "Vishanth Iyer",
+      "Youhan Lee",
+      "John St John",
+      "Kevin Boyd",
+      "Brian Roland",
+      "Xiaowei Ren",
+      "Guoqing Zhou",
+      "Zhonglin Cao",
+      "Polina Binder",
+      "Yuliya Zhautouskaya",
+      "Jakub Zakrzewski",
+      "Maximilian Stadler",
+      "Kyle Gion",
+      "Yuxing Peng",
+      "Xi Chen",
+      "Tianjing Zhang",
+      "Philipp Junk",
+      "Michelle Dimon",
+      "Paweł Gniewek",
+      "Fabian Ortega",
+      "McKinley Polen",
+      "Ivan Grubisic",
+      "Ali Bashir",
+      "Graham Holt",
+      "Danny Kovtun",
+      "Matthias Grass",
+      "Luca Naef",
+      "Rui Wang",
+      "Jian Peng",
+      "Anthony Costa",
+      "Saee Paliwal",
+      "Eddie Calleja",
+      "Timur Rvachov",
+      "Neha Tadimeti",
+      "Roy Tal",
+      "Emine Kucukbenli"
+    ],
+    "published_date": "2026-03-16T04:20:01Z",
+    "abstract": "Understanding cellular machinery requires atomic-scale reconstruction of large biomolecular assemblies. However, predicting the structures of these systems has been constrained by hardware memory requirements of models like AlphaFold 3, imposing a practical ceiling of a few thousand residues that can be processed on a single GPU. Here we present NVIDIA BioNeMo Fold-CP, a context parallelism framework that overcomes this barrier by distributing the inference and training pipelines of co-folding models across multiple GPUs. We use the Boltz models as open source reference architectures and implement custom multidimensional primitives that efficiently parallelize both the dense triangular updates and the irregular, data-dependent pattern of window-batched local attention. Our approach achieves efficient memory scaling; for an N-token input distributed across P GPUs, per-device memory scales as $O(N^2/P)$, enabling the structure prediction of assemblies exceeding 30,000 residues on 64 NVIDIA B300 GPUs. We demonstrate the scientific utility of this approach through successful developer use cases: Fold-CP enabled the scoring of over 90% of Comprehensive Resource of Mammalian protein complexes (CORUM) database, as well as folding of disease-relevant PI4KA lipid kinase complex bound to an intrinsically disordered region without cropping. By providing a scalable pathway for modeling massive systems with full global context, Fold-CP represents a significant step toward the realization of a virtual cell.",
+    "pdf_link": "https://arxiv.org/pdf/2603.14806v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.DC",
+      "cs.LG",
+      "q-bio.BM"
+    ],
+    "tldr": "Fold-CP distributes AlphaFold-style structure prediction across multiple GPUs, enabling atomic-scale modeling of biomolecular assemblies exceeding 30,000 residues with O(N²/P) memory scaling.",
+    "keywords": [
+      "AlphaFold 3",
+      "context parallelism",
+      "window-batched local attention",
+      "Boltz models",
+      "triangular updates"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.16741v1",
+    "title": "Bayesian Inference of Psychometric Variables From Brain and Behavior in Implicit Association Tests",
+    "authors": [
+      "Christian A. Kothe",
+      "Sean Mullen",
+      "Michael V. Bronstein",
+      "Grant Hanada",
+      "Marcelo Cicconet",
+      "Aaron N. McInnes",
+      "Tim Mullen",
+      "Marc Aafjes",
+      "Scott R. Sponheim",
+      "Alik S. Widge"
+    ],
+    "published_date": "2026-03-17T16:20:55Z",
+    "abstract": "Objective. We establish a principled method for inferring mental health related psychometric variables from neural and behavioral data using the Implicit Association Test (IAT) as the data generation engine, aiming to overcome the limited predictive performance (typically under 0.7 AUC) of the gold-standard D-score method, which relies solely on reaction times. Approach. We propose a sparse hierarchical Bayesian model that leverages multi-modal data to predict experiences related to mental illness symptoms in new participants. The model is a multivariate generalization of the D-score with trainable parameters, engineered for parameter efficiency in the small-cohort regime typical of IAT studies. Data from two IAT variants were analyzed: a suicidality-related E-IAT ($n=39$) and a psychosis-related PSY-IAT ($n=34$). Main Results. Our approach overcomes a high inter-individual variability and low within-session effect size in the dataset, reaching AUCs of 0.73 (E-IAT) and 0.76 (PSY-IAT) in the best modality configurations, though corrected 95% confidence intervals are wide ($\\pm 0.18$) and results are marginally significant after FDR correction ($q=0.10$). Restricting the E-IAT to MDD participants improves AUC to 0.79 $[0.62, 0.97]$ (significant at $q=0.05$). Performance is on par with the best reference methods (shrinkage LDA and EEGNet) for each task, even when the latter were adapted to the task, while the proposed method was not. Accuracy was substantially above near-chance D-scores (0.50-0.53 AUC) in both tasks, with more consistent cross-task performance than any single reference method. Significance. Our framework shows promise for enhancing IAT-based assessment of experiences related to entrapment and psychosis, and potentially other mental health conditions, though further validation on larger and independent cohorts will be needed to establish clinical utility.",
+    "pdf_link": "https://arxiv.org/pdf/2603.16741v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.NC",
+      "q-bio.QM",
+      "stat.ML"
+    ],
+    "tldr": "Sparse hierarchical Bayesian model improves psychometric inference from Implicit Association Test data, outperforming D-score baselines by leveraging multi-modal neural and behavioral features.",
+    "keywords": [
+      "hierarchical Bayesian models",
+      "D-score",
+      "shrinkage LDA",
+      "EEGNet",
+      "FDR correction"
     ],
     "relevance_score": 8
   },
   {
-    "id": "2603.09531v1",
-    "title": "Association of Radiologic PPFE Change with Mortality in Lung Cancer Screening Cohorts",
+    "id": "2603.15217v1",
+    "title": "A multiscale discrete-to-continuum framework for structured population models",
     "authors": [
-      "Shahab Aslani",
-      "Mehran Azimbagirad",
-      "Daryl Cheng",
-      "Daisuke Yamada",
-      "Ryoko Egashira",
-      "Adam Szmul",
-      "Justine Chan-Fook",
-      "Robert Chapman",
-      "Alfred Chung Pui So",
-      "Shanshan Wang",
-      "John McCabe",
-      "Tianqi Yang",
-      "Jose M Brenes",
-      "Eyjolfur Gudmundsson",
-      "The SUMMIT Consortium",
-      "Susan M. Astley",
-      "Daniel C. Alexander",
-      "Sam M. Janes",
-      "Joseph Jacob"
+      "Eleonora Agostinelli",
+      "Keith L. Chambers",
+      "Helen M. Byrne",
+      "Mohit P. Dalwadi"
     ],
-    "published_date": "2026-03-10T11:37:50Z",
-    "abstract": "Background: Pleuroparenchymal fibroelastosis (PPFE) is an upper lobe predominant fibrotic lung abnormality associated with increased mortality in established interstitial lung disease. However, the clinical significance of radiologic PPFE progression in lung cancer screening populations remains unclear. We investigated whether longitudinal change in PPFE quantified on low dose CT independently associates with mortality and respiratory morbidity. Methods: We analysed longitudinal low-dose CT scans and clinical data from two lung cancer screening studies: the National Lung Screening Trial (NLST; n=7980) and the SUMMIT study (n=8561). An automated algorithm quantified PPFE volume on baseline and follow up scans. Annualised change in PPFE (dPPFE) was derived and dichotomised using a distribution based threshold to define progressive PPFE. Associations between dPPFE and mortality were evaluated using Cox proportional hazards models adjusted for demographic and clinical variables. In the SUMMIT cohort, dPPFE was also examined in relation to clinical outcomes. Findings: dPPFE independently associated with mortality in both cohorts (NLST: HR 1.25, 95% CI 1.01-1.56, p=0.042; SUMMIT: HR 3.14, 95% CI 1.66-5.97, p<0.001). Kaplan-Meier curves showed reduced survival among participants with progressive PPFE in both cohorts. In SUMMIT, dPPFE was associated with higher respiratory admissions (IRR 2.79, p<0.001), increased antibiotic and steroid use (IRR 1.55, p=0.010), and a trend towards higher mMRC scores (OR 1.40, p=0.055). Interpretation: Radiologic PPFE progression independently associates with mortality across two large lung cancer screening cohorts and with adverse clinical outcomes. Quantitative assessment of PPFE progression may provide a clinically relevant imaging biomarker for identifying individuals at increased respiratory risk within screening programmes.",
-    "pdf_link": "https://arxiv.org/pdf/2603.09531v1",
+    "published_date": "2026-03-16T12:54:30Z",
+    "abstract": "Mathematical models of biological populations commonly use discrete structure classes to capture trait variation among individuals (e.g. age, size, phenotype, intracellular state). Upscaling these discrete models into continuum descriptions can improve analytical tractability and scalability of numerical solutions. Common upscaling approaches based solely on Taylor expansions may, however, introduce ambiguities in truncation order, uniform validity and boundary conditions. To address this, here we introduce a discrete multiscale framework to systematically derive continuum approximations of structured population models. Using the method of multiple scales and matched asymptotic expansions applied to discrete systems, we identify regions of structure space for which a continuum representation is appropriate and derive the corresponding partial differential equations. The leading-order dynamics are given by a nonlinear advection equation in the bulk domain and advection-diffusion processes in small inner layers about the leading wavefronts and stagnation point. We further derive discrete boundary layer descriptions for regions where a continuum representation is fundamentally inappropriate. Finally, we demonstrate the method on a simple lipid-structured model for early atherosclerosis and verify consistency between the discrete and continuum descriptions. The multiscale framework we present can be applied to other heterogeneous systems with discrete structure in order to obtain appropriate upscaled dynamics with asymptotically consistent boundary conditions.",
+    "pdf_link": "https://arxiv.org/pdf/2603.15217v1",
     "categories": [
-      "q-bio.QM",
-      "cs.CV",
-      "eess.IV",
-      "stat.AP"
-    ],
-    "tldr": "Automated CT volumetric analysis of 16,500 lung cancer screening participants shows annualised PPFE progression independently predicts mortality and adverse respiratory outcomes via Cox proportional hazards modelling.",
-    "keywords": [
-      "Automated Image Segmentation",
-      "Cox Proportional Hazards Model",
-      "Kaplan-Meier Survival Analysis",
-      "Longitudinal CT Quantification",
-      "Imaging Biomarker"
-    ],
-    "relevance_score": 6
-  },
-  {
-    "id": "2603.08444v2",
-    "title": "Hydrodynamic origins of symmetric swimming strategies",
-    "authors": [
-      "Takahiro Kanazawa",
-      "Kenta Ishimoto",
-      "Kyogo Kawaguchi"
-    ],
-    "published_date": "2026-03-09T14:40:32Z",
-    "abstract": "Efficient locomotion is important for the evolution of complex life, yet the physical principles selecting specific swimming strokes often remain entangled with biological constraints. In viscous fluids, the scallop theorem constrains the temporal organization of strokes, but no analogous principle is known for their spatial structure, leaving the prevalence of symmetric gaits across diverse organisms without a physical explanation. Here we show that spatial symmetry acts as an emergent organizing principle for efficiency in viscous fluids. By analysing deformable swimmers whose strokes are not constrained to any particular symmetry class, we identify a hydrodynamic duality: symmetric and anti-symmetric strokes are dynamically equivalent, yielding identical speeds and efficiencies, which we prove are optimal among all strokes. We validate this using numerical simulations of Stokes flow, demonstrating that these symmetry rules persist even in three-dimensional body plans. Our results suggest that the prevalence of symmetric and alternating gaits in nature reflects not merely a developmental constraint, but a physical optimality principle for locomotion in viscous environments, complementing developmental and neural constraints.",
-    "pdf_link": "https://arxiv.org/pdf/2603.08444v2",
-    "categories": [
-      "physics.bio-ph",
-      "physics.flu-dyn",
+      "q-bio.PE",
+      "math.DS",
       "q-bio.QM"
     ],
-    "tldr": "Unconstrained Stokes flow analysis proves symmetric and anti-symmetric swimming strokes are hydrodynamically dual and jointly optimal, providing a fluid-mechanical explanation for the prevalence of symmetric gaits in nature.",
+    "tldr": "Multiscale discrete-to-continuum framework using matched asymptotic expansions systematically derives partial differential equations for structured population models with consistent boundary conditions.",
     "keywords": [
-      "Stokes Flow Simulation",
-      "Scallop Theorem",
-      "Hydrodynamic Duality",
-      "Dynamical Systems",
-      "Numerical Optimisation"
+      "matched asymptotic expansions",
+      "method of multiple scales",
+      "advection-diffusion equation",
+      "boundary layer theory",
+      "structured population models"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2603.15217v2",
+    "title": "A multiscale discrete-to-continuum framework for structured population models",
+    "authors": [
+      "Eleonora Agostinelli",
+      "Keith L. Chambers",
+      "Helen M. Byrne",
+      "Mohit P. Dalwadi"
+    ],
+    "published_date": "2026-03-16T12:54:30Z",
+    "abstract": "Mathematical models of biological populations commonly use discrete structure classes to capture trait variation among individuals (e.g. age, size, phenotype, intracellular state). Upscaling these discrete models into continuum descriptions can improve analytical tractability and scalability of numerical solutions. Common upscaling approaches based solely on Taylor expansions may, however, introduce ambiguities in truncation order, uniform validity and boundary conditions. To address this, here we introduce a discrete multiscale framework to systematically derive continuum approximations of structured population models. Using the method of multiple scales and matched asymptotic expansions applied to discrete systems, we identify regions of structure space for which a continuum representation is appropriate and derive the corresponding partial differential equations. The leading-order dynamics are given by a nonlinear advection equation in the bulk domain and advection-diffusion processes in small inner layers about the leading wavefronts and stagnation point. We further derive discrete boundary layer descriptions for regions where a continuum representation is fundamentally inappropriate. Finally, we demonstrate the method on a simple lipid-structured model for early atherosclerosis and verify consistency between the discrete and continuum descriptions. The multiscale framework we present can be applied to other heterogeneous systems with discrete structure in order to obtain appropriate upscaled dynamics with asymptotically consistent boundary conditions.",
+    "pdf_link": "https://arxiv.org/pdf/2603.15217v2",
+    "categories": [
+      "q-bio.PE",
+      "math.DS",
+      "q-bio.QM"
+    ],
+    "tldr": "Multiscale discrete-to-continuum framework using matched asymptotic expansions systematically derives partial differential equations for structured population models with consistent boundary conditions.",
+    "keywords": [
+      "matched asymptotic expansions",
+      "method of multiple scales",
+      "advection-diffusion equation",
+      "boundary layer theory",
+      "structured population models"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2603.15711v1",
+    "title": "Knowledge Graph Extraction from Biomedical Literature for Alkaptonuria Rare Disease",
+    "authors": [
+      "Giang Pham",
+      "Rebecca Finetti",
+      "Caterina Graziani",
+      "Bianca Roncaglia",
+      "Asma Bendjeddou",
+      "Linda Brodo",
+      "Sara Brunetti",
+      "Moreno Falaschi",
+      "Stefano Forti",
+      "Silvia Giulia Galfré",
+      "Paolo Milazzo",
+      "Corrado Priami",
+      "Annalisa Santucci",
+      "Ottavia Spiga",
+      "Alina Sîrbu"
+    ],
+    "published_date": "2026-03-16T14:09:09Z",
+    "abstract": "Alkaptonuria (AKU) is an ultra-rare autosomal recessive metabolic disorder caused by mutations in the HGD (Homogentisate 1,2-Dioxygenase) gene, leading to a pathological accumulation of homogentisic acid (HGA) in body fluids and tissues. This leads to systemic manifestations, including premature spondyloarthropathy, renal and prostatic stones, and cardiovascular complications. Being ultra-rare, the amount of data related to the disease is limited, both in terms of clinical data and literature. Knowledge graphs (KGs) can help connect the limited knowledge about the disease (basic mechanisms, manifestations and existing therapies) with other knowledge; however, AKU is frequently underrepresented or entirely absent in existing biomedical KGs. In this work, we apply a text-mining methodology based on PubTator3 for large-scale extraction of biomedical relations. We construct two KGs of different sizes, validate them using existing biochemical knowledge and use them to extract genes, diseases and therapies possibly related to AKU. This computational framework reveals the systemic interactions of the disease, its comorbidities, and potential therapeutic targets, demonstrating the efficacy of our approach in analyzing rare metabolic disorders.",
+    "pdf_link": "https://arxiv.org/pdf/2603.15711v1",
+    "categories": [
+      "cs.AI",
+      "cs.IR",
+      "q-bio.QM"
+    ],
+    "tldr": "PubTator3-based text mining constructs knowledge graphs for alkaptonuria, revealing systemic interactions, comorbidities, and therapeutic targets for this ultra-rare metabolic disorder.",
+    "keywords": [
+      "PubTator3",
+      "knowledge graph construction",
+      "biomedical relation extraction",
+      "HGD gene mutations",
+      "rare disease informatics"
+    ],
+    "relevance_score": 7
+  },
+  {
+    "id": "2603.15080v1",
+    "title": "Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database",
+    "authors": [
+      "Madhulatha Mandarapu",
+      "Sandeep Kunkunuru"
+    ],
+    "published_date": "2026-03-16T10:36:13Z",
+    "abstract": "Biomedical knowledge is fragmented across siloed databases -- Reactome for pathways, STRING for protein interactions, Gene Ontology for functional annotations, ClinicalTrials.gov for study registries, and dozens more. Researchers routinely download flat files from each source and write bespoke scripts to cross-reference them, a process that is slow, error-prone, and not reproducible. We present two open-source biomedical knowledge graphs -- Pathways KG (118,686 nodes, 834,785 edges from 5 sources) and Clinical Trials KG (7,774,446 nodes, 26,973,997 edges from 5 sources) -- built on Samyama, a high-performance graph database written in Rust. Our contributions are threefold. First, we describe a reproducible ETL pattern for constructing large-scale KGs from heterogeneous public data sources, with cross-source deduplication, batch Cypher loading, and portable snapshot export. Second, we demonstrate cross-KG federation: loading both snapshots into a single graph tenant enables property-based joins across datasets, answering questions like ``Which biological pathways are disrupted by drugs currently in Phase~3 trials for breast cancer?'' -- a query that neither KG can answer alone. Third, we introduce schema-driven MCP server generation: each KG automatically exposes typed tools for LLM agents via the Model Context Protocol, enabling natural-language access to graph queries without manual tool authoring. All data sources are open-license (CC~BY~4.0, CC0, OBO). Snapshots, ETL code, and MCP configurations are publicly available. The combined federated graph (7.89M nodes, 27.8M edges) loads in 76 seconds on commodity hardware (Mac Mini M4, 16GB RAM), and the signature cross-KG query -- ``which pathways are disrupted by drugs in Phase~3 breast cancer trials?'' -- returns validated results in 2.1 seconds.",
+    "pdf_link": "https://arxiv.org/pdf/2603.15080v1",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "tldr": "Samyama graph database federates Pathways KG and Clinical Trials KG, enabling cross-dataset queries and LLM agent access via Model Context Protocol.",
+    "keywords": [
+      "Cypher query language",
+      "cross-source deduplication",
+      "Model Context Protocol",
+      "graph federation",
+      "Rust graph database"
+    ],
+    "relevance_score": 7
+  },
+  {
+    "id": "2603.15080v2",
+    "title": "Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database",
+    "authors": [
+      "Madhulatha Mandarapu",
+      "Sandeep Kunkunuru"
+    ],
+    "published_date": "2026-03-16T10:36:13Z",
+    "abstract": "Biomedical knowledge is fragmented across siloed databases -- Reactome for pathways, STRING for protein interactions, ClinicalTrials.gov for study registries, DrugBank for drug vocabularies, DGIdb for drug-gene interactions, SIDER for side effects. We present three open-source biomedical knowledge graphs -- Pathways KG (118,686 nodes, 834,785 edges from 5 sources), Clinical Trials KG (7,774,446 nodes, 26,973,997 edges from 5 sources), and Drug Interactions KG (32,726 nodes, 191,970 edges from 3 sources) -- built on Samyama, a high-performance graph database written in Rust. Our contributions are threefold. First, we describe a reproducible ETL pattern for constructing large-scale KGs from heterogeneous public data sources, with cross-source deduplication, batch loading (Python Cypher and Rust native loaders), and portable snapshot export. Second, we demonstrate cross-KG federation: loading all three snapshots into a single graph tenant enables property-based joins across datasets. Third, we introduce schema-driven MCP server generation for LLM agent access, evaluated on a new BiomedQA benchmark (40 pharmacology questions): domain-specific MCP tools achieve 98% accuracy vs. 0% for text-to-Cypher and 75% for standalone GPT-4o. All data sources are open-license. The combined federated graph (7.9M nodes, 28M edges) loads in approximately 3 minutes on commodity cloud hardware, and cross-KG queries complete in 80ms-4s.",
+    "pdf_link": "https://arxiv.org/pdf/2603.15080v2",
+    "categories": [
+      "cs.DB",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "tldr": "Samyama federates three biomedical knowledge graphs totaling 7.9M nodes; schema-driven Model Context Protocol tools achieve 98% accuracy on pharmacology question-answering benchmark.",
+    "keywords": [
+      "Cypher query language",
+      "cross-source deduplication",
+      "Model Context Protocol",
+      "graph federation",
+      "BiomedQA benchmark"
+    ],
+    "relevance_score": 7
+  },
+  {
+    "id": "2603.15702v1",
+    "title": "Whole slide and microscopy image analysis with QuPath and OMERO",
+    "authors": [
+      "Léo Leplat",
+      "Alan O'Callaghan",
+      "Peter Bankhead"
+    ],
+    "published_date": "2026-03-16T11:10:41Z",
+    "abstract": "QuPath is open-source software for bioimage analysis. As a desktop application that is flexible and easy to install, QuPath is used by labs worldwide to visualise and analyse large and complex images. However, relying only on images stored only on a local file system limits QuPath's use for larger studies. This paper describes a new extension that enables QuPath to access pixels and metadata from an OMERO server. This enhances the software by allowing it to work efficiently with images stored remotely, while also serving as a template for developers who want to connect QuPath to other image management systems.",
+    "pdf_link": "https://arxiv.org/pdf/2603.15702v1",
+    "categories": [
+      "q-bio.QM"
+    ],
+    "tldr": "New QuPath extension enables remote access to whole-slide images and metadata from OMERO servers, extending bioimage analysis to distributed image management systems.",
+    "keywords": [
+      "QuPath",
+      "OMERO server",
+      "remote pixel access",
+      "whole-slide imaging",
+      "image management API"
     ],
     "relevance_score": 5
   }
