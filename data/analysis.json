@@ -1,38 +1,105 @@
 [
   {
-    "id": "2603.15006v1",
-    "title": "Empowering Chemical Structures with Biological Insights for Scalable Phenotypic Virtual Screening",
+    "id": "2603.18249v1",
+    "title": "RAFT-UP: Robust Alignment for Spatial Transcriptomics with Explicit Control of Spatial Distortion",
     "authors": [
-      "Xiaoqing Lian",
-      "Pengsen Ma",
-      "Tengfeng Ma",
-      "Zhonghao Ren",
-      "Xibao Cai",
-      "Zhixiang Cheng",
-      "Bosheng Song",
-      "He Wang",
-      "Xiang Pan",
-      "Yangyang Chen",
-      "Sisi Yuan",
-      "Chen Lin"
+      "Yaqi Wu",
+      "Jingfeng Wang",
+      "Xin Maizie Zhou",
+      "Yanxiang Zhao",
+      "Zixuan Cang"
     ],
-    "published_date": "2026-03-16T09:13:08Z",
-    "abstract": "Motivation: The scalable identification of bioactive compounds is essential for contemporary drug discovery. This process faces a key trade-off: structural screening offers scalability but lacks biological context, whereas high-content phenotypic profiling provides deep biological insights but is resource-intensive. The primary challenge is to extract robust biological signals from noisy data and encode them into representations that do not require biological data at inference. Results: This study presents DECODE (DEcomposing Cellular Observations of Drug Effects), a framework that bridges this gap by empowering chemical representations with intrinsic biological semantics to enable structure-based in silico biological profiling. DECODE leverages limited paired transcriptomic and morphological data as supervisory signals during training, enabling the extraction of a measurement-invariant biological fingerprint from chemical structures and explicit filtering of experimental noise. Our evaluations demonstrate that DECODE retrieves functionally similar drugs in zero-shot settings with over 20% relative improvement over chemical baselines in mechanism-of-action (MOA) prediction. Furthermore, the framework achieves a 6-fold increase in hit rates for novel anti-cancer agents during external validation. Availability and implementation: The codes and datasets of DECODE are available at https://github.com/lian-xiao/DECODE.",
-    "pdf_link": "https://arxiv.org/pdf/2603.15006v1",
+    "published_date": "2026-03-18T20:15:41Z",
+    "abstract": "Spatial transcriptomics (ST) profiles gene expression across a tissue section while preserving the spatial coordinates. Because current ST technologies typically profile two-dimensional tissue slices, integrating and aligning slices from different regions of the same three-dimensional tissue or from samples under different conditions enables analyses that reveal 3D organization and condition-associated spatial patterns. Two major challenges remain. First, interpretable and flexible control over spatial distortion is needed because rigid transformations can be overly restrictive, whereas highly deformable mappings may arbitrarily distort spatial proximity. Second, biologically plausible matching is also needed, especially when the slices overlap partially. Here, we introduce RAFT-UP, a tool for robust ST alignment that provides explicit control over spatial distance preservation through a fused supervised Gromov-Wasserstein (FsGW) optimal transport framework. FsGW combines expression and spatial information, incorporates spot-wise constraints to discourage biologically implausible matches, and enforces a pairwise distance-consistency constraint that prevents mapping two pairs of spots when their spatial distances differ beyond a specified tolerance. We demonstrate that RAFT-UP accurately aligns slices from different regions of the same tissue and slices from different samples. Benchmarking shows that RAFT-UP improves spatial distance preservation while achieving spot label matching accuracy comparable to state-of-the-art methods. Finally, we demonstrate RAFT-UP on two spatially constrained downstream applications, including spatiotemporal mapping of developing mouse midbrain and comparative cross-slice analysis of cell-cell communication. RAFT-UP is available as open-source software.",
+    "pdf_link": "https://arxiv.org/pdf/2603.18249v1",
     "categories": [
       "q-bio.QM",
-      "cs.AI",
-      "cs.LG"
+      "math.OC"
     ],
-    "tldr": "DECODE extracts biological fingerprints from chemical structures using transcriptomic and morphological data, achieving 20% improvement in mechanism-of-action prediction and 6-fold increase in anti-cancer hit rates.",
+    "tldr": "RAFT-UP aligns spatial transcriptomics slices using Gromov-Wasserstein optimal transport with explicit spatial distortion control and biologically plausible matching constraints.",
     "keywords": [
-      "DECODE framework",
-      "measurement-invariant biological fingerprint",
-      "transcriptomic profiling",
-      "morphological profiling",
-      "mechanism-of-action prediction"
+      "Optimal Transport",
+      "Gromov-Wasserstein Distance",
+      "Spatial Transcriptomics",
+      "Gene Expression",
+      "Biological Alignment"
     ],
     "relevance_score": 10
+  },
+  {
+    "id": "2603.18497v1",
+    "title": "Recovering Sparse Neural Connectivity from Partial Measurements: A Covariance-Based Approach with Granger-Causality Refinement",
+    "authors": [
+      "Quilee Simeon"
+    ],
+    "published_date": "2026-03-19T05:09:51Z",
+    "abstract": "Inferring the connectivity of neural circuits from incomplete observations is a fundamental challenge in neuroscience. We present a covariance-based method for estimating the weight matrix of a recurrent neural network from sparse, partial measurements across multiple recording sessions. By accumulating pairwise covariance estimates across sessions where different subsets of neurons are observed, we reconstruct the full connectivity matrix without requiring simultaneous recording of all neurons. A Granger-causality refinement step enforces biological constraints via projected gradient descent. Through systematic experiments on synthetic networks modeling small brain circuits, we characterize a fundamental control-estimation tradeoff: stimulation aids identifiability but disrupts intrinsic dynamics, with the optimal level depending on measurement density. We discover that the ``incorrect'' linear approximation acts as implicit regularization -- outperforming the oracle estimator with known nonlinearity at all operating regimes -- and provide an exact characterization via the Stein--Price identity.",
+    "pdf_link": "https://arxiv.org/pdf/2603.18497v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.NE"
+    ],
+    "tldr": "Covariance-based method reconstructs neural connectivity from partial measurements across sessions using Granger causality refinement and projected gradient descent.",
+    "keywords": [
+      "Granger Causality",
+      "Neural Connectivity",
+      "Recurrent Neural Networks",
+      "Covariance Estimation",
+      "Projected Gradient Descent"
+    ],
+    "relevance_score": 10
+  },
+  {
+    "id": "2603.17247v1",
+    "title": "Binary Latent Protein Fitness Landscapes for Quantum Annealing Optimization",
+    "authors": [
+      "Truong-Son Hy"
+    ],
+    "published_date": "2026-03-18T01:06:20Z",
+    "abstract": "We propose Q-BIOLAT, a framework for modeling and optimizing protein fitness landscapes in binary latent spaces. Starting from protein sequences, we leverage pretrained protein language models to obtain continuous embeddings, which are then transformed into compact binary latent representations. In this space, protein fitness is approximated using a quadratic unconstrained binary optimization (QUBO) model, enabling efficient combinatorial search via classical heuristics such as simulated annealing and genetic algorithms. On the ProteinGym benchmark, we demonstrate that Q-BIOLAT captures meaningful structure in protein fitness landscapes and enables the identification of high-fitness variants. Despite using a simple binarization scheme, our method consistently retrieves sequences whose nearest neighbors lie within the top fraction of the training fitness distribution, particularly under the strongest configurations. We further show that different optimization strategies exhibit distinct behaviors, with evolutionary search performing better in higher-dimensional latent spaces and local search remaining competitive in preserving realistic sequences. Beyond its empirical performance, Q-BIOLAT provides a natural bridge between protein representation learning and combinatorial optimization. By formulating protein fitness as a QUBO problem, our framework is directly compatible with emerging quantum annealing hardware, opening new directions for quantum-assisted protein engineering. Our implementation is publicly available at: https://github.com/HySonLab/Q-BIOLAT",
+    "pdf_link": "https://arxiv.org/pdf/2603.17247v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "tldr": "Q-BIOLAT models protein fitness in binary latent space using QUBO optimization, enabling quantum annealing and classical heuristics for protein engineering.",
+    "keywords": [
+      "Quadratic Unconstrained Binary Optimization",
+      "Quantum Annealing",
+      "Protein Language Models",
+      "Simulated Annealing",
+      "Genetic Algorithms"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.18571v1",
+    "title": "CAPSUL: A Comprehensive Human Protein Benchmark for Subcellular Localization",
+    "authors": [
+      "Yicheng Hu",
+      "Xinyu Lin",
+      "Shulin Li",
+      "Wenjie Wang",
+      "Fengbin Zhu",
+      "Fuli Feng"
+    ],
+    "published_date": "2026-03-19T07:33:04Z",
+    "abstract": "Subcellular localization is a crucial biological task for drug target identification and function annotation. Although it has been biologically realized that subcellular localization is closely associated with protein structure, no existing dataset offers comprehensive 3D structural information with detailed subcellular localization annotations, thus severely hindering the application of promising structure-based models on this task. To address this gap, we introduce a new benchmark called $\\mathbf{CAPSUL}$, a $\\mathbf{C}$omprehensive hum$\\mathbf{A}$n $\\mathbf{P}$rotein benchmark for $\\mathbf{SU}$bcellular $\\mathbf{L}$ocalization. It features a dataset that integrates diverse 3D structural representations with fine-grained subcellular localization annotations carefully curated by domain experts. We evaluate this benchmark using a variety of state-of-the-art sequence-based and structure-based models, showcasing the importance of involving structural features in this task. Furthermore, we explore reweighting and single-label classification strategies to facilitate future investigation on structure-based methods for this task. Lastly, we showcase the powerful interpretability of structure-based methods through a case study on the Golgi apparatus, where we discover a decisive localization pattern $\u03b1$-helix from attention mechanisms, demonstrating the potential for bridging the gap with intuitive biological interpretability and paving the way for data-driven discoveries in cell biology.",
+    "pdf_link": "https://arxiv.org/pdf/2603.18571v1",
+    "categories": [
+      "cs.AI",
+      "cs.CE",
+      "q-bio.QM"
+    ],
+    "tldr": "CAPSUL benchmark integrates 3D protein structures with subcellular localization annotations, enabling structure-based models to improve protein localization prediction.",
+    "keywords": [
+      "Protein Structure",
+      "Subcellular Localization",
+      "Structural Features",
+      "Attention Mechanisms",
+      "Benchmark Dataset"
+    ],
+    "relevance_score": 9
   },
   {
     "id": "2603.16789v1",
@@ -49,65 +116,13 @@
       "cs.LG",
       "q-bio.QM"
     ],
-    "tldr": "Stochastic differential equation framework with signature-based MMD regularization ensures conservative continuous-time treatment optimization from irregularly sampled patient trajectories.",
+    "tldr": "Conservative stochastic control framework optimizes treatment using signature-based MMD regularization to prevent extrapolation from irregularly sampled patient trajectories.",
     "keywords": [
-      "stochastic differential equations",
-      "signature-based MMD",
-      "path space regularization",
-      "continuous-time control",
-      "conservative optimization"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2603.16587v1",
-    "title": "HistoAtlas: A Pan-Cancer Morphology Atlas Linking Histomics to Molecular Programs and Clinical Outcomes",
-    "authors": [
-      "Pierre-Antoine Bannier"
-    ],
-    "published_date": "2026-03-17T14:36:07Z",
-    "abstract": "We present HistoAtlas, a pan-cancer computational atlas that extracts 38 interpretable histomic features from 6,745 diagnostic H&E slides across 21 TCGA cancer types and systematically links every feature to survival, gene expression, somatic mutations, and immune subtypes. All associations are covariate-adjusted, multiple-testing corrected, and classified into evidence-strength tiers. The atlas recovers known biology, from immune infiltration and prognosis to proliferation and kinase signaling, while uncovering compartment-specific immune signals and morphological subtypes with divergent outcomes. Every result is spatially traceable to tissue compartments and individual cells, statistically calibrated, and openly queryable. HistoAtlas enables systematic, large-scale biomarker discovery from routine H&E without specialized staining or sequencing. Data and an interactive web atlas are freely available at https://histoatlas.com .",
-    "pdf_link": "https://arxiv.org/pdf/2603.16587v1",
-    "categories": [
-      "q-bio.QM",
-      "cs.CV",
-      "eess.IV"
-    ],
-    "tldr": "HistoAtlas extracts 38 interpretable histomic features from 6,745 H&E slides across 21 cancer types, linking morphology to survival, gene expression, and mutations.",
-    "keywords": [
-      "histomic feature extraction",
-      "covariate adjustment",
-      "multiple-testing correction",
-      "spatial compartment analysis",
-      "TCGA integration"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2603.16562v1",
-    "title": "Understanding Cell Fate Decisions with Temporal Attention",
-    "authors": [
-      "Florian Bürger",
-      "Martim Dias Gomes",
-      "Adrián E. Granada",
-      "Noémie Moreau",
-      "Katarzyna Bozek"
-    ],
-    "published_date": "2026-03-17T14:22:53Z",
-    "abstract": "Understanding non-genetic determinants of cell fate is critical for developing and improving cancer therapies, as genetically identical cells can exhibit divergent outcomes under the same treatment conditions. In this work, we present a deep learning approach for cell fate prediction from raw long-term live-cell recordings of cancer cell populations under chemotherapeutic treatment. Our Transformer model is trained to predict cell fate directly from raw image sequences, without relying on predefined morphological or molecular features. Beyond classification, we introduce a comprehensive explainability framework for interpreting the temporal and morphological cues guiding the model's predictions. We demonstrate that prediction of cell outcomes is possible based on the video only, our model achieves balanced accuracy of 0.94 and an F1-score of 0.93. Attention and masking experiments further indicate that the signal predictive of the cell fate is not uniquely located in the final frames of a cell trajectory, as reliable predictions are possible up to 10 h before the event. Our analysis reveals distinct temporal distribution of predictive information in the mitotic and apoptotic sequences, as well as the role of cell morphology and p53 signaling in determining cell outcomes. Together, these findings demonstrate that attention-based temporal models enable accurate cell fate prediction while providing biologically interpretable insights into non-genetic determinants of cellular decision-making. The code is available at https://github.com/bozeklab/Cell-Fate-Prediction.",
-    "pdf_link": "https://arxiv.org/pdf/2603.16562v1",
-    "categories": [
-      "cs.CV",
-      "q-bio.CB",
-      "q-bio.QM"
-    ],
-    "tldr": "Transformer model with temporal attention predicts cell fate from live-cell videos, achieving 0.94 accuracy and revealing morphological cues and p53 signaling dynamics.",
-    "keywords": [
-      "Transformer attention",
-      "temporal masking",
-      "gradient-based attribution",
-      "p53 signaling dynamics",
-      "live-cell imaging"
+      "Stochastic Differential Equations",
+      "Maximum Mean Discrepancy",
+      "Signature Methods",
+      "Treatment Optimization",
+      "Continuous-Time Control"
     ],
     "relevance_score": 9
   },
@@ -127,75 +142,145 @@
       "cs.AI",
       "q-bio.QM"
     ],
-    "tldr": "Staged transfer-learning framework using autoencoder-based representation learning enables sample-efficient drug-response prediction when transferring from cell lines to patient tumors under biological domain shift.",
+    "tldr": "Staged transfer learning with autoencoder-based representation learning enables sample-efficient adaptation of drug-response models from cell lines to patient tumors.",
     "keywords": [
-      "autoencoder-based representation learning",
-      "staged transfer-learning framework",
-      "few-shot adaptation",
-      "pharmacogenomic data",
-      "preclinical-to-clinical translation"
+      "Transfer Learning",
+      "Autoencoder",
+      "Domain Adaptation",
+      "Drug Response Prediction",
+      "Few-Shot Learning"
     ],
     "relevance_score": 9
   },
   {
-    "id": "2603.14806v1",
-    "title": "Fold-CP: A Context Parallelism Framework for Biomolecular Modeling",
+    "id": "2603.17380v1",
+    "title": "SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction",
     "authors": [
-      "Dejun Lin",
-      "Simon Chu",
-      "Vishanth Iyer",
-      "Youhan Lee",
-      "John St John",
-      "Kevin Boyd",
-      "Brian Roland",
-      "Xiaowei Ren",
-      "Guoqing Zhou",
-      "Zhonglin Cao",
-      "Polina Binder",
-      "Yuliya Zhautouskaya",
-      "Jakub Zakrzewski",
-      "Maximilian Stadler",
-      "Kyle Gion",
-      "Yuxing Peng",
-      "Xi Chen",
-      "Tianjing Zhang",
-      "Philipp Junk",
-      "Michelle Dimon",
-      "Paweł Gniewek",
-      "Fabian Ortega",
-      "McKinley Polen",
-      "Ivan Grubisic",
-      "Ali Bashir",
-      "Graham Holt",
-      "Danny Kovtun",
-      "Matthias Grass",
-      "Luca Naef",
-      "Rui Wang",
-      "Jian Peng",
-      "Anthony Costa",
-      "Saee Paliwal",
-      "Eddie Calleja",
-      "Timur Rvachov",
-      "Neha Tadimeti",
-      "Roy Tal",
-      "Emine Kucukbenli"
+      "Shuizhou Chen",
+      "Lang Yu",
+      "Kedu Jin",
+      "Songming Zhang",
+      "Hao Wu",
+      "Wenxuan Huang",
+      "Sheng Xu",
+      "Quan Qian",
+      "Qin Chen",
+      "Lei Bai",
+      "Siqi Sun",
+      "Zhangyang Gao"
     ],
-    "published_date": "2026-03-16T04:20:01Z",
-    "abstract": "Understanding cellular machinery requires atomic-scale reconstruction of large biomolecular assemblies. However, predicting the structures of these systems has been constrained by hardware memory requirements of models like AlphaFold 3, imposing a practical ceiling of a few thousand residues that can be processed on a single GPU. Here we present NVIDIA BioNeMo Fold-CP, a context parallelism framework that overcomes this barrier by distributing the inference and training pipelines of co-folding models across multiple GPUs. We use the Boltz models as open source reference architectures and implement custom multidimensional primitives that efficiently parallelize both the dense triangular updates and the irregular, data-dependent pattern of window-batched local attention. Our approach achieves efficient memory scaling; for an N-token input distributed across P GPUs, per-device memory scales as $O(N^2/P)$, enabling the structure prediction of assemblies exceeding 30,000 residues on 64 NVIDIA B300 GPUs. We demonstrate the scientific utility of this approach through successful developer use cases: Fold-CP enabled the scoring of over 90% of Comprehensive Resource of Mammalian protein complexes (CORUM) database, as well as folding of disease-relevant PI4KA lipid kinase complex bound to an intrinsically disordered region without cropping. By providing a scalable pathway for modeling massive systems with full global context, Fold-CP represents a significant step toward the realization of a virtual cell.",
-    "pdf_link": "https://arxiv.org/pdf/2603.14806v1",
+    "published_date": "2026-03-18T05:51:08Z",
+    "abstract": "Virtual cell models aim to enable in silico experimentation by predicting how cells respond to genetic, chemical, or cytokine perturbations from single-cell measurements. In practice, however, large-scale perturbation prediction remains constrained by three coupled bottlenecks: inefficient training and inference pipelines, unstable modeling in high-dimensional sparse expression space, and evaluation protocols that overemphasize reconstruction-like accuracy while underestimating biological fidelity. In this work we present a specialized large-scale foundation model SCALE for virtual cell perturbation prediction that addresses the above limitations jointly. First, we build a BioNeMo-based training and inference framework that substantially improves data throughput, distributed scalability, and deployment efficiency, yielding 12.51* speedup on pretrain and 1.29* on inference over the prior SOTA pipeline under matched system settings. Second, we formulate perturbation prediction as conditional transport and implement it with a set-aware flow architecture that couples LLaMA-based cellular encoding with endpoint-oriented supervision. This design yields more stable training and stronger recovery of perturbation effects. Third, we evaluate the model on Tahoe-100M using a rigorous cell-level protocol centered on biologically meaningful metrics rather than reconstruction alone. On this benchmark, our model improves PDCorr by 12.02% and DE Overlap by 10.66% over STATE. Together, these results suggest that advancing virtual cells requires not only better generative objectives, but also the co-design of scalable infrastructure, stable transport modeling, and biologically faithful evaluation.",
+    "pdf_link": "https://arxiv.org/pdf/2603.17380v1",
     "categories": [
-      "q-bio.QM",
-      "cs.DC",
       "cs.LG",
-      "q-bio.BM"
+      "cs.AI",
+      "q-bio.QM"
     ],
-    "tldr": "Fold-CP distributes AlphaFold-style structure prediction across multiple GPUs, enabling atomic-scale modeling of biomolecular assemblies exceeding 30,000 residues with O(N²/P) memory scaling.",
+    "tldr": "SCALE is a large-scale foundation model using conditional transport and LLaMA-based encoding for scalable virtual cell perturbation prediction.",
     "keywords": [
-      "AlphaFold 3",
-      "context parallelism",
-      "window-batched local attention",
-      "Boltz models",
-      "triangular updates"
+      "Conditional Transport",
+      "Foundation Models",
+      "Single-Cell Analysis",
+      "Perturbation Prediction",
+      "Flow Architecture"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.17380v2",
+    "title": "SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction",
+    "authors": [
+      "Shuizhou Chen",
+      "Lang Yu",
+      "Kedu Jin",
+      "Songming Zhang",
+      "Hao Wu",
+      "Wenxuan Huang",
+      "Sheng Xu",
+      "Quan Qian",
+      "Qin Chen",
+      "Lei Bai",
+      "Siqi Sun",
+      "Zhangyang Gao"
+    ],
+    "published_date": "2026-03-18T05:51:08Z",
+    "abstract": "Virtual cell models aim to enable in silico experimentation by predicting how cells respond to genetic, chemical, or cytokine perturbations from single-cell measurements. In practice, however, large-scale perturbation prediction remains constrained by three coupled bottlenecks: inefficient training and inference pipelines, unstable modeling in high-dimensional sparse expression space, and evaluation protocols that overemphasize reconstruction-like accuracy while underestimating biological fidelity. In this work we present a specialized large-scale foundation model SCALE for virtual cell perturbation prediction that addresses the above limitations jointly. First, we build a BioNeMo-based training and inference framework that substantially improves data throughput, distributed scalability, and deployment efficiency, yielding 12.51* speedup on pretrain and 1.29* on inference over the prior SOTA pipeline under matched system settings. Second, we formulate perturbation prediction as conditional transport and implement it with a set-aware flow architecture that couples LLaMA-based cellular encoding with endpoint-oriented supervision. This design yields more stable training and stronger recovery of perturbation effects. Third, we evaluate the model on Tahoe-100M using a rigorous cell-level protocol centered on biologically meaningful metrics rather than reconstruction alone. On this benchmark, our model improves PDCorr by 12.02% and DE Overlap by 10.66% over STATE. Together, these results suggest that advancing virtual cells requires not only better generative objectives, but also the co-design of scalable infrastructure, stable transport modeling, and biologically faithful evaluation.",
+    "pdf_link": "https://arxiv.org/pdf/2603.17380v2",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "tldr": "SCALE is a large-scale foundation model using conditional transport and LLaMA-based encoding for scalable virtual cell perturbation prediction.",
+    "keywords": [
+      "Conditional Transport",
+      "Foundation Models",
+      "Single-Cell Analysis",
+      "Perturbation Prediction",
+      "Flow Architecture"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.17191v1",
+    "title": "Tabular LLMs for Interpretable Few-Shot Alzheimer's Disease Prediction with Multimodal Biomedical Data",
+    "authors": [
+      "Sophie Kearney",
+      "Shu Yang",
+      "Zixuan Wen",
+      "Weimin Lyu",
+      "Bojian Hou",
+      "Duy Duong-Tran",
+      "Tianlong Chen",
+      "Jason H. Moore",
+      "Marylyn D. Ritchie",
+      "Chao Chen",
+      "Li Shen"
+    ],
+    "published_date": "2026-03-17T22:43:50Z",
+    "abstract": "Accurate diagnosis of Alzheimer's disease (AD) requires handling tabular biomarker data, yet such data are often small and incomplete, where deep learning models frequently fail to outperform classical methods. Pretrained large language models (LLMs) offer few-shot generalization, structured reasoning, and interpretable outputs, providing a powerful paradigm shift for clinical prediction. We propose TAP-GPT Tabular Alzheimer's Prediction GPT, a domain-adapted tabular LLM framework built on TableGPT2 and fine-tuned for few-shot AD classification using tabular prompts rather than plain texts. We evaluate TAP-GPT across four ADNI-derived datasets, including QT-PAD biomarkers and region-level structural MRI, amyloid PET, and tau PET for binary AD classification. Across multimodal and unimodal settings, TAP-GPT improves upon its backbone models and outperforms traditional machine learning baselines in the few-shot setting while remaining competitive with state-of-the-art general-purpose LLMs. We show that feature selection mitigates degradation in high-dimensional inputs and that TAP-GPT maintains stable performance under simulated and real-world missingness without imputation. Additionally, TAP-GPT produces structured, modality-aware reasoning aligned with established AD biology and shows greater stability under self-reflection, supporting its use in iterative multi-agent systems. To our knowledge, this is the first systematic application of a tabular-specialized LLM to multimodal biomarker-based AD prediction, demonstrating that such pretrained models can effectively address structured clinical prediction tasks and laying the foundation for tabular LLM-driven multi-agent clinical decision-support systems. The source code is publicly available on GitHub: https://github.com/sophie-kearney/TAP-GPT.",
+    "pdf_link": "https://arxiv.org/pdf/2603.17191v1",
+    "categories": [
+      "cs.CL",
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "tldr": "TAP-GPT adapts tabular LLMs for few-shot Alzheimer's prediction using multimodal biomarkers with interpretable, structured reasoning aligned with AD biology.",
+    "keywords": [
+      "Large Language Models",
+      "Few-Shot Learning",
+      "Tabular Data",
+      "Multimodal Biomarkers",
+      "Alzheimer's Disease"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.16562v1",
+    "title": "Understanding Cell Fate Decisions with Temporal Attention",
+    "authors": [
+      "Florian B\u00fcrger",
+      "Martim Dias Gomes",
+      "Adri\u00e1n E. Granada",
+      "No\u00e9mie Moreau",
+      "Katarzyna Bozek"
+    ],
+    "published_date": "2026-03-17T14:22:53Z",
+    "abstract": "Understanding non-genetic determinants of cell fate is critical for developing and improving cancer therapies, as genetically identical cells can exhibit divergent outcomes under the same treatment conditions. In this work, we present a deep learning approach for cell fate prediction from raw long-term live-cell recordings of cancer cell populations under chemotherapeutic treatment. Our Transformer model is trained to predict cell fate directly from raw image sequences, without relying on predefined morphological or molecular features. Beyond classification, we introduce a comprehensive explainability framework for interpreting the temporal and morphological cues guiding the model's predictions. We demonstrate that prediction of cell outcomes is possible based on the video only, our model achieves balanced accuracy of 0.94 and an F1-score of 0.93. Attention and masking experiments further indicate that the signal predictive of the cell fate is not uniquely located in the final frames of a cell trajectory, as reliable predictions are possible up to 10 h before the event. Our analysis reveals distinct temporal distribution of predictive information in the mitotic and apoptotic sequences, as well as the role of cell morphology and p53 signaling in determining cell outcomes. Together, these findings demonstrate that attention-based temporal models enable accurate cell fate prediction while providing biologically interpretable insights into non-genetic determinants of cellular decision-making. The code is available at https://github.com/bozeklab/Cell-Fate-Prediction.",
+    "pdf_link": "https://arxiv.org/pdf/2603.16562v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.CB",
+      "q-bio.QM"
+    ],
+    "tldr": "Transformer model predicts cell fate from live-cell videos with temporal attention, revealing non-genetic determinants of cellular decision-making under chemotherapy.",
+    "keywords": [
+      "Transformer",
+      "Temporal Attention",
+      "Cell Fate Prediction",
+      "Live-Cell Imaging",
+      "Explainability"
     ],
     "relevance_score": 9
   },
@@ -223,180 +308,141 @@
       "q-bio.QM",
       "stat.ML"
     ],
-    "tldr": "Sparse hierarchical Bayesian model improves psychometric inference from Implicit Association Test data, outperforming D-score baselines by leveraging multi-modal neural and behavioral features.",
+    "tldr": "Sparse hierarchical Bayesian model improves Implicit Association Test predictions of mental health symptoms using multimodal neural and behavioral data.",
     "keywords": [
-      "hierarchical Bayesian models",
-      "D-score",
-      "shrinkage LDA",
-      "EEGNet",
-      "FDR correction"
+      "Hierarchical Bayesian Models",
+      "Psychometric Variables",
+      "Multimodal Data",
+      "Neural Data",
+      "Mental Health"
     ],
     "relevance_score": 8
   },
   {
-    "id": "2603.15217v1",
-    "title": "A multiscale discrete-to-continuum framework for structured population models",
+    "id": "2603.16587v1",
+    "title": "HistoAtlas: A Pan-Cancer Morphology Atlas Linking Histomics to Molecular Programs and Clinical Outcomes",
     "authors": [
-      "Eleonora Agostinelli",
-      "Keith L. Chambers",
-      "Helen M. Byrne",
-      "Mohit P. Dalwadi"
+      "Pierre-Antoine Bannier"
     ],
-    "published_date": "2026-03-16T12:54:30Z",
-    "abstract": "Mathematical models of biological populations commonly use discrete structure classes to capture trait variation among individuals (e.g. age, size, phenotype, intracellular state). Upscaling these discrete models into continuum descriptions can improve analytical tractability and scalability of numerical solutions. Common upscaling approaches based solely on Taylor expansions may, however, introduce ambiguities in truncation order, uniform validity and boundary conditions. To address this, here we introduce a discrete multiscale framework to systematically derive continuum approximations of structured population models. Using the method of multiple scales and matched asymptotic expansions applied to discrete systems, we identify regions of structure space for which a continuum representation is appropriate and derive the corresponding partial differential equations. The leading-order dynamics are given by a nonlinear advection equation in the bulk domain and advection-diffusion processes in small inner layers about the leading wavefronts and stagnation point. We further derive discrete boundary layer descriptions for regions where a continuum representation is fundamentally inappropriate. Finally, we demonstrate the method on a simple lipid-structured model for early atherosclerosis and verify consistency between the discrete and continuum descriptions. The multiscale framework we present can be applied to other heterogeneous systems with discrete structure in order to obtain appropriate upscaled dynamics with asymptotically consistent boundary conditions.",
-    "pdf_link": "https://arxiv.org/pdf/2603.15217v1",
+    "published_date": "2026-03-17T14:36:07Z",
+    "abstract": "We present HistoAtlas, a pan-cancer computational atlas that extracts 38 interpretable histomic features from 6,745 diagnostic H&E slides across 21 TCGA cancer types and systematically links every feature to survival, gene expression, somatic mutations, and immune subtypes. All associations are covariate-adjusted, multiple-testing corrected, and classified into evidence-strength tiers. The atlas recovers known biology, from immune infiltration and prognosis to proliferation and kinase signaling, while uncovering compartment-specific immune signals and morphological subtypes with divergent outcomes. Every result is spatially traceable to tissue compartments and individual cells, statistically calibrated, and openly queryable. HistoAtlas enables systematic, large-scale biomarker discovery from routine H&E without specialized staining or sequencing. Data and an interactive web atlas are freely available at https://histoatlas.com .",
+    "pdf_link": "https://arxiv.org/pdf/2603.16587v1",
     "categories": [
-      "q-bio.PE",
-      "math.DS",
-      "q-bio.QM"
+      "q-bio.QM",
+      "cs.CV",
+      "eess.IV"
     ],
-    "tldr": "Multiscale discrete-to-continuum framework using matched asymptotic expansions systematically derives partial differential equations for structured population models with consistent boundary conditions.",
+    "tldr": "HistoAtlas extracts 38 interpretable histomic features from pan-cancer H&E slides, linking morphology to survival, gene expression, and immune subtypes.",
     "keywords": [
-      "matched asymptotic expansions",
-      "method of multiple scales",
-      "advection-diffusion equation",
-      "boundary layer theory",
-      "structured population models"
+      "Histopathology",
+      "Feature Extraction",
+      "Survival Analysis",
+      "Gene Expression",
+      "Biomarker Discovery"
     ],
     "relevance_score": 8
   },
   {
-    "id": "2603.15217v2",
-    "title": "A multiscale discrete-to-continuum framework for structured population models",
+    "id": "2603.18239v1",
+    "title": "Impact of automatic speech recognition quality on Alzheimer's disease detection from spontaneous speech: a reproducible benchmark study with lexical modeling and statistical validation",
     "authors": [
-      "Eleonora Agostinelli",
-      "Keith L. Chambers",
-      "Helen M. Byrne",
-      "Mohit P. Dalwadi"
+      "Himadri Samanta"
     ],
-    "published_date": "2026-03-16T12:54:30Z",
-    "abstract": "Mathematical models of biological populations commonly use discrete structure classes to capture trait variation among individuals (e.g. age, size, phenotype, intracellular state). Upscaling these discrete models into continuum descriptions can improve analytical tractability and scalability of numerical solutions. Common upscaling approaches based solely on Taylor expansions may, however, introduce ambiguities in truncation order, uniform validity and boundary conditions. To address this, here we introduce a discrete multiscale framework to systematically derive continuum approximations of structured population models. Using the method of multiple scales and matched asymptotic expansions applied to discrete systems, we identify regions of structure space for which a continuum representation is appropriate and derive the corresponding partial differential equations. The leading-order dynamics are given by a nonlinear advection equation in the bulk domain and advection-diffusion processes in small inner layers about the leading wavefronts and stagnation point. We further derive discrete boundary layer descriptions for regions where a continuum representation is fundamentally inappropriate. Finally, we demonstrate the method on a simple lipid-structured model for early atherosclerosis and verify consistency between the discrete and continuum descriptions. The multiscale framework we present can be applied to other heterogeneous systems with discrete structure in order to obtain appropriate upscaled dynamics with asymptotically consistent boundary conditions.",
-    "pdf_link": "https://arxiv.org/pdf/2603.15217v2",
+    "published_date": "2026-03-18T19:46:29Z",
+    "abstract": "Early detection of Alzheimer's disease from spontaneous speech has emerged as a promising non-invasive screening approach. However, the influence of automatic speech recognition (ASR) quality on downstream clinical language modeling remains insufficiently understood. In this study, we investigate Alzheimer's disease detection using lexical features derived from Whisper ASR transcripts on the ADReSSo 2021 diagnosis dataset. We evaluate interpretable machine-learning models, including Logistic Regression and Linear Support Vector Machines, using TF-IDF text representations under repeated 5x5 stratified cross-validation. Our results demonstrate that transcript quality has a statistically significant impact on classification performance. Models trained on Whisper-small transcripts consistently outperform those using Whisper-base transcripts, achieving balanced accuracy above 0.7850 with Linear SVM. Paired statistical testing confirms that the observed improvements are significant. Importantly, classifier complexity contributes less to performance variation than ASR transcription quality. Feature analysis reveals that cognitively normal speakers produce more semantically precise object- and scene-descriptive language, whereas Alzheimer's speech is characterized by vagueness, discourse markers, and increased hesitation patterns. These findings suggest that high-quality ASR can enable simple, interpretable lexical models to achieve competitive Alzheimer's detection performance without explicit acoustic modeling. The study provides a reproducible benchmark pipeline and highlights ASR selection as a critical modeling decision in clinical speech-based artificial intelligence systems.",
+    "pdf_link": "https://arxiv.org/pdf/2603.18239v1",
     "categories": [
-      "q-bio.PE",
-      "math.DS",
-      "q-bio.QM"
+      "q-bio.QM",
+      "cs.CL",
+      "cs.LG"
     ],
-    "tldr": "Multiscale discrete-to-continuum framework using matched asymptotic expansions systematically derives partial differential equations for structured population models with consistent boundary conditions.",
+    "tldr": "Whisper ASR transcript quality significantly impacts Alzheimer's detection; higher-quality transcripts enable simple interpretable models to achieve competitive classification performance.",
     "keywords": [
-      "matched asymptotic expansions",
-      "method of multiple scales",
-      "advection-diffusion equation",
-      "boundary layer theory",
-      "structured population models"
+      "Automatic Speech Recognition",
+      "Support Vector Machines",
+      "Logistic Regression",
+      "TF-IDF",
+      "Alzheimer's Disease"
     ],
     "relevance_score": 8
   },
   {
-    "id": "2603.15711v1",
-    "title": "Knowledge Graph Extraction from Biomedical Literature for Alkaptonuria Rare Disease",
+    "id": "2603.17765v1",
+    "title": "Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity Search",
     "authors": [
-      "Giang Pham",
-      "Rebecca Finetti",
-      "Caterina Graziani",
-      "Bianca Roncaglia",
-      "Asma Bendjeddou",
-      "Linda Brodo",
-      "Sara Brunetti",
-      "Moreno Falaschi",
-      "Stefano Forti",
-      "Silvia Giulia Galfré",
-      "Paolo Milazzo",
-      "Corrado Priami",
-      "Annalisa Santucci",
-      "Ottavia Spiga",
-      "Alina Sîrbu"
+      "Himadri Samanta"
     ],
-    "published_date": "2026-03-16T14:09:09Z",
-    "abstract": "Alkaptonuria (AKU) is an ultra-rare autosomal recessive metabolic disorder caused by mutations in the HGD (Homogentisate 1,2-Dioxygenase) gene, leading to a pathological accumulation of homogentisic acid (HGA) in body fluids and tissues. This leads to systemic manifestations, including premature spondyloarthropathy, renal and prostatic stones, and cardiovascular complications. Being ultra-rare, the amount of data related to the disease is limited, both in terms of clinical data and literature. Knowledge graphs (KGs) can help connect the limited knowledge about the disease (basic mechanisms, manifestations and existing therapies) with other knowledge; however, AKU is frequently underrepresented or entirely absent in existing biomedical KGs. In this work, we apply a text-mining methodology based on PubTator3 for large-scale extraction of biomedical relations. We construct two KGs of different sizes, validate them using existing biochemical knowledge and use them to extract genes, diseases and therapies possibly related to AKU. This computational framework reveals the systemic interactions of the disease, its comorbidities, and potential therapeutic targets, demonstrating the efficacy of our approach in analyzing rare metabolic disorders.",
-    "pdf_link": "https://arxiv.org/pdf/2603.15711v1",
+    "published_date": "2026-03-18T14:25:50Z",
+    "abstract": "Automated radiology report generation has gained increasing attention with the rise of deep learning and large language models. However, fully generative approaches often suffer from hallucinations and lack clinical grounding, limiting their reliability in real-world workflows. In this study, we propose a multimodal retrieval-augmented generation (RAG) system for grounded drafting of chest radiograph impressions. The system combines contrastive image-text embeddings, case-based similarity retrieval, and citation-constrained draft generation to ensure factual alignment with historical radiology reports. A curated subset of the MIMIC-CXR dataset was used to construct a multimodal retrieval database. Image embeddings were generated using CLIP encoders, while textual embeddings were derived from structured impression sections. A fusion similarity framework was implemented using FAISS indexing for scalable nearest-neighbor retrieval. Retrieved cases were used to construct grounded prompts for draft impression generation, with safety mechanisms enforcing citation coverage and confidence-based refusal. Experimental results demonstrate that multimodal fusion significantly improves retrieval performance compared to image-only retrieval, achieving Recall@5 above 0.95 on clinically relevant findings. The grounded drafting pipeline produces interpretable outputs with explicit citation traceability, enabling improved trustworthiness compared to conventional generative approaches. This work highlights the potential of retrieval-augmented multimodal systems for reliable clinical decision support and radiology workflow augmentation",
+    "pdf_link": "https://arxiv.org/pdf/2603.17765v1",
     "categories": [
-      "cs.AI",
-      "cs.IR",
       "q-bio.QM"
     ],
-    "tldr": "PubTator3-based text mining constructs knowledge graphs for alkaptonuria, revealing systemic interactions, comorbidities, and therapeutic targets for this ultra-rare metabolic disorder.",
+    "tldr": "Multimodal retrieval-augmented system generates grounded radiology impressions using CLIP embeddings and case-based similarity search with citation-constrained generation.",
     "keywords": [
-      "PubTator3",
-      "knowledge graph construction",
-      "biomedical relation extraction",
-      "HGD gene mutations",
-      "rare disease informatics"
+      "Retrieval-Augmented Generation",
+      "Contrastive Learning",
+      "Multimodal Embeddings",
+      "CLIP",
+      "Nearest-Neighbor Retrieval"
     ],
     "relevance_score": 7
   },
   {
-    "id": "2603.15080v1",
-    "title": "Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database",
+    "id": "2603.16963v1",
+    "title": "Topology-Guided Biomechanical Profiling: A White-Box Framework for Opportunistic Screening of Spinal Instability on Routine CT",
     "authors": [
-      "Madhulatha Mandarapu",
-      "Sandeep Kunkunuru"
+      "Zanting Ye",
+      "Xuanbin Wu",
+      "Guoqing Zhong",
+      "Shengyuan Liu",
+      "Jiashuai Liu",
+      "Ge Song",
+      "Zhisong Wang",
+      "Jing Hao",
+      "Xiaolong Niu",
+      "Yefeng Zheng",
+      "Yu Zhang",
+      "Lijun Lu"
     ],
-    "published_date": "2026-03-16T10:36:13Z",
-    "abstract": "Biomedical knowledge is fragmented across siloed databases -- Reactome for pathways, STRING for protein interactions, Gene Ontology for functional annotations, ClinicalTrials.gov for study registries, and dozens more. Researchers routinely download flat files from each source and write bespoke scripts to cross-reference them, a process that is slow, error-prone, and not reproducible. We present two open-source biomedical knowledge graphs -- Pathways KG (118,686 nodes, 834,785 edges from 5 sources) and Clinical Trials KG (7,774,446 nodes, 26,973,997 edges from 5 sources) -- built on Samyama, a high-performance graph database written in Rust. Our contributions are threefold. First, we describe a reproducible ETL pattern for constructing large-scale KGs from heterogeneous public data sources, with cross-source deduplication, batch Cypher loading, and portable snapshot export. Second, we demonstrate cross-KG federation: loading both snapshots into a single graph tenant enables property-based joins across datasets, answering questions like ``Which biological pathways are disrupted by drugs currently in Phase~3 trials for breast cancer?'' -- a query that neither KG can answer alone. Third, we introduce schema-driven MCP server generation: each KG automatically exposes typed tools for LLM agents via the Model Context Protocol, enabling natural-language access to graph queries without manual tool authoring. All data sources are open-license (CC~BY~4.0, CC0, OBO). Snapshots, ETL code, and MCP configurations are publicly available. The combined federated graph (7.89M nodes, 27.8M edges) loads in 76 seconds on commodity hardware (Mac Mini M4, 16GB RAM), and the signature cross-KG query -- ``which pathways are disrupted by drugs in Phase~3 breast cancer trials?'' -- returns validated results in 2.1 seconds.",
-    "pdf_link": "https://arxiv.org/pdf/2603.15080v1",
+    "published_date": "2026-03-17T06:34:18Z",
+    "abstract": "Routine oncologic computed tomography (CT) presents an ideal opportunity for screening spinal instability, yet prophylactic stabilization windows are frequently missed due to the complex geometric reasoning required by the Spinal Instability Neoplastic Score (SINS). Automating SINS is fundamentally hindered by metastatic osteolysis, which induces topological ambiguity that confounds standard segmentation and black-box AI. We propose Topology-Guided Biomechanical Profiling (TGBP), an auditable white-box framework decoupling anatomical perception from structural reasoning. TGBP anchors SINS assessment on two deterministic geometric innovations: (i) canal-referenced partitioning to resolve posterolateral boundary ambiguity, and (ii) context-aware morphometric normalization via covariance-based oriented bounding boxes (OBB) to quantify vertebral collapse. Integrated with auxiliary radiomic and large language model (LLM) modules, TGBP provides an end-to-end, interpretable SINS evaluation. Validated on a multi-center, multi-cancer cohort ($N=482$), TGBP achieved 90.2\\% accuracy in 3-tier stability triage. In a blinded reader study ($N=30$), TGBP significantly outperformed medical oncologists on complex structural features ($\u03ba=0.857$ vs.\\ $0.570$) and prevented compounding errors in Total Score estimation ($\u03ba=0.625$ vs.\\ $0.207$), democratizing expert-level opportunistic screening.",
+    "pdf_link": "https://arxiv.org/pdf/2603.16963v1",
     "categories": [
-      "cs.DB",
-      "cs.AI",
-      "q-bio.QM"
+      "q-bio.QM",
+      "cs.CV"
     ],
-    "tldr": "Samyama graph database federates Pathways KG and Clinical Trials KG, enabling cross-dataset queries and LLM agent access via Model Context Protocol.",
+    "tldr": "TGBP is an interpretable white-box framework using geometric reasoning and covariance-based methods for automated spinal instability screening on CT.",
     "keywords": [
-      "Cypher query language",
-      "cross-source deduplication",
-      "Model Context Protocol",
-      "graph federation",
-      "Rust graph database"
+      "Geometric Reasoning",
+      "Oriented Bounding Boxes",
+      "Morphometric Analysis",
+      "Medical Imaging",
+      "Interpretable AI"
     ],
     "relevance_score": 7
   },
   {
-    "id": "2603.15080v2",
-    "title": "Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database",
+    "id": "2603.16984v1",
+    "title": "Intermitotic timing and motility patterns in the cell division of the diatom Seminavis robusta",
     "authors": [
-      "Madhulatha Mandarapu",
-      "Sandeep Kunkunuru"
+      "Jonas Ziebarth",
+      "Thomas Fuhrmann-Lieker"
     ],
-    "published_date": "2026-03-16T10:36:13Z",
-    "abstract": "Biomedical knowledge is fragmented across siloed databases -- Reactome for pathways, STRING for protein interactions, ClinicalTrials.gov for study registries, DrugBank for drug vocabularies, DGIdb for drug-gene interactions, SIDER for side effects. We present three open-source biomedical knowledge graphs -- Pathways KG (118,686 nodes, 834,785 edges from 5 sources), Clinical Trials KG (7,774,446 nodes, 26,973,997 edges from 5 sources), and Drug Interactions KG (32,726 nodes, 191,970 edges from 3 sources) -- built on Samyama, a high-performance graph database written in Rust. Our contributions are threefold. First, we describe a reproducible ETL pattern for constructing large-scale KGs from heterogeneous public data sources, with cross-source deduplication, batch loading (Python Cypher and Rust native loaders), and portable snapshot export. Second, we demonstrate cross-KG federation: loading all three snapshots into a single graph tenant enables property-based joins across datasets. Third, we introduce schema-driven MCP server generation for LLM agent access, evaluated on a new BiomedQA benchmark (40 pharmacology questions): domain-specific MCP tools achieve 98% accuracy vs. 0% for text-to-Cypher and 75% for standalone GPT-4o. All data sources are open-license. The combined federated graph (7.9M nodes, 28M edges) loads in approximately 3 minutes on commodity cloud hardware, and cross-KG queries complete in 80ms-4s.",
-    "pdf_link": "https://arxiv.org/pdf/2603.15080v2",
-    "categories": [
-      "cs.DB",
-      "cs.AI",
-      "q-bio.QM"
-    ],
-    "tldr": "Samyama federates three biomedical knowledge graphs totaling 7.9M nodes; schema-driven Model Context Protocol tools achieve 98% accuracy on pharmacology question-answering benchmark.",
-    "keywords": [
-      "Cypher query language",
-      "cross-source deduplication",
-      "Model Context Protocol",
-      "graph federation",
-      "BiomedQA benchmark"
-    ],
-    "relevance_score": 7
-  },
-  {
-    "id": "2603.15702v1",
-    "title": "Whole slide and microscopy image analysis with QuPath and OMERO",
-    "authors": [
-      "Léo Leplat",
-      "Alan O'Callaghan",
-      "Peter Bankhead"
-    ],
-    "published_date": "2026-03-16T11:10:41Z",
-    "abstract": "QuPath is open-source software for bioimage analysis. As a desktop application that is flexible and easy to install, QuPath is used by labs worldwide to visualise and analyse large and complex images. However, relying only on images stored only on a local file system limits QuPath's use for larger studies. This paper describes a new extension that enables QuPath to access pixels and metadata from an OMERO server. This enhances the software by allowing it to work efficiently with images stored remotely, while also serving as a template for developers who want to connect QuPath to other image management systems.",
-    "pdf_link": "https://arxiv.org/pdf/2603.15702v1",
+    "published_date": "2026-03-17T16:53:43Z",
+    "abstract": "Many diatoms follow a size diminuation - size restoration cycle in their vegetative phase, leading to daughter cells that differ in size. For the diatom Seminavis robusta, we investigated by cell tracking over several generations whether the size difference reflects also in different intermitotic times or in the mobility of the cells. A tracking setup and machine-learning based detection algorithm was developed that revealed no significant difference in intermitotic times, a weak coupling to the day- night cycle, and a higher motility of the hypothecal, smaller daughter cell.",
+    "pdf_link": "https://arxiv.org/pdf/2603.16984v1",
     "categories": [
       "q-bio.QM"
     ],
-    "tldr": "New QuPath extension enables remote access to whole-slide images and metadata from OMERO servers, extending bioimage analysis to distributed image management systems.",
+    "tldr": "Machine-learning based cell tracking of Seminavis robusta diatoms reveals no significant intermitotic time differences but higher motility in smaller daughter cells.",
     "keywords": [
-      "QuPath",
-      "OMERO server",
-      "remote pixel access",
-      "whole-slide imaging",
-      "image management API"
+      "Cell Tracking",
+      "Object Detection",
+      "Detection Algorithm",
+      "Cell Division",
+      "Diatom Biology"
     ],
-    "relevance_score": 5
+    "relevance_score": 6
   }
 ]

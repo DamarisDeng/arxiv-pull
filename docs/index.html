@@ -19,29 +19,25 @@
             padding: 20px;
         }
         
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
         header {
             background-color: #2c3e50;
-            color: white;
-            padding: 40px 30px;
+            color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+            margin-bottom: 40px;
             border-radius: 8px;
-            margin-bottom: 30px;
         }
         
         header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            font-weight: 600;
+            font-weight: 700;
         }
         
         header .subtitle {
             font-size: 1.2em;
+            margin-bottom: 5px;
             opacity: 0.9;
-            margin-bottom: 8px;
         }
         
         header .meta {
@@ -50,56 +46,34 @@
         }
         
         main {
-            background-color: #ffffff;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
-        
-        .section h2 {
-            color: #2c3e50;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #3498db;
-        }
-        
-        .narrative {
-            background-color: #f9f9f9;
-            padding: 25px;
-            border-radius: 6px;
-            border-left: 4px solid #3498db;
-            font-size: 1.1em;
-            line-height: 1.8;
-            margin-bottom: 40px;
+            max-width: 1400px;
+            margin: 0 auto;
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: white;
+            margin-bottom: 40px;
+            background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            overflow: hidden;
         }
         
         thead {
             background-color: #2c3e50;
-            color: white;
+            color: #ffffff;
         }
         
-        thead th {
+        th {
             padding: 15px 12px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.95em;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            border: 1px solid #ddd;
         }
         
-        tbody tr {
-            border-bottom: 1px solid #ddd;
+        td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
         }
         
         tbody tr:nth-child(odd) {
@@ -111,77 +85,60 @@
         }
         
         tbody tr:hover {
-            background-color: #f0f7ff;
+            background-color: #f0f0f0;
         }
         
-        tbody td {
-            padding: 15px 12px;
-            vertical-align: top;
-            font-size: 0.9em;
-        }
-        
-        .rank-cell {
+        .rank-col {
+            width: 50px;
             text-align: center;
             font-weight: 600;
             font-size: 1.1em;
-            color: #2c3e50;
-            width: 60px;
         }
         
-        .title-cell {
-            font-weight: 500;
-            min-width: 250px;
+        .title-col {
+            width: 25%;
         }
         
-        .title-cell a {
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.2s;
+        .authors-col {
+            width: 15%;
         }
         
-        .title-cell a:hover {
-            color: #2980b9;
-            text-decoration: underline;
-        }
-        
-        .authors-cell {
-            color: #555;
-            font-size: 0.85em;
-            max-width: 200px;
-        }
-        
-        .date-cell {
-            color: #666;
-            font-size: 0.85em;
-            white-space: nowrap;
+        .date-col {
             width: 100px;
         }
         
-        .tldr-cell {
-            color: #333;
-            line-height: 1.5;
-            max-width: 350px;
+        .tldr-col {
+            width: 25%;
         }
         
-        .keywords-cell {
-            color: #666;
-            font-size: 0.85em;
-            font-style: italic;
-            max-width: 250px;
+        .keywords-col {
+            width: 20%;
         }
         
-        .score-cell {
-            text-align: center;
+        .score-col {
             width: 80px;
+            text-align: center;
+        }
+        
+        .title-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        
+        .title-link:hover {
+            text-decoration: underline;
+            color: #2980b9;
         }
         
         .score-badge {
             display: inline-block;
             padding: 6px 12px;
             border-radius: 12px;
-            font-weight: 600;
-            font-size: 0.9em;
-            color: white;
+            font-weight: 700;
+            font-size: 0.95em;
+            color: #ffffff;
         }
         
         .score-high {
@@ -196,13 +153,49 @@
             background-color: #95a5a6;
         }
         
+        .authors {
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        .date {
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .keywords {
+            font-size: 0.85em;
+            color: #555;
+            font-style: italic;
+        }
+        
+        .narrative-section {
+            background-color: #f9f9f9;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+        
+        .narrative-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .narrative-section p {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #333;
+        }
+        
         footer {
             text-align: center;
             padding: 30px 20px;
             color: #666;
             font-size: 0.9em;
             border-top: 1px solid #ddd;
-            margin-top: 50px;
+            margin-top: 40px;
         }
         
         footer a {
@@ -213,254 +206,344 @@
         footer a:hover {
             text-decoration: underline;
         }
-        
-        @media (max-width: 1200px) {
-            table {
-                font-size: 0.85em;
-            }
-            
-            header h1 {
-                font-size: 2em;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            
-            header {
-                padding: 25px 20px;
-            }
-            
-            header h1 {
-                font-size: 1.5em;
-            }
-            
-            header .subtitle {
-                font-size: 1em;
-            }
-            
-            table {
-                display: block;
-                overflow-x: auto;
-            }
-            
-            thead th,
-            tbody td {
-                padding: 10px 8px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Q-Bio Watchtower</h1>
-            <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-18 UTC</div>
-            <div class="meta">13 papers analyzed • Published March 16-17, 2026</div>
-        </header>
+    <header>
+        <h1>Q-Bio Watchtower</h1>
+        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-20 UTC</div>
+        <div class="meta">16 papers analyzed · Published March 17–19, 2026</div>
+    </header>
+    
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="rank-col">Rank</th>
+                    <th class="title-col">Title</th>
+                    <th class="authors-col">Authors</th>
+                    <th class="date-col">Published</th>
+                    <th class="tldr-col">TL;DR</th>
+                    <th class="keywords-col">Keywords</th>
+                    <th class="score-col">Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.18249v1" target="_blank" class="title-link">RAFT-UP: Robust Alignment for Spatial Transcriptomics with Explicit Control of Spatial Distortion</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Yaqi Wu, Jingfeng Wang, Xin Maizie Zhou, et al.</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-18</div>
+                    </td>
+                    <td class="tldr-col">RAFT-UP aligns spatial transcriptomics slices using Gromov-Wasserstein optimal transport with explicit spatial distortion control and biologically plausible matching constraints.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Optimal Transport, Gromov-Wasserstein Distance, Spatial Transcriptomics, Gene Expression, Biological Alignment</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">10</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.18497v1" target="_blank" class="title-link">Recovering Sparse Neural Connectivity from Partial Measurements: A Covariance-Based Approach with Granger-Causality Refinement</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Quilee Simeon</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-19</div>
+                    </td>
+                    <td class="tldr-col">Covariance-based method reconstructs neural connectivity from partial measurements across sessions using Granger causality refinement and projected gradient descent.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Granger Causality, Neural Connectivity, Recurrent Neural Networks, Covariance Estimation, Projected Gradient Descent</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">10</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.17247v1" target="_blank" class="title-link">Binary Latent Protein Fitness Landscapes for Quantum Annealing Optimization</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Truong-Son Hy</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-18</div>
+                    </td>
+                    <td class="tldr-col">Q-BIOLAT models protein fitness in binary latent space using QUBO optimization, enabling quantum annealing and classical heuristics for protein engineering.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Quadratic Unconstrained Binary Optimization, Quantum Annealing, Protein Language Models, Simulated Annealing, Genetic Algorithms</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">9</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">4</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.18571v1" target="_blank" class="title-link">CAPSUL: A Comprehensive Human Protein Benchmark for Subcellular Localization</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Yicheng Hu, Xinyu Lin, Shulin Li, et al.</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-19</div>
+                    </td>
+                    <td class="tldr-col">CAPSUL benchmark integrates 3D protein structures with subcellular localization annotations, enabling structure-based models to improve protein localization prediction.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Protein Structure, Subcellular Localization, Structural Features, Attention Mechanisms, Benchmark Dataset</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">9</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">5</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.16789v1" target="_blank" class="title-link">Conservative Continuous-Time Treatment Optimization</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Nora Schneider, Georg Manten, Niki Kilbertus</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-17</div>
+                    </td>
+                    <td class="tldr-col">Conservative stochastic control framework optimizes treatment using signature-based MMD regularization to prevent extrapolation from irregularly sampled patient trajectories.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Stochastic Differential Equations, Maximum Mean Discrepancy, Signature Methods, Treatment Optimization, Continuous-Time Control</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">9</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">6</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.16185v1" target="_blank" class="title-link">Sample-Efficient Adaptation of Drug-Response Models to Patient Tumors under Strong Biological Domain Shift</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Camille Jimenez Cortes, Philippe Lalanda, German Vega</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-17</div>
+                    </td>
+                    <td class="tldr-col">Staged transfer learning with autoencoder-based representation learning enables sample-efficient adaptation of drug-response models from cell lines to patient tumors.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Transfer Learning, Autoencoder, Domain Adaptation, Drug Response Prediction, Few-Shot Learning</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">9</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">7</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.17380v1" target="_blank" class="title-link">SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Shuizhou Chen, Lang Yu, Kedu Jin, et al.</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-18</div>
+                    </td>
+                    <td class="tldr-col">SCALE is a large-scale foundation model using conditional transport and LLaMA-based encoding for scalable virtual cell perturbation prediction.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Conditional Transport, Foundation Models, Single-Cell Analysis, Perturbation Prediction, Flow Architecture</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">9</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">8</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.17380v2" target="_blank" class="title-link">SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Shuizhou Chen, Lang Yu, Kedu Jin, et al.</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-18</div>
+                    </td>
+                    <td class="tldr-col">SCALE is a large-scale foundation model using conditional transport and LLaMA-based encoding for scalable virtual cell perturbation prediction.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Conditional Transport, Foundation Models, Single-Cell Analysis, Perturbation Prediction, Flow Architecture</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">9</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">9</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.17191v1" target="_blank" class="title-link">Tabular LLMs for Interpretable Few-Shot Alzheimer's Disease Prediction with Multimodal Biomedical Data</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Sophie Kearney, Shu Yang, Zixuan Wen, et al.</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-17</div>
+                    </td>
+                    <td class="tldr-col">TAP-GPT adapts tabular LLMs for few-shot Alzheimer's prediction using multimodal biomarkers with interpretable, structured reasoning aligned with AD biology.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Large Language Models, Few-Shot Learning, Tabular Data, Multimodal Biomarkers, Alzheimer's Disease</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">9</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">10</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.16562v1" target="_blank" class="title-link">Understanding Cell Fate Decisions with Temporal Attention</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Florian Bürger, Martim Dias Gomes, Adrián E. Granada, et al.</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-17</div>
+                    </td>
+                    <td class="tldr-col">Transformer model predicts cell fate from live-cell videos with temporal attention, revealing non-genetic determinants of cellular decision-making under chemotherapy.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Transformer, Temporal Attention, Cell Fate Prediction, Live-Cell Imaging, Explainability</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-high">9</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">11</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.16741v1" target="_blank" class="title-link">Bayesian Inference of Psychometric Variables From Brain and Behavior in Implicit Association Tests</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Christian A. Kothe, Sean Mullen, Michael V. Bronstein, et al.</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-17</div>
+                    </td>
+                    <td class="tldr-col">Sparse hierarchical Bayesian model improves Implicit Association Test predictions of mental health symptoms using multimodal neural and behavioral data.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Hierarchical Bayesian Models, Psychometric Variables, Multimodal Data, Neural Data, Mental Health</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-medium">8</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">12</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.16587v1" target="_blank" class="title-link">HistoAtlas: A Pan-Cancer Morphology Atlas Linking Histomics to Molecular Programs and Clinical Outcomes</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Pierre-Antoine Bannier</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-17</div>
+                    </td>
+                    <td class="tldr-col">HistoAtlas extracts 38 interpretable histomic features from pan-cancer H&E slides, linking morphology to survival, gene expression, and immune subtypes.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Histopathology, Feature Extraction, Survival Analysis, Gene Expression, Biomarker Discovery</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-medium">8</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">13</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.18239v1" target="_blank" class="title-link">Impact of automatic speech recognition quality on Alzheimer's disease detection from spontaneous speech: a reproducible benchmark study with lexical modeling and statistical validation</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Himadri Samanta</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-18</div>
+                    </td>
+                    <td class="tldr-col">Whisper ASR transcript quality significantly impacts Alzheimer's detection; higher-quality transcripts enable simple interpretable models to achieve competitive classification performance.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Automatic Speech Recognition, Support Vector Machines, Logistic Regression, TF-IDF, Alzheimer's Disease</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-medium">8</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">14</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.17765v1" target="_blank" class="title-link">Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity Search</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Himadri Samanta</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-18</div>
+                    </td>
+                    <td class="tldr-col">Multimodal retrieval-augmented system generates grounded radiology impressions using CLIP embeddings and case-based similarity search with citation-constrained generation.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Retrieval-Augmented Generation, Contrastive Learning, Multimodal Embeddings, CLIP, Nearest-Neighbor Retrieval</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-medium">7</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">15</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.16963v1" target="_blank" class="title-link">Topology-Guided Biomechanical Profiling: A White-Box Framework for Opportunistic Screening of Spinal Instability on Routine CT</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Zanting Ye, Xuanbin Wu, Guoqing Zhong, et al.</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-17</div>
+                    </td>
+                    <td class="tldr-col">TGBP is an interpretable white-box framework using geometric reasoning and covariance-based methods for automated spinal instability screening on CT.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Geometric Reasoning, Oriented Bounding Boxes, Morphometric Analysis, Medical Imaging, Interpretable AI</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-medium">7</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="rank-col">16</td>
+                    <td class="title-col">
+                        <a href="https://arxiv.org/pdf/2603.16984v1" target="_blank" class="title-link">Intermitotic timing and motility patterns in the cell division of the diatom Seminavis robusta</a>
+                    </td>
+                    <td class="authors-col">
+                        <div class="authors">Jonas Ziebarth, Thomas Fuhrmann-Lieker</div>
+                    </td>
+                    <td class="date-col">
+                        <div class="date">2026-03-17</div>
+                    </td>
+                    <td class="tldr-col">Machine-learning based cell tracking of Seminavis robusta diatoms reveals no significant intermitotic time differences but higher motility in smaller daughter cells.</td>
+                    <td class="keywords-col">
+                        <div class="keywords">Cell Tracking, Object Detection, Detection Algorithm, Cell Division, Diatom Biology</div>
+                    </td>
+                    <td class="score-col">
+                        <span class="score-badge score-medium">6</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         
-        <main>
-            <section class="section">
-                <h2>📊 Research Overview</h2>
-                <div class="narrative">
-                    <p>Today's digest showcases transformative advances in computational biology, with drug discovery and machine learning at the forefront. The highest-ranked papers demonstrate breakthroughs in phenotypic virtual screening (DECODE framework), continuous-time treatment optimization using stochastic differential equations, and pan-cancer morphological atlases linking histology to molecular outcomes. Key methodological trends include transformer-based temporal attention mechanisms for cell fate prediction, context parallelism frameworks enabling large-scale biomolecular structure modeling beyond 30,000 residues, and hierarchical Bayesian models enhancing psychometric inference from neural data. Across the collection, autoencoder-based representation learning, matched asymptotic expansions for population models, and federated knowledge graph architectures signal a shift toward scalable, interpretable, and clinically translatable quantitative methods.</p>
-                </div>
-            </section>
-            
-            <section class="section">
-                <h2>📑 Ranked Papers</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="rank-cell">Rank</th>
-                            <th class="title-cell">Title</th>
-                            <th class="authors-cell">Authors</th>
-                            <th class="date-cell">Published</th>
-                            <th class="tldr-cell">TL;DR</th>
-                            <th class="keywords-cell">Keywords</th>
-                            <th class="score-cell">Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rank-cell">1</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.15006v1" target="_blank">Empowering Chemical Structures with Biological Insights for Scalable Phenotypic Virtual Screening</a>
-                            </td>
-                            <td class="authors-cell">Xiaoqing Lian, Pengsen Ma, Tengfeng Ma et al.</td>
-                            <td class="date-cell">2026-03-16</td>
-                            <td class="tldr-cell">DECODE extracts biological fingerprints from chemical structures using transcriptomic and morphological data, achieving 20% improvement in mechanism-of-action prediction and 6-fold increase in anti-cancer hit rates.</td>
-                            <td class="keywords-cell">DECODE framework, measurement-invariant biological fingerprint, transcriptomic profiling, morphological profiling, mechanism-of-action prediction</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">10</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">2</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.16789v1" target="_blank">Conservative Continuous-Time Treatment Optimization</a>
-                            </td>
-                            <td class="authors-cell">Nora Schneider, Georg Manten, Niki Kilbertus</td>
-                            <td class="date-cell">2026-03-17</td>
-                            <td class="tldr-cell">Stochastic differential equation framework with signature-based MMD regularization ensures conservative continuous-time treatment optimization from irregularly sampled patient trajectories.</td>
-                            <td class="keywords-cell">stochastic differential equations, signature-based MMD, path space regularization, continuous-time control, conservative optimization</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">9</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">3</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.16587v1" target="_blank">HistoAtlas: A Pan-Cancer Morphology Atlas Linking Histomics to Molecular Programs and Clinical Outcomes</a>
-                            </td>
-                            <td class="authors-cell">Pierre-Antoine Bannier</td>
-                            <td class="date-cell">2026-03-17</td>
-                            <td class="tldr-cell">HistoAtlas extracts 38 interpretable histomic features from 6,745 H&E slides across 21 cancer types, linking morphology to survival, gene expression, and mutations.</td>
-                            <td class="keywords-cell">histomic feature extraction, covariate adjustment, multiple-testing correction, spatial compartment analysis, TCGA integration</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">9</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">4</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.16562v1" target="_blank">Understanding Cell Fate Decisions with Temporal Attention</a>
-                            </td>
-                            <td class="authors-cell">Florian Bürger, Martim Dias Gomes, Adrián E. Granada et al.</td>
-                            <td class="date-cell">2026-03-17</td>
-                            <td class="tldr-cell">Transformer model with temporal attention predicts cell fate from live-cell videos, achieving 0.94 accuracy and revealing morphological cues and p53 signaling dynamics.</td>
-                            <td class="keywords-cell">Transformer attention, temporal masking, gradient-based attribution, p53 signaling dynamics, live-cell imaging</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">9</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">5</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.16185v1" target="_blank">Sample-Efficient Adaptation of Drug-Response Models to Patient Tumors under Strong Biological Domain Shift</a>
-                            </td>
-                            <td class="authors-cell">Camille Jimenez Cortes, Philippe Lalanda, German Vega</td>
-                            <td class="date-cell">2026-03-17</td>
-                            <td class="tldr-cell">Staged transfer-learning framework using autoencoder-based representation learning enables sample-efficient drug-response prediction when transferring from cell lines to patient tumors under biological domain shift.</td>
-                            <td class="keywords-cell">autoencoder-based representation learning, staged transfer-learning framework, few-shot adaptation, pharmacogenomic data, preclinical-to-clinical translation</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">9</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">6</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.14806v1" target="_blank">Fold-CP: A Context Parallelism Framework for Biomolecular Modeling</a>
-                            </td>
-                            <td class="authors-cell">Dejun Lin, Simon Chu, Vishanth Iyer et al.</td>
-                            <td class="date-cell">2026-03-16</td>
-                            <td class="tldr-cell">Fold-CP distributes AlphaFold-style structure prediction across multiple GPUs, enabling atomic-scale modeling of biomolecular assemblies exceeding 30,000 residues with O(N²/P) memory scaling.</td>
-                            <td class="keywords-cell">AlphaFold 3, context parallelism, window-batched local attention, Boltz models, triangular updates</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">9</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">7</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.16741v1" target="_blank">Bayesian Inference of Psychometric Variables From Brain and Behavior in Implicit Association Tests</a>
-                            </td>
-                            <td class="authors-cell">Christian A. Kothe, Sean Mullen, Michael V. Bronstein et al.</td>
-                            <td class="date-cell">2026-03-17</td>
-                            <td class="tldr-cell">Sparse hierarchical Bayesian model improves psychometric inference from Implicit Association Test data, outperforming D-score baselines by leveraging multi-modal neural and behavioral features.</td>
-                            <td class="keywords-cell">hierarchical Bayesian models, D-score, shrinkage LDA, EEGNet, FDR correction</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">8</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">8</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.15217v1" target="_blank">A multiscale discrete-to-continuum framework for structured population models</a>
-                            </td>
-                            <td class="authors-cell">Eleonora Agostinelli, Keith L. Chambers, Helen M. Byrne et al.</td>
-                            <td class="date-cell">2026-03-16</td>
-                            <td class="tldr-cell">Multiscale discrete-to-continuum framework using matched asymptotic expansions systematically derives partial differential equations for structured population models with consistent boundary conditions.</td>
-                            <td class="keywords-cell">matched asymptotic expansions, method of multiple scales, advection-diffusion equation, boundary layer theory, structured population models</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">8</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">9</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.15217v2" target="_blank">A multiscale discrete-to-continuum framework for structured population models</a>
-                            </td>
-                            <td class="authors-cell">Eleonora Agostinelli, Keith L. Chambers, Helen M. Byrne et al.</td>
-                            <td class="date-cell">2026-03-16</td>
-                            <td class="tldr-cell">Multiscale discrete-to-continuum framework using matched asymptotic expansions systematically derives partial differential equations for structured population models with consistent boundary conditions.</td>
-                            <td class="keywords-cell">matched asymptotic expansions, method of multiple scales, advection-diffusion equation, boundary layer theory, structured population models</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">8</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">10</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.15711v1" target="_blank">Knowledge Graph Extraction from Biomedical Literature for Alkaptonuria Rare Disease</a>
-                            </td>
-                            <td class="authors-cell">Giang Pham, Rebecca Finetti, Caterina Graziani et al.</td>
-                            <td class="date-cell">2026-03-16</td>
-                            <td class="tldr-cell">PubTator3-based text mining constructs knowledge graphs for alkaptonuria, revealing systemic interactions, comorbidities, and therapeutic targets for this ultra-rare metabolic disorder.</td>
-                            <td class="keywords-cell">PubTator3, knowledge graph construction, biomedical relation extraction, HGD gene mutations, rare disease informatics</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-medium">7</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">11</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.15080v1" target="_blank">Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database</a>
-                            </td>
-                            <td class="authors-cell">Madhulatha Mandarapu, Sandeep Kunkunuru</td>
-                            <td class="date-cell">2026-03-16</td>
-                            <td class="tldr-cell">Samyama graph database federates Pathways KG and Clinical Trials KG, enabling cross-dataset queries and LLM agent access via Model Context Protocol.</td>
-                            <td class="keywords-cell">Cypher query language, cross-source deduplication, Model Context Protocol, graph federation, Rust graph database</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-medium">7</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">12</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.15080v2" target="_blank">Open Biomedical Knowledge Graphs at Scale: Construction, Federation, and AI Agent Access with Samyama Graph Database</a>
-                            </td>
-                            <td class="authors-cell">Madhulatha Mandarapu, Sandeep Kunkunuru</td>
-                            <td class="date-cell">2026-03-16</td>
-                            <td class="tldr-cell">Samyama federates three biomedical knowledge graphs totaling 7.9M nodes; schema-driven Model Context Protocol tools achieve 98% accuracy on pharmacology question-answering benchmark.</td>
-                            <td class="keywords-cell">Cypher query language, cross-source deduplication, Model Context Protocol, graph federation, BiomedQA benchmark</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-medium">7</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">13</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.15702v1" target="_blank">Whole slide and microscopy image analysis with QuPath and OMERO</a>
-                            </td>
-                            <td class="authors-cell">Léo Leplat, Alan O'Callaghan, Peter Bankhead</td>
-                            <td class="date-cell">2026-03-16</td>
-                            <td class="tldr-cell">New QuPath extension enables remote access to whole-slide images and metadata from OMERO servers, extending bioimage analysis to distributed image management systems.</td>
-                            <td class="keywords-cell">QuPath, OMERO server, remote pixel access, whole-slide imaging, image management API</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-medium">5</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </main>
-        
-        <footer>
-            <p>Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/list/q-bio.QM/recent" target="_blank">arXiv q-bio.QM</a> · 2026-03-18 UTC</p>
-        </footer>
-    </div>
+        <section class="narrative-section">
+            <h2>Daily Summary</h2>
+            <p>Today's q-bio.QM preprints showcase a strong emphasis on machine learning methods for biological data integration and clinical prediction. Optimal transport, neural connectivity inference, and multimodal representation learning dominate the methodological landscape, with applications spanning spatial transcriptomics alignment, protein engineering through quantum optimization, and few-shot clinical diagnostics for Alzheimer's disease. The confluence of foundation models, attention mechanisms, and geometric reasoning underscores a shift toward scalable, interpretable, and biologically grounded computational frameworks across genomics, proteomics, and medical imaging.</p>
+        </section>
+    </main>
+    
+    <footer>
+        Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/archive/q-bio.QM" target="_blank">arXiv q-bio.QM</a> · 2026-03-20 UTC
+    </footer>
 </body>
 </html>
