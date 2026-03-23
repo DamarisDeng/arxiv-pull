@@ -10,199 +10,190 @@
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #ffffff;
             color: #1a1a1a;
             line-height: 1.6;
-            padding: 20px;
         }
-        
+
         header {
             background-color: #2c3e50;
             color: #ffffff;
-            padding: 40px 20px;
+            padding: 2rem 1rem;
             text-align: center;
-            margin-bottom: 40px;
-            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
+
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
             font-weight: 700;
         }
-        
+
         header .subtitle {
-            font-size: 1.2em;
-            margin-bottom: 5px;
-            opacity: 0.9;
+            font-size: 1.1rem;
+            color: #ecf0f1;
+            margin-bottom: 0.5rem;
         }
-        
+
         header .meta {
-            font-size: 0.95em;
-            opacity: 0.8;
+            font-size: 0.95rem;
+            color: #bdc3c7;
         }
-        
+
         main {
             max-width: 1400px;
             margin: 0 auto;
+            padding: 2rem 1rem;
         }
-        
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 3rem;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-bottom: 40px;
             background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        
+
         thead {
             background-color: #2c3e50;
             color: #ffffff;
         }
-        
-        th {
-            padding: 15px 12px;
+
+        thead th {
+            padding: 1rem 0.75rem;
             text-align: left;
             font-weight: 600;
-            border: 1px solid #ddd;
+            border: 1px solid #2c3e50;
         }
-        
-        td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            vertical-align: top;
-        }
-        
+
         tbody tr:nth-child(odd) {
             background-color: #f9f9f9;
         }
-        
+
         tbody tr:nth-child(even) {
             background-color: #ffffff;
         }
-        
+
         tbody tr:hover {
-            background-color: #f0f0f0;
+            background-color: #e8f4f8;
         }
-        
-        .rank-col {
-            width: 50px;
+
+        tbody td {
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        .rank-cell {
             text-align: center;
             font-weight: 600;
-            font-size: 1.1em;
+            color: #2c3e50;
+            width: 60px;
         }
-        
-        .title-col {
-            width: 25%;
+
+        .title-cell {
+            min-width: 250px;
         }
-        
-        .authors-col {
-            width: 15%;
-        }
-        
-        .date-col {
-            width: 100px;
-        }
-        
-        .tldr-col {
-            width: 25%;
-        }
-        
-        .keywords-col {
-            width: 20%;
-        }
-        
-        .score-col {
-            width: 80px;
-            text-align: center;
-        }
-        
-        .title-link {
+
+        .title-cell a {
             color: #3498db;
             text-decoration: none;
-            font-weight: 600;
-            line-height: 1.4;
+            font-weight: 500;
         }
-        
-        .title-link:hover {
+
+        .title-cell a:hover {
             text-decoration: underline;
-            color: #2980b9;
         }
-        
+
+        .authors-cell {
+            min-width: 150px;
+            font-size: 0.9rem;
+        }
+
+        .date-cell {
+            white-space: nowrap;
+            font-size: 0.9rem;
+            width: 100px;
+        }
+
+        .tldr-cell {
+            min-width: 300px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        .keywords-cell {
+            min-width: 200px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .score-cell {
+            text-align: center;
+            width: 80px;
+        }
+
         .score-badge {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 0.4rem 0.8rem;
             border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.95em;
+            font-weight: 600;
+            font-size: 0.9rem;
             color: #ffffff;
         }
-        
+
         .score-high {
             background-color: #27ae60;
         }
-        
+
         .score-medium {
             background-color: #f39c12;
         }
-        
+
         .score-low {
             background-color: #95a5a6;
         }
-        
-        .authors {
-            font-size: 0.9em;
-            color: #555;
-        }
-        
-        .date {
-            font-size: 0.9em;
-            color: #666;
-        }
-        
-        .keywords {
-            font-size: 0.85em;
-            color: #555;
-            font-style: italic;
-        }
-        
+
         .narrative-section {
             background-color: #f9f9f9;
-            padding: 30px;
-            margin-bottom: 40px;
             border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
             border-radius: 4px;
         }
-        
-        .narrative-section h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        
+
         .narrative-section p {
-            font-size: 1.05em;
+            font-size: 1.05rem;
             line-height: 1.8;
-            color: #333;
+            color: #2c3e50;
         }
-        
+
         footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
-            padding: 30px 20px;
-            color: #666;
-            font-size: 0.9em;
-            border-top: 1px solid #ddd;
-            margin-top: 40px;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
         }
-        
+
         footer a {
             color: #3498db;
             text-decoration: none;
         }
-        
+
         footer a:hover {
             text-decoration: underline;
         }
@@ -211,339 +202,81 @@
 <body>
     <header>
         <h1>Q-Bio Watchtower</h1>
-        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-20 UTC</div>
-        <div class="meta">16 papers analyzed · Published March 17–19, 2026</div>
+        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-23 UTC</div>
+        <div class="meta">3 papers analyzed | Published on 2026-03-20</div>
     </header>
-    
+
     <main>
-        <table>
-            <thead>
-                <tr>
-                    <th class="rank-col">Rank</th>
-                    <th class="title-col">Title</th>
-                    <th class="authors-col">Authors</th>
-                    <th class="date-col">Published</th>
-                    <th class="tldr-col">TL;DR</th>
-                    <th class="keywords-col">Keywords</th>
-                    <th class="score-col">Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="rank-col">1</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.18249v1" target="_blank" class="title-link">RAFT-UP: Robust Alignment for Spatial Transcriptomics with Explicit Control of Spatial Distortion</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Yaqi Wu, Jingfeng Wang, Xin Maizie Zhou, et al.</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-18</div>
-                    </td>
-                    <td class="tldr-col">RAFT-UP aligns spatial transcriptomics slices using Gromov-Wasserstein optimal transport with explicit spatial distortion control and biologically plausible matching constraints.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Optimal Transport, Gromov-Wasserstein Distance, Spatial Transcriptomics, Gene Expression, Biological Alignment</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">10</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">2</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.18497v1" target="_blank" class="title-link">Recovering Sparse Neural Connectivity from Partial Measurements: A Covariance-Based Approach with Granger-Causality Refinement</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Quilee Simeon</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-19</div>
-                    </td>
-                    <td class="tldr-col">Covariance-based method reconstructs neural connectivity from partial measurements across sessions using Granger causality refinement and projected gradient descent.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Granger Causality, Neural Connectivity, Recurrent Neural Networks, Covariance Estimation, Projected Gradient Descent</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">10</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">3</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.17247v1" target="_blank" class="title-link">Binary Latent Protein Fitness Landscapes for Quantum Annealing Optimization</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Truong-Son Hy</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-18</div>
-                    </td>
-                    <td class="tldr-col">Q-BIOLAT models protein fitness in binary latent space using QUBO optimization, enabling quantum annealing and classical heuristics for protein engineering.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Quadratic Unconstrained Binary Optimization, Quantum Annealing, Protein Language Models, Simulated Annealing, Genetic Algorithms</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">9</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">4</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.18571v1" target="_blank" class="title-link">CAPSUL: A Comprehensive Human Protein Benchmark for Subcellular Localization</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Yicheng Hu, Xinyu Lin, Shulin Li, et al.</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-19</div>
-                    </td>
-                    <td class="tldr-col">CAPSUL benchmark integrates 3D protein structures with subcellular localization annotations, enabling structure-based models to improve protein localization prediction.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Protein Structure, Subcellular Localization, Structural Features, Attention Mechanisms, Benchmark Dataset</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">9</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">5</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.16789v1" target="_blank" class="title-link">Conservative Continuous-Time Treatment Optimization</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Nora Schneider, Georg Manten, Niki Kilbertus</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-17</div>
-                    </td>
-                    <td class="tldr-col">Conservative stochastic control framework optimizes treatment using signature-based MMD regularization to prevent extrapolation from irregularly sampled patient trajectories.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Stochastic Differential Equations, Maximum Mean Discrepancy, Signature Methods, Treatment Optimization, Continuous-Time Control</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">9</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">6</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.16185v1" target="_blank" class="title-link">Sample-Efficient Adaptation of Drug-Response Models to Patient Tumors under Strong Biological Domain Shift</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Camille Jimenez Cortes, Philippe Lalanda, German Vega</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-17</div>
-                    </td>
-                    <td class="tldr-col">Staged transfer learning with autoencoder-based representation learning enables sample-efficient adaptation of drug-response models from cell lines to patient tumors.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Transfer Learning, Autoencoder, Domain Adaptation, Drug Response Prediction, Few-Shot Learning</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">9</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">7</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.17380v1" target="_blank" class="title-link">SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Shuizhou Chen, Lang Yu, Kedu Jin, et al.</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-18</div>
-                    </td>
-                    <td class="tldr-col">SCALE is a large-scale foundation model using conditional transport and LLaMA-based encoding for scalable virtual cell perturbation prediction.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Conditional Transport, Foundation Models, Single-Cell Analysis, Perturbation Prediction, Flow Architecture</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">9</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">8</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.17380v2" target="_blank" class="title-link">SCALE:Scalable Conditional Atlas-Level Endpoint transport for virtual cell perturbation prediction</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Shuizhou Chen, Lang Yu, Kedu Jin, et al.</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-18</div>
-                    </td>
-                    <td class="tldr-col">SCALE is a large-scale foundation model using conditional transport and LLaMA-based encoding for scalable virtual cell perturbation prediction.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Conditional Transport, Foundation Models, Single-Cell Analysis, Perturbation Prediction, Flow Architecture</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">9</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">9</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.17191v1" target="_blank" class="title-link">Tabular LLMs for Interpretable Few-Shot Alzheimer's Disease Prediction with Multimodal Biomedical Data</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Sophie Kearney, Shu Yang, Zixuan Wen, et al.</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-17</div>
-                    </td>
-                    <td class="tldr-col">TAP-GPT adapts tabular LLMs for few-shot Alzheimer's prediction using multimodal biomarkers with interpretable, structured reasoning aligned with AD biology.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Large Language Models, Few-Shot Learning, Tabular Data, Multimodal Biomarkers, Alzheimer's Disease</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">9</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">10</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.16562v1" target="_blank" class="title-link">Understanding Cell Fate Decisions with Temporal Attention</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Florian Bürger, Martim Dias Gomes, Adrián E. Granada, et al.</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-17</div>
-                    </td>
-                    <td class="tldr-col">Transformer model predicts cell fate from live-cell videos with temporal attention, revealing non-genetic determinants of cellular decision-making under chemotherapy.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Transformer, Temporal Attention, Cell Fate Prediction, Live-Cell Imaging, Explainability</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-high">9</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">11</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.16741v1" target="_blank" class="title-link">Bayesian Inference of Psychometric Variables From Brain and Behavior in Implicit Association Tests</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Christian A. Kothe, Sean Mullen, Michael V. Bronstein, et al.</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-17</div>
-                    </td>
-                    <td class="tldr-col">Sparse hierarchical Bayesian model improves Implicit Association Test predictions of mental health symptoms using multimodal neural and behavioral data.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Hierarchical Bayesian Models, Psychometric Variables, Multimodal Data, Neural Data, Mental Health</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-medium">8</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">12</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.16587v1" target="_blank" class="title-link">HistoAtlas: A Pan-Cancer Morphology Atlas Linking Histomics to Molecular Programs and Clinical Outcomes</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Pierre-Antoine Bannier</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-17</div>
-                    </td>
-                    <td class="tldr-col">HistoAtlas extracts 38 interpretable histomic features from pan-cancer H&E slides, linking morphology to survival, gene expression, and immune subtypes.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Histopathology, Feature Extraction, Survival Analysis, Gene Expression, Biomarker Discovery</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-medium">8</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">13</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.18239v1" target="_blank" class="title-link">Impact of automatic speech recognition quality on Alzheimer's disease detection from spontaneous speech: a reproducible benchmark study with lexical modeling and statistical validation</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Himadri Samanta</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-18</div>
-                    </td>
-                    <td class="tldr-col">Whisper ASR transcript quality significantly impacts Alzheimer's detection; higher-quality transcripts enable simple interpretable models to achieve competitive classification performance.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Automatic Speech Recognition, Support Vector Machines, Logistic Regression, TF-IDF, Alzheimer's Disease</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-medium">8</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">14</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.17765v1" target="_blank" class="title-link">Grounded Multimodal Retrieval-Augmented Drafting of Radiology Impressions Using Case-Based Similarity Search</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Himadri Samanta</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-18</div>
-                    </td>
-                    <td class="tldr-col">Multimodal retrieval-augmented system generates grounded radiology impressions using CLIP embeddings and case-based similarity search with citation-constrained generation.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Retrieval-Augmented Generation, Contrastive Learning, Multimodal Embeddings, CLIP, Nearest-Neighbor Retrieval</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-medium">7</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">15</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.16963v1" target="_blank" class="title-link">Topology-Guided Biomechanical Profiling: A White-Box Framework for Opportunistic Screening of Spinal Instability on Routine CT</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Zanting Ye, Xuanbin Wu, Guoqing Zhong, et al.</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-17</div>
-                    </td>
-                    <td class="tldr-col">TGBP is an interpretable white-box framework using geometric reasoning and covariance-based methods for automated spinal instability screening on CT.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Geometric Reasoning, Oriented Bounding Boxes, Morphometric Analysis, Medical Imaging, Interpretable AI</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-medium">7</span>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="rank-col">16</td>
-                    <td class="title-col">
-                        <a href="https://arxiv.org/pdf/2603.16984v1" target="_blank" class="title-link">Intermitotic timing and motility patterns in the cell division of the diatom Seminavis robusta</a>
-                    </td>
-                    <td class="authors-col">
-                        <div class="authors">Jonas Ziebarth, Thomas Fuhrmann-Lieker</div>
-                    </td>
-                    <td class="date-col">
-                        <div class="date">2026-03-17</div>
-                    </td>
-                    <td class="tldr-col">Machine-learning based cell tracking of Seminavis robusta diatoms reveals no significant intermitotic time differences but higher motility in smaller daughter cells.</td>
-                    <td class="keywords-col">
-                        <div class="keywords">Cell Tracking, Object Detection, Detection Algorithm, Cell Division, Diatom Biology</div>
-                    </td>
-                    <td class="score-col">
-                        <span class="score-badge score-medium">6</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        
+        <section>
+            <h2>📊 Ranked Papers by Relevance</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="rank-cell">Rank</th>
+                            <th class="title-cell">Title</th>
+                            <th class="authors-cell">Authors</th>
+                            <th class="date-cell">Published</th>
+                            <th class="tldr-cell">TL;DR</th>
+                            <th class="keywords-cell">Keywords</th>
+                            <th class="score-cell">Score</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="rank-cell">1</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.19751v1" target="_blank">Branched Optimal Transport for Stimulus to Reaction Brain Mapping</a>
+                            </td>
+                            <td class="authors-cell">Cristian Mendico</td>
+                            <td class="date-cell">2026-03-20</td>
+                            <td class="tldr-cell">A variational framework treats neural propagation networks as unknowns, using anisotropic branched optimal transport to infer stimulus-to-reaction routing architectures from brain activity.</td>
+                            <td class="keywords-cell">Optimal Transport, Brain Networks, Variational Methods, Graph Dynamics, Neural Routing</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">10</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">2</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.19761v1" target="_blank">Multimodal branched transport infers anatomically aligned brain reaction maps</a>
+                            </td>
+                            <td class="authors-cell">Cristian Mendico</td>
+                            <td class="date-cell">2026-03-20</td>
+                            <td class="tldr-cell">Branched transport optimization combines multimodal brain imaging data to infer stimulus-response propagation architectures that reveal neural routing highways and controllability-efficiency trade-offs.</td>
+                            <td class="keywords-cell">Branched Optimal Transport, Brain Connectivity, fMRI, Tractography, Network Control</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">10</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="rank-cell">3</td>
+                            <td class="title-cell">
+                                <a href="https://arxiv.org/pdf/2603.20115v1" target="_blank">Conditioning Protein Generation via Hopfield Pattern Multiplicity</a>
+                            </td>
+                            <td class="authors-cell">Jeffrey D. Varner</td>
+                            <td class="date-cell">2026-03-20</td>
+                            <td class="tldr-cell">Stochastic attention protein generation can be directed toward functional subsets using a scalar bias parameter, enabling expansion of small binding datasets into diverse candidate libraries.</td>
+                            <td class="keywords-cell">Stochastic Attention, Protein Generation, Sequence Sampling, Hopfield Networks, Pharmacophore</td>
+                            <td class="score-cell">
+                                <span class="score-badge score-high">9</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <section class="narrative-section">
-            <h2>Daily Summary</h2>
-            <p>Today's q-bio.QM preprints showcase a strong emphasis on machine learning methods for biological data integration and clinical prediction. Optimal transport, neural connectivity inference, and multimodal representation learning dominate the methodological landscape, with applications spanning spatial transcriptomics alignment, protein engineering through quantum optimization, and few-shot clinical diagnostics for Alzheimer's disease. The confluence of foundation models, attention mechanisms, and geometric reasoning underscores a shift toward scalable, interpretable, and biologically grounded computational frameworks across genomics, proteomics, and medical imaging.</p>
+            <h2>📝 Daily Summary</h2>
+            <p>
+                Today's q-bio.QM digest highlights a strong focus on advanced mathematical frameworks for biological systems. Two companion papers by Mendico pioneer branched optimal transport as a novel approach to infer stimulus-to-reaction routing architectures in the brain, combining multimodal imaging data (fMRI, EEG, tractography) to reveal neural propagation highways and trade-offs between geometric efficiency and dynamical control. Complementing the neuroscience contributions, Varner demonstrates how stochastic attention mechanisms with Hopfield-inspired conditioning can direct protein sequence generation toward functional subsets, providing a training-free method to expand small experimental datasets into diverse therapeutic candidates. Together, these papers underscore an emerging methodological trend: variational optimization and attention-based sampling techniques that infer structure and function from sparse observations without prescribing the underlying architecture.
+            </p>
         </section>
     </main>
-    
+
     <footer>
-        Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/archive/q-bio.QM" target="_blank">arXiv q-bio.QM</a> · 2026-03-20 UTC
+        Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/archive/q-bio.QM" target="_blank">arXiv q-bio.QM</a> · 2026-03-23
     </footer>
 </body>
 </html>

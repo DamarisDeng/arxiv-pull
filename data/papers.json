@@ -1,21 +1,46 @@
 [
   {
-    "id": "2603.18571v1",
-    "title": "CAPSUL: A Comprehensive Human Protein Benchmark for Subcellular Localization",
+    "id": "2603.20115v1",
+    "title": "Conditioning Protein Generation via Hopfield Pattern Multiplicity",
     "authors": [
-      "Yicheng Hu",
-      "Xinyu Lin",
-      "Shulin Li",
-      "Wenjie Wang",
-      "Fengbin Zhu",
-      "Fuli Feng"
+      "Jeffrey D. Varner"
     ],
-    "published_date": "2026-03-19T07:33:04Z",
-    "abstract": "Subcellular localization is a crucial biological task for drug target identification and function annotation. Although it has been biologically realized that subcellular localization is closely associated with protein structure, no existing dataset offers comprehensive 3D structural information with detailed subcellular localization annotations, thus severely hindering the application of promising structure-based models on this task. To address this gap, we introduce a new benchmark called $\\mathbf{CAPSUL}$, a $\\mathbf{C}$omprehensive hum$\\mathbf{A}$n $\\mathbf{P}$rotein benchmark for $\\mathbf{SU}$bcellular $\\mathbf{L}$ocalization. It features a dataset that integrates diverse 3D structural representations with fine-grained subcellular localization annotations carefully curated by domain experts. We evaluate this benchmark using a variety of state-of-the-art sequence-based and structure-based models, showcasing the importance of involving structural features in this task. Furthermore, we explore reweighting and single-label classification strategies to facilitate future investigation on structure-based methods for this task. Lastly, we showcase the powerful interpretability of structure-based methods through a case study on the Golgi apparatus, where we discover a decisive localization pattern $α$-helix from attention mechanisms, demonstrating the potential for bridging the gap with intuitive biological interpretability and paving the way for data-driven discoveries in cell biology.",
-    "pdf_link": "https://arxiv.org/pdf/2603.18571v1",
+    "published_date": "2026-03-20T16:38:15Z",
+    "abstract": "Protein sequence generation via stochastic attention produces plausible family members from small alignments without training, but treats all stored sequences equally and cannot direct generation toward a functional subset of interest. We show that a single scalar parameter, added as a bias to the sampler's attention logits, continuously shifts generation from the full family toward a user-specified subset, with no retraining and no change to the model architecture. A practitioner supplies a small set of sequences (for example, hits from a binding screen) and a multiplicity ratio that controls how strongly generation favors them. The method is agnostic to what the subset represents: binding, stability, specificity, or any other property. We find that the conditioning is exact at the level of the sampler's internal representation, but that the decoded sequence phenotype can fall short because the dimensionality reduction used to encode sequences does not always preserve the residue-level variation that defines the functional split. We term this discrepancy the calibration gap and show that it is predicted by a simple geometric measure of how well the encoding separates the functional subset from the rest of the family. Experiments on five Pfam families (Kunitz, SH3, WW, Homeobox, and Forkhead domains) confirm the monotonic relationship between separation and gap across a fourfold range of geometries. Applied to omega-conotoxin peptides targeting a calcium channel involved in pain signaling, curated seeding from 23 characterized binders produces over a thousand candidates that preserve the primary pharmacophore and all experimentally identified binding determinants. These results show that stochastic attention enables practitioners to expand a handful of experimentally characterized sequences into diverse candidate libraries without retraining a generative model.",
+    "pdf_link": "https://arxiv.org/pdf/2603.20115v1",
     "categories": [
-      "cs.AI",
-      "cs.CE",
+      "cs.LG",
+      "q-bio.BM",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.19761v1",
+    "title": "Multimodal branched transport infers anatomically aligned brain reaction maps",
+    "authors": [
+      "Cristian Mendico"
+    ],
+    "published_date": "2026-03-20T08:44:57Z",
+    "abstract": "How external stimulation is transformed into distributed reaction patterns remains unresolved at the level of propagation architecture. Existing large-scale control models quantify transition costs on prescribed networks but do not infer the routing map itself from source and target activity. Here we combine task-related blood-oxygen-level-dependent responses, source-reconstructed electrophysiology and tractography-derived anisotropy to estimate stimulation and reaction measures, define an anatomical transport cost, and infer a branched propagation architecture by variational optimisation. Unlike standard transport formulations, branched transport favours aggregation of signal into shared neural highways before redistribution. We further attach a stochastic graph-induced dynamics to the inferred map and quantify the trade-off between geometric efficiency and dynamical controllability. We show that multimodal data generate anatomically aligned brain reaction maps, that anisotropic costs qualitatively reshape routing backbones relative to isotropic baselines, and that hybrid geometric--dynamical optimisation reveals non-trivial rank reversals across branching regimes.",
+    "pdf_link": "https://arxiv.org/pdf/2603.19761v1",
+    "categories": [
+      "math.OC",
+      "q-bio.NC",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2603.19751v1",
+    "title": "Branched Optimal Transport for Stimulus to Reaction Brain Mapping",
+    "authors": [
+      "Cristian Mendico"
+    ],
+    "published_date": "2026-03-20T08:36:45Z",
+    "abstract": "A central problem in systems neuroscience is to determine how an external stimulation is propagated through the brain so as to produce a reaction. Current deterministic and stochastic control models quantify transition costs between brain states on a prescribed network, but do not treat the transport network itself as an unknown. Here we propose a variational framework in which the inferred object is a graph/current connecting a stimulation source measure to a reaction target measure. The model is posed as an anisotropic branched optimal transport problem, where concavity of the flux cost promotes aggregation and branching. The support of an optimal current defines a stimulus-to-reaction routing architecture, interpreted as a brain reaction map. We prove existence of minimizers in discrete and continuous formulations and introduce a hybrid stochastic extension combining ramified transport with a path-space Kullback--Leibler control cost on the induced graph dynamics. This approach provides a mathematical mechanism for inferring propagation architectures rather than controlling trajectories on fixed substrates.",
+    "pdf_link": "https://arxiv.org/pdf/2603.19751v1",
+    "categories": [
+      "math.OC",
+      "q-bio.NC",
       "q-bio.QM"
     ]
   }
