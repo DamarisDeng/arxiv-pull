@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-Bio Watchtower — Daily arXiv Digest</title>
+    <title>Q-Bio Watchtower — 2026-03-24</title>
     <style>
         * {
             margin: 0;
@@ -23,24 +23,25 @@
             color: #ffffff;
             padding: 2rem 1rem;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-bottom: 4px solid #3498db;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 2rem;
+            font-weight: 600;
             margin-bottom: 0.5rem;
-            font-weight: 700;
         }
 
         header .subtitle {
-            font-size: 1.1rem;
-            color: #ecf0f1;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
         }
 
         header .meta {
-            font-size: 0.95rem;
-            color: #bdc3c7;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 0.5rem;
         }
 
         main {
@@ -49,22 +50,36 @@
             padding: 2rem 1rem;
         }
 
-        h2 {
+        .narrative {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        .narrative h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.75rem;
             color: #2c3e50;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+        }
+
+        .narrative p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #2c3e50;
         }
 
         .table-container {
             overflow-x: auto;
-            margin-bottom: 3rem;
+            margin-bottom: 2rem;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             background-color: #ffffff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
         }
 
         thead {
@@ -72,11 +87,19 @@
             color: #ffffff;
         }
 
-        thead th {
-            padding: 1rem 0.75rem;
+        th {
+            padding: 1rem;
             text-align: left;
             font-weight: 600;
-            border: 1px solid #2c3e50;
+            border: 1px solid #34495e;
+            font-size: 0.95rem;
+        }
+
+        td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            vertical-align: top;
+            font-size: 0.9rem;
         }
 
         tbody tr:nth-child(odd) {
@@ -88,57 +111,53 @@
         }
 
         tbody tr:hover {
-            background-color: #e8f4f8;
-        }
-
-        tbody td {
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            vertical-align: top;
+            background-color: #ecf0f1;
         }
 
         .rank-cell {
             text-align: center;
             font-weight: 600;
             color: #2c3e50;
+            font-size: 1.1rem;
             width: 60px;
-        }
-
-        .title-cell {
-            min-width: 250px;
         }
 
         .title-cell a {
             color: #3498db;
             text-decoration: none;
             font-weight: 500;
+            line-height: 1.4;
         }
 
         .title-cell a:hover {
             text-decoration: underline;
+            color: #2980b9;
         }
 
         .authors-cell {
-            min-width: 150px;
-            font-size: 0.9rem;
+            color: #555;
+            font-size: 0.85rem;
+            max-width: 200px;
         }
 
         .date-cell {
+            color: #666;
+            font-size: 0.85rem;
             white-space: nowrap;
-            font-size: 0.9rem;
             width: 100px;
         }
 
         .tldr-cell {
-            min-width: 300px;
-            font-size: 0.95rem;
+            color: #2c3e50;
             line-height: 1.5;
+            max-width: 350px;
         }
 
         .keywords-cell {
-            min-width: 200px;
-            font-size: 0.9rem;
             color: #555;
+            font-size: 0.85rem;
+            font-style: italic;
+            max-width: 200px;
         }
 
         .score-cell {
@@ -149,7 +168,7 @@
         .score-badge {
             display: inline-block;
             padding: 0.4rem 0.8rem;
-            border-radius: 12px;
+            border-radius: 20px;
             font-weight: 600;
             font-size: 0.9rem;
             color: #ffffff;
@@ -167,25 +186,12 @@
             background-color: #95a5a6;
         }
 
-        .narrative-section {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 1.5rem;
-            margin-bottom: 3rem;
-            border-radius: 4px;
-        }
-
-        .narrative-section p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #2c3e50;
-        }
-
         footer {
             background-color: #2c3e50;
-            color: #ecf0f1;
+            color: #ffffff;
             text-align: center;
-            padding: 1.5rem 1rem;
+            padding: 1.5rem;
+            margin-top: 2rem;
             font-size: 0.9rem;
         }
 
@@ -197,86 +203,83 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            th, td {
+                padding: 0.5rem;
+                font-size: 0.85rem;
+            }
+
+            .narrative {
+                padding: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Q-Bio Watchtower</h1>
-        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-23 UTC</div>
-        <div class="meta">3 papers analyzed | Published on 2026-03-20</div>
+        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-24</div>
+        <div class="meta">2 papers | Date range: 2026-03-22 to 2026-03-23</div>
     </header>
 
     <main>
-        <section>
-            <h2>📊 Ranked Papers by Relevance</h2>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th class="rank-cell">Rank</th>
-                            <th class="title-cell">Title</th>
-                            <th class="authors-cell">Authors</th>
-                            <th class="date-cell">Published</th>
-                            <th class="tldr-cell">TL;DR</th>
-                            <th class="keywords-cell">Keywords</th>
-                            <th class="score-cell">Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="rank-cell">1</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.19751v1" target="_blank">Branched Optimal Transport for Stimulus to Reaction Brain Mapping</a>
-                            </td>
-                            <td class="authors-cell">Cristian Mendico</td>
-                            <td class="date-cell">2026-03-20</td>
-                            <td class="tldr-cell">A variational framework treats neural propagation networks as unknowns, using anisotropic branched optimal transport to infer stimulus-to-reaction routing architectures from brain activity.</td>
-                            <td class="keywords-cell">Optimal Transport, Brain Networks, Variational Methods, Graph Dynamics, Neural Routing</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">10</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">2</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.19761v1" target="_blank">Multimodal branched transport infers anatomically aligned brain reaction maps</a>
-                            </td>
-                            <td class="authors-cell">Cristian Mendico</td>
-                            <td class="date-cell">2026-03-20</td>
-                            <td class="tldr-cell">Branched transport optimization combines multimodal brain imaging data to infer stimulus-response propagation architectures that reveal neural routing highways and controllability-efficiency trade-offs.</td>
-                            <td class="keywords-cell">Branched Optimal Transport, Brain Connectivity, fMRI, Tractography, Network Control</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">10</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="rank-cell">3</td>
-                            <td class="title-cell">
-                                <a href="https://arxiv.org/pdf/2603.20115v1" target="_blank">Conditioning Protein Generation via Hopfield Pattern Multiplicity</a>
-                            </td>
-                            <td class="authors-cell">Jeffrey D. Varner</td>
-                            <td class="date-cell">2026-03-20</td>
-                            <td class="tldr-cell">Stochastic attention protein generation can be directed toward functional subsets using a scalar bias parameter, enabling expansion of small binding datasets into diverse candidate libraries.</td>
-                            <td class="keywords-cell">Stochastic Attention, Protein Generation, Sequence Sampling, Hopfield Networks, Pharmacophore</td>
-                            <td class="score-cell">
-                                <span class="score-badge score-high">9</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+        <section class="narrative">
+            <h2>Overview</h2>
+            <p>Today's papers showcase advanced computational approaches in quantitative biology, with a strong emphasis on machine learning integration. The top paper presents CellFluxRL, which applies reinforcement learning to virtual cell modeling for drug discovery, while the second explores graph neural network architectures for biomechanical modeling of knee joint mechanics. Both papers demonstrate the growing trend of hybrid methodologies that combine domain-specific biological constraints with state-of-the-art deep learning frameworks to address computationally expensive simulations.</p>
         </section>
 
-        <section class="narrative-section">
-            <h2>📝 Daily Summary</h2>
-            <p>
-                Today's q-bio.QM digest highlights a strong focus on advanced mathematical frameworks for biological systems. Two companion papers by Mendico pioneer branched optimal transport as a novel approach to infer stimulus-to-reaction routing architectures in the brain, combining multimodal imaging data (fMRI, EEG, tractography) to reveal neural propagation highways and trade-offs between geometric efficiency and dynamical control. Complementing the neuroscience contributions, Varner demonstrates how stochastic attention mechanisms with Hopfield-inspired conditioning can direct protein sequence generation toward functional subsets, providing a training-free method to expand small experimental datasets into diverse therapeutic candidates. Together, these papers underscore an emerging methodological trend: variational optimization and attention-based sampling techniques that infer structure and function from sparse observations without prescribing the underlying architecture.
-            </p>
-        </section>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank-cell">Rank</th>
+                        <th>Title</th>
+                        <th>Authors</th>
+                        <th>Published</th>
+                        <th>TL;DR</th>
+                        <th>Keywords</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank-cell">1</td>
+                        <td class="title-cell">
+                            <a href="https://arxiv.org/pdf/2603.21743v1" target="_blank" rel="noopener">CellFluxRL: Biologically-Constrained Virtual Cell Modeling via Reinforcement Learning</a>
+                        </td>
+                        <td class="authors-cell">Dongxia Wu, Shiye Su, Yuhui Zhang, et al.</td>
+                        <td class="date-cell">2026-03-23</td>
+                        <td class="tldr-cell">Post-training CellFlux virtual cell model with reinforcement learning using biologically-informed reward functions to generate physically plausible cellular images for drug discovery.</td>
+                        <td class="keywords-cell">CellFlux, CellFluxRL</td>
+                        <td class="score-cell">
+                            <span class="score-badge score-high">9</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="rank-cell">2</td>
+                        <td class="title-cell">
+                            <a href="https://arxiv.org/pdf/2603.21020v1" target="_blank" rel="noopener">Characterizing Long-Range Dependencies in Knee Joint Contact Mechanics: A Comparison of Topology Diffusion, Global Routing, and Hybrid Graph Neural Networks</a>
+                        </td>
+                        <td class="authors-cell">Zhengye Pan, Jianwei Zuo, Jiajia Luo</td>
+                        <td class="date-cell">2026-03-22</td>
+                        <td class="tldr-cell">Compares topology diffusion, global routing, and hybrid graph neural network architectures for surrogate modeling of knee joint contact mechanics using finite element simulations.</td>
+                        <td class="keywords-cell">MeshGraphNet, Topology Diffusion</td>
+                        <td class="score-cell">
+                            <span class="score-badge score-high">8</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
 
     <footer>
-        Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/archive/q-bio.QM" target="_blank">arXiv q-bio.QM</a> · 2026-03-23
+        <p>Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM</p>
     </footer>
 </body>
 </html>

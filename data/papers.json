@@ -1,46 +1,36 @@
 [
   {
-    "id": "2603.20115v1",
-    "title": "Conditioning Protein Generation via Hopfield Pattern Multiplicity",
+    "id": "2603.21743v1",
+    "title": "CellFluxRL: Biologically-Constrained Virtual Cell Modeling via Reinforcement Learning",
     "authors": [
-      "Jeffrey D. Varner"
+      "Dongxia Wu",
+      "Shiye Su",
+      "Yuhui Zhang",
+      "Elaine Sui",
+      "Emma Lundberg",
+      "Emily B. Fox",
+      "Serena Yeung-Levy"
     ],
-    "published_date": "2026-03-20T16:38:15Z",
-    "abstract": "Protein sequence generation via stochastic attention produces plausible family members from small alignments without training, but treats all stored sequences equally and cannot direct generation toward a functional subset of interest. We show that a single scalar parameter, added as a bias to the sampler's attention logits, continuously shifts generation from the full family toward a user-specified subset, with no retraining and no change to the model architecture. A practitioner supplies a small set of sequences (for example, hits from a binding screen) and a multiplicity ratio that controls how strongly generation favors them. The method is agnostic to what the subset represents: binding, stability, specificity, or any other property. We find that the conditioning is exact at the level of the sampler's internal representation, but that the decoded sequence phenotype can fall short because the dimensionality reduction used to encode sequences does not always preserve the residue-level variation that defines the functional split. We term this discrepancy the calibration gap and show that it is predicted by a simple geometric measure of how well the encoding separates the functional subset from the rest of the family. Experiments on five Pfam families (Kunitz, SH3, WW, Homeobox, and Forkhead domains) confirm the monotonic relationship between separation and gap across a fourfold range of geometries. Applied to omega-conotoxin peptides targeting a calcium channel involved in pain signaling, curated seeding from 23 characterized binders produces over a thousand candidates that preserve the primary pharmacophore and all experimentally identified binding determinants. These results show that stochastic attention enables practitioners to expand a handful of experimentally characterized sequences into diverse candidate libraries without retraining a generative model.",
-    "pdf_link": "https://arxiv.org/pdf/2603.20115v1",
+    "published_date": "2026-03-23T09:33:18Z",
+    "abstract": "Building virtual cells with generative models to simulate cellular behavior in silico is emerging as a promising paradigm for accelerating drug discovery. However, prior image-based generative approaches can produce implausible cell images that violate basic physical and biological constraints. To address this, we propose to post-train virtual cell models with reinforcement learning (RL), leveraging biologically meaningful evaluators as reward functions. We design seven rewards spanning three categories-biological function, structural validity, and morphological correctness-and optimize the state-of-the-art CellFlux model to yield CellFluxRL. CellFluxRL consistently improves over CellFlux across all rewards, with further performance boosts from test-time scaling. Overall, our results present a virtual cell modeling framework that enforces physically-based constraints through RL, advancing beyond \"visually realistic\" generations towards \"biologically meaningful\" ones.",
+    "pdf_link": "https://arxiv.org/pdf/2603.21743v1",
     "categories": [
       "cs.LG",
-      "q-bio.BM",
       "q-bio.QM"
     ]
   },
   {
-    "id": "2603.19761v1",
-    "title": "Multimodal branched transport infers anatomically aligned brain reaction maps",
+    "id": "2603.21020v1",
+    "title": "Characterizing Long-Range Dependencies in Knee Joint Contact Mechanics: A Comparison of Topology Diffusion, Global Routing, and Hybrid Graph Neural Networks",
     "authors": [
-      "Cristian Mendico"
+      "Zhengye Pan",
+      "Jianwei Zuo",
+      "Jiajia Luo"
     ],
-    "published_date": "2026-03-20T08:44:57Z",
-    "abstract": "How external stimulation is transformed into distributed reaction patterns remains unresolved at the level of propagation architecture. Existing large-scale control models quantify transition costs on prescribed networks but do not infer the routing map itself from source and target activity. Here we combine task-related blood-oxygen-level-dependent responses, source-reconstructed electrophysiology and tractography-derived anisotropy to estimate stimulation and reaction measures, define an anatomical transport cost, and infer a branched propagation architecture by variational optimisation. Unlike standard transport formulations, branched transport favours aggregation of signal into shared neural highways before redistribution. We further attach a stochastic graph-induced dynamics to the inferred map and quantify the trade-off between geometric efficiency and dynamical controllability. We show that multimodal data generate anatomically aligned brain reaction maps, that anisotropic costs qualitatively reshape routing backbones relative to isotropic baselines, and that hybrid geometric--dynamical optimisation reveals non-trivial rank reversals across branching regimes.",
-    "pdf_link": "https://arxiv.org/pdf/2603.19761v1",
+    "published_date": "2026-03-22T02:32:12Z",
+    "abstract": "Finite element analysis of knee joint contact mechanics is computationally expensive, which has motivated the development of graph neural network surrogate models. However, effectively representing long-range dependencies in joint mechanical responses remains challenging. This study systematically compared topology diffusion, global routing, and their hybridization for surrogate modeling of knee joint contact mechanics. Using kinematic and force data from nine soccer players performing change-of-direction maneuvers, finite element simulations were used to generate graph-structured samples for training and evaluation under a grouped three-fold cross-subject evaluation framework. Five architectures were compared: standard MeshGraphNet, hierarchical MeshGraphNet, a routing-only transformer, a topology-biased routing transformer, and a hybrid model. The hybrid model achieved the best overall performance, yielding the lowest full-field error and peak stress error, together with the highest spatial agreement for high-risk regions. Among the non-hybrid models, the standard topology-diffusion model performed best overall, whereas routing-only strategies were less effective. These findings indicate that topology diffusion provides a robust basis for surrogate modeling of knee joint contact mechanics within the present benchmark, while the addition of global routing can further improve reconstruction of clinically relevant high-stress patterns.",
+    "pdf_link": "https://arxiv.org/pdf/2603.21020v1",
     "categories": [
-      "math.OC",
-      "q-bio.NC",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2603.19751v1",
-    "title": "Branched Optimal Transport for Stimulus to Reaction Brain Mapping",
-    "authors": [
-      "Cristian Mendico"
-    ],
-    "published_date": "2026-03-20T08:36:45Z",
-    "abstract": "A central problem in systems neuroscience is to determine how an external stimulation is propagated through the brain so as to produce a reaction. Current deterministic and stochastic control models quantify transition costs between brain states on a prescribed network, but do not treat the transport network itself as an unknown. Here we propose a variational framework in which the inferred object is a graph/current connecting a stimulation source measure to a reaction target measure. The model is posed as an anisotropic branched optimal transport problem, where concavity of the flux cost promotes aggregation and branching. The support of an optimal current defines a stimulus-to-reaction routing architecture, interpreted as a brain reaction map. We prove existence of minimizers in discrete and continuous formulations and introduce a hybrid stochastic extension combining ramified transport with a path-space Kullback--Leibler control cost on the induced graph dynamics. This approach provides a mathematical mechanism for inferring propagation architectures rather than controlling trajectories on fixed substrates.",
-    "pdf_link": "https://arxiv.org/pdf/2603.19751v1",
-    "categories": [
-      "math.OC",
-      "q-bio.NC",
       "q-bio.QM"
     ]
   }
