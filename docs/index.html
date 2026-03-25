@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-Bio Watchtower — 2026-03-24</title>
+    <title>Q-Bio Watchtower — Daily arXiv Digest</title>
     <style>
         * {
             margin: 0;
@@ -13,7 +13,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #ffffff;
+            background-color: #f5f5f5;
             color: #1a1a1a;
             line-height: 1.6;
         }
@@ -23,54 +23,36 @@
             color: #ffffff;
             padding: 2rem 1rem;
             text-align: center;
-            border-bottom: 4px solid #3498db;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         header h1 {
-            font-size: 2rem;
-            font-weight: 600;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
 
         header .subtitle {
-            font-size: 1rem;
+            font-size: 1.1rem;
             opacity: 0.9;
-            margin-top: 0.5rem;
+            margin-bottom: 0.5rem;
         }
 
         header .meta {
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             opacity: 0.8;
-            margin-top: 0.5rem;
         }
 
         main {
             max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
-        }
-
-        .narrative {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 4px;
-        }
-
-        .narrative h2 {
-            font-size: 1.3rem;
-            margin-bottom: 0.75rem;
-            color: #2c3e50;
-        }
-
-        .narrative p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #2c3e50;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
 
         .table-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             overflow-x: auto;
             margin-bottom: 2rem;
         }
@@ -78,11 +60,9 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
         }
 
-        thead {
+        thead tr {
             background-color: #2c3e50;
             color: #ffffff;
         }
@@ -91,15 +71,17 @@
             padding: 1rem;
             text-align: left;
             font-weight: 600;
-            border: 1px solid #34495e;
             font-size: 0.95rem;
+            border: 1px solid #34495e;
         }
 
-        td {
-            padding: 1rem;
-            border: 1px solid #ddd;
-            vertical-align: top;
-            font-size: 0.9rem;
+        th:first-child {
+            width: 60px;
+            text-align: center;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #ddd;
         }
 
         tbody tr:nth-child(odd) {
@@ -114,64 +96,62 @@
             background-color: #ecf0f1;
         }
 
-        .rank-cell {
-            text-align: center;
-            font-weight: 600;
-            color: #2c3e50;
-            font-size: 1.1rem;
-            width: 60px;
+        td {
+            padding: 1rem;
+            border: 1px solid #ddd;
+            vertical-align: top;
         }
 
-        .title-cell a {
+        td:first-child {
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .paper-title a {
             color: #3498db;
             text-decoration: none;
-            font-weight: 500;
-            line-height: 1.4;
         }
 
-        .title-cell a:hover {
+        .paper-title a:hover {
             text-decoration: underline;
-            color: #2980b9;
         }
 
-        .authors-cell {
+        .authors {
+            font-size: 0.9rem;
             color: #555;
-            font-size: 0.85rem;
-            max-width: 200px;
+            margin-bottom: 0.25rem;
         }
 
-        .date-cell {
-            color: #666;
+        .date {
             font-size: 0.85rem;
-            white-space: nowrap;
-            width: 100px;
+            color: #777;
         }
 
-        .tldr-cell {
-            color: #2c3e50;
+        .tldr {
+            font-size: 0.95rem;
             line-height: 1.5;
-            max-width: 350px;
         }
 
-        .keywords-cell {
+        .keywords {
+            font-size: 0.9rem;
             color: #555;
-            font-size: 0.85rem;
-            font-style: italic;
-            max-width: 200px;
-        }
-
-        .score-cell {
-            text-align: center;
-            width: 80px;
         }
 
         .score-badge {
             display: inline-block;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.9rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
             color: #ffffff;
+            text-align: center;
         }
 
         .score-high {
@@ -186,12 +166,32 @@
             background-color: #95a5a6;
         }
 
+        .narrative-section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .narrative-section h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .narrative-section p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
         footer {
             background-color: #2c3e50;
             color: #ffffff;
             text-align: center;
             padding: 1.5rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
             font-size: 0.9rem;
         }
 
@@ -206,16 +206,23 @@
 
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+            }
+
+            header .subtitle {
+                font-size: 1rem;
+            }
+
+            table {
+                font-size: 0.9rem;
             }
 
             th, td {
-                padding: 0.5rem;
-                font-size: 0.85rem;
+                padding: 0.75rem;
             }
 
-            .narrative {
-                padding: 1rem;
+            .narrative-section {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -223,24 +230,17 @@
 <body>
     <header>
         <h1>Q-Bio Watchtower</h1>
-        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-24</div>
-        <div class="meta">2 papers | Date range: 2026-03-22 to 2026-03-23</div>
+        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-25 UTC</div>
+        <div class="meta">3 papers analyzed from 2026-03-23</div>
     </header>
 
     <main>
-        <section class="narrative">
-            <h2>Overview</h2>
-            <p>Today's papers showcase advanced computational approaches in quantitative biology, with a strong emphasis on machine learning integration. The top paper presents CellFluxRL, which applies reinforcement learning to virtual cell modeling for drug discovery, while the second explores graph neural network architectures for biomechanical modeling of knee joint mechanics. Both papers demonstrate the growing trend of hybrid methodologies that combine domain-specific biological constraints with state-of-the-art deep learning frameworks to address computationally expensive simulations.</p>
-        </section>
-
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
-                        <th class="rank-cell">Rank</th>
-                        <th>Title</th>
-                        <th>Authors</th>
-                        <th>Published</th>
+                        <th>Rank</th>
+                        <th>Title & Authors</th>
                         <th>TL;DR</th>
                         <th>Keywords</th>
                         <th>Score</th>
@@ -248,38 +248,70 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="rank-cell">1</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.21743v1" target="_blank" rel="noopener">CellFluxRL: Biologically-Constrained Virtual Cell Modeling via Reinforcement Learning</a>
+                        <td>1</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.22477v1" target="_blank">Subspace Tensor Orthogonal Rotation Model (STORM) for Batch Alignment, Cell Type Deconvolution, and Gene Imputation in Spatial Transcriptomic Data</a>
+                            </div>
+                            <div class="authors">Sean Cottrell, Guo-Wei Wei, Longxiu Huang</div>
+                            <div class="date">Published: 2026-03-23</div>
                         </td>
-                        <td class="authors-cell">Dongxia Wu, Shiye Su, Yuhui Zhang, et al.</td>
-                        <td class="date-cell">2026-03-23</td>
-                        <td class="tldr-cell">Post-training CellFlux virtual cell model with reinforcement learning using biologically-informed reward functions to generate physically plausible cellular images for drug discovery.</td>
-                        <td class="keywords-cell">CellFlux, CellFluxRL</td>
-                        <td class="score-cell">
-                            <span class="score-badge score-high">9</span>
+                        <td class="tldr">STORM introduces an interpretable tensor factorization method to integrate multiple spatial transcriptomics slices for batch alignment, cell-type deconvolution, and gene imputation.</td>
+                        <td class="keywords">
+                            STORM, Irregular tensor factorization, Subspace tensor orthogonal rotation, Cell-type deconvolution, Gene imputation
+                        </td>
+                        <td>
+                            <span class="score-badge score-high">10/10</span>
                         </td>
                     </tr>
                     <tr>
-                        <td class="rank-cell">2</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.21020v1" target="_blank" rel="noopener">Characterizing Long-Range Dependencies in Knee Joint Contact Mechanics: A Comparison of Topology Diffusion, Global Routing, and Hybrid Graph Neural Networks</a>
+                        <td>2</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.21743v2" target="_blank">CellFluxRL: Biologically-Constrained Virtual Cell Modeling via Reinforcement Learning</a>
+                            </div>
+                            <div class="authors">Dongxia Wu, Shiye Su, Yuhui Zhang, et al.</div>
+                            <div class="date">Published: 2026-03-23</div>
                         </td>
-                        <td class="authors-cell">Zhengye Pan, Jianwei Zuo, Jiajia Luo</td>
-                        <td class="date-cell">2026-03-22</td>
-                        <td class="tldr-cell">Compares topology diffusion, global routing, and hybrid graph neural network architectures for surrogate modeling of knee joint contact mechanics using finite element simulations.</td>
-                        <td class="keywords-cell">MeshGraphNet, Topology Diffusion</td>
-                        <td class="score-cell">
-                            <span class="score-badge score-high">8</span>
+                        <td class="tldr">CellFluxRL uses reinforcement learning with biologically-meaningful reward functions to post-train generative models for creating physically and biologically plausible virtual cell images.</td>
+                        <td class="keywords">
+                            CellFlux model, CellFluxRL, Policy gradient RL, Biologically-meaningful reward functions, Test-time scaling
+                        </td>
+                        <td>
+                            <span class="score-badge score-high">9/10</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.21743v1" target="_blank">CellFluxRL: Biologically-Constrained Virtual Cell Modeling via Reinforcement Learning</a>
+                            </div>
+                            <div class="authors">Dongxia Wu, Shiye Su, Yuhui Zhang, et al.</div>
+                            <div class="date">Published: 2026-03-23</div>
+                        </td>
+                        <td class="tldr">CellFluxRL uses reinforcement learning with biologically-meaningful reward functions to post-train generative models for creating physically and biologically plausible virtual cell images.</td>
+                        <td class="keywords">
+                            CellFlux model, CellFluxRL, Policy gradient RL, Biologically-meaningful reward functions, Test-time scaling
+                        </td>
+                        <td>
+                            <span class="score-badge score-high">9/10</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
+
+        <div class="narrative-section">
+            <h2>Research Themes Overview</h2>
+            <p>
+                Today's collection highlights the convergence of advanced computational methods with cellular biology. The dominant theme centers on integrating machine learning frameworks—particularly tensor factorization and reinforcement learning—to address fundamental challenges in spatial transcriptomics and virtual cell modeling. Methodologically, these papers emphasize interpretability and biological plausibility over black-box approaches, with STORM introducing a novel tensor decomposition technique for multi-slice spatial data integration, while CellFluxRL leverages RL reward functions to enforce physical constraints in generative cell models. Together, they represent a shift toward biologically-informed computational methods that balance predictive power with mechanistic transparency.
+            </p>
+        </div>
     </main>
 
     <footer>
-        <p>Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM</p>
+        <p>Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/archive/q-bio.QM" target="_blank">arXiv q-bio.QM</a> · 2026-03-25</p>
     </footer>
 </body>
 </html>
