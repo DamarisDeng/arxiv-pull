@@ -3,210 +3,263 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-Bio Watchtower — Daily arXiv q-bio.QM Digest</title>
+    <title>Q-Bio Watchtower — arXiv q-bio.QM Digest</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #ffffff;
             color: #1a1a1a;
             line-height: 1.6;
-            padding: 20px;
+            padding: 0;
+            margin: 0;
         }
-        
+
         header {
             background-color: #2c3e50;
             color: #ffffff;
-            padding: 30px 20px;
-            margin-bottom: 30px;
-            border-radius: 8px;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
         header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 600;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
         }
-        
+
         header .subtitle {
-            font-size: 1.2em;
-            opacity: 0.9;
-            margin-bottom: 10px;
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 0.3rem;
         }
-        
-        header .meta {
-            font-size: 1em;
-            opacity: 0.8;
+
+        header .stats {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            margin-top: 0.5rem;
         }
-        
+
         main {
             max-width: 1400px;
-            margin: 0 auto;
+            margin: 2rem auto;
+            padding: 0 1rem;
         }
-        
+
+        .narrative-section {
+            background-color: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        .narrative-section h2 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .narrative-section p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #333;
+        }
+
         .table-container {
             overflow-x: auto;
-            margin-bottom: 40px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
         }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
             background-color: #ffffff;
         }
-        
-        th {
+
+        thead {
             background-color: #2c3e50;
             color: #ffffff;
-            padding: 15px 12px;
+        }
+
+        thead th {
+            padding: 1rem;
             text-align: left;
             font-weight: 600;
-            border: 1px solid #ddd;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        
-        td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            vertical-align: top;
+
+        tbody tr {
+            border-bottom: 1px solid #ddd;
         }
-        
-        tr:nth-child(even) {
+
+        tbody tr:nth-child(odd) {
             background-color: #f9f9f9;
         }
-        
-        tr:nth-child(odd) {
+
+        tbody tr:nth-child(even) {
             background-color: #ffffff;
         }
-        
+
         tbody tr:hover {
-            background-color: #f0f0f0;
+            background-color: #f0f8ff;
         }
-        
-        a {
+
+        tbody td {
+            padding: 1rem;
+            vertical-align: top;
+            font-size: 0.95rem;
+        }
+
+        tbody td:first-child {
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .paper-title a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .paper-title a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .authors {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .date {
+            color: #777;
+            font-size: 0.85rem;
+        }
+
+        .tldr {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .keywords {
+            color: #555;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .score-badge {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .score-high {
+            background-color: #27ae60;
+            color: #ffffff;
+        }
+
+        .score-medium {
+            background-color: #f39c12;
+            color: #ffffff;
+        }
+
+        .score-low {
+            background-color: #95a5a6;
+            color: #ffffff;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ffffff;
+            text-align: center;
+            padding: 1.5rem 1rem;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
             color: #3498db;
             text-decoration: none;
         }
-        
-        a:hover {
+
+        footer a:hover {
             text-decoration: underline;
         }
-        
-        .rank {
-            font-weight: 600;
-            font-size: 1.1em;
-            color: #2c3e50;
-            text-align: center;
-        }
-        
-        .title {
-            font-weight: 500;
-            font-size: 1.05em;
-            max-width: 400px;
-        }
-        
-        .authors {
-            font-size: 0.9em;
-            color: #555;
-            max-width: 300px;
-        }
-        
-        .date {
-            font-size: 0.9em;
-            white-space: nowrap;
-        }
-        
-        .tldr {
-            font-size: 0.95em;
-            line-height: 1.5;
-            max-width: 500px;
-        }
-        
-        .keywords {
-            font-size: 0.85em;
-            color: #666;
-            font-style: italic;
-            max-width: 300px;
-        }
-        
-        .score-badge {
-            display: inline-block;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-weight: 600;
-            color: #ffffff;
-            text-align: center;
-            min-width: 40px;
-        }
-        
-        .score-high {
-            background-color: #27ae60;
-        }
-        
-        .score-medium {
-            background-color: #f39c12;
-        }
-        
-        .score-low {
-            background-color: #95a5a6;
-        }
-        
-        .narrative-summary {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 20px 25px;
-            margin: 40px 0;
-            border-radius: 4px;
-        }
-        
-        .narrative-summary h2 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.5em;
-        }
-        
-        .narrative-summary p {
-            font-size: 1.05em;
-            line-height: 1.7;
-            color: #333;
-        }
-        
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px;
-            color: #666;
-            font-size: 0.9em;
-            border-top: 2px solid #e0e0e0;
-        }
-        
-        footer a {
-            color: #3498db;
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header .subtitle {
+                font-size: 1rem;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            thead th,
+            tbody td {
+                padding: 0.7rem 0.5rem;
+            }
+
+            .narrative-section {
+                padding: 1rem;
+            }
+
+            .narrative-section h2 {
+                font-size: 1.3rem;
+            }
+
+            .narrative-section p {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Q-Bio Watchtower</h1>
-        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-28</div>
-        <div class="meta">7 papers · March 25–26, 2026</div>
+        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-29 UTC</div>
+        <div class="stats">7 papers analyzed | Published: March 25–26, 2026</div>
     </header>
-    
+
     <main>
+        <section class="narrative-section">
+            <h2>Daily Overview</h2>
+            <p>
+                Today's digest showcases a remarkable convergence of deep learning and computational biology, with foundation models emerging as the dominant methodological paradigm. The highest-ranked papers introduce novel "compiler" and "world model" architectures—one translating molecular ultrastructure to neural dynamics (<a href="https://arxiv.org/pdf/2603.25713v1" target="_blank">Kording et al.</a>) and another modeling transcriptomic state distributions for virtual cell simulation (<a href="https://arxiv.org/pdf/2603.25240v1" target="_blank">Zhang et al.</a>). Across the broader collection, learned embeddings and neural networks are applied to diverse phenotypic prediction tasks (gait analysis, survival regression, animal movement), with explainable AI techniques increasingly bridging black-box models and interpretable biological insights. This shift from descriptive to predictive structure-to-function mapping underscores a maturing ecosystem where deep learning is not just a tool but a foundational framework for understanding complex biological systems.
+            </p>
+        </section>
+
         <div class="table-container">
             <table>
                 <thead>
                     <tr>
                         <th>Rank</th>
-                        <th>Title</th>
-                        <th>Authors</th>
-                        <th>Published</th>
+                        <th>Title & Details</th>
                         <th>TL;DR</th>
                         <th>Keywords</th>
                         <th>Score</th>
@@ -214,96 +267,103 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="rank">1</td>
-                        <td class="title">
-                            <a href="https://arxiv.org/pdf/2603.25240v1" target="_blank">Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells</a>
+                        <td>1</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.25713v1" target="_blank">Compiling molecular ultrastructure into neural dynamics</a>
+                            </div>
+                            <div class="authors">Konrad P. Kording, Anton Arkhipov, Davy Deng, et al.</div>
+                            <div class="date">Published: 2026-03-26</div>
                         </td>
-                        <td class="authors">Han Zhang, Guo-Hua Yuan, Chaohao Yuan et al.</td>
-                        <td class="date">2026-03-26</td>
-                        <td class="tldr">Lingshu-Cell is a masked discrete diffusion model that learns transcriptomic state distributions from single-cell data and predicts cellular responses to perturbations across ~18,000 genes for virtual cell simulation.</td>
-                        <td class="keywords">masked discrete diffusion model, foundation model, transcriptomic prediction, perturbation modeling, generative simulation</td>
+                        <td class="tldr">Proposes ultrastructure-to-dynamics compiler mapping molecularly annotated brain ultrastructure to physiological parameters for biophysical circuit simulation and intervention forecasting.</td>
+                        <td class="keywords">ultrastructure-to-dynamics compiler, biophysical simulation, uncertainty-aware parameter estimation, circuit dynamics, structure-to-function mapping</td>
                         <td><span class="score-badge score-high">10</span></td>
                     </tr>
                     <tr>
-                        <td class="rank">2</td>
-                        <td class="title">
-                            <a href="https://arxiv.org/pdf/2603.25713v1" target="_blank">Compiling molecular ultrastructure into neural dynamics</a>
+                        <td>2</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.25240v1" target="_blank">Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells</a>
+                            </div>
+                            <div class="authors">Han Zhang, Guo-Hua Yuan, Chaohao Yuan, et al.</div>
+                            <div class="date">Published: 2026-03-26</div>
                         </td>
-                        <td class="authors">Konrad P. Kording, Anton Arkhipov, Davy Deng et al.</td>
-                        <td class="date">2026-03-26</td>
-                        <td class="tldr">This paper proposes an ultrastructure-to-dynamics compiler that uses machine learning to translate molecularly annotated brain ultrastructure into physiological parameters for biophysical simulations of neural circuit dynamics.</td>
-                        <td class="keywords">learned mapping, biophysical simulation, neural dynamics modeling, structure-to-function prediction, ultrastructure imaging</td>
+                        <td class="tldr">Introduces masked discrete diffusion model predicting transcriptomic state distributions and perturbation responses across 18,000 genes for virtual cell simulation.</td>
+                        <td class="keywords">masked discrete diffusion, discrete token space, conditional simulation, transcriptomic state distribution, perturbation embedding</td>
+                        <td><span class="score-badge score-high">10</span></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.25455v1" target="_blank">A Bayesian Gamma-power-mixture survival regression model: predicting the recurrence of prostate cancer post-prostatectomy</a>
+                            </div>
+                            <div class="authors">Tommy Walker Mackay, Mingtong Xu, Shahrokh F. Shariat, et al.</div>
+                            <div class="date">Published: 2026-03-26</div>
+                        </td>
+                        <td class="tldr">Bayesian Gamma-power-mixture model predicts prostate cancer recurrence achieving 0.232 nats Shannon information, doubling log-skew-Student-mixture performance via blood biomarkers.</td>
+                        <td class="keywords">Bayesian Gamma-power-mixture, survival regression, apparent Shannon information, log-skew-Student-mixture, greedy biomarker selection</td>
                         <td><span class="score-badge score-high">9</span></td>
                     </tr>
                     <tr>
-                        <td class="rank">3</td>
-                        <td class="title">
-                            <a href="https://arxiv.org/pdf/2603.24745v1" target="_blank">Learning relationships in epidemiological data using graph neural networks</a>
+                        <td>4</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.25283v1" target="_blank">A Gait Foundation Model Predicts Multi-System Health Phenotypes from 3D Skeletal Motion</a>
+                            </div>
+                            <div class="authors">Adam Gabet, Sarah Kohn, Guy Lutsker, et al.</div>
+                            <div class="date">Published: 2026-03-26</div>
                         </td>
-                        <td class="authors">Anthony J Wood, Aeron R Sanchez, Rowland R Kao</td>
-                        <td class="date">2026-03-25</td>
-                        <td class="tldr">Graph neural networks are applied to epidemiological data to model genetic distances between pathogen sequences and predict transmission relationships by treating infected hosts as nodes and genetic distances as edge weights.</td>
-                        <td class="keywords">graph neural networks, transmission tree inference, phylogenetic modeling, genetic distance prediction, epidemiological network analysis</td>
+                        <td class="tldr">Gait foundation model trained on 3D skeletal motion predicts multi-system health phenotypes across 18 body systems using learned embeddings.</td>
+                        <td class="keywords">foundation model, learned embeddings, anatomical ablation, depth camera, phenotype prediction</td>
                         <td><span class="score-badge score-high">9</span></td>
                     </tr>
                     <tr>
-                        <td class="rank">4</td>
-                        <td class="title">
-                            <a href="https://arxiv.org/pdf/2603.24009v1" target="_blank">Analyzing animal movement using deep learning</a>
+                        <td>5</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.24745v1" target="_blank">Learning relationships in epidemiological data using graph neural networks</a>
+                            </div>
+                            <div class="authors">Anthony J Wood, Aeron R Sanchez, Rowland R Kao</div>
+                            <div class="date">Published: 2026-03-25</div>
                         </td>
-                        <td class="authors">Thibault Fronville, Maximilian Pichler, Johannes Signer et al.</td>
-                        <td class="date">2026-03-25</td>
-                        <td class="tldr">Deep neural networks are integrated into step selection functions to analyze animal movement data, automatically detecting nonlinear effects and inter-individual variability while maintaining statistical interpretability through explainable AI.</td>
-                        <td class="keywords">deep neural networks, step selection functions, generalized additive models, explainable AI, habitat selection modeling</td>
+                        <td class="tldr">Applies graph neural networks to predict pathogen genetic distances between hosts, inferring transmission pathways from weighted graphs of epidemiological data.</td>
+                        <td class="keywords">graph neural networks, genetic distance prediction, transmission tree inference, most recent common ancestor, whole-genome sequencing</td>
+                        <td><span class="score-badge score-high">9</span></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.24009v1" target="_blank">Analyzing animal movement using deep learning</a>
+                            </div>
+                            <div class="authors">Thibault Fronville, Maximilian Pichler, Johannes Signer, et al.</div>
+                            <div class="date">Published: 2026-03-25</div>
+                        </td>
+                        <td class="tldr">Deep neural networks extend step selection functions to detect nonlinear habitat preferences and inter-individual variability via explainable AI, available in citoMove.</td>
+                        <td class="keywords">step selection functions, generalized additive models, nonlinear random effects, explainable AI, selection coefficients</td>
                         <td><span class="score-badge score-high">8</span></td>
                     </tr>
                     <tr>
-                        <td class="rank">5</td>
-                        <td class="title">
-                            <a href="https://arxiv.org/pdf/2603.25283v1" target="_blank">A Gait Foundation Model Predicts Multi-System Health Phenotypes from 3D Skeletal Motion</a>
+                        <td>7</td>
+                        <td>
+                            <div class="paper-title">
+                                <a href="https://arxiv.org/pdf/2603.24733v1" target="_blank">OpenCap Monocular: 3D Human Kinematics and Musculoskeletal Dynamics from a Single Smartphone Video</a>
+                            </div>
+                            <div class="authors">Selim Gilon, Emily Y. Miller, Scott D. Uhlrich</div>
+                            <div class="date">Published: 2026-03-25</div>
                         </td>
-                        <td class="authors">Adam Gabet, Sarah Kohn, Guy Lutsker et al.</td>
-                        <td class="date">2026-03-26</td>
-                        <td class="tldr">A foundation model trained on 3D skeletal motion from gait data predicts multi-system health phenotypes including age, BMI, and clinical diagnoses through learned embeddings that outperform engineered features.</td>
-                        <td class="keywords">foundation model, embedding learning, 3D skeletal motion, phenotype prediction, anatomical ablation</td>
+                        <td class="tldr">OpenCap Monocular estimates 3D skeletal kinematics and musculoskeletal kinetics from smartphone video using WHAM monocular pose estimation and physics-based simulation.</td>
+                        <td class="keywords">WHAM monocular pose estimation, physics-based simulation, biomechanically constrained skeletal model, inverse kinematics optimization, ground reaction force estimation</td>
                         <td><span class="score-badge score-high">8</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank">6</td>
-                        <td class="title">
-                            <a href="https://arxiv.org/pdf/2603.25455v1" target="_blank">A Bayesian Gamma-power-mixture survival regression model: predicting the recurrence of prostate cancer post-prostatectomy</a>
-                        </td>
-                        <td class="authors">Tommy Walker Mackay, Mingtong Xu, Shahrokh F. Shariat et al.</td>
-                        <td class="date">2026-03-26</td>
-                        <td class="tldr">A Bayesian Gamma-power-mixture survival regression model predicts prostate cancer recurrence post-prostatectomy using blood biomarkers, achieving higher Shannon information than previous log-skew-Student-mixture models.</td>
-                        <td class="keywords">Bayesian survival regression, Gamma-power-mixture model, Shannon information, biomarker selection, posterior inference</td>
-                        <td><span class="score-badge score-medium">7</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank">7</td>
-                        <td class="title">
-                            <a href="https://arxiv.org/pdf/2603.24733v1" target="_blank">OpenCap Monocular: 3D Human Kinematics and Musculoskeletal Dynamics from a Single Smartphone Video</a>
-                        </td>
-                        <td class="authors">Selim Gilon, Emily Y. Miller, Scott D. Uhlrich</td>
-                        <td class="date">2026-03-25</td>
-                        <td class="tldr">OpenCap Monocular estimates 3D skeletal kinematics and musculoskeletal kinetics from single smartphone videos using monocular pose estimation, optimization, and physics-based simulation combined with machine learning.</td>
-                        <td class="keywords">monocular pose estimation, optimization, physics-based simulation, biomechanical modeling, machine learning</td>
-                        <td><span class="score-badge score-medium">7</span></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        
-        <section class="narrative-summary">
-            <h2>Today's Key Themes</h2>
-            <p>
-                This week's arXiv q-bio.QM submissions showcase a strong emphasis on foundation models and deep learning architectures applied to diverse biological data modalities. Three papers focus on foundation models for cellular transcriptomics (Lingshu-Cell), gait-based health assessment, and structure-to-function mapping in neuroscience, demonstrating the field's growing adoption of large-scale pretraining paradigms. Methodologically, graph neural networks and deep neural networks appear prominently for handling complex relational data in epidemiology, animal movement ecology, and biomechanics, with multiple papers emphasizing explainability and statistical interpretability alongside predictive power. Bayesian inference and physics-based simulation also remain important tools, particularly in clinical prediction and biomechanical modeling from video data.
-            </p>
-        </section>
     </main>
-    
+
     <footer>
-        Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM
+        <p>Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/archive/q-bio.QM" target="_blank">arXiv q-bio.QM</a> · 2026-03-29</p>
     </footer>
 </body>
 </html>

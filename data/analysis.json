@@ -1,35 +1,5 @@
 [
   {
-    "id": "2603.25240v1",
-    "title": "Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells",
-    "authors": [
-      "Han Zhang",
-      "Guo-Hua Yuan",
-      "Chaohao Yuan",
-      "Tingyang Xu",
-      "Tian Bian",
-      "Hong Cheng",
-      "Wenbing Huang",
-      "Deli Zhao",
-      "Yu Rong"
-    ],
-    "published_date": "2026-03-26T09:46:27Z",
-    "abstract": "Modeling cellular states and predicting their responses to perturbations are central challenges in computational biology and the development of virtual cells. Existing foundation models for single-cell transcriptomics provide powerful static representations, but they do not explicitly model the distribution of cellular states for generative simulation. Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation. By operating directly in a discrete token space that is compatible with the sparse, non-sequential nature of single-cell transcriptomic data, Lingshu-Cell captures complex transcriptome-wide expression dependencies across approximately 18,000 genes without relying on prior gene selection, such as filtering by high variability or ranking by expression level. Across diverse tissues and species, Lingshu-Cell accurately reproduces transcriptomic distributions, marker-gene expression patterns and cell-subtype proportions, demonstrating its ability to capture complex cellular heterogeneity. Moreover, by jointly embedding cell type or donor identity with perturbation, Lingshu-Cell can predict whole-transcriptome expression changes for novel combinations of identity and perturbation. It achieves leading performance on the Virtual Cell Challenge H1 genetic perturbation benchmark and in predicting cytokine-induced responses in human PBMCs. Together, these results establish Lingshu-Cell as a flexible cellular world model for in silico simulation of cell states and perturbation responses, laying the foundation for a new paradigm in biological discovery and perturbation screening.",
-    "pdf_link": "https://arxiv.org/pdf/2603.25240v1",
-    "categories": [
-      "q-bio.QM"
-    ],
-    "tldr": "Lingshu-Cell is a masked discrete diffusion model that learns transcriptomic state distributions from single-cell data and predicts cellular responses to perturbations across ~18,000 genes for virtual cell simulation.",
-    "keywords": [
-      "masked discrete diffusion model",
-      "foundation model",
-      "transcriptomic prediction",
-      "perturbation modeling",
-      "generative simulation"
-    ],
-    "relevance_score": 10
-  },
-  {
     "id": "2603.25713v1",
     "title": "Compiling molecular ultrastructure into neural dynamics",
     "authors": [
@@ -66,68 +36,71 @@
       "q-bio.NC",
       "q-bio.QM"
     ],
-    "tldr": "This paper proposes an ultrastructure-to-dynamics compiler that uses machine learning to translate molecularly annotated brain ultrastructure into physiological parameters for biophysical simulations of neural circuit dynamics.",
+    "tldr": "Proposes ultrastructure-to-dynamics compiler mapping molecularly annotated brain ultrastructure to physiological parameters for biophysical circuit simulation and intervention forecasting.",
     "keywords": [
-      "learned mapping",
+      "ultrastructure-to-dynamics compiler",
       "biophysical simulation",
-      "neural dynamics modeling",
-      "structure-to-function prediction",
-      "ultrastructure imaging"
+      "uncertainty-aware parameter estimation",
+      "circuit dynamics",
+      "structure-to-function mapping"
     ],
-    "relevance_score": 9
+    "relevance_score": 10
   },
   {
-    "id": "2603.24745v1",
-    "title": "Learning relationships in epidemiological data using graph neural networks",
+    "id": "2603.25240v1",
+    "title": "Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells",
     "authors": [
-      "Anthony J Wood",
-      "Aeron R Sanchez",
-      "Rowland R Kao"
+      "Han Zhang",
+      "Guo-Hua Yuan",
+      "Chaohao Yuan",
+      "Tingyang Xu",
+      "Tian Bian",
+      "Hong Cheng",
+      "Wenbing Huang",
+      "Deli Zhao",
+      "Yu Rong"
     ],
-    "published_date": "2026-03-25T19:09:47Z",
-    "abstract": "When designing control strategies for an infectious disease it is critical to identify the key pathways of transmission. Data on infected hosts - when they were born, where they lived and with whom they interacted - can help infer sources of infection and transmission clusters. However such data are generally not powerful enough to identify infector-infectee pairs with any certainty. Whole-genome sequencing data of the underlying pathogen, on the other hand, can serve as a powerful adjoint to these data as they can be used to estimate a time to a most recent common ancestor between two infected hosts. and in turn their relative proximity in the transmission tree. A statistical model that explains the genetic distance between different host pathogens and associated risk factors can therefore inform key risk factors for transmission itself. We show how graph neural networks (GNNs) are a powerful and natural modelling architecture for such a problem. By treating the epidemiological dataset as a graph where infected hosts are nodes and edges are weighted by the genetic distance between different host pairs, we show how a GNN can be fit to predict the genetic distance between known hosts and new, unsequenced hosts. Comparisons with other established approaches show that GNNs have useful performance advantages albeit with greater computational cost.",
-    "pdf_link": "https://arxiv.org/pdf/2603.24745v1",
+    "published_date": "2026-03-26T09:46:27Z",
+    "abstract": "Modeling cellular states and predicting their responses to perturbations are central challenges in computational biology and the development of virtual cells. Existing foundation models for single-cell transcriptomics provide powerful static representations, but they do not explicitly model the distribution of cellular states for generative simulation. Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation. By operating directly in a discrete token space that is compatible with the sparse, non-sequential nature of single-cell transcriptomic data, Lingshu-Cell captures complex transcriptome-wide expression dependencies across approximately 18,000 genes without relying on prior gene selection, such as filtering by high variability or ranking by expression level. Across diverse tissues and species, Lingshu-Cell accurately reproduces transcriptomic distributions, marker-gene expression patterns and cell-subtype proportions, demonstrating its ability to capture complex cellular heterogeneity. Moreover, by jointly embedding cell type or donor identity with perturbation, Lingshu-Cell can predict whole-transcriptome expression changes for novel combinations of identity and perturbation. It achieves leading performance on the Virtual Cell Challenge H1 genetic perturbation benchmark and in predicting cytokine-induced responses in human PBMCs. Together, these results establish Lingshu-Cell as a flexible cellular world model for in silico simulation of cell states and perturbation responses, laying the foundation for a new paradigm in biological discovery and perturbation screening.",
+    "pdf_link": "https://arxiv.org/pdf/2603.25240v1",
     "categories": [
       "q-bio.QM"
     ],
-    "tldr": "Graph neural networks are applied to epidemiological data to model genetic distances between pathogen sequences and predict transmission relationships by treating infected hosts as nodes and genetic distances as edge weights.",
+    "tldr": "Introduces masked discrete diffusion model predicting transcriptomic state distributions and perturbation responses across 18,000 genes for virtual cell simulation.",
     "keywords": [
-      "graph neural networks",
-      "transmission tree inference",
-      "phylogenetic modeling",
-      "genetic distance prediction",
-      "epidemiological network analysis"
+      "masked discrete diffusion",
+      "discrete token space",
+      "conditional simulation",
+      "transcriptomic state distribution",
+      "perturbation embedding"
     ],
-    "relevance_score": 9
+    "relevance_score": 10
   },
   {
-    "id": "2603.24009v1",
-    "title": "Analyzing animal movement using deep learning",
+    "id": "2603.25455v1",
+    "title": "A Bayesian Gamma-power-mixture survival regression model: predicting the recurrence of prostate cancer post-prostatectomy",
     "authors": [
-      "Thibault Fronville",
-      "Maximilian Pichler",
-      "Johannes Signer",
-      "Marius Grabow",
-      "Stephanie Kramer-Schadt",
-      "Viktoriia Radchuk",
-      "Florian Hartig"
+      "Tommy Walker Mackay",
+      "Mingtong Xu",
+      "Shahrokh F. Shariat",
+      "Roger Sewell"
     ],
-    "published_date": "2026-03-25T07:13:40Z",
-    "abstract": "Understanding how animals move through heterogeneous landscapes is central to ecology and conservation. In this context, step selection functions (SSFs) have emerged as the main statistical framework to analyze how biotic and abiotic predictors influence movement paths observed by radio tracking, GPS tags, or similar sensors. A traditional SSF consists of a generalized linear model (GLM) that infers the animal's habitat preferences (selection coefficients) by comparing each observed movement step to random steps. Such GLM-SSFs, however, cannot flexibly consider non-linear or interacting effects, unless those have been specified a priori. To address this problem, generalized additive models have been integrated in the SSF framework, but those GAM-SSFs are still limited in their ability to represent complex habitat preferences and inter-individual variability. Here we explore the utility of deep neural networks (DNNs) to overcome these limitations. We find that DNN-SSFs, coupled with explainable AI to extract selection coefficients, offer many advantages for analyzing movement data. In the case of linear effects, they effectively retrieve the same effect sizes and p-values as conventional GLMs. At the same time, however, they can automatically detect complex interaction effects, nonlinear responses, and inter-individual variability if those are present in the data. We conclude that DNN-SSFs are a promising extension of traditional SSF. Our analysis extends previous research on DNN-SSF by exploring differences and similarities of GLM, GAM and DNN-based SSF models in more depth, in particular regarding the validity of statistical indicators that are derived from the DNN. We also propose new DNN structures to capture inter-individual effects that can be viewed as a nonlinear random effect. All methods used in this paper are available via the 'citoMove' R package.",
-    "pdf_link": "https://arxiv.org/pdf/2603.24009v1",
+    "published_date": "2026-03-26T13:52:54Z",
+    "abstract": "In a dataset of 423 patients who had had radical prostatectomy for localised prostate cancer we estimated the apparent Shannon information (ASI) about time to biochemical recurrence in various subsets of the available pre-op variables using a Bayesian Gamma-power-mixture survival regression model. In all the subsets examined the ASI was positive with posterior probability greater than 0.975 . Using only age and results of pre-operative blood tests (PSA and biomarkers) we achieved 0.232 (0.180 to 0.290) nats ASI (0.335 (0.260 to 0.419) bits) (posterior mean and equitailed 95% posterior confidence intervals). This is more than double the mean posterior ASI previously achieved on the same dataset by a subset of the current authors using a log-skew-Student-mixture model, and is greater than that previous value with posterior probability greater than 0.99 . Additionally using pre- or post-operative Gleason grades, operative findings, clinical stage, and presence or absence of extraprostatic extension or seminal vesicle invasion did not increase the ASI extracted. However removing the blood-based biomarkers and replacing them with either pre-operative Gleason grades or findings available from MRI scanning greatly reduced the available ASI to respectively 0.077 (0.038 to 0.120) and 0.088 (0.045 to 0.132) nats (both less than the values using blood-based biomarkers with posterior probability greater than 0.995). A greedy approach to selection of the best biomarkers gave TGFbeta1, VCAM1, IL6sR, and uPA in descending order of importance from those examined.",
+    "pdf_link": "https://arxiv.org/pdf/2603.25455v1",
     "categories": [
       "stat.AP",
       "q-bio.QM"
     ],
-    "tldr": "Deep neural networks are integrated into step selection functions to analyze animal movement data, automatically detecting nonlinear effects and inter-individual variability while maintaining statistical interpretability through explainable AI.",
+    "tldr": "Bayesian Gamma-power-mixture model predicts prostate cancer recurrence achieving 0.232 nats Shannon information, doubling log-skew-Student-mixture performance via blood biomarkers.",
     "keywords": [
-      "deep neural networks",
-      "step selection functions",
-      "generalized additive models",
-      "explainable AI",
-      "habitat selection modeling"
+      "Bayesian Gamma-power-mixture",
+      "survival regression",
+      "apparent Shannon information",
+      "log-skew-Student-mixture",
+      "greedy biomarker selection"
     ],
-    "relevance_score": 8
+    "relevance_score": 9
   },
   {
     "id": "2603.25283v1",
@@ -155,41 +128,68 @@
       "cs.AI",
       "q-bio.QM"
     ],
-    "tldr": "A foundation model trained on 3D skeletal motion from gait data predicts multi-system health phenotypes including age, BMI, and clinical diagnoses through learned embeddings that outperform engineered features.",
+    "tldr": "Gait foundation model trained on 3D skeletal motion predicts multi-system health phenotypes across 18 body systems using learned embeddings.",
     "keywords": [
       "foundation model",
-      "embedding learning",
-      "3D skeletal motion",
-      "phenotype prediction",
-      "anatomical ablation"
+      "learned embeddings",
+      "anatomical ablation",
+      "depth camera",
+      "phenotype prediction"
     ],
-    "relevance_score": 8
+    "relevance_score": 9
   },
   {
-    "id": "2603.25455v1",
-    "title": "A Bayesian Gamma-power-mixture survival regression model: predicting the recurrence of prostate cancer post-prostatectomy",
+    "id": "2603.24745v1",
+    "title": "Learning relationships in epidemiological data using graph neural networks",
     "authors": [
-      "Tommy Walker Mackay",
-      "Mingtong Xu",
-      "Shahrokh F. Shariat",
-      "Roger Sewell"
+      "Anthony J Wood",
+      "Aeron R Sanchez",
+      "Rowland R Kao"
     ],
-    "published_date": "2026-03-26T13:52:54Z",
-    "abstract": "In a dataset of 423 patients who had had radical prostatectomy for localised prostate cancer we estimated the apparent Shannon information (ASI) about time to biochemical recurrence in various subsets of the available pre-op variables using a Bayesian Gamma-power-mixture survival regression model. In all the subsets examined the ASI was positive with posterior probability greater than 0.975 . Using only age and results of pre-operative blood tests (PSA and biomarkers) we achieved 0.232 (0.180 to 0.290) nats ASI (0.335 (0.260 to 0.419) bits) (posterior mean and equitailed 95% posterior confidence intervals). This is more than double the mean posterior ASI previously achieved on the same dataset by a subset of the current authors using a log-skew-Student-mixture model, and is greater than that previous value with posterior probability greater than 0.99 . Additionally using pre- or post-operative Gleason grades, operative findings, clinical stage, and presence or absence of extraprostatic extension or seminal vesicle invasion did not increase the ASI extracted. However removing the blood-based biomarkers and replacing them with either pre-operative Gleason grades or findings available from MRI scanning greatly reduced the available ASI to respectively 0.077 (0.038 to 0.120) and 0.088 (0.045 to 0.132) nats (both less than the values using blood-based biomarkers with posterior probability greater than 0.995). A greedy approach to selection of the best biomarkers gave TGFbeta1, VCAM1, IL6sR, and uPA in descending order of importance from those examined.",
-    "pdf_link": "https://arxiv.org/pdf/2603.25455v1",
+    "published_date": "2026-03-25T19:09:47Z",
+    "abstract": "When designing control strategies for an infectious disease it is critical to identify the key pathways of transmission. Data on infected hosts - when they were born, where they lived and with whom they interacted - can help infer sources of infection and transmission clusters. However such data are generally not powerful enough to identify infector-infectee pairs with any certainty. Whole-genome sequencing data of the underlying pathogen, on the other hand, can serve as a powerful adjoint to these data as they can be used to estimate a time to a most recent common ancestor between two infected hosts. and in turn their relative proximity in the transmission tree. A statistical model that explains the genetic distance between different host pathogens and associated risk factors can therefore inform key risk factors for transmission itself. We show how graph neural networks (GNNs) are a powerful and natural modelling architecture for such a problem. By treating the epidemiological dataset as a graph where infected hosts are nodes and edges are weighted by the genetic distance between different host pairs, we show how a GNN can be fit to predict the genetic distance between known hosts and new, unsequenced hosts. Comparisons with other established approaches show that GNNs have useful performance advantages albeit with greater computational cost.",
+    "pdf_link": "https://arxiv.org/pdf/2603.24745v1",
+    "categories": [
+      "q-bio.QM"
+    ],
+    "tldr": "Applies graph neural networks to predict pathogen genetic distances between hosts, inferring transmission pathways from weighted graphs of epidemiological data.",
+    "keywords": [
+      "graph neural networks",
+      "genetic distance prediction",
+      "transmission tree inference",
+      "most recent common ancestor",
+      "whole-genome sequencing"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.24009v1",
+    "title": "Analyzing animal movement using deep learning",
+    "authors": [
+      "Thibault Fronville",
+      "Maximilian Pichler",
+      "Johannes Signer",
+      "Marius Grabow",
+      "Stephanie Kramer-Schadt",
+      "Viktoriia Radchuk",
+      "Florian Hartig"
+    ],
+    "published_date": "2026-03-25T07:13:40Z",
+    "abstract": "Understanding how animals move through heterogeneous landscapes is central to ecology and conservation. In this context, step selection functions (SSFs) have emerged as the main statistical framework to analyze how biotic and abiotic predictors influence movement paths observed by radio tracking, GPS tags, or similar sensors. A traditional SSF consists of a generalized linear model (GLM) that infers the animal's habitat preferences (selection coefficients) by comparing each observed movement step to random steps. Such GLM-SSFs, however, cannot flexibly consider non-linear or interacting effects, unless those have been specified a priori. To address this problem, generalized additive models have been integrated in the SSF framework, but those GAM-SSFs are still limited in their ability to represent complex habitat preferences and inter-individual variability. Here we explore the utility of deep neural networks (DNNs) to overcome these limitations. We find that DNN-SSFs, coupled with explainable AI to extract selection coefficients, offer many advantages for analyzing movement data. In the case of linear effects, they effectively retrieve the same effect sizes and p-values as conventional GLMs. At the same time, however, they can automatically detect complex interaction effects, nonlinear responses, and inter-individual variability if those are present in the data. We conclude that DNN-SSFs are a promising extension of traditional SSF. Our analysis extends previous research on DNN-SSF by exploring differences and similarities of GLM, GAM and DNN-based SSF models in more depth, in particular regarding the validity of statistical indicators that are derived from the DNN. We also propose new DNN structures to capture inter-individual effects that can be viewed as a nonlinear random effect. All methods used in this paper are available via the 'citoMove' R package.",
+    "pdf_link": "https://arxiv.org/pdf/2603.24009v1",
     "categories": [
       "stat.AP",
       "q-bio.QM"
     ],
-    "tldr": "A Bayesian Gamma-power-mixture survival regression model predicts prostate cancer recurrence post-prostatectomy using blood biomarkers, achieving higher Shannon information than previous log-skew-Student-mixture models.",
+    "tldr": "Deep neural networks extend step selection functions to detect nonlinear habitat preferences and inter-individual variability via explainable AI, available in citoMove.",
     "keywords": [
-      "Bayesian survival regression",
-      "Gamma-power-mixture model",
-      "Shannon information",
-      "biomarker selection",
-      "posterior inference"
+      "step selection functions",
+      "generalized additive models",
+      "nonlinear random effects",
+      "explainable AI",
+      "selection coefficients"
     ],
-    "relevance_score": 7
+    "relevance_score": 8
   },
   {
     "id": "2603.24733v1",
@@ -207,14 +207,14 @@
       "eess.IV",
       "q-bio.QM"
     ],
-    "tldr": "OpenCap Monocular estimates 3D skeletal kinematics and musculoskeletal kinetics from single smartphone videos using monocular pose estimation, optimization, and physics-based simulation combined with machine learning.",
+    "tldr": "OpenCap Monocular estimates 3D skeletal kinematics and musculoskeletal kinetics from smartphone video using WHAM monocular pose estimation and physics-based simulation.",
     "keywords": [
-      "monocular pose estimation",
-      "optimization",
+      "WHAM monocular pose estimation",
       "physics-based simulation",
-      "biomechanical modeling",
-      "machine learning"
+      "biomechanically constrained skeletal model",
+      "inverse kinematics optimization",
+      "ground reaction force estimation"
     ],
-    "relevance_score": 7
+    "relevance_score": 8
   }
 ]
