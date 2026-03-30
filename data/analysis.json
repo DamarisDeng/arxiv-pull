@@ -1,5 +1,35 @@
 [
   {
+    "id": "2603.25240v1",
+    "title": "Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells",
+    "authors": [
+      "Han Zhang",
+      "Guo-Hua Yuan",
+      "Chaohao Yuan",
+      "Tingyang Xu",
+      "Tian Bian",
+      "Hong Cheng",
+      "Wenbing Huang",
+      "Deli Zhao",
+      "Yu Rong"
+    ],
+    "published_date": "2026-03-26T09:46:27Z",
+    "abstract": "Modeling cellular states and predicting their responses to perturbations are central challenges in computational biology and the development of virtual cells. Existing foundation models for single-cell transcriptomics provide powerful static representations, but they do not explicitly model the distribution of cellular states for generative simulation. Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation. By operating directly in a discrete token space that is compatible with the sparse, non-sequential nature of single-cell transcriptomic data, Lingshu-Cell captures complex transcriptome-wide expression dependencies across approximately 18,000 genes without relying on prior gene selection, such as filtering by high variability or ranking by expression level. Across diverse tissues and species, Lingshu-Cell accurately reproduces transcriptomic distributions, marker-gene expression patterns and cell-subtype proportions, demonstrating its ability to capture complex cellular heterogeneity. Moreover, by jointly embedding cell type or donor identity with perturbation, Lingshu-Cell can predict whole-transcriptome expression changes for novel combinations of identity and perturbation. It achieves leading performance on the Virtual Cell Challenge H1 genetic perturbation benchmark and in predicting cytokine-induced responses in human PBMCs. Together, these results establish Lingshu-Cell as a flexible cellular world model for in silico simulation of cell states and perturbation responses, laying the foundation for a new paradigm in biological discovery and perturbation screening.",
+    "pdf_link": "https://arxiv.org/pdf/2603.25240v1",
+    "categories": [
+      "q-bio.QM"
+    ],
+    "tldr": "Lingshu-Cell uses masked discrete diffusion to learn transcriptomic distributions and simulate cellular perturbation responses across 18,000 genes with state-of-the-art accuracy.",
+    "keywords": [
+      "Masked Discrete Diffusion Model",
+      "Foundation Model",
+      "Single-Cell Transcriptomics",
+      "Perturbation Prediction",
+      "Generative Simulation"
+    ],
+    "relevance_score": 10
+  },
+  {
     "id": "2603.25713v1",
     "title": "Compiling molecular ultrastructure into neural dynamics",
     "authors": [
@@ -36,69 +66,13 @@
       "q-bio.NC",
       "q-bio.QM"
     ],
-    "tldr": "Proposes ultrastructure-to-dynamics compiler mapping molecularly annotated brain ultrastructure to physiological parameters for biophysical circuit simulation and intervention forecasting.",
+    "tldr": "An ultrastructure-to-dynamics compiler uses machine learning to map brain ultrastructure to physiological parameters, enabling predictive biophysical circuit simulations.",
     "keywords": [
-      "ultrastructure-to-dynamics compiler",
-      "biophysical simulation",
-      "uncertainty-aware parameter estimation",
-      "circuit dynamics",
-      "structure-to-function mapping"
-    ],
-    "relevance_score": 10
-  },
-  {
-    "id": "2603.25240v1",
-    "title": "Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells",
-    "authors": [
-      "Han Zhang",
-      "Guo-Hua Yuan",
-      "Chaohao Yuan",
-      "Tingyang Xu",
-      "Tian Bian",
-      "Hong Cheng",
-      "Wenbing Huang",
-      "Deli Zhao",
-      "Yu Rong"
-    ],
-    "published_date": "2026-03-26T09:46:27Z",
-    "abstract": "Modeling cellular states and predicting their responses to perturbations are central challenges in computational biology and the development of virtual cells. Existing foundation models for single-cell transcriptomics provide powerful static representations, but they do not explicitly model the distribution of cellular states for generative simulation. Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation. By operating directly in a discrete token space that is compatible with the sparse, non-sequential nature of single-cell transcriptomic data, Lingshu-Cell captures complex transcriptome-wide expression dependencies across approximately 18,000 genes without relying on prior gene selection, such as filtering by high variability or ranking by expression level. Across diverse tissues and species, Lingshu-Cell accurately reproduces transcriptomic distributions, marker-gene expression patterns and cell-subtype proportions, demonstrating its ability to capture complex cellular heterogeneity. Moreover, by jointly embedding cell type or donor identity with perturbation, Lingshu-Cell can predict whole-transcriptome expression changes for novel combinations of identity and perturbation. It achieves leading performance on the Virtual Cell Challenge H1 genetic perturbation benchmark and in predicting cytokine-induced responses in human PBMCs. Together, these results establish Lingshu-Cell as a flexible cellular world model for in silico simulation of cell states and perturbation responses, laying the foundation for a new paradigm in biological discovery and perturbation screening.",
-    "pdf_link": "https://arxiv.org/pdf/2603.25240v1",
-    "categories": [
-      "q-bio.QM"
-    ],
-    "tldr": "Introduces masked discrete diffusion model predicting transcriptomic state distributions and perturbation responses across 18,000 genes for virtual cell simulation.",
-    "keywords": [
-      "masked discrete diffusion",
-      "discrete token space",
-      "conditional simulation",
-      "transcriptomic state distribution",
-      "perturbation embedding"
-    ],
-    "relevance_score": 10
-  },
-  {
-    "id": "2603.25455v1",
-    "title": "A Bayesian Gamma-power-mixture survival regression model: predicting the recurrence of prostate cancer post-prostatectomy",
-    "authors": [
-      "Tommy Walker Mackay",
-      "Mingtong Xu",
-      "Shahrokh F. Shariat",
-      "Roger Sewell"
-    ],
-    "published_date": "2026-03-26T13:52:54Z",
-    "abstract": "In a dataset of 423 patients who had had radical prostatectomy for localised prostate cancer we estimated the apparent Shannon information (ASI) about time to biochemical recurrence in various subsets of the available pre-op variables using a Bayesian Gamma-power-mixture survival regression model. In all the subsets examined the ASI was positive with posterior probability greater than 0.975 . Using only age and results of pre-operative blood tests (PSA and biomarkers) we achieved 0.232 (0.180 to 0.290) nats ASI (0.335 (0.260 to 0.419) bits) (posterior mean and equitailed 95% posterior confidence intervals). This is more than double the mean posterior ASI previously achieved on the same dataset by a subset of the current authors using a log-skew-Student-mixture model, and is greater than that previous value with posterior probability greater than 0.99 . Additionally using pre- or post-operative Gleason grades, operative findings, clinical stage, and presence or absence of extraprostatic extension or seminal vesicle invasion did not increase the ASI extracted. However removing the blood-based biomarkers and replacing them with either pre-operative Gleason grades or findings available from MRI scanning greatly reduced the available ASI to respectively 0.077 (0.038 to 0.120) and 0.088 (0.045 to 0.132) nats (both less than the values using blood-based biomarkers with posterior probability greater than 0.995). A greedy approach to selection of the best biomarkers gave TGFbeta1, VCAM1, IL6sR, and uPA in descending order of importance from those examined.",
-    "pdf_link": "https://arxiv.org/pdf/2603.25455v1",
-    "categories": [
-      "stat.AP",
-      "q-bio.QM"
-    ],
-    "tldr": "Bayesian Gamma-power-mixture model predicts prostate cancer recurrence achieving 0.232 nats Shannon information, doubling log-skew-Student-mixture performance via blood biomarkers.",
-    "keywords": [
-      "Bayesian Gamma-power-mixture",
-      "survival regression",
-      "apparent Shannon information",
-      "log-skew-Student-mixture",
-      "greedy biomarker selection"
+      "Ultrastructure-To-Dynamics Compiler",
+      "Biophysical Simulation",
+      "Neural Dynamics Modeling",
+      "Synaptic Efficacy Prediction",
+      "Structure-Function Mapping"
     ],
     "relevance_score": 9
   },
@@ -128,13 +102,13 @@
       "cs.AI",
       "q-bio.QM"
     ],
-    "tldr": "Gait foundation model trained on 3D skeletal motion predicts multi-system health phenotypes across 18 body systems using learned embeddings.",
+    "tldr": "A gait foundation model trained on 3D skeletal motion learns embeddings predicting multi-system health phenotypes across 18 body systems, outperforming engineered features.",
     "keywords": [
-      "foundation model",
-      "learned embeddings",
-      "anatomical ablation",
-      "depth camera",
-      "phenotype prediction"
+      "Foundation Model",
+      "Learned Embeddings",
+      "3D Skeletal Motion",
+      "Phenotype Prediction",
+      "Anatomical Ablation"
     ],
     "relevance_score": 9
   },
@@ -152,15 +126,15 @@
     "categories": [
       "q-bio.QM"
     ],
-    "tldr": "Applies graph neural networks to predict pathogen genetic distances between hosts, inferring transmission pathways from weighted graphs of epidemiological data.",
+    "tldr": "Graph neural networks model epidemiological transmission by predicting genetic distances between pathogen sequences, treating hosts as nodes with edges weighted by similarity.",
     "keywords": [
-      "graph neural networks",
-      "genetic distance prediction",
-      "transmission tree inference",
-      "most recent common ancestor",
-      "whole-genome sequencing"
+      "Graph Neural Networks",
+      "Transmission Tree Inference",
+      "Genetic Distance Prediction",
+      "Whole-Genome Sequencing",
+      "Epidemiological Modeling"
     ],
-    "relevance_score": 9
+    "relevance_score": 8
   },
   {
     "id": "2603.24009v1",
@@ -181,15 +155,15 @@
       "stat.AP",
       "q-bio.QM"
     ],
-    "tldr": "Deep neural networks extend step selection functions to detect nonlinear habitat preferences and inter-individual variability via explainable AI, available in citoMove.",
+    "tldr": "Deep neural network-based step selection functions automatically detect complex nonlinear effects and inter-individual variability in animal movement data with statistical validity.",
     "keywords": [
-      "step selection functions",
-      "generalized additive models",
-      "nonlinear random effects",
-      "explainable AI",
-      "selection coefficients"
+      "Deep Neural Networks",
+      "Step Selection Functions",
+      "Explainable AI",
+      "Generalized Additive Models",
+      "Nonlinear Random Effects"
     ],
-    "relevance_score": 8
+    "relevance_score": 7
   },
   {
     "id": "2603.24733v1",
@@ -207,14 +181,40 @@
       "eess.IV",
       "q-bio.QM"
     ],
-    "tldr": "OpenCap Monocular estimates 3D skeletal kinematics and musculoskeletal kinetics from smartphone video using WHAM monocular pose estimation and physics-based simulation.",
+    "tldr": "OpenCap Monocular combines pose estimation, optimization, and physics simulation to estimate 3D skeletal kinematics and kinetics from smartphone videos with clinical accuracy.",
     "keywords": [
-      "WHAM monocular pose estimation",
-      "physics-based simulation",
-      "biomechanically constrained skeletal model",
-      "inverse kinematics optimization",
-      "ground reaction force estimation"
+      "Monocular Pose Estimation",
+      "Physics-Based Simulation",
+      "Biomechanical Modeling",
+      "Optimization",
+      "Machine Learning"
     ],
-    "relevance_score": 8
+    "relevance_score": 7
+  },
+  {
+    "id": "2603.25455v1",
+    "title": "A Bayesian Gamma-power-mixture survival regression model: predicting the recurrence of prostate cancer post-prostatectomy",
+    "authors": [
+      "Tommy Walker Mackay",
+      "Mingtong Xu",
+      "Shahrokh F. Shariat",
+      "Roger Sewell"
+    ],
+    "published_date": "2026-03-26T13:52:54Z",
+    "abstract": "In a dataset of 423 patients who had had radical prostatectomy for localised prostate cancer we estimated the apparent Shannon information (ASI) about time to biochemical recurrence in various subsets of the available pre-op variables using a Bayesian Gamma-power-mixture survival regression model. In all the subsets examined the ASI was positive with posterior probability greater than 0.975 . Using only age and results of pre-operative blood tests (PSA and biomarkers) we achieved 0.232 (0.180 to 0.290) nats ASI (0.335 (0.260 to 0.419) bits) (posterior mean and equitailed 95% posterior confidence intervals). This is more than double the mean posterior ASI previously achieved on the same dataset by a subset of the current authors using a log-skew-Student-mixture model, and is greater than that previous value with posterior probability greater than 0.99 . Additionally using pre- or post-operative Gleason grades, operative findings, clinical stage, and presence or absence of extraprostatic extension or seminal vesicle invasion did not increase the ASI extracted. However removing the blood-based biomarkers and replacing them with either pre-operative Gleason grades or findings available from MRI scanning greatly reduced the available ASI to respectively 0.077 (0.038 to 0.120) and 0.088 (0.045 to 0.132) nats (both less than the values using blood-based biomarkers with posterior probability greater than 0.995). A greedy approach to selection of the best biomarkers gave TGFbeta1, VCAM1, IL6sR, and uPA in descending order of importance from those examined.",
+    "pdf_link": "https://arxiv.org/pdf/2603.25455v1",
+    "categories": [
+      "stat.AP",
+      "q-bio.QM"
+    ],
+    "tldr": "A Bayesian Gamma-power-mixture model predicts prostate cancer recurrence using blood biomarkers, achieving higher Shannon information and identifying key predictive markers.",
+    "keywords": [
+      "Bayesian Survival Regression",
+      "Gamma-Power-Mixture Model",
+      "Shannon Information",
+      "Biomarker Selection",
+      "Greedy Variable Selection"
+    ],
+    "relevance_score": 6
   }
 ]
