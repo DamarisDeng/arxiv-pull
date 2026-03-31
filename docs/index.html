@@ -3,200 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Q-Bio Watchtower - Daily arXiv q-bio.QM research digest">
-    <meta name="author" content="Q-Bio Watchtower">
-    <title>Q-Bio Watchtower — 2026-03-30</title>
+    <title>Q-Bio Watchtower — 2026-03-31</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #ffffff;
             color: #1a1a1a;
             line-height: 1.6;
-            padding: 0;
-            margin: 0;
         }
-        
+
         header {
             background-color: #2c3e50;
             color: #ffffff;
-            padding: 2rem 1rem;
+            padding: 2rem 1.5rem;
             text-align: center;
             border-bottom: 4px solid #3498db;
         }
-        
+
         header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
-        
+
         header .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #ecf0f1;
-            margin-bottom: 0.5rem;
+            font-weight: 400;
         }
-        
+
         header .meta {
             font-size: 0.95rem;
             color: #bdc3c7;
             margin-top: 0.5rem;
         }
-        
+
         main {
             max-width: 1400px;
-            margin: 0 auto;
-            padding: 2rem 1rem;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
         }
-        
-        .narrative-summary {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-            border-radius: 4px;
-        }
-        
-        .narrative-summary h2 {
-            color: #2c3e50;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .narrative-summary p {
-            font-size: 1.05rem;
-            line-height: 1.8;
-            color: #34495e;
-        }
-        
-        .table-container {
-            overflow-x: auto;
-            margin-bottom: 2rem;
-        }
-        
+
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-bottom: 3rem;
             background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
-        thead {
+
+        th {
             background-color: #2c3e50;
             color: #ffffff;
-        }
-        
-        thead th {
             padding: 1rem;
             text-align: left;
             font-weight: 600;
             font-size: 0.95rem;
             border: 1px solid #34495e;
         }
-        
-        tbody tr {
-            border-bottom: 1px solid #ddd;
-        }
-        
-        tbody tr:nth-child(odd) {
-            background-color: #f9f9f9;
-        }
-        
-        tbody tr:nth-child(even) {
-            background-color: #ffffff;
-        }
-        
-        tbody tr:hover {
-            background-color: #ecf0f1;
-        }
-        
-        tbody td {
+
+        td {
             padding: 1rem;
             border: 1px solid #ddd;
             vertical-align: top;
         }
-        
-        .rank-cell {
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            width: 60px;
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
         }
-        
-        .title-cell {
-            font-weight: 600;
-            min-width: 250px;
+
+        tr:nth-child(odd) {
+            background-color: #ffffff;
         }
-        
-        .title-cell a {
+
+        tbody tr:hover {
+            background-color: #f0f8ff;
+        }
+
+        a {
             color: #3498db;
             text-decoration: none;
-            border-bottom: 1px solid transparent;
-            transition: border-bottom 0.2s ease;
+            font-weight: 500;
         }
-        
-        .title-cell a:hover {
-            border-bottom: 1px solid #3498db;
+
+        a:hover {
+            text-decoration: underline;
         }
-        
-        .authors-cell {
+
+        .rank-col {
+            width: 60px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #7f8c8d;
+        }
+
+        .title-col {
+            min-width: 250px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .authors-col {
+            min-width: 150px;
             font-size: 0.9rem;
             color: #555;
-            min-width: 180px;
         }
-        
-        .date-cell {
-            font-size: 0.85rem;
-            color: #7f8c8d;
-            white-space: nowrap;
-            min-width: 100px;
+
+        .date-col {
+            width: 110px;
+            font-size: 0.9rem;
+            color: #555;
         }
-        
-        .tldr-cell {
+
+        .tldr-col {
+            min-width: 300px;
             font-size: 0.9rem;
             line-height: 1.5;
-            color: #2c3e50;
-            min-width: 300px;
         }
-        
-        .keywords-cell {
-            font-size: 0.85rem;
-            color: #555;
+
+        .keywords-col {
             min-width: 200px;
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            font-style: italic;
         }
-        
-        .score-cell {
-            text-align: center;
+
+        .score-col {
             width: 80px;
+            text-align: center;
         }
-        
+
         .score-badge {
             display: inline-block;
             padding: 0.4rem 0.8rem;
-            border-radius: 20px;
+            border-radius: 12px;
             font-weight: 700;
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #ffffff;
         }
-        
+
         .score-high {
             background-color: #27ae60;
         }
-        
+
         .score-medium {
             background-color: #f39c12;
         }
-        
+
         .score-low {
             background-color: #95a5a6;
         }
-        
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        section h2 {
+            font-size: 1.8rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 0.5rem;
+        }
+
+        .narrative {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #2c3e50;
+            background-color: #f8f9fa;
+            padding: 1.5rem;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+        }
+
         footer {
             background-color: #ecf0f1;
             color: #7f8c8d;
@@ -204,32 +190,19 @@
             padding: 1.5rem;
             font-size: 0.9rem;
             border-top: 2px solid #bdc3c7;
+            margin-top: 4rem;
         }
-        
-        footer a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
+
         @media (max-width: 768px) {
             header h1 {
                 font-size: 1.8rem;
             }
-            
-            header .subtitle {
-                font-size: 1rem;
-            }
-            
+
             table {
                 font-size: 0.85rem;
             }
-            
-            thead th,
-            tbody td {
+
+            th, td {
                 padding: 0.75rem 0.5rem;
             }
         }
@@ -238,116 +211,64 @@
 <body>
     <header>
         <h1>Q-Bio Watchtower</h1>
-        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-30 UTC</div>
-        <div class="meta">7 papers reviewed · Average relevance: 8.0 · Date range: March 25–26, 2026</div>
+        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-31</div>
+        <div class="meta">3 papers analyzed | Date range: 2026-03-28 to 2026-03-29</div>
     </header>
-    
+
     <main>
-        <section class="narrative-summary">
-            <h2>📊 Today's Research Landscape</h2>
-            <p>
-                Today's computational biology research is dominated by foundation models and deep learning approaches that bridge molecular structure to functional prediction. The leading themes include generative models for single-cell transcriptomics (Lingshu-Cell), neural network architectures for predicting physiological dynamics from brain ultrastructure, and foundation models extracting multi-system health phenotypes from 3D skeletal motion data. Methodologically, these papers showcase a clear trend toward end-to-end learning frameworks that automatically discover complex nonlinear relationships—whether in cellular perturbation responses, epidemiological transmission networks via graph neural networks, or animal movement patterns through deep neural network-based step selection functions. Together, these works signal a paradigm shift from hand-crafted features toward learned representations that generalize across diverse biological scales, from molecules to organisms.
-            </p>
+        <table>
+            <thead>
+                <tr>
+                    <th class="rank-col">Rank</th>
+                    <th class="title-col">Title</th>
+                    <th class="authors-col">Authors</th>
+                    <th class="date-col">Published</th>
+                    <th class="tldr-col">TL;DR</th>
+                    <th class="keywords-col">Keywords</th>
+                    <th class="score-col">Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="rank-col">1</td>
+                    <td class="title-col"><a href="https://arxiv.org/pdf/2603.27484v1" target="_blank">Quantitative mapping of dynamic 3D transport in growing cells via volumetric spatio-temporal image correlation spectroscopy (vSTICS)</a></td>
+                    <td class="authors-col">Ahmad Mahmood, Paul W. Wiseman</td>
+                    <td class="date-col">2026-03-29</td>
+                    <td class="tldr-col">Novel vSTICS framework quantifies 3D flow, diffusion, and particle density in living cells using spatio-temporal correlation analysis on volumetric fluorescence imaging.</td>
+                    <td class="keywords-col">volumetric spatio-temporal image correlation spectroscopy, lattice light-sheet microscopy, spatio-temporal correlation analysis, imaging-FCS, reverse-fountain model</td>
+                    <td class="score-col"><span class="score-badge score-high">10</span></td>
+                </tr>
+                <tr>
+                    <td class="rank-col">2</td>
+                    <td class="title-col"><a href="https://arxiv.org/pdf/2603.27303v1" target="_blank">Self-evolving AI agents for protein discovery and directed evolution</a></td>
+                    <td class="authors-col">Yang Tan, Lingrong Zhang, Mingchen Li, et al.</td>
+                    <td class="date-col">2026-03-28</td>
+                    <td class="tldr-col">VenusFactory2 autonomously discovers and optimizes proteins using self-evolving multi-agent AI framework that synthesizes dynamic workflows from natural language prompts.</td>
+                    <td class="keywords-col">multi-agent systems, directed evolution, protein optimization, workflow synthesis, VenusAgentEval</td>
+                    <td class="score-col"><span class="score-badge score-high">9</span></td>
+                </tr>
+                <tr>
+                    <td class="rank-col">3</td>
+                    <td class="title-col"><a href="https://arxiv.org/pdf/2603.27787v1" target="_blank">Cardiovascular-Kidney-Metabolic Health: Insights from Wearables and Blood Biomarkers</a></td>
+                    <td class="authors-col">Zeinab Esmaeilpour, A. Ali Heydari, Daniel McDuff, et al.</td>
+                    <td class="date-col">2026-03-29</td>
+                    <td class="tldr-col">Integrates wearable sensor data with biomarkers to characterize cardiovascular-kidney-metabolic syndrome heterogeneity and identify early predictors of organ-specific health decline.</td>
+                    <td class="keywords-col">HOMA-IR, normalized deviance score, feature ablation analysis, multi-system subtyping, wearable-derived phenotypes</td>
+                    <td class="score-col"><span class="score-badge score-medium">7</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section>
+            <h2>Daily Summary</h2>
+            <div class="narrative">
+                Today's q-bio.QM digest highlights significant methodological advances across computational imaging, AI-driven protein engineering, and multi-modal health monitoring. The top-ranked work introduces volumetric spatio-temporal correlation spectroscopy (vSTICS) for 3D intracellular transport mapping, while AI-powered autonomous agents demonstrate breakthrough capabilities in protein discovery and directed evolution. Wearable biosensor integration with clinical biomarkers emerges as a powerful approach for early detection of complex multi-organ syndromes, underscoring the field's shift toward high-dimensional, multi-scale quantitative biology.
+            </div>
         </section>
-        
-        <div class="table-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="rank-cell">Rank</th>
-                        <th class="title-cell">Title</th>
-                        <th class="authors-cell">Authors</th>
-                        <th class="date-cell">Published</th>
-                        <th class="tldr-cell">TL;DR</th>
-                        <th class="keywords-cell">Keywords</th>
-                        <th class="score-cell">Score</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="rank-cell">1</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.25240v1" target="_blank" rel="noopener noreferrer">Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells</a>
-                        </td>
-                        <td class="authors-cell">Han Zhang, Guo-Hua Yuan, Chaohao Yuan et al.</td>
-                        <td class="date-cell">2026-03-26</td>
-                        <td class="tldr-cell">Lingshu-Cell uses masked discrete diffusion to learn transcriptomic distributions and simulate cellular perturbation responses across 18,000 genes with state-of-the-art accuracy.</td>
-                        <td class="keywords-cell">Masked Discrete Diffusion Model, Foundation Model, Single-Cell Transcriptomics, Perturbation Prediction, Generative Simulation</td>
-                        <td class="score-cell"><span class="score-badge score-high">10</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">2</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.25713v1" target="_blank" rel="noopener noreferrer">Compiling molecular ultrastructure into neural dynamics</a>
-                        </td>
-                        <td class="authors-cell">Konrad P. Kording, Anton Arkhipov, Davy Deng et al.</td>
-                        <td class="date-cell">2026-03-26</td>
-                        <td class="tldr-cell">An ultrastructure-to-dynamics compiler uses machine learning to map brain ultrastructure to physiological parameters, enabling predictive biophysical circuit simulations.</td>
-                        <td class="keywords-cell">Ultrastructure-To-Dynamics Compiler, Biophysical Simulation, Neural Dynamics Modeling, Synaptic Efficacy Prediction, Structure-Function Mapping</td>
-                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">3</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.25283v1" target="_blank" rel="noopener noreferrer">A Gait Foundation Model Predicts Multi-System Health Phenotypes from 3D Skeletal Motion</a>
-                        </td>
-                        <td class="authors-cell">Adam Gabet, Sarah Kohn, Guy Lutsker et al.</td>
-                        <td class="date-cell">2026-03-26</td>
-                        <td class="tldr-cell">A gait foundation model trained on 3D skeletal motion learns embeddings predicting multi-system health phenotypes across 18 body systems, outperforming engineered features.</td>
-                        <td class="keywords-cell">Foundation Model, Learned Embeddings, 3D Skeletal Motion, Phenotype Prediction, Anatomical Ablation</td>
-                        <td class="score-cell"><span class="score-badge score-high">9</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">4</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.24745v1" target="_blank" rel="noopener noreferrer">Learning relationships in epidemiological data using graph neural networks</a>
-                        </td>
-                        <td class="authors-cell">Anthony J Wood, Aeron R Sanchez, Rowland R Kao</td>
-                        <td class="date-cell">2026-03-25</td>
-                        <td class="tldr-cell">Graph neural networks model epidemiological transmission by predicting genetic distances between pathogen sequences, treating hosts as nodes with edges weighted by similarity.</td>
-                        <td class="keywords-cell">Graph Neural Networks, Transmission Tree Inference, Genetic Distance Prediction, Whole-Genome Sequencing, Epidemiological Modeling</td>
-                        <td class="score-cell"><span class="score-badge score-high">8</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">5</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.24009v1" target="_blank" rel="noopener noreferrer">Analyzing animal movement using deep learning</a>
-                        </td>
-                        <td class="authors-cell">Thibault Fronville, Maximilian Pichler, Johannes Signer et al.</td>
-                        <td class="date-cell">2026-03-25</td>
-                        <td class="tldr-cell">Deep neural network-based step selection functions automatically detect complex nonlinear effects and inter-individual variability in animal movement data with statistical validity.</td>
-                        <td class="keywords-cell">Deep Neural Networks, Step Selection Functions, Explainable AI, Generalized Additive Models, Nonlinear Random Effects</td>
-                        <td class="score-cell"><span class="score-badge score-medium">7</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">6</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.24733v1" target="_blank" rel="noopener noreferrer">OpenCap Monocular: 3D Human Kinematics and Musculoskeletal Dynamics from a Single Smartphone Video</a>
-                        </td>
-                        <td class="authors-cell">Selim Gilon, Emily Y. Miller, Scott D. Uhlrich</td>
-                        <td class="date-cell">2026-03-25</td>
-                        <td class="tldr-cell">OpenCap Monocular combines pose estimation, optimization, and physics simulation to estimate 3D skeletal kinematics and kinetics from smartphone videos with clinical accuracy.</td>
-                        <td class="keywords-cell">Monocular Pose Estimation, Physics-Based Simulation, Biomechanical Modeling, Optimization, Machine Learning</td>
-                        <td class="score-cell"><span class="score-badge score-medium">7</span></td>
-                    </tr>
-                    <tr>
-                        <td class="rank-cell">7</td>
-                        <td class="title-cell">
-                            <a href="https://arxiv.org/pdf/2603.25455v1" target="_blank" rel="noopener noreferrer">A Bayesian Gamma-power-mixture survival regression model: predicting the recurrence of prostate cancer post-prostatectomy</a>
-                        </td>
-                        <td class="authors-cell">Tommy Walker Mackay, Mingtong Xu, Shahrokh F. Shariat et al.</td>
-                        <td class="date-cell">2026-03-26</td>
-                        <td class="tldr-cell">A Bayesian Gamma-power-mixture model predicts prostate cancer recurrence using blood biomarkers, achieving higher Shannon information and identifying key predictive markers.</td>
-                        <td class="keywords-cell">Bayesian Survival Regression, Gamma-Power-Mixture Model, Shannon Information, Biomarker Selection, Greedy Variable Selection</td>
-                        <td class="score-cell"><span class="score-badge score-medium">6</span></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </main>
-    
+
     <footer>
-        <p>Generated by Q-Bio Watchtower · Data source: <a href="https://arxiv.org/" target="_blank" rel="noopener noreferrer">arXiv q-bio.QM</a> · Last updated: 2026-03-30</p>
+        Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM
     </footer>
 </body>
 </html>

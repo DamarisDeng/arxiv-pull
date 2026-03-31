@@ -1,220 +1,89 @@
 [
   {
-    "id": "2603.25240v1",
-    "title": "Lingshu-Cell: A generative cellular world model for transcriptome modeling toward virtual cells",
+    "id": "2603.27484v1",
+    "title": "Quantitative mapping of dynamic 3D transport in growing cells via volumetric spatio-temporal image correlation spectroscopy (vSTICS)",
     "authors": [
-      "Han Zhang",
-      "Guo-Hua Yuan",
-      "Chaohao Yuan",
-      "Tingyang Xu",
-      "Tian Bian",
-      "Hong Cheng",
-      "Wenbing Huang",
-      "Deli Zhao",
-      "Yu Rong"
+      "Ahmad Mahmood",
+      "Paul W. Wiseman"
     ],
-    "published_date": "2026-03-26T09:46:27Z",
-    "abstract": "Modeling cellular states and predicting their responses to perturbations are central challenges in computational biology and the development of virtual cells. Existing foundation models for single-cell transcriptomics provide powerful static representations, but they do not explicitly model the distribution of cellular states for generative simulation. Here, we introduce Lingshu-Cell, a masked discrete diffusion model that learns transcriptomic state distributions and supports conditional simulation under perturbation. By operating directly in a discrete token space that is compatible with the sparse, non-sequential nature of single-cell transcriptomic data, Lingshu-Cell captures complex transcriptome-wide expression dependencies across approximately 18,000 genes without relying on prior gene selection, such as filtering by high variability or ranking by expression level. Across diverse tissues and species, Lingshu-Cell accurately reproduces transcriptomic distributions, marker-gene expression patterns and cell-subtype proportions, demonstrating its ability to capture complex cellular heterogeneity. Moreover, by jointly embedding cell type or donor identity with perturbation, Lingshu-Cell can predict whole-transcriptome expression changes for novel combinations of identity and perturbation. It achieves leading performance on the Virtual Cell Challenge H1 genetic perturbation benchmark and in predicting cytokine-induced responses in human PBMCs. Together, these results establish Lingshu-Cell as a flexible cellular world model for in silico simulation of cell states and perturbation responses, laying the foundation for a new paradigm in biological discovery and perturbation screening.",
-    "pdf_link": "https://arxiv.org/pdf/2603.25240v1",
+    "published_date": "2026-03-29T02:35:32Z",
+    "abstract": "Quantitatively mapping three-dimensional (3D) flow, diffusion, and particle density in crowded living cells remains challenging because most dynamic optical microscopy measurements are effectively planar and existing analysis methods struggle with dense, noisy volumetric data. We introduce volumetric spatio-temporal image correlation spectroscopy (vSTICS), a framework that recovers voxel-resolved flow, diffusion coefficients, and particle densities from 3D fluorescence time series. Growing Camellia japonica pollen tubes were imaged with field-synthesis lattice light-sheet microscopy, and localized 3D spatio-temporal correlation analysis was applied to overlapping volumetric samples to generate maps of velocity, diffusion, and density. Validation with synthetic flow-diffusion simulations showed accurate recovery of seeded transport parameters, including velocities near $3$ $μ$m s$^{-1}$ and diffusion near $10^{-3}$ $μ$m$^2$ s$^{-1}$. Fluorescent microsphere experiments verified particle number and point spread function readouts and measured diffusion coefficients of $0.3 \\pm 0.1$ $μ$m$^2$ s$^{-1}$ in gel, consistent with imaging-FCS measurements of $0.5 \\pm 0.2$ $μ$m$^2$ s$^{-1}$. Applied to mitochondria in pollen tubes, vSTICS resolved a bidirectional reverse-fountain pattern with slower anterograde transport ($0.1$-$1$ $μ$m s$^{-1}$) and faster retrograde motion peaking near $3$ $μ$m s$^{-1}$, plus a retrograde corridor about $2$ $μ$m wide. Density and diffusion maps indicated a denser, more advective core and higher peripheral diffusion. High-density sub-diffraction vesicle mapping produced similar velocity landscapes with about ten-fold higher particle densities. These results establish vSTICS as a practical method for quantitative 3D mapping of intracellular transport and refines the reverse-fountain model by revealing asymmetric, predominantly transverse circulation.",
+    "pdf_link": "https://arxiv.org/pdf/2603.27484v1",
     "categories": [
-      "q-bio.QM"
+      "q-bio.QM",
+      "physics.bio-ph",
+      "q-bio.SC"
     ],
-    "tldr": "Lingshu-Cell uses masked discrete diffusion to learn transcriptomic distributions and simulate cellular perturbation responses across 18,000 genes with state-of-the-art accuracy.",
+    "tldr": "Novel vSTICS framework quantifies 3D flow, diffusion, and particle density in living cells using spatio-temporal correlation analysis on volumetric fluorescence imaging.",
     "keywords": [
-      "Masked Discrete Diffusion Model",
-      "Foundation Model",
-      "Single-Cell Transcriptomics",
-      "Perturbation Prediction",
-      "Generative Simulation"
+      "volumetric spatio-temporal image correlation spectroscopy",
+      "lattice light-sheet microscopy",
+      "spatio-temporal correlation analysis",
+      "imaging-FCS",
+      "reverse-fountain model"
     ],
     "relevance_score": 10
   },
   {
-    "id": "2603.25713v1",
-    "title": "Compiling molecular ultrastructure into neural dynamics",
+    "id": "2603.27303v1",
+    "title": "Self-evolving AI agents for protein discovery and directed evolution",
     "authors": [
-      "Konrad P. Kording",
-      "Anton Arkhipov",
-      "Davy Deng",
-      "Sean Escola",
-      "Seth G. N. Grant",
-      "Gal Haspel",
-      "Michał Januszewski",
-      "Narayanan Kasthuri",
-      "Nina Khera",
-      "Richie E. Kohman",
-      "Grace Lindsay",
-      "Jeantine Lunshof",
-      "Adam Marblestone",
-      "David A. Markowitz",
-      "Jordan Matelsky",
-      "Brett Mensh",
-      "Patrick Mineault",
-      "Andrew Payne",
-      "Joanne Peng",
-      "Xaq Pitkow",
-      "Philip Shiu",
-      "Gregor Schuhknecht",
-      "Sven Truckenbrodt",
-      "Joshua T. Vogelstein",
-      "Edward S. Boyden"
+      "Yang Tan",
+      "Lingrong Zhang",
+      "Mingchen Li",
+      "Yuanxi Yu",
+      "Bozitao Zhong",
+      "Bingxin Zhou",
+      "Nanqing Dong",
+      "Liang Hong"
     ],
-    "published_date": "2026-03-26T17:54:38Z",
-    "abstract": "High-resolution brain imaging can now capture not just synapse locations but their molecular composition, with the cost of such mapping falling exponentially. Yet such ultrastructural data has so far told us little about local neuronal physiology - specifically, the parameters (e.g., synaptic efficacies, local conductances) that govern neural dynamics. We propose to translate molecularly annotated ultrastructure into physiology, introducing the concept of an ultrastructure-to-dynamics compiler: a learned mapping from molecularly annotated ultrastructure to simulator-ready, uncertainty-aware physiological parameters. The requirement is paired training data, with jointly acquired ultrastructure from imaging, and dynamical responses to perturbations from physiological experiments. With this data we can train models that predict local physiology directly from structure. Such a compiler would support biophysical simulations by turning anatomical maps into models of circuit dynamics, shifting structure-to-function from a descriptive program to a predictive one and opening routes to understanding neural computation and forecasting intervention effects.",
-    "pdf_link": "https://arxiv.org/pdf/2603.25713v1",
-    "categories": [
-      "q-bio.NC",
-      "q-bio.QM"
-    ],
-    "tldr": "An ultrastructure-to-dynamics compiler uses machine learning to map brain ultrastructure to physiological parameters, enabling predictive biophysical circuit simulations.",
-    "keywords": [
-      "Ultrastructure-To-Dynamics Compiler",
-      "Biophysical Simulation",
-      "Neural Dynamics Modeling",
-      "Synaptic Efficacy Prediction",
-      "Structure-Function Mapping"
-    ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2603.25283v1",
-    "title": "A Gait Foundation Model Predicts Multi-System Health Phenotypes from 3D Skeletal Motion",
-    "authors": [
-      "Adam Gabet",
-      "Sarah Kohn",
-      "Guy Lutsker",
-      "Shira Gelman",
-      "Anastasia Godneva",
-      "Gil Sasson",
-      "Arad Zulti",
-      "David Krongauz",
-      "Rotem Shaulitch",
-      "Assaf Rotem",
-      "Ohad Doron",
-      "Yuval Brodsky",
-      "Adina Weinberger",
-      "Eran Segal"
-    ],
-    "published_date": "2026-03-26T10:21:02Z",
-    "abstract": "Gait is increasingly recognized as a vital sign, yet current approaches treat it as a symptom of specific pathologies rather than a systemic biomarker. We developed a gait foundation model for 3D skeletal motion from 3,414 deeply phenotyped adults, recorded via a depth camera during five motor tasks. Learned embeddings outperformed engineered features, predicting age (Pearson r = 0.69), BMI (r = 0.90), and visceral adipose tissue area (r = 0.82). Embeddings significantly predicted 1,980 of 3,210 phenotypic targets; after adjustment for age, BMI, VAT, and height, gait provided independent gains in all 18 body systems in males and 17 of 18 in females, and improved prediction of clinical diagnoses and medication use. Anatomical ablation revealed that legs dominated metabolic and frailty predictions while torso encoded sleep and lifestyle phenotypes. These findings establish gait as an independent multi-system biosignal, motivating translation to consumer-grade video and its integration as a scalable, passive vital sign.",
-    "pdf_link": "https://arxiv.org/pdf/2603.25283v1",
+    "published_date": "2026-03-28T15:16:49Z",
+    "abstract": "Protein scientific discovery is bottlenecked by the manual orchestration of information and algorithms, while general agents are insufficient in complex domain projects. VenusFactory2 provides an autonomous framework that shifts from static tool usage to dynamic workflow synthesis via a self-evolving multi-agent infrastructure to address protein-related demands. It outperforms a set of well-known agents on the VenusAgentEval benchmark, and autonomously organizes the discovery and optimization of proteins from a single natural language prompt.",
+    "pdf_link": "https://arxiv.org/pdf/2603.27303v1",
     "categories": [
       "cs.AI",
+      "cs.CL",
       "q-bio.QM"
     ],
-    "tldr": "A gait foundation model trained on 3D skeletal motion learns embeddings predicting multi-system health phenotypes across 18 body systems, outperforming engineered features.",
+    "tldr": "VenusFactory2 autonomously discovers and optimizes proteins using self-evolving multi-agent AI framework that synthesizes dynamic workflows from natural language prompts.",
     "keywords": [
-      "Foundation Model",
-      "Learned Embeddings",
-      "3D Skeletal Motion",
-      "Phenotype Prediction",
-      "Anatomical Ablation"
+      "multi-agent systems",
+      "directed evolution",
+      "protein optimization",
+      "workflow synthesis",
+      "VenusAgentEval"
     ],
     "relevance_score": 9
   },
   {
-    "id": "2603.24745v1",
-    "title": "Learning relationships in epidemiological data using graph neural networks",
+    "id": "2603.27787v1",
+    "title": "Cardiovascular-Kidney-Metabolic Health: Insights from Wearables and Blood Biomarkers",
     "authors": [
-      "Anthony J Wood",
-      "Aeron R Sanchez",
-      "Rowland R Kao"
+      "Zeinab Esmaeilpour",
+      "A. Ali Heydari",
+      "Daniel McDuff",
+      "Anthony Z Faranesh",
+      "Conor Heneghan",
+      "Shwetak Patel",
+      "Mark Malhotra",
+      "Cathy Speed",
+      "Javier L. Prieto",
+      "Ahmed A. Metwally"
     ],
-    "published_date": "2026-03-25T19:09:47Z",
-    "abstract": "When designing control strategies for an infectious disease it is critical to identify the key pathways of transmission. Data on infected hosts - when they were born, where they lived and with whom they interacted - can help infer sources of infection and transmission clusters. However such data are generally not powerful enough to identify infector-infectee pairs with any certainty. Whole-genome sequencing data of the underlying pathogen, on the other hand, can serve as a powerful adjoint to these data as they can be used to estimate a time to a most recent common ancestor between two infected hosts. and in turn their relative proximity in the transmission tree. A statistical model that explains the genetic distance between different host pathogens and associated risk factors can therefore inform key risk factors for transmission itself. We show how graph neural networks (GNNs) are a powerful and natural modelling architecture for such a problem. By treating the epidemiological dataset as a graph where infected hosts are nodes and edges are weighted by the genetic distance between different host pairs, we show how a GNN can be fit to predict the genetic distance between known hosts and new, unsequenced hosts. Comparisons with other established approaches show that GNNs have useful performance advantages albeit with greater computational cost.",
-    "pdf_link": "https://arxiv.org/pdf/2603.24745v1",
+    "published_date": "2026-03-29T17:44:21Z",
+    "abstract": "Cardiovascular-Kidney-Metabolic (CKM) syndrome represents a growing public health crisis, yet the subclinical heterogeneity of its component systems remains underexplored. Early detection of physiological deviation is critical for preventing irreversible organ damage and mortality. Here, we characterize the prevalence and interplay of CKM impairment in a US cohort (N=841) by integrating continuous wearable data with clinical biomarkers. We assessed cardiovascular, kidney via clinical biomarkers, namely Chol/HDL, eGFR, as well as metabolic health risk through Homeostatic Model Assessment of Insulin Resistance (HOMA-IR). We show that while metabolic and cardiovascular disruptions are significantly associated (r=0.26, p<0.001), early-stage kidney impairment manifests independently. Utilizing a normalized deviance score, we identified significant health impairments in 29.0% of the cohort. Cardiovascular deviation was the most prevalent singular phenotype (13.3%), followed by metabolic (9.1%) and renal (6.25%) deviations, with dual metabolic-cardiovascular impairment occurring in only 2.2% of participants. These findings suggest that high system-specific deviance may serve as an indicator for accelerated physiological aging within the respective organ system. Furthermore, feature ablation analysis revealed that step count, Active Zone Minutes, and resting heart rate are the most potent wearable-derived predictors of cardiovascular and metabolic decline. These findings underscore the necessity of a multi-system subtyping approach, demonstrating that wearable-derived phenotypes can facilitate the early, targeted interventions required to manage the complex landscape of CKM syndrome.",
+    "pdf_link": "https://arxiv.org/pdf/2603.27787v1",
     "categories": [
       "q-bio.QM"
     ],
-    "tldr": "Graph neural networks model epidemiological transmission by predicting genetic distances between pathogen sequences, treating hosts as nodes with edges weighted by similarity.",
+    "tldr": "Integrates wearable sensor data with biomarkers to characterize cardiovascular-kidney-metabolic syndrome heterogeneity and identify early predictors of organ-specific health decline.",
     "keywords": [
-      "Graph Neural Networks",
-      "Transmission Tree Inference",
-      "Genetic Distance Prediction",
-      "Whole-Genome Sequencing",
-      "Epidemiological Modeling"
-    ],
-    "relevance_score": 8
-  },
-  {
-    "id": "2603.24009v1",
-    "title": "Analyzing animal movement using deep learning",
-    "authors": [
-      "Thibault Fronville",
-      "Maximilian Pichler",
-      "Johannes Signer",
-      "Marius Grabow",
-      "Stephanie Kramer-Schadt",
-      "Viktoriia Radchuk",
-      "Florian Hartig"
-    ],
-    "published_date": "2026-03-25T07:13:40Z",
-    "abstract": "Understanding how animals move through heterogeneous landscapes is central to ecology and conservation. In this context, step selection functions (SSFs) have emerged as the main statistical framework to analyze how biotic and abiotic predictors influence movement paths observed by radio tracking, GPS tags, or similar sensors. A traditional SSF consists of a generalized linear model (GLM) that infers the animal's habitat preferences (selection coefficients) by comparing each observed movement step to random steps. Such GLM-SSFs, however, cannot flexibly consider non-linear or interacting effects, unless those have been specified a priori. To address this problem, generalized additive models have been integrated in the SSF framework, but those GAM-SSFs are still limited in their ability to represent complex habitat preferences and inter-individual variability. Here we explore the utility of deep neural networks (DNNs) to overcome these limitations. We find that DNN-SSFs, coupled with explainable AI to extract selection coefficients, offer many advantages for analyzing movement data. In the case of linear effects, they effectively retrieve the same effect sizes and p-values as conventional GLMs. At the same time, however, they can automatically detect complex interaction effects, nonlinear responses, and inter-individual variability if those are present in the data. We conclude that DNN-SSFs are a promising extension of traditional SSF. Our analysis extends previous research on DNN-SSF by exploring differences and similarities of GLM, GAM and DNN-based SSF models in more depth, in particular regarding the validity of statistical indicators that are derived from the DNN. We also propose new DNN structures to capture inter-individual effects that can be viewed as a nonlinear random effect. All methods used in this paper are available via the 'citoMove' R package.",
-    "pdf_link": "https://arxiv.org/pdf/2603.24009v1",
-    "categories": [
-      "stat.AP",
-      "q-bio.QM"
-    ],
-    "tldr": "Deep neural network-based step selection functions automatically detect complex nonlinear effects and inter-individual variability in animal movement data with statistical validity.",
-    "keywords": [
-      "Deep Neural Networks",
-      "Step Selection Functions",
-      "Explainable AI",
-      "Generalized Additive Models",
-      "Nonlinear Random Effects"
+      "HOMA-IR",
+      "normalized deviance score",
+      "feature ablation analysis",
+      "multi-system subtyping",
+      "wearable-derived phenotypes"
     ],
     "relevance_score": 7
-  },
-  {
-    "id": "2603.24733v1",
-    "title": "OpenCap Monocular: 3D Human Kinematics and Musculoskeletal Dynamics from a Single Smartphone Video",
-    "authors": [
-      "Selim Gilon",
-      "Emily Y. Miller",
-      "Scott D. Uhlrich"
-    ],
-    "published_date": "2026-03-25T18:56:46Z",
-    "abstract": "Quantifying human movement (kinematics) and musculoskeletal forces (kinetics) at scale, such as estimating quadriceps force during a sit-to-stand movement, could transform prediction, treatment, and monitoring of mobility-related conditions. However, quantifying kinematics and kinetics traditionally requires costly, time-intensive analysis in specialized laboratories, limiting clinical translation. Scalable, accurate tools for biomechanical assessment are needed. We introduce OpenCap Monocular, an algorithm that estimates 3D skeletal kinematics and kinetics from a single smartphone video. The method refines 3D human pose estimates from a monocular pose estimation model (WHAM) via optimization, computes kinematics of a biomechanically constrained skeletal model, and estimates kinetics via physics-based simulation and machine learning. We validated OpenCap Monocular against marker-based motion capture and force plate data for walking, squatting, and sit-to-stand tasks. OpenCap Monocular achieved low kinematic error (4.8° mean absolute error for rotational degrees of freedom; 3.4 cm for pelvis translations), outperforming a regression-only computer vision baseline by 48% in rotational accuracy (p = 0.036) and 69% in translational accuracy (p < 0.001). OpenCap Monocular also estimated ground reaction forces during walking with accuracy comparable to, or better than, our prior two-camera OpenCap system. We demonstrate that the algorithm estimates important kinetic outcomes with clinically meaningful accuracy in applications related to frailty and knee osteoarthritis, including estimating knee extension moment during sit-to-stand transitions and knee adduction moment during walking. OpenCap Monocular is deployed via a smartphone app, web app, and secure cloud computing (https://opencap.ai), enabling free, accessible single-smartphone biomechanical assessments.",
-    "pdf_link": "https://arxiv.org/pdf/2603.24733v1",
-    "categories": [
-      "cs.CV",
-      "eess.IV",
-      "q-bio.QM"
-    ],
-    "tldr": "OpenCap Monocular combines pose estimation, optimization, and physics simulation to estimate 3D skeletal kinematics and kinetics from smartphone videos with clinical accuracy.",
-    "keywords": [
-      "Monocular Pose Estimation",
-      "Physics-Based Simulation",
-      "Biomechanical Modeling",
-      "Optimization",
-      "Machine Learning"
-    ],
-    "relevance_score": 7
-  },
-  {
-    "id": "2603.25455v1",
-    "title": "A Bayesian Gamma-power-mixture survival regression model: predicting the recurrence of prostate cancer post-prostatectomy",
-    "authors": [
-      "Tommy Walker Mackay",
-      "Mingtong Xu",
-      "Shahrokh F. Shariat",
-      "Roger Sewell"
-    ],
-    "published_date": "2026-03-26T13:52:54Z",
-    "abstract": "In a dataset of 423 patients who had had radical prostatectomy for localised prostate cancer we estimated the apparent Shannon information (ASI) about time to biochemical recurrence in various subsets of the available pre-op variables using a Bayesian Gamma-power-mixture survival regression model. In all the subsets examined the ASI was positive with posterior probability greater than 0.975 . Using only age and results of pre-operative blood tests (PSA and biomarkers) we achieved 0.232 (0.180 to 0.290) nats ASI (0.335 (0.260 to 0.419) bits) (posterior mean and equitailed 95% posterior confidence intervals). This is more than double the mean posterior ASI previously achieved on the same dataset by a subset of the current authors using a log-skew-Student-mixture model, and is greater than that previous value with posterior probability greater than 0.99 . Additionally using pre- or post-operative Gleason grades, operative findings, clinical stage, and presence or absence of extraprostatic extension or seminal vesicle invasion did not increase the ASI extracted. However removing the blood-based biomarkers and replacing them with either pre-operative Gleason grades or findings available from MRI scanning greatly reduced the available ASI to respectively 0.077 (0.038 to 0.120) and 0.088 (0.045 to 0.132) nats (both less than the values using blood-based biomarkers with posterior probability greater than 0.995). A greedy approach to selection of the best biomarkers gave TGFbeta1, VCAM1, IL6sR, and uPA in descending order of importance from those examined.",
-    "pdf_link": "https://arxiv.org/pdf/2603.25455v1",
-    "categories": [
-      "stat.AP",
-      "q-bio.QM"
-    ],
-    "tldr": "A Bayesian Gamma-power-mixture model predicts prostate cancer recurrence using blood biomarkers, achieving higher Shannon information and identifying key predictive markers.",
-    "keywords": [
-      "Bayesian Survival Regression",
-      "Gamma-Power-Mixture Model",
-      "Shannon Information",
-      "Biomarker Selection",
-      "Greedy Variable Selection"
-    ],
-    "relevance_score": 6
   }
 ]
