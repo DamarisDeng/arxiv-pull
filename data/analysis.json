@@ -1,89 +1,300 @@
 [
   {
-    "id": "2603.27484v1",
-    "title": "Quantitative mapping of dynamic 3D transport in growing cells via volumetric spatio-temporal image correlation spectroscopy (vSTICS)",
+    "id": "2604.00871v1",
+    "title": "Analytical characterisation of the Mi- and To-phases in HeMiTo dynamics: exponential growth and logistic saturation of toxic prion-like proteins",
     "authors": [
-      "Ahmad Mahmood",
-      "Paul W. Wiseman"
+      "Johannes G. Borgqvist"
     ],
-    "published_date": "2026-03-29T02:35:32Z",
-    "abstract": "Quantitatively mapping three-dimensional (3D) flow, diffusion, and particle density in crowded living cells remains challenging because most dynamic optical microscopy measurements are effectively planar and existing analysis methods struggle with dense, noisy volumetric data. We introduce volumetric spatio-temporal image correlation spectroscopy (vSTICS), a framework that recovers voxel-resolved flow, diffusion coefficients, and particle densities from 3D fluorescence time series. Growing Camellia japonica pollen tubes were imaged with field-synthesis lattice light-sheet microscopy, and localized 3D spatio-temporal correlation analysis was applied to overlapping volumetric samples to generate maps of velocity, diffusion, and density. Validation with synthetic flow-diffusion simulations showed accurate recovery of seeded transport parameters, including velocities near $3$ $μ$m s$^{-1}$ and diffusion near $10^{-3}$ $μ$m$^2$ s$^{-1}$. Fluorescent microsphere experiments verified particle number and point spread function readouts and measured diffusion coefficients of $0.3 \\pm 0.1$ $μ$m$^2$ s$^{-1}$ in gel, consistent with imaging-FCS measurements of $0.5 \\pm 0.2$ $μ$m$^2$ s$^{-1}$. Applied to mitochondria in pollen tubes, vSTICS resolved a bidirectional reverse-fountain pattern with slower anterograde transport ($0.1$-$1$ $μ$m s$^{-1}$) and faster retrograde motion peaking near $3$ $μ$m s$^{-1}$, plus a retrograde corridor about $2$ $μ$m wide. Density and diffusion maps indicated a denser, more advective core and higher peripheral diffusion. High-density sub-diffraction vesicle mapping produced similar velocity landscapes with about ten-fold higher particle densities. These results establish vSTICS as a practical method for quantitative 3D mapping of intracellular transport and refines the reverse-fountain model by revealing asymmetric, predominantly transverse circulation.",
-    "pdf_link": "https://arxiv.org/pdf/2603.27484v1",
+    "published_date": "2026-04-01T13:16:23Z",
+    "abstract": "Prion-like propagation of misfolded proteins is a key mechanism underlying the progression of neurodegenerative diseases such as Alzheimer's disease. In previous work, we introduced the HeMiTo framework, describing these prion-like dynamics for a class of heterodimer models in terms of three phases: the healthy (He), mixed (Mi), and toxic (To) phases. While the He-phase was characterised analytically, the Mi-phase was described numerically and the To-phase was inferred from linear stability arguments. In this work, we provide a complete analytical characterisation of the Mi- and To-phases for our class of heterodimer models. We derive exact inner solutions governing the Mi-phase and match them with outer solutions from the He-phase, explaining the concave-like behaviour of the healthy species and establishing explicit conditions for exponential growth of the toxic species with a mechanistically interpretable growth rate. Furthermore, we formalise a quasi steady-state reduction near the toxic steady state and show that the dynamics reduce to a logistic growth equation, linking exponential growth to saturation. Together, these results provide a unified and mechanistic description of prion-like dynamics across all phases of disease progression and establish a foundation for predictive modelling of biomarker trajectories.",
+    "pdf_link": "https://arxiv.org/pdf/2604.00871v1",
     "categories": [
       "q-bio.QM",
-      "physics.bio-ph",
-      "q-bio.SC"
+      "math.DS",
+      "q-bio.MN"
     ],
-    "tldr": "Novel vSTICS framework quantifies 3D flow, diffusion, and particle density in living cells using spatio-temporal correlation analysis on volumetric fluorescence imaging.",
+    "tldr": "This paper provides a complete analytical characterization of the mixed and toxic phases in the HeMiTo framework for modeling prion-like protein dynamics in neurodegenerative diseases, deriving exact solutions for exponential growth and logistic saturation of toxic species.",
     "keywords": [
-      "volumetric spatio-temporal image correlation spectroscopy",
-      "lattice light-sheet microscopy",
-      "spatio-temporal correlation analysis",
-      "imaging-FCS",
-      "reverse-fountain model"
-    ],
-    "relevance_score": 10
-  },
-  {
-    "id": "2603.27303v1",
-    "title": "Self-evolving AI agents for protein discovery and directed evolution",
-    "authors": [
-      "Yang Tan",
-      "Lingrong Zhang",
-      "Mingchen Li",
-      "Yuanxi Yu",
-      "Bozitao Zhong",
-      "Bingxin Zhou",
-      "Nanqing Dong",
-      "Liang Hong"
-    ],
-    "published_date": "2026-03-28T15:16:49Z",
-    "abstract": "Protein scientific discovery is bottlenecked by the manual orchestration of information and algorithms, while general agents are insufficient in complex domain projects. VenusFactory2 provides an autonomous framework that shifts from static tool usage to dynamic workflow synthesis via a self-evolving multi-agent infrastructure to address protein-related demands. It outperforms a set of well-known agents on the VenusAgentEval benchmark, and autonomously organizes the discovery and optimization of proteins from a single natural language prompt.",
-    "pdf_link": "https://arxiv.org/pdf/2603.27303v1",
-    "categories": [
-      "cs.AI",
-      "cs.CL",
-      "q-bio.QM"
-    ],
-    "tldr": "VenusFactory2 autonomously discovers and optimizes proteins using self-evolving multi-agent AI framework that synthesizes dynamic workflows from natural language prompts.",
-    "keywords": [
-      "multi-agent systems",
-      "directed evolution",
-      "protein optimization",
-      "workflow synthesis",
-      "VenusAgentEval"
+      "HeMiTo framework",
+      "heterodimer models",
+      "logistic growth equation",
+      "quasi steady-state reduction",
+      "dynamical systems"
     ],
     "relevance_score": 9
   },
   {
-    "id": "2603.27787v1",
-    "title": "Cardiovascular-Kidney-Metabolic Health: Insights from Wearables and Blood Biomarkers",
+    "id": "2603.29546v1",
+    "title": "Sampling from the Solution Space and Metabolic Environments of Genome-Scale Metabolic Models",
     "authors": [
-      "Zeinab Esmaeilpour",
-      "A. Ali Heydari",
-      "Daniel McDuff",
-      "Anthony Z Faranesh",
-      "Conor Heneghan",
-      "Shwetak Patel",
-      "Mark Malhotra",
-      "Cathy Speed",
-      "Javier L. Prieto",
-      "Ahmed A. Metwally"
+      "Haris Zafeiropoulos",
+      "Daniel Rios Garza"
     ],
-    "published_date": "2026-03-29T17:44:21Z",
-    "abstract": "Cardiovascular-Kidney-Metabolic (CKM) syndrome represents a growing public health crisis, yet the subclinical heterogeneity of its component systems remains underexplored. Early detection of physiological deviation is critical for preventing irreversible organ damage and mortality. Here, we characterize the prevalence and interplay of CKM impairment in a US cohort (N=841) by integrating continuous wearable data with clinical biomarkers. We assessed cardiovascular, kidney via clinical biomarkers, namely Chol/HDL, eGFR, as well as metabolic health risk through Homeostatic Model Assessment of Insulin Resistance (HOMA-IR). We show that while metabolic and cardiovascular disruptions are significantly associated (r=0.26, p<0.001), early-stage kidney impairment manifests independently. Utilizing a normalized deviance score, we identified significant health impairments in 29.0% of the cohort. Cardiovascular deviation was the most prevalent singular phenotype (13.3%), followed by metabolic (9.1%) and renal (6.25%) deviations, with dual metabolic-cardiovascular impairment occurring in only 2.2% of participants. These findings suggest that high system-specific deviance may serve as an indicator for accelerated physiological aging within the respective organ system. Furthermore, feature ablation analysis revealed that step count, Active Zone Minutes, and resting heart rate are the most potent wearable-derived predictors of cardiovascular and metabolic decline. These findings underscore the necessity of a multi-system subtyping approach, demonstrating that wearable-derived phenotypes can facilitate the early, targeted interventions required to manage the complex landscape of CKM syndrome.",
-    "pdf_link": "https://arxiv.org/pdf/2603.27787v1",
+    "published_date": "2026-03-31T10:28:37Z",
+    "abstract": "Flux sampling is an analysis that, based on a distribution, picks randomly an efficient number of points from the solution space of a metabolic model. Unlike most constraint-based analyses, flux sampling does not require an objective function to optimize, allowing for the exploration of the whole spectrum of the phenotypes a species can exhibit. However, sampling can also be restricted to a subspace where a chosen objective reaches at least a specified fraction of its optimum. This targeted approach adds value when investigating phenotypes that are optimal for a specific function. Contrary to Flux Balance Analysis, which returns a single solution, sampling leverages statistical power to uncover phenotypes that otherwise would be masked. This can be especially useful when changing the conditions (medium) in which a species lives. Here, we highlight some state-of-the-art methods for applying flux sampling at Genome-Scale Metabolic Models in different scenarios, and we showcase flux sampling applications",
+    "pdf_link": "https://arxiv.org/pdf/2603.29546v1",
     "categories": [
+      "q-bio.MN",
       "q-bio.QM"
     ],
-    "tldr": "Integrates wearable sensor data with biomarkers to characterize cardiovascular-kidney-metabolic syndrome heterogeneity and identify early predictors of organ-specific health decline.",
+    "tldr": "This review highlights state-of-the-art methods for applying flux sampling to explore the phenotypic solution space of genome-scale metabolic models without requiring an objective function, allowing comprehensive investigation of metabolic capabilities.",
     "keywords": [
-      "HOMA-IR",
-      "normalized deviance score",
-      "feature ablation analysis",
-      "multi-system subtyping",
-      "wearable-derived phenotypes"
+      "flux sampling",
+      "Flux Balance Analysis",
+      "genome-scale metabolic models",
+      "constraint-based analysis",
+      "phenotype exploration"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.29986v1",
+    "title": "ParetoEnsembles.jl: A Julia Package for Multiobjective Parameter Estimation Using Pareto Optimal Ensemble Techniques",
+    "authors": [
+      "Jeffrey D. Varner"
+    ],
+    "published_date": "2026-03-31T16:51:24Z",
+    "abstract": "Mathematical models of natural and man-made systems often have many adjustable parameters that must be estimated from multiple, potentially conflicting datasets. Rather than reporting a single best-fit parameter vector, it is often more informative to generate an ensemble of parameter sets that collectively map out the trade-offs among competing objectives. This paper presents ParetoEnsembles.jl, an open-source Julia package that generates such ensembles using Pareto Optimal Ensemble Techniques (POETs), a simulated-annealing-based algorithm that requires no gradient information. The implementation corrects the original dominance relation from weak to strict Pareto dominance, reduces the per-iteration ranking cost from $O(n^2 m)$ to $O(nm)$ through an incremental update scheme, and adds multi-chain parallel execution for improved front coverage. We demonstrate the package on a cell-free gene expression model fitted to experimental data and a blood coagulation cascade model with ten estimated rate constants and three objectives. A controlled synthetic-data study reveals parameter identifiability structure, with individual rate constants off by several-fold yet model predictions accurate to 7%. A five-replicate coverage analysis confirms that timing features are reliably covered while peak amplitude is systematically overconfident. Validation against published experimental thrombin generation data demonstrates that the ensemble predicts held-out conditions to within 10% despite inherent model approximation error. By making ensemble generation lightweight and accessible, ParetoEnsembles.jl aims to lower the barrier to routine uncertainty characterization in mechanistic modeling.",
+    "pdf_link": "https://arxiv.org/pdf/2603.29986v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.MS"
+    ],
+    "tldr": "ParetoEnsembles.jl is a Julia package implementing Pareto Optimal Ensemble Techniques for multiobjective parameter estimation in biological models using simulated annealing with improved algorithmic efficiency and parallel execution.",
+    "keywords": [
+      "Pareto optimization",
+      "simulated annealing",
+      "parameter estimation",
+      "ensemble methods",
+      "multiobjective optimization"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.29977v1",
+    "title": "Quantifying Cross-Modal Interactions in Multimodal Glioma Survival Prediction via InterSHAP: Evidence for Additive Signal Integration",
+    "authors": [
+      "Iain Swift",
+      "JingHua Ye",
+      "Ruairi O'Reilly"
+    ],
+    "published_date": "2026-03-31T16:39:56Z",
+    "abstract": "Multimodal deep learning for cancer prognosis is commonly assumed to benefit from synergistic cross-modal interactions, yet this assumption has not been directly tested in survival prediction settings. This work adapts InterSHAP, a Shapley interaction index-based metric, from classification to Cox proportional hazards models and applies it to quantify cross-modal interactions in glioma survival prediction. Using TCGA-GBM and TCGA-LGG data (n=575), we evaluate four fusion architectures combining whole-slide image (WSI) and RNA-seq features. Our central finding is an inverse relationship between predictive performance and measured interaction: architectures achieving superior discrimination (C-index 0.64$\\to$0.82) exhibit equivalent or lower cross-modal interaction (4.8\\%$\\to$3.0\\%). Variance decomposition reveals stable additive contributions across all architectures (WSI${\\approx}$40\\%, RNA${\\approx}$55\\%, Interaction${\\approx}$4\\%), indicating that performance gains arise from complementary signal aggregation rather than learned synergy. These findings provide a practical model auditing tool for comparing fusion strategies, reframe the role of architectural complexity in multimodal fusion, and have implications for privacy-preserving federated deployment.",
+    "pdf_link": "https://arxiv.org/pdf/2603.29977v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
+    ],
+    "tldr": "This work adapts InterSHAP to Cox proportional hazards models to quantify cross-modal interactions in glioma survival prediction, revealing that improved performance arises from additive signal integration rather than synergistic interactions.",
+    "keywords": [
+      "InterSHAP",
+      "Cox proportional hazards",
+      "Shapley values",
+      "multimodal fusion",
+      "deep learning"
+    ],
+    "relevance_score": 9
+  },
+  {
+    "id": "2603.29793v1",
+    "title": "Multimodal Machine Learning for Early Prediction of Metastasis in a Swedish Multi-Cancer Cohort",
+    "authors": [
+      "Franco Rugolon",
+      "Korbinian Randl",
+      "Braslav Jovanovic",
+      "Ioanna Miliou",
+      "Panagiotis Papapetrou"
+    ],
+    "published_date": "2026-03-31T14:27:21Z",
+    "abstract": "Multimodal Machine Learning offers a holistic view of a patient's status, integrating structured and unstructured data from electronic health records (EHR). We propose a framework to predict metastasis risk one month prior to diagnosis, using six months of clinical history from EHR data. Data from four cancer cohorts collected at Karolinska University Hospital (Stockholm, Sweden) were analyzed: breast (n = 743), colon (n = 387), lung (n = 870), and prostate (n = 1890). The dataset included demographics, comorbidities, laboratory results, medications, and clinical text. We compared traditional and deep learning classifiers across single modalities and multimodal combinations, using various fusion strategies and a Transparent Reporting of a multivariable prediction model for Individual Prognosis Or Diagnosis (TRIPOD) 2a design, with an 80-20 development-validation split to ensure a rigorous, repeatable evaluation. Performance was evaluated using AUROC, AUPRC, F1 score, sensitivity, and specificity. We then employed a multimodal adaptation of SHAP to analyze the classifiers' reasoning. Intermediate fusion achieved the highest F1 scores on breast (0.845), colon (0.786), and prostate cancer (0.845), demonstrating strong predictive performance. For lung cancer, the intermediate fusion achieved an F1 score of 0.819, while the text-only model achieved the highest, with an F1 score of 0.829. Deep learning classifiers consistently outperformed traditional models. Colon cancer, the smallest cohort, had the lowest performance, highlighting the importance of sufficient training data. SHAP analysis showed that the relative importance of modalities varied across cancer types. Fusion strategies offer distinct strengths and weaknesses. Intermediate fusion consistently delivered the best results, but strategy choices should align with data characteristics and organizational needs.",
+    "pdf_link": "https://arxiv.org/pdf/2603.29793v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "tldr": "This study develops a multimodal machine learning framework integrating structured and unstructured EHR data to predict cancer metastasis one month prior to diagnosis across four cancer types, with deep learning and intermediate fusion strategies achieving the best performance.",
+    "keywords": [
+      "multimodal fusion",
+      "deep learning",
+      "SHAP",
+      "TRIPOD",
+      "survival prediction"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2604.00243v1",
+    "title": "UCell: rethinking generalizability and scaling of bio-medical vision models",
+    "authors": [
+      "Nicholas Kuang",
+      "Vanessa Scalon",
+      "Ji Yu"
+    ],
+    "published_date": "2026-03-31T21:13:20Z",
+    "abstract": "The modern deep learning field is a scale-centric one. Larger models have been shown to consistently perform better than smaller models of similar architecture. In many sub-domains of biomedical research, however, the model scaling is bottlenecked by the amount of available training data, and the high cost associated with generating and validating additional high quality data. Despite the practical hurdle, the majority of the ongoing research still focuses on building bigger foundation models, whereas the alternative of improving the ability of small models has been under-explored. Here we experiment with building models with 10-30M parameters, tiny by modern standards, to perform the single-cell segmentation task. An important design choice is the incorporation of a recursive structure into the model's forward computation graph, leading to a more parameter-efficient architecture. We found that for the single-cell segmentation, on multiple benchmarks, our small model, UCell, matches the performance of models 10-20 times its size, and with a similar generalizability to unseen out-of-domain data. More importantly, we found that ucell can be trained from scratch using only a set of microscopy imaging data, without relying on massive pretraining on natural images, and therefore decouples the model building from any external commercial interests. Finally, we examined and confirmed the adaptability of ucell by performing a wide range of one-shot and few-shot fine tuning experiments on a diverse set of small datasets. Implementation is available at https://github.com/jiyuuchc/ucell",
+    "pdf_link": "https://arxiv.org/pdf/2604.00243v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.QM"
+    ],
+    "tldr": "UCell is a parameter-efficient recursive deep learning architecture with 10-30M parameters that matches the single-cell segmentation performance of models 10-20 times larger while being trainable from scratch without pretraining on natural images.",
+    "keywords": [
+      "recursive neural networks",
+      "deep learning",
+      "cell segmentation",
+      "few-shot learning",
+      "computer vision"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2604.00251v1",
+    "title": "Evaluation of neuroCombat and deep learning harmonization for multi-site magnetic resonance neuroimaging in youth with prenatal alcohol exposure",
+    "authors": [
+      "Chloe Scholten",
+      "Elyssa M. McMaster",
+      "Adam M. Saunders",
+      "Michael E. Kim",
+      "Gaurav Rudravaram",
+      "Elias Levy",
+      "Bryce Geeraert",
+      "Lianrui Zuo",
+      "Simon Vandekar",
+      "Catherine Lebel",
+      "Bennett A. Landman"
+    ],
+    "published_date": "2026-03-31T21:23:47Z",
+    "abstract": "In cases of prevalent diseases and disorders, such as Prenatal Alcohol Exposure (PAE), multi-site data collection allows for increased study samples. However, multi-site studies introduce additional variability through heterogeneous collection materials, such as scanner and acquisition protocols, which confound with biologically relevant signals. Neuroscientists often utilize statistical methods on image-derived metrics, such as volume of regions of interest, after all image processing to minimize site-related variance. HACA3, a deep learning harmonization method, offers an opportunity to harmonize image signals prior to metric quantification; however, HACA3 has not yet been validated in a pediatric cohort. In this work, we investigate HACA3's ability to remove site-related variance and preserve biologically relevant signal compared to a statistical method, neuroCombat, and pair HACA3 processing with neuroCombat to evaluate the efficacy of multiple harmonization methods in a pediatric (age 7 to 21) population across three unique scanners with controls and cases of PAE with downstream MaCRUISE volume metrics. We find that HACA3 qualitatively improves inter-site contrast variations, but statistical methods reduce greater site-related variance within the MaCRUISE volume metrics following an ANCOVA test, and HACA3 relies on follow-up statistical methods to approach maximal biological preservation in this context.",
+    "pdf_link": "https://arxiv.org/pdf/2604.00251v1",
+    "categories": [
+      "eess.IV",
+      "q-bio.QM"
+    ],
+    "tldr": "This study compares neuroCombat statistical harmonization with HACA3 deep learning harmonization for multi-site MRI data in pediatric prenatal alcohol exposure, finding that statistical methods reduce site-related variance more effectively than deep learning alone.",
+    "keywords": [
+      "neuroCombat",
+      "HACA3",
+      "deep learning",
+      "ANCOVA",
+      "batch effect correction"
     ],
     "relevance_score": 7
+  },
+  {
+    "id": "2604.00246v1",
+    "title": "Harmonization mitigates diffusion MRI scanner effects in infancy: insights from the HEALthy Brain and Childhood Development (HBCD) study",
+    "authors": [
+      "Elyssa M. McMaster",
+      "Gaurav Rudravaram",
+      "Michael E. Kim",
+      "Trent M. Schwartz",
+      "Chloe Scholten",
+      "Jongyeon Yoon",
+      "Adam M. Saunders",
+      "Andre T. S. Hucke",
+      "Karthik Ramadass",
+      "Emily M. Harriott",
+      "Steven L. Meisler",
+      "Simon N. Vandekar",
+      "Allen Newton",
+      "Seth A. Smith",
+      "Saikat Sengupta",
+      "Kathryn L. Humphreys",
+      "Sarah Osmundson",
+      "Daniel Moyer",
+      "Laurie E. Cutting",
+      "Bennett A. Landman"
+    ],
+    "published_date": "2026-03-31T21:16:53Z",
+    "abstract": "The HEALthy Brain and Childhood Development (HBCD) Study is an ongoing longitudinal initiative to understand population-level brain maturation; however, large-scale studies must overcome site-related variance and preserve biologically relevant signal. In addition to diffusion-weighted magnetic resonance imaging images, the HBCD dataset offers analysis-ready derivatives for scientists to conduct their analysis, including scalar diffusion tensor (DTI) metrics in a predetermined set of bundles. The purpose of this study is to characterize HBCD-specific site effects in diffusion MRI data, which have not been systematically reported. In this work, we investigate the sensitivity of HBCD bundle metrics to scanner model-related variance and address these variations with ComBat-GAM harmonization within the current HBCD data release 1.1 across six scanner models. Following ComBat-GAM, we observe zero statistically significant differences between the distributions from any scanner model following FDR correction and reduce Cohen's f effect sizes across all metrics. Our work underscores the importance of rigorous harmonization efforts in large-scale studies, and we encourage future investigations of HBCD data to control for these effects.",
+    "pdf_link": "https://arxiv.org/pdf/2604.00246v1",
+    "categories": [
+      "eess.IV",
+      "q-bio.QM"
+    ],
+    "tldr": "This study characterizes scanner-related variance in HBCD diffusion MRI data and demonstrates that ComBat-GAM harmonization effectively eliminates statistically significant differences between scanner models while preserving biologically relevant signals.",
+    "keywords": [
+      "ComBat-GAM",
+      "diffusion tensor imaging",
+      "batch effect correction",
+      "FDR correction",
+      "harmonization"
+    ],
+    "relevance_score": 7
+  },
+  {
+    "id": "2603.29684v1",
+    "title": "FcsIT: An Open-Source, Cross-Platform Tool for Correlation and Analysis of Fluorescence Correlation Spectroscopy Data",
+    "authors": [
+      "Tomasz Kalwarczyk"
+    ],
+    "published_date": "2026-03-31T12:37:40Z",
+    "abstract": "FcsIT is a platform-independent, open-source tool for calculating the correlation and fitting fluorescence correlation spectroscopy data. The software is written in Python and uses a powerful Dear PyGUI engine for its interface. It provides reading and correlating the TTTR data, as well as TCSPC filtering of the photon time-trace data. The circular-block bootstrap method applied to the calculation of correlation data and its variance results in data quality comparable to that obtained with commercially available software. An intuitive fitting interface provides efficient analysis of large datasets and includes nine predefined mathematical models for fitting correlation curves. Moreover, it allows users to add their own models in a user-friendly manner. Validation of the FcsIT tool against simulated FCS data and real FCS experiments confirms its usability and potential appeal to a wide variety of FCS users.",
+    "pdf_link": "https://arxiv.org/pdf/2603.29684v1",
+    "categories": [
+      "q-bio.QM",
+      "physics.data-an"
+    ],
+    "tldr": "FcsIT is an open-source Python tool for fluorescence correlation spectroscopy data analysis that implements circular-block bootstrap methods for correlation calculation and provides an intuitive interface with nine predefined fitting models.",
+    "keywords": [
+      "fluorescence correlation spectroscopy",
+      "circular-block bootstrap",
+      "TTTR",
+      "TCSPC",
+      "correlation analysis"
+    ],
+    "relevance_score": 7
+  },
+  {
+    "id": "2603.29916v1",
+    "title": "Growth-rate distributions at stationarity",
+    "authors": [
+      "Edgardo Brigatti"
+    ],
+    "published_date": "2026-03-31T15:57:12Z",
+    "abstract": "We propose new analytical tools for describing growth-rate distributions generated by stationary time-series. Our analysis shows how deviations from normality are not pathological behaviour, as suggested by some traditional views, but instead can be accounted for by clean and general statistical considerations. In contrast, strict normality is the effect of specific modelling choices. Systems characterized by stationary Gamma or heavy-tailed abundance distributions produce log-growth-rate distributions well described by a generalized logistic distribution, which can describe tent-shaped or nearly normal datasets and serves as a useful null model for these observables. These results prove that, for large enough time lags, in practice, growth-rate distributions cease to be time-dependent and exhibit finite variance. Based on this analysis, we identify some key stylized macroecological patterns and specific stochastic differential equations capable of reproducing them. A pragmatic workflow for heuristic selection between these models is then introduced. This approach is particularly useful for systems with limited data-tracking quality, where applying sophisticated inference methods is challenging.",
+    "pdf_link": "https://arxiv.org/pdf/2603.29916v1",
+    "categories": [
+      "physics.data-an",
+      "q-bio.PE",
+      "q-bio.QM"
+    ],
+    "tldr": "This work develops analytical tools for characterizing growth-rate distributions in stationary time-series, showing that deviations from normality can be explained by generalized logistic distributions and stochastic differential equations.",
+    "keywords": [
+      "generalized logistic distribution",
+      "stochastic differential equations",
+      "Gamma distribution",
+      "time-series analysis",
+      "statistical inference"
+    ],
+    "relevance_score": 7
+  },
+  {
+    "id": "2603.28930v1",
+    "title": "Retrospective Economic Evaluation of Group Testing in the COVID-19 Pandemic",
+    "authors": [
+      "Michael Balzer",
+      "Kainat Khowaja",
+      "Christiane Fuchs"
+    ],
+    "published_date": "2026-03-30T19:07:39Z",
+    "abstract": "Surveillance of diseases in a pandemic is an important part of public health policy. Diagnostic testing at the individual level is often infeasible due to resource constraints. To circumvent these constraints, group testing can be applied. The economic cost evaluation from the payer's perspective typically focuses only on deterministic costs which overlooks the substantial economic impact of productivity losses resulting from quarantine and workplace disruptions. The objective of this article is to develop a mathematical model for a retrospective economic evaluation of group testing that incorporates both deterministic costs and income-based economic loss. Group testing algorithms are revisited and simulated at optimized pool sizes to determine the required number of tests. Income data from the German Socio-Economic Panel are integrated into a mathematical model to capture the economic loss. Afterward, hybrid Monte Carlo experiments are conducted by evaluating the economic cost in the Coronavirus disease 2019 pandemic in Germany. Monte Carlo experiments show that the optimal choice of group testing algorithms changes substantially when income-based economic losses are included. Evaluations considering only deterministic costs systematically underestimate the total economic cost. Algorithms with a longer quarantine duration are less attractive than shorter quarantine duration if income-based economic loss is accounted for. The findings show that current evaluations underestimate the true economic cost. Group testing algorithms with shorter duration and fewer stages are preferred, even when they require a larger number of tests. These results underscore the importance of incorporating income-based economic loss into a mathematical model.",
+    "pdf_link": "https://arxiv.org/pdf/2603.28930v1",
+    "categories": [
+      "stat.CO",
+      "econ.EM",
+      "econ.GN",
+      "q-bio.QM"
+    ],
+    "tldr": "This study develops a mathematical model for economic evaluation of COVID-19 group testing algorithms that incorporates both deterministic costs and income-based economic losses from quarantine, showing that optimal algorithm selection changes when productivity losses are included.",
+    "keywords": [
+      "Monte Carlo simulation",
+      "group testing algorithms",
+      "pooled testing",
+      "economic modeling",
+      "optimization"
+    ],
+    "relevance_score": 6
   }
 ]

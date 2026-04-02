@@ -1,5 +1,93 @@
 [
   {
+    "id": "2604.00871v1",
+    "title": "Analytical characterisation of the Mi- and To-phases in HeMiTo dynamics: exponential growth and logistic saturation of toxic prion-like proteins",
+    "authors": [
+      "Johannes G. Borgqvist"
+    ],
+    "published_date": "2026-04-01T13:16:23Z",
+    "abstract": "Prion-like propagation of misfolded proteins is a key mechanism underlying the progression of neurodegenerative diseases such as Alzheimer's disease. In previous work, we introduced the HeMiTo framework, describing these prion-like dynamics for a class of heterodimer models in terms of three phases: the healthy (He), mixed (Mi), and toxic (To) phases. While the He-phase was characterised analytically, the Mi-phase was described numerically and the To-phase was inferred from linear stability arguments. In this work, we provide a complete analytical characterisation of the Mi- and To-phases for our class of heterodimer models. We derive exact inner solutions governing the Mi-phase and match them with outer solutions from the He-phase, explaining the concave-like behaviour of the healthy species and establishing explicit conditions for exponential growth of the toxic species with a mechanistically interpretable growth rate. Furthermore, we formalise a quasi steady-state reduction near the toxic steady state and show that the dynamics reduce to a logistic growth equation, linking exponential growth to saturation. Together, these results provide a unified and mechanistic description of prion-like dynamics across all phases of disease progression and establish a foundation for predictive modelling of biomarker trajectories.",
+    "pdf_link": "https://arxiv.org/pdf/2604.00871v1",
+    "categories": [
+      "q-bio.QM",
+      "math.DS",
+      "q-bio.MN"
+    ]
+  },
+  {
+    "id": "2604.00251v1",
+    "title": "Evaluation of neuroCombat and deep learning harmonization for multi-site magnetic resonance neuroimaging in youth with prenatal alcohol exposure",
+    "authors": [
+      "Chloe Scholten",
+      "Elyssa M. McMaster",
+      "Adam M. Saunders",
+      "Michael E. Kim",
+      "Gaurav Rudravaram",
+      "Elias Levy",
+      "Bryce Geeraert",
+      "Lianrui Zuo",
+      "Simon Vandekar",
+      "Catherine Lebel",
+      "Bennett A. Landman"
+    ],
+    "published_date": "2026-03-31T21:23:47Z",
+    "abstract": "In cases of prevalent diseases and disorders, such as Prenatal Alcohol Exposure (PAE), multi-site data collection allows for increased study samples. However, multi-site studies introduce additional variability through heterogeneous collection materials, such as scanner and acquisition protocols, which confound with biologically relevant signals. Neuroscientists often utilize statistical methods on image-derived metrics, such as volume of regions of interest, after all image processing to minimize site-related variance. HACA3, a deep learning harmonization method, offers an opportunity to harmonize image signals prior to metric quantification; however, HACA3 has not yet been validated in a pediatric cohort. In this work, we investigate HACA3's ability to remove site-related variance and preserve biologically relevant signal compared to a statistical method, neuroCombat, and pair HACA3 processing with neuroCombat to evaluate the efficacy of multiple harmonization methods in a pediatric (age 7 to 21) population across three unique scanners with controls and cases of PAE with downstream MaCRUISE volume metrics. We find that HACA3 qualitatively improves inter-site contrast variations, but statistical methods reduce greater site-related variance within the MaCRUISE volume metrics following an ANCOVA test, and HACA3 relies on follow-up statistical methods to approach maximal biological preservation in this context.",
+    "pdf_link": "https://arxiv.org/pdf/2604.00251v1",
+    "categories": [
+      "eess.IV",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2604.00246v1",
+    "title": "Harmonization mitigates diffusion MRI scanner effects in infancy: insights from the HEALthy Brain and Childhood Development (HBCD) study",
+    "authors": [
+      "Elyssa M. McMaster",
+      "Gaurav Rudravaram",
+      "Michael E. Kim",
+      "Trent M. Schwartz",
+      "Chloe Scholten",
+      "Jongyeon Yoon",
+      "Adam M. Saunders",
+      "Andre T. S. Hucke",
+      "Karthik Ramadass",
+      "Emily M. Harriott",
+      "Steven L. Meisler",
+      "Simon N. Vandekar",
+      "Allen Newton",
+      "Seth A. Smith",
+      "Saikat Sengupta",
+      "Kathryn L. Humphreys",
+      "Sarah Osmundson",
+      "Daniel Moyer",
+      "Laurie E. Cutting",
+      "Bennett A. Landman"
+    ],
+    "published_date": "2026-03-31T21:16:53Z",
+    "abstract": "The HEALthy Brain and Childhood Development (HBCD) Study is an ongoing longitudinal initiative to understand population-level brain maturation; however, large-scale studies must overcome site-related variance and preserve biologically relevant signal. In addition to diffusion-weighted magnetic resonance imaging images, the HBCD dataset offers analysis-ready derivatives for scientists to conduct their analysis, including scalar diffusion tensor (DTI) metrics in a predetermined set of bundles. The purpose of this study is to characterize HBCD-specific site effects in diffusion MRI data, which have not been systematically reported. In this work, we investigate the sensitivity of HBCD bundle metrics to scanner model-related variance and address these variations with ComBat-GAM harmonization within the current HBCD data release 1.1 across six scanner models. Following ComBat-GAM, we observe zero statistically significant differences between the distributions from any scanner model following FDR correction and reduce Cohen's f effect sizes across all metrics. Our work underscores the importance of rigorous harmonization efforts in large-scale studies, and we encourage future investigations of HBCD data to control for these effects.",
+    "pdf_link": "https://arxiv.org/pdf/2604.00246v1",
+    "categories": [
+      "eess.IV",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2604.00243v1",
+    "title": "UCell: rethinking generalizability and scaling of bio-medical vision models",
+    "authors": [
+      "Nicholas Kuang",
+      "Vanessa Scalon",
+      "Ji Yu"
+    ],
+    "published_date": "2026-03-31T21:13:20Z",
+    "abstract": "The modern deep learning field is a scale-centric one. Larger models have been shown to consistently perform better than smaller models of similar architecture. In many sub-domains of biomedical research, however, the model scaling is bottlenecked by the amount of available training data, and the high cost associated with generating and validating additional high quality data. Despite the practical hurdle, the majority of the ongoing research still focuses on building bigger foundation models, whereas the alternative of improving the ability of small models has been under-explored. Here we experiment with building models with 10-30M parameters, tiny by modern standards, to perform the single-cell segmentation task. An important design choice is the incorporation of a recursive structure into the model's forward computation graph, leading to a more parameter-efficient architecture. We found that for the single-cell segmentation, on multiple benchmarks, our small model, UCell, matches the performance of models 10-20 times its size, and with a similar generalizability to unseen out-of-domain data. More importantly, we found that ucell can be trained from scratch using only a set of microscopy imaging data, without relying on massive pretraining on natural images, and therefore decouples the model building from any external commercial interests. Finally, we examined and confirmed the adaptability of ucell by performing a wide range of one-shot and few-shot fine tuning experiments on a diverse set of small datasets. Implementation is available at https://github.com/jiyuuchc/ucell",
+    "pdf_link": "https://arxiv.org/pdf/2604.00243v1",
+    "categories": [
+      "cs.CV",
+      "q-bio.QM"
+    ]
+  },
+  {
     "id": "2603.29986v1",
     "title": "ParetoEnsembles.jl: A Julia Package for Multiobjective Parameter Estimation Using Pareto Optimal Ensemble Techniques",
     "authors": [
@@ -107,28 +195,6 @@
       "stat.CO",
       "econ.EM",
       "econ.GN",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2603.27787v1",
-    "title": "Cardiovascular-Kidney-Metabolic Health: Insights from Wearables and Blood Biomarkers",
-    "authors": [
-      "Zeinab Esmaeilpour",
-      "A. Ali Heydari",
-      "Daniel McDuff",
-      "Anthony Z Faranesh",
-      "Conor Heneghan",
-      "Shwetak Patel",
-      "Mark Malhotra",
-      "Cathy Speed",
-      "Javier L. Prieto",
-      "Ahmed A. Metwally"
-    ],
-    "published_date": "2026-03-29T17:44:21Z",
-    "abstract": "Cardiovascular-Kidney-Metabolic (CKM) syndrome represents a growing public health crisis, yet the subclinical heterogeneity of its component systems remains underexplored. Early detection of physiological deviation is critical for preventing irreversible organ damage and mortality. Here, we characterize the prevalence and interplay of CKM impairment in a US cohort (N=841) by integrating continuous wearable data with clinical biomarkers. We assessed cardiovascular, kidney via clinical biomarkers, namely Chol/HDL, eGFR, as well as metabolic health risk through Homeostatic Model Assessment of Insulin Resistance (HOMA-IR). We show that while metabolic and cardiovascular disruptions are significantly associated (r=0.26, p<0.001), early-stage kidney impairment manifests independently. Utilizing a normalized deviance score, we identified significant health impairments in 29.0% of the cohort. Cardiovascular deviation was the most prevalent singular phenotype (13.3%), followed by metabolic (9.1%) and renal (6.25%) deviations, with dual metabolic-cardiovascular impairment occurring in only 2.2% of participants. These findings suggest that high system-specific deviance may serve as an indicator for accelerated physiological aging within the respective organ system. Furthermore, feature ablation analysis revealed that step count, Active Zone Minutes, and resting heart rate are the most potent wearable-derived predictors of cardiovascular and metabolic decline. These findings underscore the necessity of a multi-system subtyping approach, demonstrating that wearable-derived phenotypes can facilitate the early, targeted interventions required to manage the complex landscape of CKM syndrome.",
-    "pdf_link": "https://arxiv.org/pdf/2603.27787v1",
-    "categories": [
       "q-bio.QM"
     ]
   }
