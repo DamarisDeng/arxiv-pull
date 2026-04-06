@@ -1,34 +1,24 @@
 [
   {
-    "id": "2604.01990v1",
-    "title": "Evaluating Deep Surrogate Models for Knee Joint Contact Mechanics Under Input-Limited Conditions",
+    "id": "2604.02886v1",
+    "title": "High-dimensional Many-to-many-to-many Mediation Analysis",
     "authors": [
-      "Zhengye Pan",
-      "Jianwei Zuo",
-      "Jiajia Luo"
+      "Tien Dat Nguyen",
+      "Trung Khang Tran",
+      "Cong Khanh Truong",
+      "Duy-Cat Can",
+      "Binh T. Nguyen",
+      "Oliver Y. Chén"
     ],
-    "published_date": "2026-04-02T12:53:13Z",
-    "abstract": "Background and Objective: Accurate surrogate modeling of knee joint contact mechanics is important for reconstructing stress distributions and identifying risk-relevant regions, yet the relative suitability of different modeling paradigms under practically relevant input-limited conditions remains unclear. Methods: Nine male soccer players performed 90° change-of-direction trials. Finite element simulations driven by subject-specific joint posture and reaction forces were converted into graph-structured samples. Five surrogate architectures representing local diffusion, history-context enhancement, hierarchical multi-scale modeling, explicit global interaction, and local-global hybridization were compared using three-fold cross-subject validation under full, pose-corrupted, load-corrupted, and minimal-input conditions. Performance was evaluated using full-field error, high-stress error, high-risk region overlap, and hotspot localization metrics. Results: The hybrid model achieved the best overall performance under full inputs and remained the most robust under pose- and load-corrupted conditions. Under minimal inputs, no single model dominated all metrics: the history-context model yielded lower overall and high-stress errors, the hybrid model better preserved high-risk region reconstruction, and the hierarchical model showed an advantage in hotspot localization. Conclusion: Evaluation of surrogate models for knee joint contact mechanics should shift from accuracy comparisons under ideal inputs to a comprehensive assessment of the preservation of risk-relevant information under realistic input constraints. Although the local-global hybrid model showed the best overall robustness, the optimal model under minimal-input conditions remained task-dependent.",
-    "pdf_link": "https://arxiv.org/pdf/2604.01990v1",
+    "published_date": "2026-04-03T08:48:50Z",
+    "abstract": "We study high-dimensional mediation analysis in which exposures, mediators, and outcomes are all multivariate, and both exposures and mediators may be high-dimensional. We formalize this as a many (exposures)-to-many (mediators)-to-many (outcomes) (MMM) mediation analysis problem. Methodologically, MMM mediation analysis simultaneously performs variable selection for high-dimensional exposures and mediators, estimates the indirect effect matrix (i.e., the coefficient matrices linking exposure-to-mediator and mediator-to-outcome pathways), and enables prediction of multivariate outcomes. Theoretically, we show that the estimated indirect effect matrices are consistent and element-wise asymptotically normal, and we derive error bounds for the estimators. To evaluate the efficacy of the MMM mediation framework, we first investigate its finite-sample performance, including convergence properties, the behavior of the asymptotic approximations, and robustness to noise, via simulation studies. We then apply MMM mediation analysis to data from the Alzheimer's Disease Neuroimaging Initiative to study how cortical thickness of 202 brain regions may mediate the effects of 688 genome-wide significant single nucleotide polymorphisms (SNPs) (selected from approximately 1.5 million SNPs) on eleven cognitive-behavioral and diagnostic outcomes. The MMM mediation framework identifies biologically interpretable, many-to-many-to-many genetic-neural-cognitive pathways and improves downstream out-of-sample classification and prediction performance. Taken together, our results demonstrate the potential of MMM mediation analysis and highlight the value of statistical methodology for investigating complex, high-dimensional multi-layer pathways in science. The MMM package is available at https://github.com/THELabTop/MMM-Mediation.",
+    "pdf_link": "https://arxiv.org/pdf/2604.02886v1",
     "categories": [
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.01734v1",
-    "title": "A Novel Multi-view Mixture Model Framework for Longitudinal Clustering with Application to ANCA-Associated Vasculitis",
-    "authors": [
-      "Shen Jia",
-      "David Selby",
-      "Mark A Little",
-      "Tin Lok James Ng"
-    ],
-    "published_date": "2026-04-02T07:56:08Z",
-    "abstract": "Effectively modeling irregularly sampled longitudinal data is essential for understanding disease progression and improving risk prediction. We propose a two-view mixture model that integrates static baseline covariates and longitudinal biomarker trajectories within a unified probabilistic clustering framework. Temporal patterns are modeled using Neural Ordinary Differential Equations. Model training uses an EM algorithm with a sparsity-inducing log-penalty for interpretable subgroup discovery. Application of the model to an Irish cohort of ANCA-associated vasculitis patients reveals subgroups with heterogeneous serum creatinine trajectories and variation in end-stage kidney disease outcomes.",
-    "pdf_link": "https://arxiv.org/pdf/2604.01734v1",
-    "categories": [
+      "stat.ME",
+      "q-bio.GN",
       "q-bio.QM",
-      "stat.ME"
+      "stat.AP",
+      "stat.ML"
     ]
   }
 ]
