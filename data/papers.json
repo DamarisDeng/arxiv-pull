@@ -1,5 +1,20 @@
 [
   {
+    "id": "2604.05844v1",
+    "title": "Modeling Patient Care Trajectories with Transformer Hawkes Processes",
+    "authors": [
+      "Saumya Pandey",
+      "Varun Chandola"
+    ],
+    "published_date": "2026-04-07T13:10:49Z",
+    "abstract": "Patient healthcare utilization consists of irregularly time-stamped events, such as outpatient visits, inpatient admissions, and emergency encounters, forming individualized care trajectories. Modeling these trajectories is crucial for understanding utilization patterns and predicting future care needs, but is challenging due to temporal irregularity and severe class imbalance. In this work, we build on the Transformer Hawkes Process framework to model patient trajectories in continuous time. By combining Transformer-based history encoding with Hawkes process dynamics, the model captures event dependencies and jointly predicts event type and time-to-event. To address extreme imbalance, we introduce an imbalance-aware training strategy using inverse square-root class weighting. This improves sensitivity to rare but clinically important events without altering the data distribution. Experiments on real-world data demonstrate improved performance and provide clinically meaningful insights for identifying high-risk patient populations.",
+    "pdf_link": "https://arxiv.org/pdf/2604.05844v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
     "id": "2604.04858v1",
     "title": "FairLogue: A Toolkit for Intersectional Fairness Analysis in Clinical Machine Learning Models",
     "authors": [
@@ -57,109 +72,6 @@
       "cs.IT",
       "q-bio.QM",
       "stat.ML"
-    ]
-  },
-  {
-    "id": "2604.03952v1",
-    "title": "Multidimensional physical fitness is associated with reduced dementia risk through proteomic and neuroimaging pathways: a prospective cohort study of the UK Biobank",
-    "authors": [
-      "Yiqing Sun",
-      "Runyu Lin",
-      "Jiayue Qin",
-      "Feiyue Pan",
-      "Bingjie Li",
-      "Zhigang Yao"
-    ],
-    "published_date": "2026-04-05T04:07:37Z",
-    "abstract": "Dementia affects over 55 million people worldwide, yet whether distinct domains of physical fitness independently protect against neurodegeneration through shared or divergent biological mechanisms remains unknown. Using the UK Biobank (n = 51,517; 12-year follow-up), we integrated epidemiological, proteomic, and neuroimaging analyses to systematically characterize the multidimensional fitness-dementia relationship. Higher handgrip strength, cardiorespiratory fitness, and pulmonary function were each independently associated with reduced dementia risk (HRs 0.50, 0.62, and 0.73, respectively, for highest vs. lowest tertiles), with stronger associations in women and younger individuals. Plasma proteomic profiling revealed domain-specific molecular signatures--neurofilament light chain predominating for muscular and cardiorespiratory fitness, and inflammatory mediators including GDF15 for pulmonary function--with 22-40 proteins per domain independently predicting dementia, converging on neuroinflammatory and neurovascular pathways. Brain MRI analyses identified hippocampal volume as a significant structural mediator (proportion mediated: 3.7-10.1%), indicating structural preservation as one of multiple mechanistic pathways. Population attributable fraction analyses estimated that suboptimal fitness may account for approximately 26% of dementia cases. These findings reveal that multidimensional physical fitness shapes dementia risk through distinct yet converging neuroinflammatory, neurovascular, and structural brain mechanisms, with implications for life-course prevention.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03952v1",
-    "categories": [
-      "stat.AP",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.03911v1",
-    "title": "Align Your Structures: Generating Trajectories with Structure Pretraining for Molecular Dynamics",
-    "authors": [
-      "Aniketh Iyengar",
-      "Jiaqi Han",
-      "Pengwei Sun",
-      "Mingjian Jiang",
-      "Jianwen Xie",
-      "Stefano Ermon"
-    ],
-    "published_date": "2026-04-05T00:37:28Z",
-    "abstract": "Generating molecular dynamics (MD) trajectories using deep generative models has attracted increasing attention, yet remains inherently challenging due to the limited availability of MD data and the complexities involved in modeling high-dimensional MD distributions. To overcome these challenges, we propose a novel framework that leverages structure pretraining for MD trajectory generation. Specifically, we first train a diffusion-based structure generation model on a large-scale conformer dataset, on top of which we introduce an interpolator module trained on MD trajectory data, designed to enforce temporal consistency among generated structures. Our approach effectively harnesses abundant structural data to mitigate the scarcity of MD trajectory data and effectively decomposes the intricate MD modeling task into two manageable subproblems: structural generation and temporal alignment. We comprehensively evaluate our method on the QM9 and DRUGS small-molecule datasets across unconditional generation, forward simulation, and interpolation tasks, and further extend our framework and analysis to tetrapeptide and protein monomer systems. Experimental results confirm that our approach excels in generating chemically realistic MD trajectories, as evidenced by remarkable improvements of accuracy in geometric, dynamical, and energetic measurements.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03911v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.03794v1",
-    "title": "Bounding Transient Moments for a Class of Stochastic Reaction Networks Using Kolmogorov's Backward Equation",
-    "authors": [
-      "Takeyuki Iwasaki",
-      "Yutaka Hori"
-    ],
-    "published_date": "2026-04-04T16:49:49Z",
-    "abstract": "Stochastic chemical reaction networks (SRNs) in cellular systems are commonly modeled as continuous-time Markov chains (CTMCs) describing the dynamics of molecular copy numbers. The exact evaluation of transient copy number statistics is, however, often hindered by a non-closed hierarchy of moment equations. In this paper, we propose a method for computing theoretically guaranteed upper and lower bounds on transient moments based on the Kolmogorov's backward equation, which provides a dual representation of the CME, the governing equation for the probability distribution of the CTMC. This dual formulation avoids the moment closure problem by shifting the source of infinite dimensionality to the dependence on the initial state. We show that, this dual formulation, combined with the monotonicity of the CTMC generator, leads to a finite-dimensional linear time-invariant system that provides bounds on transient moments. The resulting system enables efficient evaluation of moment bounds across multiple initial conditions by simple inner-product operations without recomputing the bounding system. Further, for certain classes of SRNs, the bounding ODEs admit explicit construction from the reaction model, providing a systematic and constructive framework for computing provable bounds.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03794v1",
-    "categories": [
-      "q-bio.QM",
-      "eess.SY"
-    ]
-  },
-  {
-    "id": "2604.03791v1",
-    "title": "Acceleration of Moment Bound Optimization for Stochastic Chemical Reactions Using Reaction-wise Sparsity of Moment Equations",
-    "authors": [
-      "Tomoki Sadatoshi",
-      "Antonis Papachristodoulou",
-      "Yutaka Hori"
-    ],
-    "published_date": "2026-04-04T16:39:48Z",
-    "abstract": "Moment dynamics in stochastic chemical kinetics often involve an infinite chain of coupled equations, where lower-order moments depend on higher-order ones, making them analytically intractable. Moment bounding via semidefinite programming provides guaranteed upper and lower bounds on stationary moments. However, this formulation suffers from the rapidly growing size of semidefinite constraints due to the combinatorial growth of moments with the number of molecular species. In this paper, we propose a sparsity-exploiting matrix decomposition method for semidefinite constraints in stationary moment bounding problems to reduce the computational cost of the resulting semidefinite programs. Specifically, we characterize the sparsity structure of moment equations, where each reaction involves only a subset of variables determined by its reactants, and exploit this structure to decompose the semidefinite constraints into smaller ones. We demonstrate that the resulting formulation reduces the computational cost of the optimization problem while providing practically useful bounds.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03791v1",
-    "categories": [
-      "math.OC",
-      "eess.SY",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.03630v1",
-    "title": "A Multimodal Foundation Model of Spatial Transcriptomics and Histology for Biological Discovery and Clinical Prediction",
-    "authors": [
-      "Jinxi Xiang",
-      "Siyu Hou",
-      "Yuchen Li",
-      "Ryan Quinton",
-      "Xiaoming Zhang",
-      "Feyisope Eweje",
-      "Xiangde Luo",
-      "Yijiang Chen",
-      "Zhe Li",
-      "Colin Bergstrom",
-      "Ted Kim",
-      "Sierra Willens",
-      "Francesca Maria Olguin",
-      "Matthew Abikenari",
-      "Andrew Heider",
-      "Sanjeeth Rajaram",
-      "Joel Neal",
-      "Maximilian Diehn",
-      "Xiang Zhou",
-      "Ruijiang Li"
-    ],
-    "published_date": "2026-04-04T08:00:26Z",
-    "abstract": "Spatial transcriptomics (ST) enables gene expression mapping within anatomical context but remains costly and low-throughput. Hematoxylin and eosin (H\\&E) staining offers rich morphology yet lacks molecular resolution. We present \\textbf{\\ours} (\\textbf{S}patial \\textbf{T}ranscriptomics and hist\\textbf{O}logy \\textbf{R}epresentation \\textbf{M}odel), a foundation model trained on 1.2 million spatially resolved transcriptomic profiles with matched histology across 18 organs. Using a hierarchical architecture integrating morphological features, gene expression, and spatial context, STORM bridges imaging and omics through robust molecular--morphological representations. STORM enhances spatial domain discovery, producing biologically coherent tissue maps, and outperforms existing methods in predicting spatial gene expression from H\\&E images across 11 tumor types. The model is platform-agnostic, performing consistently across Visium, Xenium, Visium HD, and CosMx. Applied to 23 independent cohorts comprising 7,245 patients, STORM significantly improves immunotherapy response prediction and prognostication over established biomarkers, providing a scalable framework for spatially informed discovery and clinical precision medicine.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03630v1",
-    "categories": [
-      "cs.AI",
-      "q-bio.QM"
     ]
   }
 ]

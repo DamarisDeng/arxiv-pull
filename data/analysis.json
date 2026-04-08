@@ -1,125 +1,5 @@
 [
   {
-    "id": "2604.03911v1",
-    "title": "Align Your Structures: Generating Trajectories with Structure Pretraining for Molecular Dynamics",
-    "authors": [
-      "Aniketh Iyengar",
-      "Jiaqi Han",
-      "Pengwei Sun",
-      "Mingjian Jiang",
-      "Jianwen Xie",
-      "Stefano Ermon"
-    ],
-    "published_date": "2026-04-05T00:37:28Z",
-    "abstract": "Generating molecular dynamics (MD) trajectories using deep generative models has attracted increasing attention, yet remains inherently challenging due to the limited availability of MD data and the complexities involved in modeling high-dimensional MD distributions. To overcome these challenges, we propose a novel framework that leverages structure pretraining for MD trajectory generation. Specifically, we first train a diffusion-based structure generation model on a large-scale conformer dataset, on top of which we introduce an interpolator module trained on MD trajectory data, designed to enforce temporal consistency among generated structures. Our approach effectively harnesses abundant structural data to mitigate the scarcity of MD trajectory data and effectively decomposes the intricate MD modeling task into two manageable subproblems: structural generation and temporal alignment. We comprehensively evaluate our method on the QM9 and DRUGS small-molecule datasets across unconditional generation, forward simulation, and interpolation tasks, and further extend our framework and analysis to tetrapeptide and protein monomer systems. Experimental results confirm that our approach excels in generating chemically realistic MD trajectories, as evidenced by remarkable improvements of accuracy in geometric, dynamical, and energetic measurements.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03911v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ],
-    "tldr": "A novel diffusion-based framework for generating molecular dynamics trajectories leverages structure pretraining on large-scale conformer datasets combined with an interpolator module to enforce temporal consistency, achieving superior accuracy in geometric, dynamical, and energetic measurements.",
-    "keywords": [
-      "Diffusion models",
-      "Temporal interpolation",
-      "Structure generation",
-      "QM9 dataset",
-      "Conformer sampling"
-    ],
-    "relevance_score": 10
-  },
-  {
-    "id": "2604.03794v1",
-    "title": "Bounding Transient Moments for a Class of Stochastic Reaction Networks Using Kolmogorov's Backward Equation",
-    "authors": [
-      "Takeyuki Iwasaki",
-      "Yutaka Hori"
-    ],
-    "published_date": "2026-04-04T16:49:49Z",
-    "abstract": "Stochastic chemical reaction networks (SRNs) in cellular systems are commonly modeled as continuous-time Markov chains (CTMCs) describing the dynamics of molecular copy numbers. The exact evaluation of transient copy number statistics is, however, often hindered by a non-closed hierarchy of moment equations. In this paper, we propose a method for computing theoretically guaranteed upper and lower bounds on transient moments based on the Kolmogorov's backward equation, which provides a dual representation of the CME, the governing equation for the probability distribution of the CTMC. This dual formulation avoids the moment closure problem by shifting the source of infinite dimensionality to the dependence on the initial state. We show that, this dual formulation, combined with the monotonicity of the CTMC generator, leads to a finite-dimensional linear time-invariant system that provides bounds on transient moments. The resulting system enables efficient evaluation of moment bounds across multiple initial conditions by simple inner-product operations without recomputing the bounding system. Further, for certain classes of SRNs, the bounding ODEs admit explicit construction from the reaction model, providing a systematic and constructive framework for computing provable bounds.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03794v1",
-    "categories": [
-      "q-bio.QM",
-      "eess.SY"
-    ],
-    "tldr": "A method for computing guaranteed upper and lower bounds on transient moments in stochastic chemical reaction networks using Kolmogorov's backward equation, which transforms the infinite-dimensional moment closure problem into a finite-dimensional linear time-invariant system.",
-    "keywords": [
-      "Continuous-time Markov chains (CTMCs)",
-      "Kolmogorov backward equation",
-      "Moment closure",
-      "Chemical master equation",
-      "Linear time-invariant systems"
-    ],
-    "relevance_score": 10
-  },
-  {
-    "id": "2604.03791v1",
-    "title": "Acceleration of Moment Bound Optimization for Stochastic Chemical Reactions Using Reaction-wise Sparsity of Moment Equations",
-    "authors": [
-      "Tomoki Sadatoshi",
-      "Antonis Papachristodoulou",
-      "Yutaka Hori"
-    ],
-    "published_date": "2026-04-04T16:39:48Z",
-    "abstract": "Moment dynamics in stochastic chemical kinetics often involve an infinite chain of coupled equations, where lower-order moments depend on higher-order ones, making them analytically intractable. Moment bounding via semidefinite programming provides guaranteed upper and lower bounds on stationary moments. However, this formulation suffers from the rapidly growing size of semidefinite constraints due to the combinatorial growth of moments with the number of molecular species. In this paper, we propose a sparsity-exploiting matrix decomposition method for semidefinite constraints in stationary moment bounding problems to reduce the computational cost of the resulting semidefinite programs. Specifically, we characterize the sparsity structure of moment equations, where each reaction involves only a subset of variables determined by its reactants, and exploit this structure to decompose the semidefinite constraints into smaller ones. We demonstrate that the resulting formulation reduces the computational cost of the optimization problem while providing practically useful bounds.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03791v1",
-    "categories": [
-      "math.OC",
-      "eess.SY",
-      "q-bio.QM"
-    ],
-    "tldr": "A sparsity-exploiting matrix decomposition method accelerates semidefinite programming for stationary moment bounds in stochastic chemical kinetics by exploiting reaction-wise sparsity structure, reducing computational cost while maintaining practically useful bounds.",
-    "keywords": [
-      "Semidefinite programming (SDP)",
-      "Moment equations",
-      "Matrix decomposition",
-      "Sparsity structure",
-      "Combinatorial optimization"
-    ],
-    "relevance_score": 10
-  },
-  {
-    "id": "2604.03630v1",
-    "title": "A Multimodal Foundation Model of Spatial Transcriptomics and Histology for Biological Discovery and Clinical Prediction",
-    "authors": [
-      "Jinxi Xiang",
-      "Siyu Hou",
-      "Yuchen Li",
-      "Ryan Quinton",
-      "Xiaoming Zhang",
-      "Feyisope Eweje",
-      "Xiangde Luo",
-      "Yijiang Chen",
-      "Zhe Li",
-      "Colin Bergstrom",
-      "Ted Kim",
-      "Sierra Willens",
-      "Francesca Maria Olguin",
-      "Matthew Abikenari",
-      "Andrew Heider",
-      "Sanjeeth Rajaram",
-      "Joel Neal",
-      "Maximilian Diehn",
-      "Xiang Zhou",
-      "Ruijiang Li"
-    ],
-    "published_date": "2026-04-04T08:00:26Z",
-    "abstract": "Spatial transcriptomics (ST) enables gene expression mapping within anatomical context but remains costly and low-throughput. Hematoxylin and eosin (H\\&E) staining offers rich morphology yet lacks molecular resolution. We present \\textbf{\\ours} (\\textbf{S}patial \\textbf{T}ranscriptomics and hist\\textbf{O}logy \\textbf{R}epresentation \\textbf{M}odel), a foundation model trained on 1.2 million spatially resolved transcriptomic profiles with matched histology across 18 organs. Using a hierarchical architecture integrating morphological features, gene expression, and spatial context, STORM bridges imaging and omics through robust molecular--morphological representations. STORM enhances spatial domain discovery, producing biologically coherent tissue maps, and outperforms existing methods in predicting spatial gene expression from H\\&E images across 11 tumor types. The model is platform-agnostic, performing consistently across Visium, Xenium, Visium HD, and CosMx. Applied to 23 independent cohorts comprising 7,245 patients, STORM significantly improves immunotherapy response prediction and prognostication over established biomarkers, providing a scalable framework for spatially informed discovery and clinical precision medicine.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03630v1",
-    "categories": [
-      "cs.AI",
-      "q-bio.QM"
-    ],
-    "tldr": "STORM is a multimodal foundation model trained on 1.2 million spatial transcriptomics profiles that predicts gene expression from H&E histology images, enhances spatial domain discovery, and significantly improves immunotherapy response prediction across 7,245 patients.",
-    "keywords": [
-      "Hierarchical architecture",
-      "Spatial transcriptomics",
-      "Multimodal fusion",
-      "Gene expression prediction",
-      "Platform-agnostic modeling"
-    ],
-    "relevance_score": 10
-  },
-  {
     "id": "2604.04239v1",
     "title": "Good Rankings, Wrong Probabilities: A Calibration Audit of Multimodal Cancer Survival Models",
     "authors": [
@@ -133,15 +13,63 @@
       "cs.AI",
       "q-bio.QM"
     ],
-    "tldr": "Multimodal deep learning models fusing histopathology images with genomic data achieve strong concordance indices for cancer survival prediction but systematically fail 1-calibration tests, revealing that discrimination performance alone is insufficient for clinical deployment.",
+    "tldr": "Multimodal deep learning models for cancer survival show strong discrimination but fail calibration tests; Platt Scaling improves probability estimates without affecting ranking performance.",
     "keywords": [
-      "Concordance index (C-index)",
-      "1-calibration",
-      "Breslow estimator",
-      "Platt scaling",
-      "Benjamini-Hochberg correction"
+      "Concordance Index",
+      "Platt Scaling",
+      "Benjamini-Hochberg Correction",
+      "Breslow Reconstruction",
+      "Discrete-Time Survival"
     ],
     "relevance_score": 9
+  },
+  {
+    "id": "2604.05844v1",
+    "title": "Modeling Patient Care Trajectories with Transformer Hawkes Processes",
+    "authors": [
+      "Saumya Pandey",
+      "Varun Chandola"
+    ],
+    "published_date": "2026-04-07T13:10:49Z",
+    "abstract": "Patient healthcare utilization consists of irregularly time-stamped events, such as outpatient visits, inpatient admissions, and emergency encounters, forming individualized care trajectories. Modeling these trajectories is crucial for understanding utilization patterns and predicting future care needs, but is challenging due to temporal irregularity and severe class imbalance. In this work, we build on the Transformer Hawkes Process framework to model patient trajectories in continuous time. By combining Transformer-based history encoding with Hawkes process dynamics, the model captures event dependencies and jointly predicts event type and time-to-event. To address extreme imbalance, we introduce an imbalance-aware training strategy using inverse square-root class weighting. This improves sensitivity to rare but clinically important events without altering the data distribution. Experiments on real-world data demonstrate improved performance and provide clinically meaningful insights for identifying high-risk patient populations.",
+    "pdf_link": "https://arxiv.org/pdf/2604.05844v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "tldr": "Transformer Hawkes Process models patient healthcare trajectories in continuous time, using inverse square-root weighting to handle severe class imbalance and predict care events.",
+    "keywords": [
+      "Transformer Hawkes Process",
+      "Continuous Time Modeling",
+      "Inverse Square-Root Weighting",
+      "History Encoding",
+      "Event Dependencies"
+    ],
+    "relevance_score": 8
+  },
+  {
+    "id": "2604.04858v1",
+    "title": "FairLogue: A Toolkit for Intersectional Fairness Analysis in Clinical Machine Learning Models",
+    "authors": [
+      "Nick Souligne",
+      "Vignesh Subbian"
+    ],
+    "published_date": "2026-04-06T17:03:03Z",
+    "abstract": "Objective: Algorithmic fairness is essential for equitable and trustworthy machine learning in healthcare. Most fairness tools emphasize single-axis demographic comparisons and may miss compounded disparities affecting intersectional populations. This study introduces Fairlogue, a toolkit designed to operationalize intersectional fairness assessment in observational and counterfactual contexts within clinical settings. Methods: Fairlogue is a Python-based toolkit composed of three components: 1) an observational framework extending demographic parity, equalized odds, and equal opportunity difference to intersectional populations; 2) a counterfactual framework evaluating fairness under treatment-based contexts; and 3) a generalized counterfactual framework assessing fairness under interventions on intersectional group membership. The toolkit was evaluated using electronic health record data from the All of Us Controlled Tier V8 dataset in a glaucoma surgery prediction task using logistic regression with race and gender as protected attributes. Results: Observational analysis identified substantial intersectional disparities despite moderate model performance (AUROC = 0.709; accuracy = 0.651). Intersectional evaluation revealed larger fairness gaps than single-axis analyses, including demographic parity differences of 0.20 and equalized odds true positive and false positive rate gaps of 0.33 and 0.15, respectively. Counterfactual analysis using permutation-based null distributions produced unfairness (\"u-value\") estimates near zero, suggesting observed disparities were consistent with chance after conditioning on covariates. Conclusion: Fairlogue provides a modular toolkit integrating observational and counterfactual methods for quantifying and evaluating intersectional bias in clinical machine learning workflows.",
+    "pdf_link": "https://arxiv.org/pdf/2604.04858v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ],
+    "tldr": "FairLogue toolkit enables intersectional fairness assessment in clinical machine learning using observational and counterfactual frameworks, revealing disparities missed by single-axis analyses.",
+    "keywords": [
+      "Demographic Parity",
+      "Equalized Odds",
+      "Counterfactual Framework",
+      "Logistic Regression",
+      "Intersectional Fairness"
+    ],
+    "relevance_score": 7
   },
   {
     "id": "2604.04155v1",
@@ -158,39 +86,15 @@
       "q-bio.QM",
       "stat.ML"
     ],
-    "tldr": "Foundation models for biology and physics suffer from the 'Geometric Alignment Tax,' where discrete tokenization intrinsically distorts continuous geometric structure by up to 8.5x compared to continuous objectives, as demonstrated through controlled ablations and rate-distortion theory.",
+    "tldr": "Discrete tokenization in biological foundation models distorts geometric representations; continuous objectives reduce distortion up to 8.5x compared to cross-entropy with categorical bottlenecks.",
     "keywords": [
-      "Rate-distortion theory",
-      "Mutual information (MINE)",
-      "Vector quantization",
-      "Cross-entropy",
-      "Dynamical systems"
+      "Rate-Distortion Theory",
+      "Mutual Information Neural Estimation",
+      "Geometric Alignment Tax",
+      "Cross-Entropy",
+      "Learned Codebooks"
     ],
-    "relevance_score": 9
-  },
-  {
-    "id": "2604.04858v1",
-    "title": "FairLogue: A Toolkit for Intersectional Fairness Analysis in Clinical Machine Learning Models",
-    "authors": [
-      "Nick Souligne",
-      "Vignesh Subbian"
-    ],
-    "published_date": "2026-04-06T17:03:03Z",
-    "abstract": "Objective: Algorithmic fairness is essential for equitable and trustworthy machine learning in healthcare. Most fairness tools emphasize single-axis demographic comparisons and may miss compounded disparities affecting intersectional populations. This study introduces Fairlogue, a toolkit designed to operationalize intersectional fairness assessment in observational and counterfactual contexts within clinical settings. Methods: Fairlogue is a Python-based toolkit composed of three components: 1) an observational framework extending demographic parity, equalized odds, and equal opportunity difference to intersectional populations; 2) a counterfactual framework evaluating fairness under treatment-based contexts; and 3) a generalized counterfactual framework assessing fairness under interventions on intersectional group membership. The toolkit was evaluated using electronic health record data from the All of Us Controlled Tier V8 dataset in a glaucoma surgery prediction task using logistic regression with race and gender as protected attributes. Results: Observational analysis identified substantial intersectional disparities despite moderate model performance (AUROC = 0.709; accuracy = 0.651). Intersectional evaluation revealed larger fairness gaps than single-axis analyses, including demographic parity differences of 0.20 and equalized odds true positive and false positive rate gaps of 0.33 and 0.15, respectively. Counterfactual analysis using permutation-based null distributions produced unfairness (\"u-value\") estimates near zero, suggesting observed disparities were consistent with chance after conditioning on covariates. Conclusion: Fairlogue provides a modular toolkit integrating observational and counterfactual methods for quantifying and evaluating intersectional bias in clinical machine learning workflows.",
-    "pdf_link": "https://arxiv.org/pdf/2604.04858v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ],
-    "tldr": "FairLogue is a Python toolkit for assessing intersectional algorithmic fairness in clinical machine learning models through observational and counterfactual frameworks, revealing that intersectional analysis identifies larger fairness gaps than single-axis demographic comparisons.",
-    "keywords": [
-      "Logistic regression",
-      "Demographic parity",
-      "Equalized odds",
-      "Counterfactual fairness",
-      "Permutation-based null distributions"
-    ],
-    "relevance_score": 8
+    "relevance_score": 7
   },
   {
     "id": "2604.04469v1",
@@ -205,42 +109,14 @@
       "cs.CL",
       "q-bio.QM"
     ],
-    "tldr": "Transformer language models exhibit anti-scalar variability where representational noise decreases with magnitude (opposite to biological systems), demonstrating that distributional learning alone cannot reproduce the constant coefficient of variation observed in biological magnitude systems.",
+    "tldr": "Transformer language models reproduce log-compressive magnitude geometry but lack the constant coefficient of variation noise signature characteristic of biological magnitude representation systems.",
     "keywords": [
-      "Transformer models",
-      "Scalar variability",
-      "Coefficient of variation",
-      "Distributional learning",
-      "Log-compressive magnitude geometry"
+      "Scalar Variability",
+      "Coefficient of Variation",
+      "Hidden-State Representations",
+      "Log-Compressive Geometry",
+      "Distributional Learning"
     ],
-    "relevance_score": 7
-  },
-  {
-    "id": "2604.03952v1",
-    "title": "Multidimensional physical fitness is associated with reduced dementia risk through proteomic and neuroimaging pathways: a prospective cohort study of the UK Biobank",
-    "authors": [
-      "Yiqing Sun",
-      "Runyu Lin",
-      "Jiayue Qin",
-      "Feiyue Pan",
-      "Bingjie Li",
-      "Zhigang Yao"
-    ],
-    "published_date": "2026-04-05T04:07:37Z",
-    "abstract": "Dementia affects over 55 million people worldwide, yet whether distinct domains of physical fitness independently protect against neurodegeneration through shared or divergent biological mechanisms remains unknown. Using the UK Biobank (n = 51,517; 12-year follow-up), we integrated epidemiological, proteomic, and neuroimaging analyses to systematically characterize the multidimensional fitness-dementia relationship. Higher handgrip strength, cardiorespiratory fitness, and pulmonary function were each independently associated with reduced dementia risk (HRs 0.50, 0.62, and 0.73, respectively, for highest vs. lowest tertiles), with stronger associations in women and younger individuals. Plasma proteomic profiling revealed domain-specific molecular signatures--neurofilament light chain predominating for muscular and cardiorespiratory fitness, and inflammatory mediators including GDF15 for pulmonary function--with 22-40 proteins per domain independently predicting dementia, converging on neuroinflammatory and neurovascular pathways. Brain MRI analyses identified hippocampal volume as a significant structural mediator (proportion mediated: 3.7-10.1%), indicating structural preservation as one of multiple mechanistic pathways. Population attributable fraction analyses estimated that suboptimal fitness may account for approximately 26% of dementia cases. These findings reveal that multidimensional physical fitness shapes dementia risk through distinct yet converging neuroinflammatory, neurovascular, and structural brain mechanisms, with implications for life-course prevention.",
-    "pdf_link": "https://arxiv.org/pdf/2604.03952v1",
-    "categories": [
-      "stat.AP",
-      "q-bio.QM"
-    ],
-    "tldr": "Multidimensional physical fitness (handgrip strength, cardiorespiratory fitness, pulmonary function) independently reduces dementia risk through distinct molecular signatures and neuroimaging pathways, with optimal fitness potentially preventing 26% of dementia cases.",
-    "keywords": [
-      "Cox proportional hazards",
-      "Mediation analysis",
-      "Population attributable fraction",
-      "Plasma proteomics",
-      "Hippocampal volume"
-    ],
-    "relevance_score": 6
+    "relevance_score": 5
   }
 ]

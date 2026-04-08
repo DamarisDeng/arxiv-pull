@@ -1,274 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q-Bio Watchtower — 2026-03-31</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background-color: #ffffff;
-            color: #1a1a1a;
-            line-height: 1.6;
-        }
-
-        header {
-            background-color: #2c3e50;
-            color: #ffffff;
-            padding: 2rem 1.5rem;
-            text-align: center;
-            border-bottom: 4px solid #3498db;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 700;
-        }
-
-        header .subtitle {
-            font-size: 1.1rem;
-            color: #ecf0f1;
-            font-weight: 400;
-        }
-
-        header .meta {
-            font-size: 0.95rem;
-            color: #bdc3c7;
-            margin-top: 0.5rem;
-        }
-
-        main {
-            max-width: 1400px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 3rem;
-            background-color: #ffffff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        th {
-            background-color: #2c3e50;
-            color: #ffffff;
-            padding: 1rem;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border: 1px solid #34495e;
-        }
-
-        td {
-            padding: 1rem;
-            border: 1px solid #ddd;
-            vertical-align: top;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #ffffff;
-        }
-
-        tbody tr:hover {
-            background-color: #f0f8ff;
-        }
-
-        a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .rank-col {
-            width: 60px;
-            text-align: center;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #7f8c8d;
-        }
-
-        .title-col {
-            min-width: 250px;
-            font-weight: 600;
-            color: #2c3e50;
-        }
-
-        .authors-col {
-            min-width: 150px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .date-col {
-            width: 110px;
-            font-size: 0.9rem;
-            color: #555;
-        }
-
-        .tldr-col {
-            min-width: 300px;
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        .keywords-col {
-            min-width: 200px;
-            font-size: 0.85rem;
-            color: #7f8c8d;
-            font-style: italic;
-        }
-
-        .score-col {
-            width: 80px;
-            text-align: center;
-        }
-
-        .score-badge {
-            display: inline-block;
-            padding: 0.4rem 0.8rem;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 1rem;
-            color: #ffffff;
-        }
-
-        .score-high {
-            background-color: #27ae60;
-        }
-
-        .score-medium {
-            background-color: #f39c12;
-        }
-
-        .score-low {
-            background-color: #95a5a6;
-        }
-
-        section {
-            margin-bottom: 3rem;
-        }
-
-        section h2 {
-            font-size: 1.8rem;
-            color: #2c3e50;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 0.5rem;
-        }
-
-        .narrative {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #2c3e50;
-            background-color: #f8f9fa;
-            padding: 1.5rem;
-            border-left: 4px solid #3498db;
-            border-radius: 4px;
-        }
-
-        footer {
-            background-color: #ecf0f1;
-            color: #7f8c8d;
-            text-align: center;
-            padding: 1.5rem;
-            font-size: 0.9rem;
-            border-top: 2px solid #bdc3c7;
-            margin-top: 4rem;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            table {
-                font-size: 0.85rem;
-            }
-
-            th, td {
-                padding: 0.75rem 0.5rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q-Bio Watchtower — 2026-04-08</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.6;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    header .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      font-weight: 300;
+    }
+    
+    header .meta {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+    
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+    
+    .narrative-summary {
+      background-color: #f9f9f9;
+      border-left: 4px solid #3498db;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 4px;
+    }
+    
+    .narrative-summary h2 {
+      color: #2c3e50;
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .narrative-summary p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: #333;
+    }
+    
+    .table-container {
+      overflow-x: auto;
+      margin-bottom: 2rem;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    }
+    
+    thead {
+      background-color: #2c3e50;
+      color: white;
+    }
+    
+    thead th {
+      padding: 1rem 0.75rem;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
+    
+    tbody tr:nth-child(odd) {
+      background-color: #f9f9f9;
+    }
+    
+    tbody tr:nth-child(even) {
+      background-color: #ffffff;
+    }
+    
+    tbody tr:hover {
+      background-color: #f0f8ff;
+    }
+    
+    td {
+      padding: 1rem 0.75rem;
+      border: 1px solid #ddd;
+      vertical-align: top;
+    }
+    
+    td.rank {
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #2c3e50;
+      width: 60px;
+    }
+    
+    td.title {
+      font-weight: 600;
+      max-width: 400px;
+    }
+    
+    td.title a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    
+    td.title a:hover {
+      color: #2980b9;
+      text-decoration: underline;
+    }
+    
+    td.authors {
+      color: #555;
+      font-size: 0.9rem;
+      max-width: 200px;
+    }
+    
+    td.date {
+      color: #666;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      width: 110px;
+    }
+    
+    td.tldr {
+      color: #333;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      max-width: 350px;
+    }
+    
+    td.keywords {
+      color: #555;
+      font-size: 0.85rem;
+      max-width: 250px;
+    }
+    
+    td.score {
+      text-align: center;
+      width: 80px;
+    }
+    
+    .score-badge {
+      display: inline-block;
+      padding: 0.4rem 0.7rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: white;
+    }
+    
+    .score-high {
+      background-color: #27ae60;
+    }
+    
+    .score-medium {
+      background-color: #f39c12;
+    }
+    
+    .score-low {
+      background-color: #95a5a6;
+    }
+    
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      
+      main {
+        padding: 1rem;
+      }
+      
+      table {
+        font-size: 0.85rem;
+      }
+      
+      td, th {
+        padding: 0.6rem 0.4rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Q-Bio Watchtower</h1>
-        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-03-31</div>
-        <div class="meta">3 papers analyzed | Date range: 2026-03-28 to 2026-03-29</div>
-    </header>
-
-    <main>
-        <table>
-            <thead>
-                <tr>
-                    <th class="rank-col">Rank</th>
-                    <th class="title-col">Title</th>
-                    <th class="authors-col">Authors</th>
-                    <th class="date-col">Published</th>
-                    <th class="tldr-col">TL;DR</th>
-                    <th class="keywords-col">Keywords</th>
-                    <th class="score-col">Score</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="rank-col">1</td>
-                    <td class="title-col"><a href="https://arxiv.org/pdf/2603.27484v1" target="_blank">Quantitative mapping of dynamic 3D transport in growing cells via volumetric spatio-temporal image correlation spectroscopy (vSTICS)</a></td>
-                    <td class="authors-col">Ahmad Mahmood, Paul W. Wiseman</td>
-                    <td class="date-col">2026-03-29</td>
-                    <td class="tldr-col">Novel vSTICS framework quantifies 3D flow, diffusion, and particle density in living cells using spatio-temporal correlation analysis on volumetric fluorescence imaging.</td>
-                    <td class="keywords-col">volumetric spatio-temporal image correlation spectroscopy, lattice light-sheet microscopy, spatio-temporal correlation analysis, imaging-FCS, reverse-fountain model</td>
-                    <td class="score-col"><span class="score-badge score-high">10</span></td>
-                </tr>
-                <tr>
-                    <td class="rank-col">2</td>
-                    <td class="title-col"><a href="https://arxiv.org/pdf/2603.27303v1" target="_blank">Self-evolving AI agents for protein discovery and directed evolution</a></td>
-                    <td class="authors-col">Yang Tan, Lingrong Zhang, Mingchen Li, et al.</td>
-                    <td class="date-col">2026-03-28</td>
-                    <td class="tldr-col">VenusFactory2 autonomously discovers and optimizes proteins using self-evolving multi-agent AI framework that synthesizes dynamic workflows from natural language prompts.</td>
-                    <td class="keywords-col">multi-agent systems, directed evolution, protein optimization, workflow synthesis, VenusAgentEval</td>
-                    <td class="score-col"><span class="score-badge score-high">9</span></td>
-                </tr>
-                <tr>
-                    <td class="rank-col">3</td>
-                    <td class="title-col"><a href="https://arxiv.org/pdf/2603.27787v1" target="_blank">Cardiovascular-Kidney-Metabolic Health: Insights from Wearables and Blood Biomarkers</a></td>
-                    <td class="authors-col">Zeinab Esmaeilpour, A. Ali Heydari, Daniel McDuff, et al.</td>
-                    <td class="date-col">2026-03-29</td>
-                    <td class="tldr-col">Integrates wearable sensor data with biomarkers to characterize cardiovascular-kidney-metabolic syndrome heterogeneity and identify early predictors of organ-specific health decline.</td>
-                    <td class="keywords-col">HOMA-IR, normalized deviance score, feature ablation analysis, multi-system subtyping, wearable-derived phenotypes</td>
-                    <td class="score-col"><span class="score-badge score-medium">7</span></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <section>
-            <h2>Daily Summary</h2>
-            <div class="narrative">
-                Today's q-bio.QM digest highlights significant methodological advances across computational imaging, AI-driven protein engineering, and multi-modal health monitoring. The top-ranked work introduces volumetric spatio-temporal correlation spectroscopy (vSTICS) for 3D intracellular transport mapping, while AI-powered autonomous agents demonstrate breakthrough capabilities in protein discovery and directed evolution. Wearable biosensor integration with clinical biomarkers emerges as a powerful approach for early detection of complex multi-organ syndromes, underscoring the field's shift toward high-dimensional, multi-scale quantitative biology.
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM
-    </footer>
+  <header>
+    <h1>Q-Bio Watchtower</h1>
+    <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-04-08 UTC</div>
+    <div class="meta">5 papers analyzed | Date range: April 5–7, 2026</div>
+  </header>
+  
+  <main>
+    <section class="narrative-summary">
+      <h2>Daily Research Overview</h2>
+      <p>Today's digest highlights a strong focus on machine learning trustworthiness and representation quality in biomedical applications. The leading papers address calibration failures in multimodal cancer survival models, intersectional fairness in clinical predictions, and geometric distortions introduced by discrete tokenization in foundation models. Methodologically, the collection emphasizes rigorous evaluation beyond standard performance metrics—including fold-level calibration audits, counterfactual fairness frameworks, and rate-distortion analysis—alongside novel approaches for modeling temporal healthcare trajectories and cognitive representations in transformers.</p>
+    </section>
+    
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Title</th>
+            <th>Authors</th>
+            <th>Published</th>
+            <th>TL;DR</th>
+            <th>Keywords</th>
+            <th>Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="rank">1</td>
+            <td class="title">
+              <a href="https://arxiv.org/pdf/2604.04239v1" target="_blank">Good Rankings, Wrong Probabilities: A Calibration Audit of Multimodal Cancer Survival Models</a>
+            </td>
+            <td class="authors">Sajad Ghawami</td>
+            <td class="date">2026-04-05</td>
+            <td class="tldr">Multimodal deep learning models for cancer survival show strong discrimination but fail calibration tests; Platt Scaling improves probability estimates without affecting ranking performance.</td>
+            <td class="keywords">Concordance Index, Platt Scaling, Benjamini-Hochberg Correction, Breslow Reconstruction, Discrete-Time Survival</td>
+            <td class="score"><span class="score-badge score-high">9</span></td>
+          </tr>
+          <tr>
+            <td class="rank">2</td>
+            <td class="title">
+              <a href="https://arxiv.org/pdf/2604.05844v1" target="_blank">Modeling Patient Care Trajectories with Transformer Hawkes Processes</a>
+            </td>
+            <td class="authors">Saumya Pandey, Varun Chandola</td>
+            <td class="date">2026-04-07</td>
+            <td class="tldr">Transformer Hawkes Process models patient healthcare trajectories in continuous time, using inverse square-root weighting to handle severe class imbalance and predict care events.</td>
+            <td class="keywords">Transformer Hawkes Process, Continuous Time Modeling, Inverse Square-Root Weighting, History Encoding, Event Dependencies</td>
+            <td class="score"><span class="score-badge score-high">8</span></td>
+          </tr>
+          <tr>
+            <td class="rank">3</td>
+            <td class="title">
+              <a href="https://arxiv.org/pdf/2604.04858v1" target="_blank">FairLogue: A Toolkit for Intersectional Fairness Analysis in Clinical Machine Learning Models</a>
+            </td>
+            <td class="authors">Nick Souligne, Vignesh Subbian</td>
+            <td class="date">2026-04-06</td>
+            <td class="tldr">FairLogue toolkit enables intersectional fairness assessment in clinical machine learning using observational and counterfactual frameworks, revealing disparities missed by single-axis analyses.</td>
+            <td class="keywords">Demographic Parity, Equalized Odds, Counterfactual Framework, Logistic Regression, Intersectional Fairness</td>
+            <td class="score"><span class="score-badge score-medium">7</span></td>
+          </tr>
+          <tr>
+            <td class="rank">4</td>
+            <td class="title">
+              <a href="https://arxiv.org/pdf/2604.04155v1" target="_blank">The Geometric Alignment Tax: Tokenization vs. Continuous Geometry in Scientific Foundation Models</a>
+            </td>
+            <td class="authors">Prashant C. Raju</td>
+            <td class="date">2026-04-05</td>
+            <td class="tldr">Discrete tokenization in biological foundation models distorts geometric representations; continuous objectives reduce distortion up to 8.5x compared to cross-entropy with categorical bottlenecks.</td>
+            <td class="keywords">Rate-Distortion Theory, Mutual Information Neural Estimation, Geometric Alignment Tax, Cross-Entropy, Learned Codebooks</td>
+            <td class="score"><span class="score-badge score-medium">7</span></td>
+          </tr>
+          <tr>
+            <td class="rank">5</td>
+            <td class="title">
+              <a href="https://arxiv.org/pdf/2604.04469v1" target="_blank">Same Geometry, Opposite Noise: Transformer Magnitude Representations Lack Scalar Variability</a>
+            </td>
+            <td class="authors">Jon-Paul Cacioli</td>
+            <td class="date">2026-04-06</td>
+            <td class="tldr">Transformer language models reproduce log-compressive magnitude geometry but lack the constant coefficient of variation noise signature characteristic of biological magnitude representation systems.</td>
+            <td class="keywords">Scalar Variability, Coefficient of Variation, Hidden-State Representations, Log-Compressive Geometry, Distributional Learning</td>
+            <td class="score"><span class="score-badge score-medium">5</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+  
+  <footer>
+    Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM · 2026-04-08
+  </footer>
 </body>
 </html>
