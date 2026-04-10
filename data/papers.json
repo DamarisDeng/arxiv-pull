@@ -1,5 +1,116 @@
 [
   {
+    "id": "2604.08507v1",
+    "title": "A Quasi-Regression Method for the Mediation Analysis of Zero-Inflated Single-Cell Data",
+    "authors": [
+      "Seungjun Ahn",
+      "Donald Porchia",
+      "Panos Roussos",
+      "Maaike van Gerwen",
+      "Qing Lu",
+      "Zhigang Li"
+    ],
+    "published_date": "2026-04-09T17:49:37Z",
+    "abstract": "Recent advances in single-cell technologies have advanced our understanding of gene regulation and cellular heterogeneity at single-cell resolution. Single-cell data contain both gene expression levels and the proportion of expressing cells, which makes them structurally different from bulk data. Currently, methodological work on causal mediation analysis for single-cell data remains limited and often requires specific distributional assumptions. To address this challenge, we present QuasiMed, a mediation framework specialized for single-cell data. Our proposed method comprises three steps, including (i) screening mediator candidates through penalized regression and marginal models (similar to sure independence screening), (ii) estimation of indirect effects through the average expression and the proportion of expressing cells, (iii) and hypothesis testing with multiplicity control. The key benefit of QuasiMed is that it specifies only the mean functions of the mediation models through a quasi-regression framework, thereby relaxing strict distributional assumptions. The method performance was evaluated through the real-data-inspired simulations, and demonstrated high power, false discovery rate control, and computational efficiency. Lastly, we applied QuasiMed to ROSMAP single-cell data to illustrate its potential to identify mediating causal pathways. R package is freely available on GitHub repository at https://github.com/sjahnn/QuasiMed.",
+    "pdf_link": "https://arxiv.org/pdf/2604.08507v1",
+    "categories": [
+      "stat.ME",
+      "q-bio.QM",
+      "stat.AP"
+    ]
+  },
+  {
+    "id": "2604.08305v1",
+    "title": "HistDiT: A Structure-Aware Latent Conditional Diffusion Model for High-Fidelity Virtual Staining in Histopathology",
+    "authors": [
+      "Aasim Bin Saleem",
+      "Amr Ahmed",
+      "Ardhendu Behera",
+      "Hafeezullah Amin",
+      "Iman Yi Liao",
+      "Mahmoud Khattab",
+      "Pan Jia Wern",
+      "Haslina Makmur"
+    ],
+    "published_date": "2026-04-09T14:39:37Z",
+    "abstract": "Immunohistochemistry (IHC) is essential for assessing specific immune biomarkers like Human Epidermal growth-factor Receptor 2 (HER2) in breast cancer. However, the traditional protocols of obtaining IHC stains are resource-intensive, time-consuming, and prone to structural damages. Virtual staining has emerged as a scalable alternative, but it faces significant challenges in preserving fine-grained cellular structures while accurately translating biochemical expressions. Current state-of-the-art methods still rely on Generative Adversarial Networks (GANs) or standard convolutional U-Net diffusion models that often struggle with \"structure and staining trade-offs\". The generated samples are either structurally relevant but blurry, or texturally realistic but have artifacts that compromise their diagnostic use. In this paper, we introduce HistDiT, a novel latent conditional Diffusion Transformer (DiT) architecture that establishes a new benchmark for visual fidelity in virtual histological staining. The novelty introduced in this work is, a) the Dual-Stream Conditioning strategy that explicitly maintains a balance between spatial constraints via VAE-encoded latents and semantic phenotype guidance via UNI embeddings; b) the multi-objective loss function that contributes to sharper images with clear morphological structure; and c) the use of the Structural Correlation Metric (SCM) to focus on the core morphological structure for precise assessment of sample quality. Consequently, our model outperforms existing baselines, as demonstrated through rigorous quantitative and qualitative evaluations.",
+    "pdf_link": "https://arxiv.org/pdf/2604.08305v1",
+    "categories": [
+      "eess.IV",
+      "cs.AI",
+      "cs.CV",
+      "cs.ET",
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2604.07576v1",
+    "title": "Quantifying the Spatiotemporal Dynamics of Engineered Cardiac Microbundles",
+    "authors": [
+      "Hiba Kobeissi",
+      "Samuel J. DePalma",
+      "Javiera Jilberto",
+      "David Nordsletten",
+      "Brendon M. Baker",
+      "Emma Lejeune"
+    ],
+    "published_date": "2026-04-08T20:28:49Z",
+    "abstract": "Brightfield time-lapse imaging is widely used in cardiac tissue engineering, yet the absence of standardized, interpretable analytical frameworks limits reproducibility and cross-platform comparison. We present an open, scalable computational pipeline for quantifying spatiotemporal contractile dynamics in microscopy videos of human induced pluripotent stem cell-derived cardiac microbundles. Building on our open-source tools \"MicroBundleCompute\" and \"MicroBundlePillarTrack,\" we define a suite of 16 interpretable structural, functional, and spatiotemporal metrics that capture tissue deformation, synchrony, and heterogeneity. The framework integrates full-field displacement tracking, strain reconstruction, spatial registration, dimensionality reduction, and topology-based vector-field analysis within a unified workflow. Applied to a dataset of 670 cardiac microbundles spanning 20 experimental conditions, the pipeline reveals continuous variation in contractile phenotypes rather than discrete condition-specific clustering, with intra-condition variability often exceeding inter-condition differences. Redundancy analysis identifies a reduced core set of 10 metrics that retain most informational content while minimizing multicollinearity. Analysis of denoised displacement fields shows that contraction is dominated by a global isotropic mode, with localized saddle-type deformation patterns present in approximately half of the samples. All software and workflows are released openly to enable reproducible, scalable analysis of dynamic tissue mechanics.",
+    "pdf_link": "https://arxiv.org/pdf/2604.07576v1",
+    "categories": [
+      "q-bio.QM",
+      "stat.AP"
+    ]
+  },
+  {
+    "id": "2604.07560v1",
+    "title": "Predicting Activity Cliffs for Autonomous Medicinal Chemistry",
+    "authors": [
+      "Michael Cuccarese"
+    ],
+    "published_date": "2026-04-08T20:02:17Z",
+    "abstract": "Activity cliff prediction - identifying positions where small structural changes cause large potency shifts - has been a persistent challenge in computational medicinal chemistry. This work focuses on a parsimonious definition: which small modifications, at which positions, confer the highest probability of an outcome change. Position-level sensitivity is calculated using 25 million matched molecular pairs from 50 ChEMBL targets across six protein families, revealing that two questions have fundamentally different answers. \"Which positions vary most?\" is answered by scaffold size alone (NDCG@3 = 0.966), requiring no machine learning. \"Which are true activity cliffs?\" - where small modifications cause disproportionately large effects, as captured by SALI normalization - requires an 11-feature model with 3D pharmacophore context (NDCG@3 = 0.910 vs. 0.839 random), generalizing across all six protein families, novel scaffolds (0.913), and temporal splits (0.878). The model identifies the cliff-prone position first 53% of the time (vs. 27% random - 2x lift), reducing positions a chemist must explore from 3.1 to 2.1 - a 31% reduction in first-round experiments. Predicting which modification to make is not tractable from structure alone (Spearman 0.268, collapsing to -0.31 on novel scaffolds). The system is released as open-source code and an interactive webapp.",
+    "pdf_link": "https://arxiv.org/pdf/2604.07560v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.LG"
+    ]
+  },
+  {
+    "id": "2604.07557v1",
+    "title": "Validated Synthetic Patient Generation for Small Longitudinal Cohorts: Coagulation Dynamics Across Pregnancy",
+    "authors": [
+      "Jeffrey D. Varner",
+      "Maria Cristina Bravo",
+      "Carole McBride",
+      "Thomas Orfeo",
+      "Ira Bernstein"
+    ],
+    "published_date": "2026-04-08T19:56:24Z",
+    "abstract": "Small longitudinal clinical cohorts, common in maternal health, rare diseases, and early-phase trials, limit computational modeling: too few patients to train reliable models, yet too costly and slow to expand through additional enrollment. We present multiplicity-weighted Stochastic Attention (SA), a generative framework based on modern Hopfield network theory that addresses this gap. SA embeds real patient profiles as memory patterns in a continuous energy landscape and generates novel synthetic patients via Langevin dynamics that interpolate between stored patterns while preserving the geometry of the original cohort. Per-pattern multiplicity weights enable targeted amplification of rare clinical subgroups at inference time without retraining. We applied SA to a longitudinal coagulation dataset from 23 pregnant patients spanning 72 biochemical features across 3 visits (pre-pregnancy baseline, first trimester, and third trimester), including rare subgroups such as polycystic ovary syndrome and preeclampsia. Synthetic patients generated by SA were statistically, structurally, and mechanistically indistinguishable from their real counterparts across multiple independent validation tests, including an ordinary differential equation model of the coagulation cascade. A downstream utility test further showed that a mechanistic model calibrated entirely on synthetic patients predicted held-out real patient outcomes as well as one calibrated on real data. These results demonstrate that SA can produce clinically useful synthetic cohorts from very small longitudinal datasets, enabling data-augmented modeling in small-cohort settings.",
+    "pdf_link": "https://arxiv.org/pdf/2604.07557v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2604.07309v1",
+    "title": "Generation time in a discrete epidemic model with asymptomatic carriers: beyond geometric waiting times",
+    "authors": [
+      "Jordi Ripoll",
+      "Joan Saldaña"
+    ],
+    "published_date": "2026-04-08T17:20:39Z",
+    "abstract": "We study the random times between successive cases in a transmission chain of infectious diseases with asymptomatic carriers. We derive the probability distribution of this generation time (in days) from a discrete-time epidemic model with variable infectiousness both along elapsed times and across phases. The introduced non-Markovian model is a compact recursive system featuring random waiting times at each of the three infected stages: latent, asymptomatic, and symptomatic. By rearranging the terms of the basic reproduction number, which represents the expected number of secondary cases produced by an asymptomatic primary case who may eventually develop symptoms, we get to the generation-time probabilities. The expected generation time is a convex combination of the expected generation times before and after the onset of symptoms. Additionally, our analysis reveals that the n-th moment of the generation time is related to the moments up to n-th order of the weighted forward recurrence time at each phase and the moments up to n-th order of the latent period and the incubation period. These weights are the infectiousness along the elapsed times for each transmission phase. Finally, we illustrate several data-driven epidemic scenarios, assuming that infectiousness varies only across phases and discrete Weibull distributions for the waiting times. Each disease analyzed, except measles, exhibits moderate variability in its respective generation time distribution.",
+    "pdf_link": "https://arxiv.org/pdf/2604.07309v1",
+    "categories": [
+      "q-bio.PE",
+      "q-bio.QM"
+    ]
+  },
+  {
     "id": "2604.05844v1",
     "title": "Modeling Patient Care Trajectories with Transformer Hawkes Processes",
     "authors": [
@@ -12,66 +123,6 @@
     "categories": [
       "cs.LG",
       "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.04858v1",
-    "title": "FairLogue: A Toolkit for Intersectional Fairness Analysis in Clinical Machine Learning Models",
-    "authors": [
-      "Nick Souligne",
-      "Vignesh Subbian"
-    ],
-    "published_date": "2026-04-06T17:03:03Z",
-    "abstract": "Objective: Algorithmic fairness is essential for equitable and trustworthy machine learning in healthcare. Most fairness tools emphasize single-axis demographic comparisons and may miss compounded disparities affecting intersectional populations. This study introduces Fairlogue, a toolkit designed to operationalize intersectional fairness assessment in observational and counterfactual contexts within clinical settings. Methods: Fairlogue is a Python-based toolkit composed of three components: 1) an observational framework extending demographic parity, equalized odds, and equal opportunity difference to intersectional populations; 2) a counterfactual framework evaluating fairness under treatment-based contexts; and 3) a generalized counterfactual framework assessing fairness under interventions on intersectional group membership. The toolkit was evaluated using electronic health record data from the All of Us Controlled Tier V8 dataset in a glaucoma surgery prediction task using logistic regression with race and gender as protected attributes. Results: Observational analysis identified substantial intersectional disparities despite moderate model performance (AUROC = 0.709; accuracy = 0.651). Intersectional evaluation revealed larger fairness gaps than single-axis analyses, including demographic parity differences of 0.20 and equalized odds true positive and false positive rate gaps of 0.33 and 0.15, respectively. Counterfactual analysis using permutation-based null distributions produced unfairness (\"u-value\") estimates near zero, suggesting observed disparities were consistent with chance after conditioning on covariates. Conclusion: Fairlogue provides a modular toolkit integrating observational and counterfactual methods for quantifying and evaluating intersectional bias in clinical machine learning workflows.",
-    "pdf_link": "https://arxiv.org/pdf/2604.04858v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.04469v1",
-    "title": "Same Geometry, Opposite Noise: Transformer Magnitude Representations Lack Scalar Variability",
-    "authors": [
-      "Jon-Paul Cacioli"
-    ],
-    "published_date": "2026-04-06T06:39:34Z",
-    "abstract": "Scalar variability -- the finding that representational noise scales proportionally with magnitude, producing a constant coefficient of variation -- is a hallmark of biological magnitude systems. We tested whether transformer language models exhibit this property by analysing the dispersion of hidden-state representations across carrier sentences for 26 numerical magnitudes in three 7-8B parameter models (Llama-3-8B-Instruct, Mistral-7B-Instruct-v0.3, Llama-3-8B-Base; data from Cacioli, 2026). We found the opposite: representational variability decreased with magnitude along the magnitude axis (scaling exponent alpha approx -0.19; 0/16 primary layers with alpha > 0, all three models). The negative sign was consistent in full-dimensional space (alpha approx -0.04) and after sentence-identity correction (alpha approx -0.007). The anti-scalar pattern was 3-5x stronger along the magnitude axis than orthogonal dimensions, and corpus frequency strongly predicted per-magnitude variability (rho = .84). These results demonstrate that distributional learning alone is insufficient to produce scalar variability: transformers reproduce log-compressive magnitude geometry but not the constant-CV noise signature observed in biological systems.",
-    "pdf_link": "https://arxiv.org/pdf/2604.04469v1",
-    "categories": [
-      "cs.CL",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.04239v1",
-    "title": "Good Rankings, Wrong Probabilities: A Calibration Audit of Multimodal Cancer Survival Models",
-    "authors": [
-      "Sajad Ghawami"
-    ],
-    "published_date": "2026-04-05T19:47:04Z",
-    "abstract": "Multimodal deep learning models that fuse whole-slide histopathology images with genomic data have achieved strong discriminative performance for cancer survival prediction, as measured by the concordance index. Yet whether the survival probabilities derived from these models - either directly from native outputs or via standard post-hoc reconstruction - are calibrated remains largely unexamined. We conduct, to our knowledge, the first systematic fold-level 1-calibration audit of multimodal WSI-genomics survival architectures, evaluating native discrete-time survival outputs (Experiment A: 3 models on TCGA-BRCA) and Breslow-reconstructed survival curves from scalar risk scores (Experiment B: 11 architectures across 5 TCGA cancer types). In Experiment A, all three models fail 1-calibration on a majority of folds (12 of 15 fold-level tests reject after Benjamini-Hochberg correction). Across the full 290 fold-level tests, 166 reject the null of correct calibration at the median event time after Benjamini-Hochberg correction (FDR = 0.05). MCAT achieves C-index 0.817 on GBMLGG yet fails 1-calibration on all five folds. Gating-based fusion is associated with better calibration; bilinear and concatenation fusion are not. Post-hoc Platt scaling reduces miscalibration at the evaluated horizon (e.g., MCAT: 5/5 folds failing to 2/5) without affecting discrimination. The concordance index alone is insufficient for evaluating survival models intended for clinical use.",
-    "pdf_link": "https://arxiv.org/pdf/2604.04239v1",
-    "categories": [
-      "cs.LG",
-      "cs.AI",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.04155v1",
-    "title": "The Geometric Alignment Tax: Tokenization vs. Continuous Geometry in Scientific Foundation Models",
-    "authors": [
-      "Prashant C. Raju"
-    ],
-    "published_date": "2026-04-05T15:45:49Z",
-    "abstract": "Foundation models for biology and physics optimize predictive accuracy, but their internal representations systematically fail to preserve the continuous geometry of the systems they model. We identify the root cause: the Geometric Alignment Tax, an intrinsic cost of forcing continuous manifolds through discrete categorical bottlenecks. Controlled ablations on synthetic dynamical systems demonstrate that replacing cross-entropy with a continuous head on an identical encoder reduces geometric distortion by up to 8.5x, while learned codebooks exhibit a non-monotonic double bind where finer quantization worsens geometry despite improving reconstruction. Under continuous objectives, three architectures differ by 1.3x; under discrete tokenization, they diverge by 3,000x. Evaluating 14 biological foundation models with rate-distortion theory and MINE, we identify three failure regimes: Local-Global Decoupling, Representational Compression, and Geometric Vacuity. A controlled experiment confirms that Evo 2's reverse-complement robustness on real DNA reflects conserved sequence composition, not learned symmetry. No model achieves simultaneously low distortion, high mutual information, and global coherence.",
-    "pdf_link": "https://arxiv.org/pdf/2604.04155v1",
-    "categories": [
-      "cs.LG",
-      "cs.IT",
-      "q-bio.QM",
-      "stat.ML"
     ]
   }
 ]

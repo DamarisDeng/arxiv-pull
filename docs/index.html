@@ -1,317 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Q-Bio Watchtower — 2026-04-08</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-      padding: 0;
-    }
-    
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-    }
-    
-    header .subtitle {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      font-weight: 300;
-    }
-    
-    header .meta {
-      margin-top: 0.5rem;
-      font-size: 0.95rem;
-      opacity: 0.85;
-    }
-    
-    main {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
-    
-    .narrative-summary {
-      background-color: #f9f9f9;
-      border-left: 4px solid #3498db;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
-      border-radius: 4px;
-    }
-    
-    .narrative-summary h2 {
-      color: #2c3e50;
-      font-size: 1.3rem;
-      margin-bottom: 0.75rem;
-    }
-    
-    .narrative-summary p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: #333;
-    }
-    
-    .table-container {
-      overflow-x: auto;
-      margin-bottom: 2rem;
-    }
-    
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: white;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.08);
-    }
-    
-    thead {
-      background-color: #2c3e50;
-      color: white;
-    }
-    
-    thead th {
-      padding: 1rem 0.75rem;
-      text-align: left;
-      font-weight: 600;
-      font-size: 0.9rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    
-    tbody tr {
-      border-bottom: 1px solid #ddd;
-    }
-    
-    tbody tr:nth-child(odd) {
-      background-color: #f9f9f9;
-    }
-    
-    tbody tr:nth-child(even) {
-      background-color: #ffffff;
-    }
-    
-    tbody tr:hover {
-      background-color: #f0f8ff;
-    }
-    
-    td {
-      padding: 1rem 0.75rem;
-      border: 1px solid #ddd;
-      vertical-align: top;
-    }
-    
-    td.rank {
-      text-align: center;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: #2c3e50;
-      width: 60px;
-    }
-    
-    td.title {
-      font-weight: 600;
-      max-width: 400px;
-    }
-    
-    td.title a {
-      color: #3498db;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    
-    td.title a:hover {
-      color: #2980b9;
-      text-decoration: underline;
-    }
-    
-    td.authors {
-      color: #555;
-      font-size: 0.9rem;
-      max-width: 200px;
-    }
-    
-    td.date {
-      color: #666;
-      font-size: 0.9rem;
-      white-space: nowrap;
-      width: 110px;
-    }
-    
-    td.tldr {
-      color: #333;
-      font-size: 0.95rem;
-      line-height: 1.5;
-      max-width: 350px;
-    }
-    
-    td.keywords {
-      color: #555;
-      font-size: 0.85rem;
-      max-width: 250px;
-    }
-    
-    td.score {
-      text-align: center;
-      width: 80px;
-    }
-    
-    .score-badge {
-      display: inline-block;
-      padding: 0.4rem 0.7rem;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: white;
-    }
-    
-    .score-high {
-      background-color: #27ae60;
-    }
-    
-    .score-medium {
-      background-color: #f39c12;
-    }
-    
-    .score-low {
-      background-color: #95a5a6;
-    }
-    
-    footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
-    
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      
-      main {
-        padding: 1rem;
-      }
-      
-      table {
-        font-size: 0.85rem;
-      }
-      
-      td, th {
-        padding: 0.6rem 0.4rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Bio Watchtower — Daily arXiv q-bio.QM Digest</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            color: #1a1a1a;
+            background-color: #ffffff;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 40px 20px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            margin-bottom: 8px;
+        }
+
+        header .meta {
+            font-size: 0.95em;
+            opacity: 0.85;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        thead {
+            background-color: #2c3e50;
+            color: #ffffff;
+        }
+
+        th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #ddd;
+            font-size: 0.95em;
+        }
+
+        td {
+            padding: 16px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+
+        tbody tr:hover {
+            background-color: #f0f4f8;
+            transition: background-color 0.2s ease;
+        }
+
+        a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .rank {
+            font-weight: 600;
+            text-align: center;
+            width: 60px;
+            color: #2c3e50;
+        }
+
+        .title-cell {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .title-cell a {
+            color: #3498db;
+        }
+
+        .authors {
+            font-size: 0.9em;
+            color: #555;
+        }
+
+        .date {
+            font-size: 0.9em;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .tldr {
+            font-size: 0.9em;
+            line-height: 1.5;
+            color: #333;
+            font-style: italic;
+        }
+
+        .keywords {
+            font-size: 0.85em;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        .score-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            text-align: center;
+            min-width: 50px;
+            font-size: 0.9em;
+        }
+
+        .score-badge.excellent {
+            background-color: #27ae60;
+        }
+
+        .score-badge.good {
+            background-color: #f39c12;
+        }
+
+        .score-badge.fair {
+            background-color: #95a5a6;
+        }
+
+        .narrative-section {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+            margin-bottom: 40px;
+        }
+
+        .narrative-section h2 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .narrative-section p {
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        footer {
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 4px 0;
+        }
+
+        .no-data {
+            text-align: center;
+            padding: 60px 20px;
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            table {
+                font-size: 0.85em;
+            }
+
+            th, td {
+                padding: 12px 8px;
+            }
+
+            .title-cell {
+                min-width: 200px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Q-Bio Watchtower</h1>
-    <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-04-08 UTC</div>
-    <div class="meta">5 papers analyzed | Date range: April 5–7, 2026</div>
-  </header>
-  
-  <main>
-    <section class="narrative-summary">
-      <h2>Daily Research Overview</h2>
-      <p>Today's digest highlights a strong focus on machine learning trustworthiness and representation quality in biomedical applications. The leading papers address calibration failures in multimodal cancer survival models, intersectional fairness in clinical predictions, and geometric distortions introduced by discrete tokenization in foundation models. Methodologically, the collection emphasizes rigorous evaluation beyond standard performance metrics—including fold-level calibration audits, counterfactual fairness frameworks, and rate-distortion analysis—alongside novel approaches for modeling temporal healthcare trajectories and cognitive representations in transformers.</p>
-    </section>
-    
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Rank</th>
-            <th>Title</th>
-            <th>Authors</th>
-            <th>Published</th>
-            <th>TL;DR</th>
-            <th>Keywords</th>
-            <th>Score</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="rank">1</td>
-            <td class="title">
-              <a href="https://arxiv.org/pdf/2604.04239v1" target="_blank">Good Rankings, Wrong Probabilities: A Calibration Audit of Multimodal Cancer Survival Models</a>
-            </td>
-            <td class="authors">Sajad Ghawami</td>
-            <td class="date">2026-04-05</td>
-            <td class="tldr">Multimodal deep learning models for cancer survival show strong discrimination but fail calibration tests; Platt Scaling improves probability estimates without affecting ranking performance.</td>
-            <td class="keywords">Concordance Index, Platt Scaling, Benjamini-Hochberg Correction, Breslow Reconstruction, Discrete-Time Survival</td>
-            <td class="score"><span class="score-badge score-high">9</span></td>
-          </tr>
-          <tr>
-            <td class="rank">2</td>
-            <td class="title">
-              <a href="https://arxiv.org/pdf/2604.05844v1" target="_blank">Modeling Patient Care Trajectories with Transformer Hawkes Processes</a>
-            </td>
-            <td class="authors">Saumya Pandey, Varun Chandola</td>
-            <td class="date">2026-04-07</td>
-            <td class="tldr">Transformer Hawkes Process models patient healthcare trajectories in continuous time, using inverse square-root weighting to handle severe class imbalance and predict care events.</td>
-            <td class="keywords">Transformer Hawkes Process, Continuous Time Modeling, Inverse Square-Root Weighting, History Encoding, Event Dependencies</td>
-            <td class="score"><span class="score-badge score-high">8</span></td>
-          </tr>
-          <tr>
-            <td class="rank">3</td>
-            <td class="title">
-              <a href="https://arxiv.org/pdf/2604.04858v1" target="_blank">FairLogue: A Toolkit for Intersectional Fairness Analysis in Clinical Machine Learning Models</a>
-            </td>
-            <td class="authors">Nick Souligne, Vignesh Subbian</td>
-            <td class="date">2026-04-06</td>
-            <td class="tldr">FairLogue toolkit enables intersectional fairness assessment in clinical machine learning using observational and counterfactual frameworks, revealing disparities missed by single-axis analyses.</td>
-            <td class="keywords">Demographic Parity, Equalized Odds, Counterfactual Framework, Logistic Regression, Intersectional Fairness</td>
-            <td class="score"><span class="score-badge score-medium">7</span></td>
-          </tr>
-          <tr>
-            <td class="rank">4</td>
-            <td class="title">
-              <a href="https://arxiv.org/pdf/2604.04155v1" target="_blank">The Geometric Alignment Tax: Tokenization vs. Continuous Geometry in Scientific Foundation Models</a>
-            </td>
-            <td class="authors">Prashant C. Raju</td>
-            <td class="date">2026-04-05</td>
-            <td class="tldr">Discrete tokenization in biological foundation models distorts geometric representations; continuous objectives reduce distortion up to 8.5x compared to cross-entropy with categorical bottlenecks.</td>
-            <td class="keywords">Rate-Distortion Theory, Mutual Information Neural Estimation, Geometric Alignment Tax, Cross-Entropy, Learned Codebooks</td>
-            <td class="score"><span class="score-badge score-medium">7</span></td>
-          </tr>
-          <tr>
-            <td class="rank">5</td>
-            <td class="title">
-              <a href="https://arxiv.org/pdf/2604.04469v1" target="_blank">Same Geometry, Opposite Noise: Transformer Magnitude Representations Lack Scalar Variability</a>
-            </td>
-            <td class="authors">Jon-Paul Cacioli</td>
-            <td class="date">2026-04-06</td>
-            <td class="tldr">Transformer language models reproduce log-compressive magnitude geometry but lack the constant coefficient of variation noise signature characteristic of biological magnitude representation systems.</td>
-            <td class="keywords">Scalar Variability, Coefficient of Variation, Hidden-State Representations, Log-Compressive Geometry, Distributional Learning</td>
-            <td class="score"><span class="score-badge score-medium">5</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </main>
-  
-  <footer>
-    Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM · 2026-04-08
-  </footer>
+    <header>
+        <h1>Q-Bio Watchtower</h1>
+        <div class="subtitle">Daily arXiv q-bio.QM Digest — 2026-04-10 UTC</div>
+        <div class="meta">7 papers | Date range: 2026-04-07 to 2026-04-09</div>
+    </header>
+
+    <main>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="rank">Rank</th>
+                        <th>Title</th>
+                        <th>Authors</th>
+                        <th>Published</th>
+                        <th>TL;DR</th>
+                        <th>Keywords</th>
+                        <th style="text-align: center;">Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="rank">1</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2604.08507v1" target="_blank">A Quasi-Regression Method for the Mediation Analysis of Zero-Inflated Single-Cell Data</a></td>
+                        <td class="authors">Seungjun Ahn, Donald Porchia, Panos Roussos, <em>et al.</em></td>
+                        <td class="date">2026-04-09</td>
+                        <td class="tldr">QuasiMed presents a mediation analysis framework using quasi-regression for single-cell RNA-seq data with zero-inflation, avoiding strict distributional assumptions.</td>
+                        <td class="keywords">Mediation analysis, Sure independence screening, Penalized regression, Quasi-regression, Zero-inflated models</td>
+                        <td style="text-align: center;"><span class="score-badge excellent">9</span></td>
+                    </tr>
+                    <tr>
+                        <td class="rank">2</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2604.07557v1" target="_blank">Validated Synthetic Patient Generation for Small Longitudinal Cohorts: Coagulation Dynamics Across Pregnancy</a></td>
+                        <td class="authors">Jeffrey D. Varner, Maria Cristina Bravo, Carole McBride, <em>et al.</em></td>
+                        <td class="date">2026-04-08</td>
+                        <td class="tldr">Stochastic Attention framework generates synthetic patient cohorts from small longitudinal datasets using Hopfield networks and Langevin dynamics, validated on coagulation dynamics.</td>
+                        <td class="keywords">Generative models, Hopfield networks, Langevin dynamics, Patient synthesis, Data augmentation</td>
+                        <td style="text-align: center;"><span class="score-badge excellent">9</span></td>
+                    </tr>
+                    <tr>
+                        <td class="rank">3</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2604.07309v1" target="_blank">Generation time in a discrete epidemic model with asymptomatic carriers: beyond geometric waiting times</a></td>
+                        <td class="authors">Jordi Ripoll, Joan Saldaña</td>
+                        <td class="date">2026-04-08</td>
+                        <td class="tldr">Non-Markovian discrete epidemic model derives generation time distributions for diseases with asymptomatic transmission phases using recursive probability systems.</td>
+                        <td class="keywords">Epidemic modeling, Non-Markovian processes, Generation time distribution, Weibull distributions, Basic reproduction number</td>
+                        <td style="text-align: center;"><span class="score-badge good">8</span></td>
+                    </tr>
+                    <tr>
+                        <td class="rank">4</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2604.08305v1" target="_blank">HistDiT: A Structure-Aware Latent Conditional Diffusion Model for High-Fidelity Virtual Staining in Histopathology</a></td>
+                        <td class="authors">Aasim Bin Saleem, Amr Ahmed, Ardhendu Behera, <em>et al.</em></td>
+                        <td class="date">2026-04-09</td>
+                        <td class="tldr">HistDiT uses a diffusion transformer with dual-stream conditioning to generate high-fidelity virtual histopathological stains while preserving cellular structure.</td>
+                        <td class="keywords">Diffusion transformers, Latent conditional generation, Virtual staining, VAE-encoded constraints, Generative models</td>
+                        <td style="text-align: center;"><span class="score-badge good">8</span></td>
+                    </tr>
+                    <tr>
+                        <td class="rank">5</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2604.05844v1" target="_blank">Modeling Patient Care Trajectories with Transformer Hawkes Processes</a></td>
+                        <td class="authors">Saumya Pandey, Varun Chandola</td>
+                        <td class="date">2026-04-07</td>
+                        <td class="tldr">Transformer Hawkes Process model captures patient care trajectories with continuous-time event dependencies while addressing severe class imbalance via inverse square-root weighting.</td>
+                        <td class="keywords">Hawkes processes, Transformers, Event prediction, Temporal point processes, Class imbalance handling</td>
+                        <td style="text-align: center;"><span class="score-badge good">8</span></td>
+                    </tr>
+                    <tr>
+                        <td class="rank">6</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2604.07576v1" target="_blank">Quantifying the Spatiotemporal Dynamics of Engineered Cardiac Microbundles</a></td>
+                        <td class="authors">Hiba Kobeissi, Samuel J. DePalma, Javiera Jilberto, <em>et al.</em></td>
+                        <td class="date">2026-04-08</td>
+                        <td class="tldr">This work presents a computational pipeline with 16 spatiotemporal metrics for quantifying contractile dynamics in cardiac tissue engineering videos using displacement tracking and topology analysis.</td>
+                        <td class="keywords">Image analysis, Displacement tracking, Dimensionality reduction, Vector field analysis, Tissue mechanics</td>
+                        <td style="text-align: center;"><span class="score-badge good">8</span></td>
+                    </tr>
+                    <tr>
+                        <td class="rank">7</td>
+                        <td class="title-cell"><a href="https://arxiv.org/pdf/2604.07560v1" target="_blank">Predicting Activity Cliffs for Autonomous Medicinal Chemistry</a></td>
+                        <td class="authors">Michael Cuccarese</td>
+                        <td class="date">2026-04-08</td>
+                        <td class="tldr">This study uses 25 million molecular pairs to predict activity cliff positions in medicinal chemistry, identifying where small structural modifications cause large potency shifts with 31% experimental reduction.</td>
+                        <td class="keywords">Molecular descriptor analysis, SALI normalization, 3D Pharmacophore context, Drug discovery, Position sensitivity</td>
+                        <td style="text-align: center;"><span class="score-badge good">7</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <section class="narrative-section">
+            <h2>Key Themes & Methodological Insights</h2>
+            <p>This week's q-bio.QM literature reflects a strong convergence on modern generative and deep learning architectures applied to biomedical problems, with particular emphasis on handling complex, heterogeneous data and small-sample regimes. Three high-impact papers employ diffusion transformers and neural point processes for patient-centric tasks—synthetic data generation, virtual histopathology, and care trajectory modeling—demonstrating mature adoption of transformer-based temporal reasoning in clinical settings. Complementing these advances, traditional quantitative approaches continue to thrive: quasi-regression frameworks for mediation analysis, rigorous epidemiological modeling of generation times, and computational image analysis pipelines all showcase the enduring value of parsimonious statistical methods paired with careful biological problem formulation. Across all seven papers, a unifying theme is the need to balance methodological sophistication with interpretability and reproducibility, whether through open-source software releases, standardized metrics, or explicit treatment of distributional assumptions.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Generated by Q-Bio Watchtower · Data source: arXiv q-bio.QM</p>
+        <p>Report timestamp: 2026-04-10T00:00:00Z</p>
+    </footer>
 </body>
 </html>
