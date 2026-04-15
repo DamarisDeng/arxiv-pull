@@ -1,5 +1,103 @@
 [
   {
+    "id": "2604.12671v1",
+    "title": "Differentiating Physical and Psychological Stress Using Wearable Physiological Signals and Salivary Cortisol",
+    "authors": [
+      "Ozan Kaya",
+      "Nikoletta Athanassopoulou",
+      "George G. Malliaras",
+      "Marco Vinicio Alban-Paccha"
+    ],
+    "published_date": "2026-04-14T12:42:48Z",
+    "abstract": "Objective: This study aimed to assess how wearable physiological signals, alone and combined with salivary cortisol, distinguish physical and psychological stress and their recovery states. Methods: Six healthy adults completed three laboratory sessions on separate days: rest, physical stress (high-intensity cycling), or psychological stress (modified Trier Social Stress Test). Heart rate, heart rate variability, electrodermal activity, and wrist accelerometry were recorded continuously, and salivary cortisol was sampled at five time points. Features were extracted in non-overlapping 10-minute windows and labelled as rest, physical stress, physical recovery, psychological stress, or psychological recovery. A gradient boosting classifier was trained using wearable features alone and with five additional cortisol features per window. Performance was evaluated using leave-one-participant-out cross-validation. Results: Wearable-only classification achieved 77.8% overall accuracy, with high accuracy for physical stress and recovery but frequent misclassification of psychological stress and recovery (recall 50.0% and 54.2%). Including cortisol improved overall accuracy (94.4%), particularly for psychological states, increasing recall to 83.3% and 87.5%. Cortisol also reduced misclassification between psychological stress and rest. Conclusion: Wearable signals alone were insufficient to reliably distinguish psychological stress from rest and recovery. Integrating salivary cortisol improved classification of psychological stress and recovery and reduced confusion with rest, highlighting the value of endocrine context alongside wearable physiology. Significance: These findings support multimodal stress monitoring and motivate larger, ecologically valid studies and scalable alternatives to repeated cortisol sampling.",
+    "pdf_link": "https://arxiv.org/pdf/2604.12671v1",
+    "categories": [
+      "q-bio.QM",
+      "eess.SP"
+    ]
+  },
+  {
+    "id": "2604.12294v1",
+    "title": "The IQ-Motion Confound in Multi-Site Autism fMRI May Be Inflated by Site-Correlated Measurement Uncertainty",
+    "authors": [
+      "Kareem Soliman"
+    ],
+    "published_date": "2026-04-14T05:04:53Z",
+    "abstract": "Multi-site autism neuroimaging studies routinely control for the confound between full-scale IQ and head motion by regressing framewise displacement against IQ scores and removing shared variance. This procedure assumes that ordinary least squares (OLS) provides an unbiased estimate of the confound magnitude. We tested this assumption on the ABIDE-I phenotypic dataset (n=935 subjects across 19 international scanning sites) using Probability Cloud Regression, an errors-in-variables (EIV) estimator that models per-observation measurement uncertainty in both variables. IQ measurement error was derived from published Wechsler test-retest reliability coefficients; response-side uncertainty was represented by a site-level proxy equal to the within-site standard deviation of mean framewise displacement. Three findings emerged. First, OLS overestimates the IQ-motion slope by a factor of 4.67 relative to the EIV-corrected estimate when the bias factor is computed from the full-precision fitted coefficients (OLS -0.00125, EIV -0.00027 mm per IQ point after rounding for display). Second, under leave-site-out cross-validation a single pooled predictor of raw FD produces negative out-of-sample R^2 at all 19 sites (overall R^2 = -0.074), indicating that the pooled predictor does not transport cleanly across sites once site information is removed. Third, the direction of the EIV-corrected slope is robust across all 64 configurations of an 8x8 sensitivity grid spanning 12-fold ranges of each noise parameter. These results suggest that pooled OLS may overstate the IQ-motion association in ABIDE-I, but direct downstream consequences for motion-correction pipelines remain to be quantified using raw motion traces and connectivity-level re-analysis. Formal EIV methods appear to remain uncommon in multi-site neuroimaging confound estimation.",
+    "pdf_link": "https://arxiv.org/pdf/2604.12294v1",
+    "categories": [
+      "q-bio.QM",
+      "stat.AP"
+    ]
+  },
+  {
+    "id": "2604.12075v1",
+    "title": "OpenTME: An Open Dataset of AI-powered H&E Tumor Microenvironment Profiles from TCGA",
+    "authors": [
+      "Maaike Galama",
+      "Nina Kozar-Gillan",
+      "Christina Embacher",
+      "Todd Dembo",
+      "Cornelius Böhm",
+      "Evelyn Ramberger",
+      "Julika Ribbat-Idel",
+      "Rosemarie Krupar",
+      "Verena Aumiller",
+      "Miriam Hägele",
+      "Kai Standvoss",
+      "Gerrit Erdmann",
+      "Blanca Pablos",
+      "Ari Angelo",
+      "Simon Schallenberg",
+      "Andrew Norgan",
+      "Viktor Matyas",
+      "Klaus-Robert Müller",
+      "Maximilian Alber",
+      "Lukas Ruff",
+      "Frederick Klauschen"
+    ],
+    "published_date": "2026-04-13T21:27:29Z",
+    "abstract": "The tumor microenvironment (TME) plays a central role in cancer progression, treatment response, and patient outcomes, yet large-scale, consistent, and quantitative TME characterization from routine hematoxylin and eosin (H&E)-stained histopathology remains scarce. We introduce OpenTME, an open-access dataset of pre-computed TME profiles derived from 3,634 H&E-stained whole-slide images across five cancer types (bladder, breast, colorectal, liver, and lung cancer) from The Cancer Genome Atlas (TCGA). All outputs were generated using Atlas H&E-TME, an AI-powered application built on the Atlas family of pathology foundation models, which performs tissue quality control, tissue segmentation, cell detection and classification, and spatial neighborhood analysis, yielding over 4,500 quantitative readouts per slide at cell-level resolution. OpenTME is available for non-commercial academic research on Hugging Face. We will continue to expand OpenTME over time and anticipate it will serve as a resource for biomarker discovery, spatial biology research, and the development of computational methods for TME analysis.",
+    "pdf_link": "https://arxiv.org/pdf/2604.12075v1",
+    "categories": [
+      "cs.CV",
+      "cs.AI",
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2604.12026v1",
+    "title": "TriFit: Trimodal Fusion with Protein Dynamics for Mutation Fitness Prediction",
+    "authors": [
+      "Seungik Cho"
+    ],
+    "published_date": "2026-04-13T20:11:09Z",
+    "abstract": "Predicting the functional impact of single amino acid substitutions (SAVs) is central to understanding genetic disease and engineering therapeutic proteins. While protein language models and structure-based methods have achieved strong performance on this task, they systematically neglect protein dynamics; residue flexibility, correlated motions, and allosteric coupling are well-established determinants of mutational tolerance in structural biology, yet have not been incorporated into supervised variant effect predictors. We present TriFit, a multimodal framework that integrates sequence, structure, and protein dynamics through a four-expert Mixture-of-Experts (MoE) fusion module with trimodal cross-modal contrastive learning. Sequence embeddings are extracted via masked marginal scoring with ESM-2 (650M); structural embeddings from AlphaFold2-predicted C-alpha geometries; and dynamics embeddings from Gaussian Network Model (GNM) B-factors, mode shapes, and residue-residue cross-correlations. The MoE router adaptively weights modality combinations conditioned on the input, enabling protein-specific fusion without fixed modality assumptions. On the ProteinGym substitution benchmark (217 DMS assays, 696k SAVs), TriFit achieves AUROC 0.897 +/- 0.0002, outperforming all supervised baselines including Kermut (0.864) and ProteinNPT (0.844), and the best zero-shot model ESM3 (0.769). Ablation studies confirm that dynamics provides the largest marginal contribution over pairwise modality combinations, and TriFit achieves well-calibrated probabilistic outputs (ECE = 0.044) without post-hoc correction.",
+    "pdf_link": "https://arxiv.org/pdf/2604.12026v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.BM",
+      "q-bio.QM"
+    ]
+  },
+  {
+    "id": "2604.11944v1",
+    "title": "A unified data format for managing diabetes time-series data: DIAbetes eXchange (DIAX)",
+    "authors": [
+      "Elliott C. Pryor",
+      "Marc D. Breton",
+      "Anas El Fathi"
+    ],
+    "published_date": "2026-04-13T18:35:23Z",
+    "abstract": "Diabetes devices, including Continuous Glucose Monitoring (CGM), Smart Insulin Pens, and Automated Insulin Delivery systems, generate rich time-series data widely used in research and machine learning. However, inconsistent data formats across sources hinder sharing, integration, and analysis. We present DIAX (DIAbetes eXchange), a standardized JSON-based format for unifying diabetes time-series data, including CGM, insulin, and meal signals. DIAX promotes interoperability, reproducibility, and extensibility, particularly for machine learning applications. An open-source repository provides tools for dataset conversion, cross-format compatibility, visualization, and community contributions. DIAX is a translational resource, not a data host, ensuring flexibility without imposing data-sharing constraints. Currently, DIAX is compatible with other standardization efforts and supports major datasets (DCLP3, DCLP5, IOBP2, PEDAP, T1Dexi, Loop), totaling over 10 million patient-hours of data. https://github.com/Center-for-Diabetes-Technology/DIAX",
+    "pdf_link": "https://arxiv.org/pdf/2604.11944v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
     "id": "2604.11483v1",
     "title": "CAGenMol: Condition-Aware Diffusion Language Model for Goal-Directed Molecular Generation",
     "authors": [
@@ -19,6 +117,23 @@
     ]
   },
   {
+    "id": "2604.11852v1",
+    "title": "Evaluating the Limitations of Protein Sequence Representations for Parkinson's Disease Classification",
+    "authors": [
+      "César Jesús Núñez-Prado",
+      "Grigori Sidorov",
+      "Liliana Chanona-Hernández"
+    ],
+    "published_date": "2026-04-13T03:54:24Z",
+    "abstract": "The identification of reliable molecular biomarkers for Parkinson's disease remains challenging due to its multifactorial nature. Although protein sequences constitute a fundamental and widely available source of biological information, their standalone discriminative capacity for complex disease classification remains unclear. In this work, we present a controlled and leakage-free evaluation of multiple representations derived exclusively from protein primary sequences, including amino acid composition, k-mers, physicochemical descriptors, hybrid representations, and embeddings from protein language models, all assessed under a nested stratified cross-validation framework to ensure unbiased performance estimation. The best-performing configuration (ProtBERT + MLP) achieves an F1-score of 0.704 +/- 0.028 and ROC-AUC of 0.748 +/- 0.047, indicating only moderate discriminative performance. Classical representations such as k-mers reach comparable F1 values (up to approximately 0.667), but exhibit highly imbalanced behavior, with recall close to 0.98 and precision around 0.50, reflecting a strong bias toward positive predictions. Across representations, performance differences remain within a narrow range (F1 between 0.60 and 0.70), while unsupervised analyses reveal no intrinsic structure aligned with class labels, and statistical testing (Friedman test, p = 0.1749) does not indicate significant differences across models. These results demonstrate substantial overlap between classes and indicate that primary sequence information alone provides limited discriminative power for Parkinson's disease classification. This work establishes a reproducible baseline and provides empirical evidence that more informative biological features, such as structural, functional, or interaction-based descriptors, are required for robust disease modeling.",
+    "pdf_link": "https://arxiv.org/pdf/2604.11852v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.AI",
+      "cs.LG"
+    ]
+  },
+  {
     "id": "2604.10609v1",
     "title": "Self-supervised Pretraining of Cell Segmentation Models",
     "authors": [
@@ -33,21 +148,6 @@
     "categories": [
       "cs.CV",
       "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.10476v1",
-    "title": "The Dynamic Origin of Kleiber's Law",
-    "authors": [
-      "Riccardo Marchesi"
-    ],
-    "published_date": "2026-04-12T06:13:42Z",
-    "abstract": "The ubiquitous $3/4$ metabolic scaling exponent, known as Kleiber's law, has long been attributed to the minimization of viscous dissipation within fractal transport networks. In this paper, we invert this standard narrative, demonstrating that Kleiber's law is fundamentally a signature of pulsatile wave physics rather than steady-state geometry. By coupling local branching optimization to global allometry, we derive the exact generalized metabolic exponent $β= dα/(2d+α)$, which strictly maps local transport microphysics to global organismal scaling. We show that dynamic wave-impedance matching in the proximal vasculature uniquely enforces $β= 3/4$ in three dimensions. This bound is dynamically protected: no static optimization of a viscous network can reproduce it. Consequently, we analytically predict the critical body mass for the wave-to-viscous transition, successfully explaining the empirical shift to steeper allometric scaling ($β\\approx 0.9$) in small mammals and invertebrates with no free parameters. Furthermore, we demonstrate that the classical West--Brown--Enquist (WBE) derivation is structurally divergent under its own geometric assumptions, failing at the required proximal-dominance limit. Our framework is validated across nine biological systems spanning five phyla -- including vertebrate vasculature, insect tracheae, plant xylem, and sponge canals -- accurately predicting empirical branching exponents from independent biophysical measurements. Ultimately, we establish a general allometric equation of state that organizes diverse biological networks into discrete universality classes, generating falsifiable predictions across clades from shrews to flatworms.",
-    "pdf_link": "https://arxiv.org/pdf/2604.10476v1",
-    "categories": [
-      "physics.bio-ph",
-      "q-bio.QM",
-      "q-bio.TO"
     ]
   }
 ]
