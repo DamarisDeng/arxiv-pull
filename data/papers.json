@@ -1,5 +1,40 @@
 [
   {
+    "id": "2604.13980v1",
+    "title": "BOAT: Navigating the Sea of In Silico Predictors for Antibody Design via Multi-Objective Bayesian Optimization",
+    "authors": [
+      "Jackie Rao",
+      "Ferran Gonzalez Hernandez",
+      "Leon Gerard",
+      "Alexandra Gessner"
+    ],
+    "published_date": "2026-04-15T15:25:52Z",
+    "abstract": "Antibody lead optimization is inherently a multi-objective challenge in drug discovery. Achieving a balance between different drug-like properties is crucial for the development of viable candidates, and this search becomes exponentially challenging as desired properties grow. The ever-growing zoo of sophisticated in silico tools for predicting antibody properties calls for an efficient joint optimization procedure to overcome resource-intensive sequential filtering pipelines. We present BOAT, a versatile Bayesian optimization framework for multi-property antibody engineering. Our `plug-and-play' framework couples uncertainty-aware surrogate modeling with a genetic algorithm to jointly optimize various predicted antibody traits while enabling efficient exploration of sequence space. Through systematic benchmarking against genetic algorithms and newer generative learning approaches, we demonstrate competitive performance with state-of-the-art methods for multi-objective protein optimization. We identify clear regimes where surrogate-driven optimization outperforms expensive generative approaches and establish practical limits imposed by sequence dimensionality and oracle costs.",
+    "pdf_link": "https://arxiv.org/pdf/2604.13980v1",
+    "categories": [
+      "cs.LG",
+      "q-bio.QM",
+      "stat.ML"
+    ]
+  },
+  {
+    "id": "2604.13175v1",
+    "title": "Pareto-Optimal Offline Reinforcement Learning via Smooth Tchebysheff Scalarization",
+    "authors": [
+      "Aadyot Bhatnagar",
+      "Peter Mørch Groth",
+      "Ali Madani"
+    ],
+    "published_date": "2026-04-14T18:00:39Z",
+    "abstract": "Large language models can be aligned with human preferences through offline reinforcement learning (RL) on small labeled datasets. While single-objective alignment is well-studied, many real-world applications demand the simultaneous optimization of multiple conflicting rewards, e.g. optimizing both catalytic activity and specificity in protein engineering, or helpfulness and harmlessness for chatbots. Prior work has largely relied on linear reward scalarization, but this approach provably fails to recover non-convex regions of the Pareto front. In this paper, instead of scalarizing the rewards directly, we frame multi-objective RL itself as an optimization problem to be scalarized via smooth Tchebysheff scalarization, a recent technique that overcomes the shortcomings of linear scalarization. We use this formulation to derive Smooth Tchebysheff Optimization of Multi-Objective Preferences (STOMP), a novel offline RL algorithm that extends direct preference optimization to the multi-objective setting in a principled way by standardizing the individual rewards based on their observed distributions. We empirically validate STOMP on a range of protein engineering tasks by aligning three autoregressive protein language models on three laboratory datasets of protein fitness. Compared to state-of-the-art baselines, STOMP achieves the highest hypervolumes in eight of nine settings according to both offline off-policy and generative evaluations. We thus demonstrate that STOMP is a powerful, robust multi-objective alignment algorithm that can meaningfully improve post-trained models for multi-attribute protein optimization and beyond.",
+    "pdf_link": "https://arxiv.org/pdf/2604.13175v1",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "q-bio.QM"
+    ]
+  },
+  {
     "id": "2604.12671v1",
     "title": "Differentiating Physical and Psychological Stress Using Wearable Physiological Signals and Salivary Cortisol",
     "authors": [
@@ -113,40 +148,6 @@
     "pdf_link": "https://arxiv.org/pdf/2604.11483v1",
     "categories": [
       "cs.LG",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.11852v1",
-    "title": "Evaluating the Limitations of Protein Sequence Representations for Parkinson's Disease Classification",
-    "authors": [
-      "César Jesús Núñez-Prado",
-      "Grigori Sidorov",
-      "Liliana Chanona-Hernández"
-    ],
-    "published_date": "2026-04-13T03:54:24Z",
-    "abstract": "The identification of reliable molecular biomarkers for Parkinson's disease remains challenging due to its multifactorial nature. Although protein sequences constitute a fundamental and widely available source of biological information, their standalone discriminative capacity for complex disease classification remains unclear. In this work, we present a controlled and leakage-free evaluation of multiple representations derived exclusively from protein primary sequences, including amino acid composition, k-mers, physicochemical descriptors, hybrid representations, and embeddings from protein language models, all assessed under a nested stratified cross-validation framework to ensure unbiased performance estimation. The best-performing configuration (ProtBERT + MLP) achieves an F1-score of 0.704 +/- 0.028 and ROC-AUC of 0.748 +/- 0.047, indicating only moderate discriminative performance. Classical representations such as k-mers reach comparable F1 values (up to approximately 0.667), but exhibit highly imbalanced behavior, with recall close to 0.98 and precision around 0.50, reflecting a strong bias toward positive predictions. Across representations, performance differences remain within a narrow range (F1 between 0.60 and 0.70), while unsupervised analyses reveal no intrinsic structure aligned with class labels, and statistical testing (Friedman test, p = 0.1749) does not indicate significant differences across models. These results demonstrate substantial overlap between classes and indicate that primary sequence information alone provides limited discriminative power for Parkinson's disease classification. This work establishes a reproducible baseline and provides empirical evidence that more informative biological features, such as structural, functional, or interaction-based descriptors, are required for robust disease modeling.",
-    "pdf_link": "https://arxiv.org/pdf/2604.11852v1",
-    "categories": [
-      "q-bio.QM",
-      "cs.AI",
-      "cs.LG"
-    ]
-  },
-  {
-    "id": "2604.10609v1",
-    "title": "Self-supervised Pretraining of Cell Segmentation Models",
-    "authors": [
-      "Kaden Stillwagon",
-      "Alexandra Dunnum VandeLoo",
-      "Benjamin Magondu",
-      "Craig R. Forest"
-    ],
-    "published_date": "2026-04-12T12:29:39Z",
-    "abstract": "Instance segmentation enables the analysis of spatial and temporal properties of cells in microscopy images by identifying the pixels belonging to each cell. However, progress is constrained by the scarcity of high-quality labeled microscopy datasets. Many recent approaches address this challenge by initializing models with segmentation-pretrained weights from large-scale natural-image models such as Segment Anything Model (SAM). However, representations learned from natural images often encode objectness and texture priors that are poorly aligned with microscopy data, leading to degraded performance under domain shift. We propose DINOCell, a self-supervised framework for cell instance segmentation that leverages representations from DINOv2 and adapts them to microscopy through continued self-supervised training on unlabeled cell images prior to supervised fine-tuning. On the LIVECell benchmark, DINOCell achieves a SEG score of 0.784, improving by 10.42% over leading SAM-based models, and demonstrates strong zero-shot performance on three out-of-distribution microscopy datasets. These results highlight the benefits of domain-adapted self-supervised pretraining for robust cell segmentation.",
-    "pdf_link": "https://arxiv.org/pdf/2604.10609v1",
-    "categories": [
-      "cs.CV",
       "q-bio.QM"
     ]
   }
