@@ -1,5 +1,20 @@
 [
   {
+    "id": "2604.14334v1",
+    "title": "Mamba-SSM with LLM Reasoning for Biomarker Discovery: Causal Feature Refinement via Chain-of-Thought Gene Evaluation",
+    "authors": [
+      "Pushpa Kumar Balan",
+      "Aijing Feng"
+    ],
+    "published_date": "2026-04-15T18:39:46Z",
+    "abstract": "Gradient saliency from deep sequence models surfaces candidate biomarkers efficiently, but the resulting gene lists are contaminated by tissue-composition confounders that degrade downstream classifiers. We study whether LLM chain-of-thought (CoT) reasoning can faithfully filter these confounders, and whether reasoning quality drives downstream performance. We train a Mamba SSM on TCGA-BRCA RNA-seq and extract the top-50 genes by gradient saliency; DeepSeek-R1 evaluates every candidate with structured CoT to produce a final 17-gene set. The raw 50-gene saliency set (no LLM) performs worse than a 5,000-gene variance baseline (AUC 0.832 vs. 0.903), while the LLM-filtered set surpasses it (AUC 0.927), using 294x fewer features. A faithfulness audit (COSMIC CGC, OncoKB, PAM50) reveals only 6 of 17 selected genes (35.3%) are validated BRCA biomarkers, yet 10 of 16 known BRCA genes in the input were missed - including FOXA1. This gap between downstream performance and reasoning faithfulness suggests selective faithfulness: targeted confounder removal is sufficient for performance gains even without comprehensive recall.",
+    "pdf_link": "https://arxiv.org/pdf/2604.14334v1",
+    "categories": [
+      "q-bio.QM",
+      "cs.AI"
+    ]
+  },
+  {
     "id": "2604.13980v1",
     "title": "BOAT: Navigating the Sea of In Silico Predictors for Antibody Design via Multi-Objective Bayesian Optimization",
     "authors": [
@@ -18,6 +33,26 @@
     ]
   },
   {
+    "id": "2604.14241v1",
+    "title": "Polyformer: a generative framework for thermodynamic modeling of polymeric molecules",
+    "authors": [
+      "Alessio Valentini",
+      "David Pekker",
+      "Chungwen Liang",
+      "Todd Martinez",
+      "Swagatam Mukhopadhyay"
+    ],
+    "published_date": "2026-04-15T03:26:15Z",
+    "abstract": "The classic paradigm of structural biology is that the sequence of a biomolecule (protein, nucleic acid, lipid, etc) determines its conformation (shape) which determines its biological function. Protein folding programs like AlphaFold address this paradigm by predicting the single best conformation given a sequence that defines the molecule. However, biomolecules are not static structures, and their conformational ensemble determines their function. We present the Polyformer -- a generative framework for thermodynamic modeling of polymeric molecules. Given the sequence and temperature (or another thermodynamic variable), the Polyformer generates conformations faithful to the molecule's thermodynamic conformational ensemble. It is the first generative model that solves three problems simultaneously: how does a molecule fold, what is its conformational ensemble, and how does the conformational ensemble change as we change physical temperature. As a concrete test case, we apply Polyformer to protein domains with 50-111 residues and report good agreement of model predictions to Molecular Dynamics (MD) trajectories.",
+    "pdf_link": "https://arxiv.org/pdf/2604.14241v1",
+    "categories": [
+      "q-bio.BM",
+      "cond-mat.stat-mech",
+      "cs.LG",
+      "q-bio.QM"
+    ]
+  },
+  {
     "id": "2604.13175v1",
     "title": "Pareto-Optimal Offline Reinforcement Learning via Smooth Tchebysheff Scalarization",
     "authors": [
@@ -31,6 +66,7 @@
     "categories": [
       "cs.LG",
       "cs.AI",
+      "q-bio.BM",
       "q-bio.QM"
     ]
   },
@@ -49,106 +85,6 @@
     "categories": [
       "q-bio.QM",
       "eess.SP"
-    ]
-  },
-  {
-    "id": "2604.12294v1",
-    "title": "The IQ-Motion Confound in Multi-Site Autism fMRI May Be Inflated by Site-Correlated Measurement Uncertainty",
-    "authors": [
-      "Kareem Soliman"
-    ],
-    "published_date": "2026-04-14T05:04:53Z",
-    "abstract": "Multi-site autism neuroimaging studies routinely control for the confound between full-scale IQ and head motion by regressing framewise displacement against IQ scores and removing shared variance. This procedure assumes that ordinary least squares (OLS) provides an unbiased estimate of the confound magnitude. We tested this assumption on the ABIDE-I phenotypic dataset (n=935 subjects across 19 international scanning sites) using Probability Cloud Regression, an errors-in-variables (EIV) estimator that models per-observation measurement uncertainty in both variables. IQ measurement error was derived from published Wechsler test-retest reliability coefficients; response-side uncertainty was represented by a site-level proxy equal to the within-site standard deviation of mean framewise displacement. Three findings emerged. First, OLS overestimates the IQ-motion slope by a factor of 4.67 relative to the EIV-corrected estimate when the bias factor is computed from the full-precision fitted coefficients (OLS -0.00125, EIV -0.00027 mm per IQ point after rounding for display). Second, under leave-site-out cross-validation a single pooled predictor of raw FD produces negative out-of-sample R^2 at all 19 sites (overall R^2 = -0.074), indicating that the pooled predictor does not transport cleanly across sites once site information is removed. Third, the direction of the EIV-corrected slope is robust across all 64 configurations of an 8x8 sensitivity grid spanning 12-fold ranges of each noise parameter. These results suggest that pooled OLS may overstate the IQ-motion association in ABIDE-I, but direct downstream consequences for motion-correction pipelines remain to be quantified using raw motion traces and connectivity-level re-analysis. Formal EIV methods appear to remain uncommon in multi-site neuroimaging confound estimation.",
-    "pdf_link": "https://arxiv.org/pdf/2604.12294v1",
-    "categories": [
-      "q-bio.QM",
-      "stat.AP"
-    ]
-  },
-  {
-    "id": "2604.12075v1",
-    "title": "OpenTME: An Open Dataset of AI-powered H&E Tumor Microenvironment Profiles from TCGA",
-    "authors": [
-      "Maaike Galama",
-      "Nina Kozar-Gillan",
-      "Christina Embacher",
-      "Todd Dembo",
-      "Cornelius Böhm",
-      "Evelyn Ramberger",
-      "Julika Ribbat-Idel",
-      "Rosemarie Krupar",
-      "Verena Aumiller",
-      "Miriam Hägele",
-      "Kai Standvoss",
-      "Gerrit Erdmann",
-      "Blanca Pablos",
-      "Ari Angelo",
-      "Simon Schallenberg",
-      "Andrew Norgan",
-      "Viktor Matyas",
-      "Klaus-Robert Müller",
-      "Maximilian Alber",
-      "Lukas Ruff",
-      "Frederick Klauschen"
-    ],
-    "published_date": "2026-04-13T21:27:29Z",
-    "abstract": "The tumor microenvironment (TME) plays a central role in cancer progression, treatment response, and patient outcomes, yet large-scale, consistent, and quantitative TME characterization from routine hematoxylin and eosin (H&E)-stained histopathology remains scarce. We introduce OpenTME, an open-access dataset of pre-computed TME profiles derived from 3,634 H&E-stained whole-slide images across five cancer types (bladder, breast, colorectal, liver, and lung cancer) from The Cancer Genome Atlas (TCGA). All outputs were generated using Atlas H&E-TME, an AI-powered application built on the Atlas family of pathology foundation models, which performs tissue quality control, tissue segmentation, cell detection and classification, and spatial neighborhood analysis, yielding over 4,500 quantitative readouts per slide at cell-level resolution. OpenTME is available for non-commercial academic research on Hugging Face. We will continue to expand OpenTME over time and anticipate it will serve as a resource for biomarker discovery, spatial biology research, and the development of computational methods for TME analysis.",
-    "pdf_link": "https://arxiv.org/pdf/2604.12075v1",
-    "categories": [
-      "cs.CV",
-      "cs.AI",
-      "cs.LG",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.12026v1",
-    "title": "TriFit: Trimodal Fusion with Protein Dynamics for Mutation Fitness Prediction",
-    "authors": [
-      "Seungik Cho"
-    ],
-    "published_date": "2026-04-13T20:11:09Z",
-    "abstract": "Predicting the functional impact of single amino acid substitutions (SAVs) is central to understanding genetic disease and engineering therapeutic proteins. While protein language models and structure-based methods have achieved strong performance on this task, they systematically neglect protein dynamics; residue flexibility, correlated motions, and allosteric coupling are well-established determinants of mutational tolerance in structural biology, yet have not been incorporated into supervised variant effect predictors. We present TriFit, a multimodal framework that integrates sequence, structure, and protein dynamics through a four-expert Mixture-of-Experts (MoE) fusion module with trimodal cross-modal contrastive learning. Sequence embeddings are extracted via masked marginal scoring with ESM-2 (650M); structural embeddings from AlphaFold2-predicted C-alpha geometries; and dynamics embeddings from Gaussian Network Model (GNM) B-factors, mode shapes, and residue-residue cross-correlations. The MoE router adaptively weights modality combinations conditioned on the input, enabling protein-specific fusion without fixed modality assumptions. On the ProteinGym substitution benchmark (217 DMS assays, 696k SAVs), TriFit achieves AUROC 0.897 +/- 0.0002, outperforming all supervised baselines including Kermut (0.864) and ProteinNPT (0.844), and the best zero-shot model ESM3 (0.769). Ablation studies confirm that dynamics provides the largest marginal contribution over pairwise modality combinations, and TriFit achieves well-calibrated probabilistic outputs (ECE = 0.044) without post-hoc correction.",
-    "pdf_link": "https://arxiv.org/pdf/2604.12026v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.BM",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.11944v1",
-    "title": "A unified data format for managing diabetes time-series data: DIAbetes eXchange (DIAX)",
-    "authors": [
-      "Elliott C. Pryor",
-      "Marc D. Breton",
-      "Anas El Fathi"
-    ],
-    "published_date": "2026-04-13T18:35:23Z",
-    "abstract": "Diabetes devices, including Continuous Glucose Monitoring (CGM), Smart Insulin Pens, and Automated Insulin Delivery systems, generate rich time-series data widely used in research and machine learning. However, inconsistent data formats across sources hinder sharing, integration, and analysis. We present DIAX (DIAbetes eXchange), a standardized JSON-based format for unifying diabetes time-series data, including CGM, insulin, and meal signals. DIAX promotes interoperability, reproducibility, and extensibility, particularly for machine learning applications. An open-source repository provides tools for dataset conversion, cross-format compatibility, visualization, and community contributions. DIAX is a translational resource, not a data host, ensuring flexibility without imposing data-sharing constraints. Currently, DIAX is compatible with other standardization efforts and supports major datasets (DCLP3, DCLP5, IOBP2, PEDAP, T1Dexi, Loop), totaling over 10 million patient-hours of data. https://github.com/Center-for-Diabetes-Technology/DIAX",
-    "pdf_link": "https://arxiv.org/pdf/2604.11944v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
-    ]
-  },
-  {
-    "id": "2604.11483v1",
-    "title": "CAGenMol: Condition-Aware Diffusion Language Model for Goal-Directed Molecular Generation",
-    "authors": [
-      "Yanting Li",
-      "Zhuoyang Jiang",
-      "Enyan Dai",
-      "Lei Wang",
-      "Wen-Cai Ye",
-      "Li Liu"
-    ],
-    "published_date": "2026-04-13T13:49:23Z",
-    "abstract": "Goal-directed molecular generation requires satisfying heterogeneous constraints such as protein--ligand compatibility and multi-objective drug-like properties, yet existing methods often optimize these constraints in isolation, failing to reconcile conflicting objectives (e.g., affinity vs. safety), and struggle to navigate the non-differentiable chemical space without compromising structural validity. To address these challenges, we propose CAGenMol, a condition-aware discrete diffusion framework over molecular sequences that formulates molecular design as conditional denoising guided by heterogeneous structural and property signals. By coupling discrete diffusion with reinforcement learning, the model aligns the generation trajectory with non-differentiable objectives while preserving chemical validity and diversity. The non-autoregressive nature of diffusion language model further enables iterative refinement of molecular fragments at inference time. Experiments on structure-conditioned, property-conditioned, and dual-conditioned benchmarks demonstrate consistent improvements over state-of-the-art methods in binding affinity, drug-likeness, and success rate, highlighting the effectiveness of our framework.",
-    "pdf_link": "https://arxiv.org/pdf/2604.11483v1",
-    "categories": [
-      "cs.LG",
-      "q-bio.QM"
     ]
   }
 ]
