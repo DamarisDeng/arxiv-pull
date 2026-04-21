@@ -1,8 +1,6 @@
 name: Q-Bio Watchtower
 
 on:
-  schedule:
-    - cron: '0 6 * * *'  # Daily at 06:00 UTC (after arXiv nightly batch)
   workflow_dispatch:      # Allow manual runs
 
 permissions:
